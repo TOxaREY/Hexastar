@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */ = {isa = PBXBuildFile; fileRef = F239826D200F8976003A0BBC /* KeyboardHEX.xib */; };
 		F297B232200E20750072E484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297B231200E20750072E484 /* AppDelegate.swift */; };
 		F297B234200E20760072E484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297B233200E20760072E484 /* ViewController.swift */; };
 		F297B237200E20760072E484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B235200E20760072E484 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F239826D200F8976003A0BBC /* KeyboardHEX.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardHEX.xib; sourceTree = "<group>"; };
 		F297B22E200E20750072E484 /* Hexastar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hexastar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F297B231200E20750072E484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F297B233200E20760072E484 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				F297B231200E20750072E484 /* AppDelegate.swift */,
 				F297B233200E20760072E484 /* ViewController.swift */,
 				F297B235200E20760072E484 /* Main.storyboard */,
+				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
 				F297B238200E20760072E484 /* Assets.xcassets */,
 				F297B23A200E20760072E484 /* LaunchScreen.storyboard */,
 				F297B23D200E20760072E484 /* Info.plist */,
@@ -125,6 +128,7 @@
 			files = (
 				F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */,
 				F297B239200E20760072E484 /* Assets.xcassets in Resources */,
+				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
 				F297B237200E20760072E484 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

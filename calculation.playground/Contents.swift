@@ -3,7 +3,7 @@ import Foundation
 var myUni = UInt64()
 var multiUni = String()
 var printStringHex = String()
-myUni = 74
+myUni = 9999999999999999999
 func hexConv() -> (String) {
      var hex = String()
 while myUni > 0 {
@@ -39,11 +39,11 @@ if myUni > 0 {
 }
 print(multiUni)
 //hex to decimal
-var hexStr = "10fFFF"
+var hexStr = "111111ABCDEFEDCB"
 func decimalConv() -> (String) {
 var hexArray = [Character]()
-var hexArrayInt = [Int]()
-var decimal = [Int]()
+var hexArrayInt = [UInt64]()
+var decimal = [UInt64]()
 for char in hexStr {
     hexArray.append(char)
 }
@@ -70,7 +70,7 @@ for i in hexArray {
 }
 var decArr = Array(hexArrayInt.reversed())
 for i in 0...decArr.count - 1 {
-    decimal.append(decArr[i] * Int(pow(16, Double(i))))
+    decimal.append(decArr[i] * UInt64(pow(16, Double(i))))
 }
     return String(Int(decimal.reduce(0, +)))
 }
