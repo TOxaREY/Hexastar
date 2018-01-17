@@ -14,6 +14,7 @@
 		F297B239200E20760072E484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F297B238200E20760072E484 /* Assets.xcassets */; };
 		F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B23A200E20760072E484 /* LaunchScreen.storyboard */; };
 		F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F2B10B3E200FAB36003DD679 /* STARWARS.TTF */; };
+		F2EE6FD6200FC39900134DDE /* KeyboardHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F297B23B200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F297B23D200E20760072E484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
+		F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHEX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F297B233200E20760072E484 /* ViewController.swift */,
 				F297B235200E20760072E484 /* Main.storyboard */,
 				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
+				F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */,
 				F297B238200E20760072E484 /* Assets.xcassets */,
 				F297B23A200E20760072E484 /* LaunchScreen.storyboard */,
 				F297B23D200E20760072E484 /* Info.plist */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2EE6FD6200FC39900134DDE /* KeyboardHEX.swift in Sources */,
 				F297B234200E20760072E484 /* ViewController.swift in Sources */,
 				F297B232200E20750072E484 /* AppDelegate.swift in Sources */,
 			);
