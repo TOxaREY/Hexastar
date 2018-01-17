@@ -13,6 +13,7 @@
 		F297B237200E20760072E484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B235200E20760072E484 /* Main.storyboard */; };
 		F297B239200E20760072E484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F297B238200E20760072E484 /* Assets.xcassets */; };
 		F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B23A200E20760072E484 /* LaunchScreen.storyboard */; };
+		F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F2B10B3E200FAB36003DD679 /* STARWARS.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F297B238200E20760072E484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F297B23B200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F297B23D200E20760072E484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		F297B230200E20750072E484 /* Hexastar */ = {
 			isa = PBXGroup;
 			children = (
+				F2B10B3E200FAB36003DD679 /* STARWARS.TTF */,
 				F297B231200E20750072E484 /* AppDelegate.swift */,
 				F297B233200E20760072E484 /* ViewController.swift */,
 				F297B235200E20760072E484 /* Main.storyboard */,
@@ -128,6 +131,7 @@
 			files = (
 				F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */,
 				F297B239200E20760072E484 /* Assets.xcassets in Resources */,
+				F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */,
 				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
 				F297B237200E20760072E484 /* Main.storyboard in Resources */,
 			);
