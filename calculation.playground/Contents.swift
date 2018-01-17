@@ -3,7 +3,7 @@ import Foundation
 var myUni = UInt64()
 var multiUni = String()
 var printStringHex = String()
-myUni = 9999999999999999999
+myUni = 74
 func hexConv() -> (String) {
      var hex = String()
 while myUni > 0 {

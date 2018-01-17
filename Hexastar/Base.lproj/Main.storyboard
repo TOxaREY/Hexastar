@@ -29,7 +29,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ZRY-PO-iSW"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.91764705882352937" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.90980392156862744" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>

@@ -1,6 +1,6 @@
 import UIKit
 import Foundation
-let myString = "-"
+let myString = "🇺🇦"
 var myUni = [UInt32]()
 var myUnic = [UInt32]()
 var multiUni = [String]()
@@ -47,7 +47,7 @@ while myUni.count > 0 {
 //}
 //print(printStringHex)
 //hex to decimal
-multiUni = ["1F1FA","1F1E6"]
+multiUni = ["4A"]
 var multiDec = [String]()
 var multiDecString = [String]()
 var hexStr = ""
