@@ -14,7 +14,7 @@ protocol KeyboardDelegate: class {
     func keyWasTapped(character: String)
 }
 
-class Keyboard: UIView {
+class KeyboardHex: UIView {
     
     weak var delegate: KeyboardDelegate?
     required init?(coder aDecoder: NSCoder) {

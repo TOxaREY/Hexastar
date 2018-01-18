@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,6 +13,9 @@
         <array key="STARWARS.TTF">
             <string>STARWARS</string>
         </array>
+        <array key="Starjout.ttf">
+            <string>StarJediOutline</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -20,11 +23,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hexastar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nir-cS-6Xf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hexadecimal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
+                                        <rect key="frame" x="46" y="20.5" width="228" height="48"/>
+                                        <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="30"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88627450980392153" green="0.0078431372549019607" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="SPf-lq-OZQ"/>
+                                    <constraint firstItem="mut-tC-wbi" firstAttribute="centerY" secondItem="Nir-cS-6Xf" secondAttribute="centerY" constant="12" id="TzQ-34-AoF"/>
+                                    <constraint firstItem="mut-tC-wbi" firstAttribute="centerX" secondItem="Nir-cS-6Xf" secondAttribute="centerX" id="cro-zv-zuh"/>
+                                </constraints>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p">
-                                <rect key="frame" x="107" y="112" width="200" height="30"/>
+                                <rect key="frame" x="60" y="112" width="200" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ZRY-PO-iSW"/>
@@ -37,12 +57,15 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q8Z-hz-N0p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LoQ-oD-cS3"/>
+                            <constraint firstItem="Nir-cS-6Xf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VRZ-3A-JyM"/>
                             <constraint firstItem="Q8Z-hz-N0p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="c6E-ch-vZl"/>
+                            <constraint firstItem="Nir-cS-6Xf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qig-p2-f41"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nir-cS-6Xf" secondAttribute="trailing" id="qni-yQ-0xw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="Q8Z-hz-N0p" id="FTk-XG-cnf"/>
+                        <outlet property="textFieldHex" destination="Q8Z-hz-N0p" id="ooy-II-Qyo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

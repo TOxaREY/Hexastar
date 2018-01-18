@@ -9,27 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController, KeyboardDelegate {
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textFieldHex: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let keyboardView = Keyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 246))
-        keyboardView.delegate = self
-        textField.inputView = keyboardView
+        
+//// KeyboardHEX
+        let keyboardViewHex = KeyboardHex(frame: CGRect(x: 0, y: 0, width: 0, height: 246))
+        keyboardViewHex.delegate = self
+        textFieldHex.inputView = keyboardViewHex
     }
     func keyWasTapped(character: String) {
-        if character == "delete" && (textField.text?.isEmpty)! == true {
-            textField.text? = ""
+        if character == "delete" && (textFieldHex.text?.isEmpty)! == true {
+            textFieldHex.text? = ""
         } else {
             if character == "delete" {
-                textField.text?.removeLast()
+                textFieldHex.text?.removeLast()
             } else {
-                textField.insertText(character)
+                textFieldHex.insertText(character)
             }
         }
     }
-    
-    // кнопка перехода на Binatrix
+////
+//// Button transition Binatrix
     //        @IBAction func binatrixButton(_ sender: Any) {
     //            let appURL = NSURL(string: "binatrixHexastar://")!
     //            let webURL = NSURL(string: "https://itunes.apple.com/ru/app/binatrix/id1296545616")!
@@ -40,8 +42,15 @@ class ViewController: UIViewController, KeyboardDelegate {
     //            } else {
     //                application.open(webURL as URL)
     //            }
-    //    }
-    
+////           }
+//// Touche screen off keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (touches.first) != nil {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches, with: event)
+    }
+////
     
 }
 
