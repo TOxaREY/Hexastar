@@ -7,7 +7,18 @@
 //
 
 import UIKit
-
+//// Check height device
+public var screenHeight: CGFloat {
+    return UIScreen.main.bounds.height
+}
+func heightKeyboard() -> Int {
+    if screenHeight == 812 {
+        return 222
+    } else {
+        return Int(screenHeight / 3)
+    }
+}
+////
 class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var textFieldHex: UITextField!
     
@@ -15,7 +26,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         super.viewDidLoad()
         
 //// KeyboardHEX
-        let keyboardViewHex = KeyboardHex(frame: CGRect(x: 0, y: 0, width: 0, height: 246))
+        let keyboardViewHex = KeyboardHex(frame: CGRect(x: 0, y: 0, width: 0, height: Int(heightKeyboard())))
         keyboardViewHex.delegate = self
         textFieldHex.inputView = keyboardViewHex
     }
