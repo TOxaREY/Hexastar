@@ -2,7 +2,6 @@ import UIKit
 import Foundation
 var myUni = UInt64()
 var multiUni = String()
-var printStringHex = String()
 myUni = 74
 func hexConv() -> (String) {
      var hex = String()
