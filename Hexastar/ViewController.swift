@@ -24,7 +24,12 @@ class ViewController: UIViewController, KeyboardDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(screenHeight)
+       
+        
+        
+        
+        
+        
 //// KeyboardHEX
         let keyboardViewHex = KeyboardHex(frame: CGRect(x: 0, y: 0, width: 0, height: Int(heightKeyboard())))
         keyboardViewHex.delegate = self
