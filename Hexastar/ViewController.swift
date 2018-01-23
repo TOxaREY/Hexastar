@@ -20,7 +20,7 @@ func heightKeyboard() -> Int {
     }
 }
 ////
-class ViewController: UIViewController, KeyboardDelegate {
+class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, KeyboardDelegate3 {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var leftKey: UIButton!
@@ -29,6 +29,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Нажатие меняет заголовок
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         labelTitleTap()
+        keyboardOff()
     }
     var tap = 0
     func labelTitleTap() {
@@ -57,27 +58,29 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
 //// Нажатие кнопок
     @IBAction func leftPush(_ sender: UIButton) {
+        textField.isEnabled = true
         rightKey.isSelected = false
         leftKey.isSelected = true
         textField.text = ""
         view.endEditing(true)
         switch labelTitle.text {
-        case "hexadecimal"?: leftButtonDecHex()
-        case "octal"?: leftButtonDecOct()
-        case "decimal"?: leftButtonHexDec()
+        case "hexadecimal"?: keyboardDec(); leftButtonDecHex()
+        case "octal"?: keyboardDec(); leftButtonDecOct()
+        case "decimal"?: keyboardHex(); leftButtonHexDec()
         default:
             break
         }
     }
     @IBAction func rightPush(_ sender: UIButton) {
+        textField.isEnabled = true
         leftKey.isSelected = false
         rightKey.isSelected = true
         textField.text = ""
         view.endEditing(true)
         switch labelTitle.text {
-        case "hexadecimal"?: rightButtonOctHex()
-        case "octal"?: rightButtonHexOct()
-        case "decimal"?: rightButtonOctDec()
+        case "hexadecimal"?: keyboardOct(); rightButtonOctHex()
+        case "octal"?: keyboardHex(); rightButtonHexOct()
+        case "decimal"?: keyboardOct(); rightButtonOctDec()
         default:
             break
         }
@@ -155,6 +158,12 @@ class ViewController: UIViewController, KeyboardDelegate {
         rightKey.isSelected = false
     }
 ////
+//// Выключение кейборда при ненажатых кнопках
+    func keyboardOff() {
+        if leftKey.isSelected == false && rightKey.isSelected == false {
+            textField.isEnabled = false
+        }
+    }
 //// Функция показа клавиш
     func keyWasTapped(character: String) {
         if character == "delete" && (textField.text?.isEmpty)! == true {
@@ -168,17 +177,31 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
+//// Keyboards
+    func keyboardHex() {
+        let keyboardViewHex = KeyboardHex(frame: CGRect(x: 0, y: 0, width: 0, height: Int(heightKeyboard())))
+        keyboardViewHex.delegate = self
+        textField.inputView = keyboardViewHex
+    }
+    func keyboardDec() {
+        let keyboardViewDec = KeyboardDec(frame: CGRect(x: 0, y: 0, width: 0, height: Int(heightKeyboard())))
+        keyboardViewDec.delegate = self
+        textField.inputView = keyboardViewDec
+    }
+    func keyboardOct() {
+        let keyboardViewOct = KeyboardOct(frame: CGRect(x: 0, y: 0, width: 0, height: Int(heightKeyboard())))
+        keyboardViewOct.delegate = self
+        textField.inputView = keyboardViewOct
+    }
+    
+////
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         labelTitleTap()
         labelButton()
-       
-//// KeyboardHEX внутри viewLoad
-        let keyboardViewHex = KeyboardHex(frame: CGRect(x: 0, y: 0, width: 0, height: Int(heightKeyboard())))
-        keyboardViewHex.delegate = self
-        textField.inputView = keyboardViewHex
-        
-////
+        keyboardOff()
+
     }
 //// Кнопка перехода в другую программу
     //        @IBAction func binatrixButton(_ sender: Any) {

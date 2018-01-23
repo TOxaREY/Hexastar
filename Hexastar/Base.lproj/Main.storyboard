@@ -68,7 +68,7 @@
                                         </constraints>
                                         <color key="textColor" red="1" green="0.90980392156862744" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="inputTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="5NA-8u-ZA1"/>
                                         </connections>
