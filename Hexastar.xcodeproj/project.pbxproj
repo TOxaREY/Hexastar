@@ -16,7 +16,6 @@
 		F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B23A200E20760072E484 /* LaunchScreen.storyboard */; };
 		F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F2B10B3E200FAB36003DD679 /* STARWARS.TTF */; };
 		F2EE6FD6200FC39900134DDE /* KeyboardHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */; };
-		F2FC35A92010DEA600C6B9CB /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2FC35A82010DEA100C6B9CB /* Starjedi.ttf */; };
 		F2FC35AB2010E02200C6B9CB /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2FC35AA2010E01500C6B9CB /* Starjout.ttf */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		F297B23D200E20760072E484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
 		F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHEX.swift; sourceTree = "<group>"; };
-		F2FC35A82010DEA100C6B9CB /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
 		F2FC35AA2010E01500C6B9CB /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +66,6 @@
 			children = (
 				F2B10B3E200FAB36003DD679 /* STARWARS.TTF */,
 				F25A00402010B12900EDFEAF /* Starjhol.ttf */,
-				F2FC35A82010DEA100C6B9CB /* Starjedi.ttf */,
 				F2FC35AA2010E01500C6B9CB /* Starjout.ttf */,
 				F297B231200E20750072E484 /* AppDelegate.swift */,
 				F297B233200E20760072E484 /* ViewController.swift */,
@@ -147,7 +144,6 @@
 				F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */,
 				F2FC35AB2010E02200C6B9CB /* Starjout.ttf in Resources */,
 				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
-				F2FC35A92010DEA600C6B9CB /* Starjedi.ttf in Resources */,
 				F297B237200E20760072E484 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

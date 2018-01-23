@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var textF: UITextField!
-    @IBOutlet weak var labelF: UILabel!
+    @IBOutlet weak var labelRes: UILabel!
     @IBOutlet weak var leftKey: UIButton!
     @IBOutlet weak var rightKey: UIButton!
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
@@ -77,59 +77,59 @@ class ViewController: UIViewController {
     func leftButtonDecHex () {
         if textF.text?.count != 0 {
             if leftKey.isSelected == true {
-                labelF.text = "Dec to Hex"
+                labelRes.text = "Dec to Hex"
             }
         } else {
-            labelF.text = ""
+            labelRes.text = ""
         }
     }
     func rightButtonOctHex () {
         if textF.text?.count != 0 {
             if rightKey.isSelected == true {
-                labelF.text = "Oct to Hex"
+                labelRes.text = "Oct to Hex"
             }
         } else {
-            labelF.text = ""
+            labelRes.text = ""
         }
     }
     func leftButtonDecOct () {
         if textF.text?.count != 0 {
             if leftKey.isSelected == true {
-                labelF.text = "Dec to Oct"
+                labelRes.text = "Dec to Oct"
             }
         } else {
-            labelF.text = ""
+            labelRes.text = ""
         }
     }
     func rightButtonHexOct () {
         if textF.text?.count != 0 {
             if rightKey.isSelected == true {
-                labelF.text = "Hex to Oct"
+                labelRes.text = "Hex to Oct"
             }
         } else {
-            labelF.text = ""
+            labelRes.text = ""
         }
     }
     func leftButtonHexDec () {
         if textF.text?.count != 0 {
             if leftKey.isSelected == true {
-                labelF.text = "Hex to Dec"
+                labelRes.text = "Hex to Dec"
             }
         } else {
-            labelF.text = ""
+            labelRes.text = ""
         }
     }
     func rightButtonOctDec () {
         if textF.text?.count != 0 {
             if rightKey.isSelected == true {
-                labelF.text = "Oct to Dec"
+                labelRes.text = "Oct to Dec"
             }
         } else {
-            labelF.text = ""
+            labelRes.text = ""
         }
     }
     func selectOff() {
-        labelF.text = ""
+        labelRes.text = ""
         leftKey.isSelected = false
         rightKey.isSelected = false
     }

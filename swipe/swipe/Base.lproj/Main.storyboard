@@ -101,7 +101,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="labelF" destination="XAo-dJ-x0I" id="sEF-m2-CLW"/>
+                        <outlet property="labelRes" destination="XAo-dJ-x0I" id="gLu-Jc-c4G"/>
                         <outlet property="labelTitle" destination="bZy-W4-IvV" id="RIb-ot-9cp"/>
                         <outlet property="leftKey" destination="jiQ-eM-nYB" id="fSu-he-k24"/>
                         <outlet property="rightKey" destination="cb3-Z3-gua" id="pcm-mS-VCx"/>
