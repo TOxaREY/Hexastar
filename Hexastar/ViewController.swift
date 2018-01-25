@@ -8,6 +8,32 @@
 
 import UIKit
 import Foundation
+//// Мигание йоды и надписи
+extension UIImageView {
+    func flash() {
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 1
+        flash.fromValue = 1
+        flash.toValue = 0
+        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = 1000000
+        layer.add(flash, forKey: nil)
+    }
+}
+extension UILabel{
+    func flash() {
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 1
+        flash.fromValue = 1
+        flash.toValue = 0.2
+        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = 1000000
+        layer.add(flash, forKey: nil)
+    }
+}
+////
 //// Определение высоты девайса
 public var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
@@ -26,6 +52,8 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var leftKey: UIButton!
     @IBOutlet weak var rightKey: UIButton!
     @IBOutlet weak var labelRes: UILabel!
+    @IBOutlet weak var leftYoda: UIImageView!
+    @IBOutlet weak var rightYoda: UIImageView!
 //// Нажатие меняет заголовок
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         labelTitleTap()
@@ -45,6 +73,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         view.endEditing(true)
         selectOff()
         labelButton()
+        labelTitle.flash()
     }
 ////
 //// Надпись на кнопке в зависисмоти от заголовка
@@ -221,7 +250,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelTitleTap()
         labelButton()
         keyboardOff()
-      
+        leftYoda.flash()
+        rightYoda.flash()
     }
 //// Кнопка перехода в другую программу
     //        @IBAction func binatrixButton(_ sender: Any) {
