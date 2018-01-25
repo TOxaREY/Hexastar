@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,6 +14,9 @@
         <array key="STARWARS.TTF">
             <string>STARWARS</string>
         </array>
+        <array key="Starjhol.ttf">
+            <string>StarJediHollow</string>
+        </array>
         <array key="Starjout.ttf">
             <string>StarJediOutline</string>
         </array>
@@ -24,27 +27,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hexastar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nir-cS-6Xf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <rect key="frame" x="-0.66666666666665719" y="0.0" width="375.66666666666663" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hexadecimal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="46" y="20" width="228" height="48"/>
+                                        <rect key="frame" x="74.333333333333343" y="20" width="228.00000000000003" height="48"/>
                                         <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yoda_5_render_by_aracnify-d9313br" translatesAutoresizingMaskIntoConstraints="NO" id="zVz-ye-iBY">
-                                        <rect key="frame" x="0.0" y="34" width="46" height="30"/>
+                                        <rect key="frame" x="28.333333333333336" y="34" width="46.000000000000007" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zVz-ye-iBY" secondAttribute="height" multiplier="46:30" id="CfP-I8-rYr"/>
                                             <constraint firstAttribute="height" constant="30" id="Iwz-W6-rPs"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Yoda_5_render_by_aracnify-d9313br2 копия" translatesAutoresizingMaskIntoConstraints="NO" id="DVL-Cw-9eX">
-                                        <rect key="frame" x="274" y="34" width="46" height="30"/>
+                                        <rect key="frame" x="302.33333333333337" y="34" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DVL-Cw-9eX" secondAttribute="height" multiplier="46:30" id="FSE-EP-HNr"/>
                                             <constraint firstAttribute="height" constant="30" id="c0U-Tx-6IO"/>
@@ -67,19 +70,19 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D4-2p-BDI">
-                                <rect key="frame" x="0.0" y="64" width="320" height="331"/>
+                                <rect key="frame" x="-0.66666666666665719" y="64.000000000000028" width="375.66666666666663" height="510.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-Bp-TF3">
-                                        <rect key="frame" x="0.0" y="65" width="320" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375.33333333333331" height="224"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="FHF-Up-DgF"/>
+                                            <constraint firstAttribute="height" constant="224" id="FHF-Up-DgF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p">
-                                        <rect key="frame" x="60" y="201" width="200" height="30"/>
+                                        <rect key="frame" x="88.333333333333343" y="380.66666666666669" width="200.00000000000003" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ZRY-PO-iSW"/>
@@ -92,15 +95,19 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1J-N7-F90">
-                                        <rect key="frame" x="0.0" y="284" width="160" height="46.5"/>
-                                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="455.66666666666663" width="188" height="54.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="StarJediHollow" family="Star Jedi Hollow" pointSize="30"/>
+                                        <color key="tintColor" red="0.49019607900000001" green="0.8627451062" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="leftPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oXW-7l-jF7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Z-Pr-kgR">
-                                        <rect key="frame" x="160" y="284" width="160" height="47"/>
-                                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="188" y="455.66666666666663" width="187.33333333333337" height="55"/>
+                                        <fontDescription key="fontDescription" name="StarJediHollow" family="Star Jedi Hollow" pointSize="17"/>
                                         <connections>
                                             <action selector="rightPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5f-bT-lSb"/>
                                         </connections>
@@ -108,7 +115,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="A0Z-Pr-kgR" secondAttribute="trailing" id="66m-cw-UiH"/>
-                                    <constraint firstItem="yAb-Bp-TF3" firstAttribute="top" secondItem="0D4-2p-BDI" secondAttribute="top" constant="65" id="DuZ-Pb-MzM"/>
+                                    <constraint firstItem="yAb-Bp-TF3" firstAttribute="top" secondItem="0D4-2p-BDI" secondAttribute="top" id="DuZ-Pb-MzM"/>
                                     <constraint firstItem="s1J-N7-F90" firstAttribute="width" secondItem="A0Z-Pr-kgR" secondAttribute="width" id="J5Z-B3-Sfi"/>
                                     <constraint firstAttribute="bottom" secondItem="A0Z-Pr-kgR" secondAttribute="bottom" id="LLW-wR-49r"/>
                                     <constraint firstItem="yAb-Bp-TF3" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="MZE-Cf-JgG"/>
@@ -124,7 +131,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BT-gf-V2s">
-                                <rect key="frame" x="0.0" y="395" width="320" height="173"/>
+                                <rect key="frame" x="-0.66666666666665719" y="574.66666666666663" width="375.66666666666663" height="203.33333333333337"/>
                                 <color key="backgroundColor" red="0.49019607900000001" green="0.8627451062" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2BT-gf-V2s" secondAttribute="height" multiplier="414:224" id="969-0o-SDW"/>
