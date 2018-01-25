@@ -1,16 +1,12 @@
 import UIKit
 import Foundation
 //decimal to hex
-var inputDecDouble = Double()
-inputDecDouble = 1515.55514
-var inputDecInt = UInt64(inputDecDouble)
-var countDecInt = String(inputDecInt).count
-var countFrac = 50 - countDecInt
-var y = 0
-var inputDecFrac = inputDecDouble - Double(inputDecInt)
-var outputHex = String()
-var outputHexFrac = String()
-var outHexTotal = String()
+var inputDecString = "9999"
+var inputDecDouble = Double(inputDecString)
+var inputDecInt = UInt64(inputDecDouble!)
+
+
+
 
 func decHexConv() -> (String) {
      var hexStringTemp = String()
@@ -40,15 +36,23 @@ default: break
         let hexStringTempRev = Array(hexStringTemp.reversed())
         return hexStringTempRev.flatMap{String($0)}.joined()
     }
-if inputDecInt > 0 {
-    outputHex.append(decHexConv())
-} else {
-    outputHex = "0"
+func outputHexFunc() -> (String) {
+    var outputHex = String()
+    if inputDecInt > 0 {
+        outputHex.append(decHexConv())
+    } else {
+        outputHex = "0"
+    }
+    return outputHex
 }
 
 // Frac
 func decHexFracConv() -> (String) {
-   var hexStringFracTemp = String()
+    var hexStringFracTemp = String()
+    let countDecInt = String(inputDecInt).count
+    let countFrac = 50 - countDecInt
+    var y = 0
+    var inputDecFrac = inputDecDouble! - Double(inputDecInt)
     while inputDecFrac != 0 && y != countFrac {
         switch UInt64(inputDecFrac * 16) {
         case 16 : hexStringFracTemp.append("10")
@@ -75,13 +79,22 @@ func decHexFracConv() -> (String) {
     }
     return hexStringFracTemp
 }
-outputHexFrac = decHexFracConv()
+func decHexFuncTotal() -> (String) {
+    let outputHexFrac = decHexFracConv()
+    let outputHexInt = outputHexFunc()
+    var outHexTotal  = String()
+    if outputHexFrac.count != 0 {
+        outHexTotal = outputHexInt + "." + outputHexFrac
+    } else {
+        outHexTotal = outputHexInt
+    }
+    return outHexTotal
+}
 
-outHexTotal = outputHex + "." + outputHexFrac
-//print(outHexTotal)
+print(decHexFuncTotal())
 
 //hex to decimal
-var inputHexString = "FFFFFFFFFFF.FF"
+var inputHexString = "F.0"
 var outputDec = String()
 
 func hexDecConv() -> (String) {
@@ -137,6 +150,6 @@ for i in 0...decArrayIntTempRev.count - 1 {
 }
     outputDec = hexDecConv()
 
-print(outputDec)
+//print(outputDec)
 
 

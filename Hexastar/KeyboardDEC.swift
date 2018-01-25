@@ -10,13 +10,9 @@ import Foundation
 import UIKit
 
 
-protocol KeyboardDelegate2: class {
-    func keyWasTapped(character: String)
-}
-
 class KeyboardDec: UIView {
     
-    weak var delegate: KeyboardDelegate2?
+    weak var delegate: KeyboardDelegate?
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initializeSubviews()

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Foundation
 //// Определение высоты девайса
 public var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
@@ -20,7 +20,7 @@ func heightKeyboard() -> Int {
     }
 }
 ////
-class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, KeyboardDelegate3 {
+class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var leftKey: UIButton!
@@ -56,17 +56,19 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
         default: break
         }
     }
+////
 //// Нажатие кнопок
     @IBAction func leftPush(_ sender: UIButton) {
         textField.isEnabled = true
         rightKey.isSelected = false
         leftKey.isSelected = true
         textField.text = ""
+        labelRes.text = ""
         view.endEditing(true)
         switch labelTitle.text {
-        case "hexadecimal"?: keyboardDec(); leftButtonDecHex()
-        case "octal"?: keyboardDec(); leftButtonDecOct()
-        case "decimal"?: keyboardHex(); leftButtonHexDec()
+        case "hexadecimal"?: keyboardDec()
+        case "octal"?: keyboardDec()
+        case "decimal"?: keyboardHex()
         default:
             break
         }
@@ -76,19 +78,22 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
         leftKey.isSelected = false
         rightKey.isSelected = true
         textField.text = ""
+        labelRes.text = ""
         view.endEditing(true)
         switch labelTitle.text {
-        case "hexadecimal"?: keyboardOct(); rightButtonOctHex()
-        case "octal"?: keyboardHex(); rightButtonHexOct()
-        case "decimal"?: keyboardOct(); rightButtonOctDec()
+        case "hexadecimal"?: keyboardOct()
+        case "octal"?: keyboardHex()
+        case "decimal"?: keyboardOct()
         default:
             break
         }
     }
 ////
 //// Поле ввода зависимость от заголовка выдает направление конвертирования
-    
-    @IBAction func inputTextField(_ sender: UITextField) {
+    @IBAction func inputTextField(_ sender: Any) {
+        if textField.text!.count > 13 {
+            textField.text?.removeLast()
+        }
         switch labelTitle.text {
         case "hexadecimal"?: leftButtonDecHex(); rightButtonOctHex()
         case "octal"?: leftButtonDecOct(); rightButtonHexOct()
@@ -99,7 +104,8 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
     func leftButtonDecHex () {
         if textField.text?.count != 0 {
             if leftKey.isSelected == true {
-                labelRes.text = "Dec to Hex"
+                decHexCalc.inputDecString = textField.text!
+                labelRes.text = decHexCalc.decHexFuncTotal()
             }
         } else {
             labelRes.text = ""
@@ -108,7 +114,9 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
     func rightButtonOctHex () {
         if textField.text?.count != 0 {
             if rightKey.isSelected == true {
-                labelRes.text = "Oct to Hex"
+                octDecCalc.inputOctString = textField.text!
+                decHexCalc.inputDecString = octDecCalc.octDecConv()
+                labelRes.text = decHexCalc.decHexFuncTotal()
             }
         } else {
             labelRes.text = ""
@@ -117,7 +125,8 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
     func leftButtonDecOct () {
         if textField.text?.count != 0 {
             if leftKey.isSelected == true {
-                labelRes.text = "Dec to Oct"
+                decOctCalc.inputDecString = textField.text!
+                labelRes.text = decOctCalc.decOctFuncTotal()
             }
         } else {
             labelRes.text = ""
@@ -126,7 +135,9 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
     func rightButtonHexOct () {
         if textField.text?.count != 0 {
             if rightKey.isSelected == true {
-                labelRes.text = "Hex to Oct"
+                hexDecCalc.inputHexString = textField.text!
+                decOctCalc.inputDecString = hexDecCalc.hexDecConv()
+                labelRes.text = decOctCalc.decOctFuncTotal()
             }
         } else {
             labelRes.text = ""
@@ -135,7 +146,8 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
     func leftButtonHexDec () {
         if textField.text?.count != 0 {
             if leftKey.isSelected == true {
-                labelRes.text = "Hex to Dec"
+                hexDecCalc.inputHexString = textField.text!
+                labelRes.text = hexDecCalc.hexDecConv()
             }
         } else {
             labelRes.text = ""
@@ -144,7 +156,8 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
     func rightButtonOctDec () {
         if textField.text?.count != 0 {
             if rightKey.isSelected == true {
-                labelRes.text = "Oct to Dec"
+                octDecCalc.inputOctString = textField.text!
+                labelRes.text = octDecCalc.octDecConv()
             }
         } else {
             labelRes.text = ""
@@ -164,13 +177,13 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
             textField.isEnabled = false
         }
     }
-//// Функция показа клавиш
+//// Функция показа клавиш удаление бэкфордом!!!
     func keyWasTapped(character: String) {
         if character == "delete" && (textField.text?.isEmpty)! == true {
             textField.text? = ""
         } else {
             if character == "delete" {
-                textField.text?.removeLast()
+                textField.deleteBackward()
             } else {
                 textField.insertText(character)
             }
@@ -195,13 +208,20 @@ class ViewController: UIViewController, KeyboardDelegate, KeyboardDelegate2, Key
     }
     
 ////
+//// Классы
+    var decHexCalc = DecHexCalc()
+    var hexDecCalc = HexDecCalc()
+    var decOctCalc = DecOctCalc()
+    var octDecCalc = OctDecCalc()
+////
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         labelTitleTap()
         labelButton()
         keyboardOff()
-
+      
     }
 //// Кнопка перехода в другую программу
     //        @IBAction func binatrixButton(_ sender: Any) {
