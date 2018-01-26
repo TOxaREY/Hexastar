@@ -8,25 +8,13 @@
 
 import UIKit
 import Foundation
-//// Мигание йоды и надписи
+//// Мигание йоды
 extension UIImageView {
     func flash() {
         let flash = CABasicAnimation(keyPath: "opacity")
         flash.duration = 1
         flash.fromValue = 1
         flash.toValue = 0
-        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        flash.autoreverses = true
-        flash.repeatCount = 1000000
-        layer.add(flash, forKey: nil)
-    }
-}
-extension UILabel{
-    func flash() {
-        let flash = CABasicAnimation(keyPath: "opacity")
-        flash.duration = 1
-        flash.fromValue = 1
-        flash.toValue = 0.2
         flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         flash.autoreverses = true
         flash.repeatCount = 1000000
@@ -47,6 +35,14 @@ func heightKeyboard() -> Int {
 }
 ////
 class ViewController: UIViewController, KeyboardDelegate {
+//// Блокировка поворота
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+////
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var leftKey: UIButton!
@@ -54,6 +50,20 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var labelRes: UILabel!
     @IBOutlet weak var leftYoda: UIImageView!
     @IBOutlet weak var rightYoda: UIImageView!
+
+//// Положение поля ввода
+    func constraintTextField() {
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        switch screenHeight {
+        case 736: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -127).isActive = true
+        case 812: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -166).isActive = true
+        case 667: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -111).isActive = true
+        case 568: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -87).isActive = true
+        default: break
+        }
+         textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -87).isActive = true
+    }
+////
 //// Нажатие меняет заголовок
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         labelTitleTap()
@@ -73,7 +83,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         view.endEditing(true)
         selectOff()
         labelButton()
-        labelTitle.flash()
     }
 ////
 //// Надпись на кнопке в зависисмоти от заголовка
@@ -252,6 +261,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         keyboardOff()
         leftYoda.flash()
         rightYoda.flash()
+        constraintTextField()
     }
 //// Кнопка перехода в другую программу
     //        @IBAction func binatrixButton(_ sender: Any) {
