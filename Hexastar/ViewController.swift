@@ -22,6 +22,18 @@ extension UIImageView {
         layer.add(flash, forKey: nil)
     }
 }
+extension UILabel {
+    func flash() {
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 3
+        flash.fromValue = 1
+        flash.toValue = 0.3
+        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = 1000000
+        layer.add(flash, forKey: nil)
+    }
+}
 ////
 //// Определение высоты девайса
 public var screenHeight: CGFloat {
@@ -53,6 +65,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var rightYoda: UIImageView!
 //// Две точки
     func dotta() {
+        if textField.text?.count != 0 {
         let startIndex = textField.text?.startIndex
         if textField.text![startIndex!] == "." {
             textField.text?.removeLast()
@@ -66,6 +79,7 @@ class ViewController: UIViewController, KeyboardDelegate {
                 ((textField.text)!).removeLast()
             }
         }
+      }
     }
 ////
 //// Положение поля ввода
@@ -91,9 +105,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         let fontTitle = UIFont(name: "StarJediOutline", size: 30.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: fontTitle]
         switch tap {
-        case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("hexadecimal", comment: "hexadecimal") , attributes: attributes); tap += 1
-        case 1: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("octal", comment: "octal") , attributes: attributes); tap += 1
-        case 2: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("decimal", comment: "decimal") , attributes: attributes); tap = 0
+        case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("hexadecimal", comment: "hexadecimal") , attributes: attributes); tap += 1; placeHoldersTitle()
+        case 1: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("octal", comment: "octal") , attributes: attributes); tap += 1; placeHoldersTitle()
+        case 2: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("decimal", comment: "decimal") , attributes: attributes); tap = 0; placeHoldersTitle()
         default: break
         }
         textField.text = ""
@@ -105,9 +119,9 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Надпись на кнопке в зависисмоти от заголовка
     func labelButton() {
         switch labelTitle.text {
-        case "hexadecimal"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
-        case "octal"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("HEX", for: UIControlState.normal)
-        case "decimal"?: leftKey.setTitle("HEX", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
+        case "hexadecimal"?: leftKey.setTitle("dec", for: UIControlState.normal); rightKey.setTitle("oct", for: UIControlState.normal)
+        case "octal"?: leftKey.setTitle("dec", for: UIControlState.normal); rightKey.setTitle("hex", for: UIControlState.normal)
+        case "decimal"?: leftKey.setTitle("hex", for: UIControlState.normal); rightKey.setTitle("oct", for: UIControlState.normal)
         default: break
         }
     }
@@ -121,9 +135,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelRes.text = ""
         view.endEditing(true)
         switch labelTitle.text {
-        case "hexadecimal"?: keyboardDec()
-        case "octal"?: keyboardDec()
-        case "decimal"?: keyboardHex()
+        case "hexadecimal"?: keyboardDec(); placeHoldersDec()
+        case "octal"?: keyboardDec(); placeHoldersDec()
+        case "decimal"?: keyboardHex(); placeHoldersHex()
         default:
             break
         }
@@ -136,15 +150,37 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelRes.text = ""
         view.endEditing(true)
         switch labelTitle.text {
-        case "hexadecimal"?: keyboardOct()
-        case "octal"?: keyboardHex()
-        case "decimal"?: keyboardOct()
+        case "hexadecimal"?: keyboardOct(); placeHoldersOct()
+        case "octal"?: keyboardHex(); placeHoldersHex()
+        case "decimal"?: keyboardOct(); placeHoldersOct()
         default:
             break
         }
     }
 ////
-//// Поле ввода зависимость от заголовка выдает направление конвертирования
+//// Плейсхолдеры
+    func placeHoldersTitle() {
+    let font = UIFont(name: "Menlo", size: 20.0)!
+    let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
+    textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выберите направление конвертации", comment: "select the direction of conversion"), attributes: attributes)
+    }
+    func placeHoldersDec() {
+        let font = UIFont(name: "Menlo", size: 20.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите десятичное число", comment: "enter the decimal number"), attributes: attributes)
+    }
+    func placeHoldersOct() {
+        let font = UIFont(name: "Menlo", size: 20.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите восьмеричное число", comment: "enter the decimal number"), attributes: attributes)
+    }
+    func placeHoldersHex() {
+        let font = UIFont(name: "Menlo", size: 20.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите шестадцатиричное число", comment: "enter the decimal number"), attributes: attributes)
+    }
+////
+//// Поле ввода
     @IBAction func inputTextField(_ sender: Any) {
         dotta()
         if textField.text!.count > 13 {
@@ -274,12 +310,14 @@ class ViewController: UIViewController, KeyboardDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        constraintTextField()
+        labelTitle.flash()
+        leftYoda.flash()
+        rightYoda.flash()
         labelTitleTap()
         labelButton()
         keyboardOff()
-        leftYoda.flash()
-        rightYoda.flash()
-        constraintTextField()
+        placeHoldersTitle()
     }
 //// Кнопка перехода в другую программу
     //        @IBAction func binatrixButton(_ sender: Any) {
