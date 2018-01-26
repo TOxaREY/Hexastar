@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+
 //// Мигание йоды
 extension UIImageView {
     func flash() {
@@ -50,7 +51,19 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var labelRes: UILabel!
     @IBOutlet weak var leftYoda: UIImageView!
     @IBOutlet weak var rightYoda: UIImageView!
-
+//// Две точки
+    func dotta() {
+        var i = 0
+        for character in (textField.text!) {
+            if character == "." || character == "," {
+                i += 1
+            }
+            if i == 2 {
+                ((textField.text)!).removeLast()
+            }
+        }
+    }
+////
 //// Положение поля ввода
     func constraintTextField() {
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -129,6 +142,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Поле ввода зависимость от заголовка выдает направление конвертирования
     @IBAction func inputTextField(_ sender: Any) {
+        dotta()
         if textField.text!.count > 13 {
             textField.text?.removeLast()
         }
