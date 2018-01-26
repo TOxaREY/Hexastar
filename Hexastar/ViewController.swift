@@ -53,6 +53,10 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var rightYoda: UIImageView!
 //// Две точки
     func dotta() {
+        let startIndex = textField.text?.startIndex
+        if textField.text![startIndex!] == "." {
+            textField.text?.removeLast()
+        }
         var i = 0
         for character in (textField.text!) {
             if character == "." || character == "," {
