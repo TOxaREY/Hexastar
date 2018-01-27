@@ -94,12 +94,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Z-Pr-kgR">
                                         <rect key="frame" x="160" y="284.5" width="160" height="46.5"/>
                                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="StarJediHollow" family="Star Jedi Hollow" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="StarJediHollow" family="Star Jedi Hollow" pointSize="30"/>
                                         <connections>
                                             <action selector="rightPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5f-bT-lSb"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p" customClass="NMTextField" customModule="Hexastar" customModuleProvider="target">
                                         <rect key="frame" x="142" y="234.5" width="36" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="textColor" red="1" green="0.90980392156862744" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,6 +109,33 @@
                                             <action selector="inputTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="OV1-nP-hZo"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCZ-da-0Go">
+                                        <rect key="frame" x="20" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Copy"/>
+                                        <connections>
+                                            <action selector="copyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUg-NS-Ikq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-xd-mG9">
+                                        <rect key="frame" x="259" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Paste"/>
+                                        <connections>
+                                            <action selector="pasterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m18-5D-gya"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-Hf-F3y">
+                                        <rect key="frame" x="259" y="131" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oY4-90-Xs8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="A0Z-Pr-kgR" secondAttribute="trailing" id="66m-cw-UiH"/>
@@ -152,10 +179,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="CpE-Hf-F3y" id="1Xn-oi-wsl"/>
+                        <outlet property="copyButton" destination="tCZ-da-0Go" id="4R6-2t-osX"/>
                         <outlet property="labelRes" destination="yAb-Bp-TF3" id="GQ4-gw-Ekq"/>
                         <outlet property="labelTitle" destination="mut-tC-wbi" id="VGn-0x-ewb"/>
                         <outlet property="leftKey" destination="s1J-N7-F90" id="o4E-mh-wwH"/>
                         <outlet property="leftYoda" destination="zVz-ye-iBY" id="19e-LR-XVe"/>
+                        <outlet property="pasteButton" destination="kZe-xd-mG9" id="pp6-HO-B7Y"/>
                         <outlet property="rightKey" destination="A0Z-Pr-kgR" id="Xg4-8W-HFY"/>
                         <outlet property="rightYoda" destination="DVL-Cw-9eX" id="v6f-Y4-Omj"/>
                         <outlet property="textField" destination="Q8Z-hz-N0p" id="lbx-4e-52z"/>

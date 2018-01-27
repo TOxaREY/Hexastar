@@ -22,18 +22,18 @@ extension UIImageView {
         layer.add(flash, forKey: nil)
     }
 }
-extension UILabel {
-    func flash() {
-        let flash = CABasicAnimation(keyPath: "opacity")
-        flash.duration = 3
-        flash.fromValue = 1
-        flash.toValue = 0.3
-        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        flash.autoreverses = true
-        flash.repeatCount = 1000000
-        layer.add(flash, forKey: nil)
-    }
-}
+//extension UILabel {
+//    func flash() {
+//        let flash = CABasicAnimation(keyPath: "opacity")
+//        flash.duration = 3
+//        flash.fromValue = 1
+//        flash.toValue = 0.3
+//        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        flash.autoreverses = true
+//        flash.repeatCount = 1000000
+//        layer.add(flash, forKey: nil)
+//    }
+//}
 ////
 //// Определение высоты девайса
 public var screenHeight: CGFloat {
@@ -47,6 +47,16 @@ func heightKeyboard() -> Int {
     }
 }
 ////
+//// Отключение вставить
+class NMTextField: UITextField {
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        if action == #selector(UIResponderStandardEditActions.paste(_:)) {
+            return false
+        }
+        return super.canPerformAction(action, withSender: sender)
+    }
+}
+////
 class ViewController: UIViewController, KeyboardDelegate {
 //// Блокировка поворота
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -56,6 +66,16 @@ class ViewController: UIViewController, KeyboardDelegate {
         return false
     }
 ////
+    func wrong() {
+          view.endEditing(true)
+        let font = UIFont(name: "Menlo", size: 20.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: font]
+        textField.attributedText = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+            self.textField.text?.removeAll()
+        }
+    }
+
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var leftKey: UIButton!
@@ -63,7 +83,77 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var labelRes: UILabel!
     @IBOutlet weak var leftYoda: UIImageView!
     @IBOutlet weak var rightYoda: UIImageView!
-//// Две точки
+    @IBOutlet weak var copyButton: UIButton!
+    @IBOutlet weak var pasteButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
+    
+    @IBAction func clearButton(_ sender: Any) {
+        textField.text?.removeAll()
+        view.endEditing(true)
+    }
+    @IBAction func copyButton(_ sender: Any) {
+        if labelRes.text?.count != 0 {
+        if labelRes.text!.count > 18 {
+            var labelRes18:String = ""
+            let overCount = labelRes.text!.count - 18
+            labelRes18 = String(labelRes.text!.dropLast(overCount))
+            UIPasteboard.general.string = labelRes18
+        } else {
+        UIPasteboard.general.string = labelRes.text
+      }
+    }
+        view.endEditing(true)
+    }
+    @IBAction func pasterButton(_ sender: Any) {
+        var pasteBoardString: String? = UIPasteboard.general.string
+        if pasteBoardString == nil {
+            wrong()
+        } else {
+            if pasteBoardString!.count > 13 {
+            let overCount = pasteBoardString!.count - 13
+                pasteBoardString = String(pasteBoardString!.dropLast(overCount))
+            }
+            if ((pasteBoardString)!).count <= 13 {
+                for i in pasteBoardString! {
+                    guard i == "0" ||
+                        i == "1" ||
+                        i == "2" ||
+                        i == "3" ||
+                        i == "4" ||
+                        i == "5" ||
+                        i == "6" ||
+                        i == "7" ||
+                        i == "8" ||
+                        i == "9" ||
+                        i == "." ||
+                        i == "," else {
+                            wrong()
+                            return
+                    }
+                }
+                textField.text = pasteBoardString
+                var i = 0
+                for character in (pasteBoardString)! {
+                    if character == "." || character == "," {
+                        i += 1
+                    }
+                    if i == 2 {
+                        wrong()
+                    }
+                }
+                //func calc
+                leftButtonDecHex()
+            } else {
+                wrong()
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    //// Две точки и первая точка
     func dotta() {
         if textField.text?.count != 0 {
         let startIndex = textField.text?.startIndex
@@ -300,7 +390,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
     
 ////
-//// Классы
+//// Классы вычислений
     var decHexCalc = DecHexCalc()
     var hexDecCalc = HexDecCalc()
     var decOctCalc = DecOctCalc()
@@ -311,7 +401,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         constraintTextField()
-        labelTitle.flash()
+//        labelTitle.flash()
         leftYoda.flash()
         rightYoda.flash()
         labelTitleTap()
