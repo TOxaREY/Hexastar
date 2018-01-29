@@ -90,7 +90,11 @@ class ViewController: UIViewController, KeyboardDelegate {
     
     @IBAction func clearButton(_ sender: Any) {
         textField.text?.removeAll()
+        textField.isEnabled = false
+        placeHoldersTitle()
         labelRes.text?.removeAll()
+        leftKey.isSelected = false
+        rightKey.isSelected = false
         view.endEditing(true)
     }
     @IBAction func copyButton(_ sender: Any) {
@@ -116,7 +120,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         } else {
             var i = 0
             for character in pasteBoardString! {
-                if character == "." || character == "," {
+                if character == "." {
                     i += 1
                 }
             }
@@ -150,8 +154,7 @@ class ViewController: UIViewController, KeyboardDelegate {
                 i == "7" ||
                 i == "8" ||
                 i == "9" ||
-                i == "." ||
-                i == "," else {
+                i == "." else {
                     wrong()
                     return
             }
@@ -184,14 +187,7 @@ class ViewController: UIViewController, KeyboardDelegate {
                 i == "D" ||
                 i == "E" ||
                 i == "F" ||
-                i == "a" ||
-                i == "b" ||
-                i == "c" ||
-                i == "d" ||
-                i == "e" ||
-                i == "f" ||
-                i == "." ||
-                i == "," else {
+                i == "."  else {
                     wrong()
                     return
             }
@@ -216,8 +212,7 @@ class ViewController: UIViewController, KeyboardDelegate {
                 i == "5" ||
                 i == "6" ||
                 i == "7" ||
-                i == "." ||
-                i == "," else {
+                i == "."  else {
                     wrong()
                     return
             }
@@ -263,7 +258,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
         var i = 0
         for character in (textField.text!) {
-            if character == "." || character == "," {
+            if character == "."  {
                 i += 1
             }
             if i == 2 {
@@ -283,7 +278,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         case 568: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -87).isActive = true
         default: break
         }
-         textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -87).isActive = true
     }
 ////
 //// Нажатие меняет заголовок
@@ -509,6 +503,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelButton()
         keyboardOff()
         placeHoldersTitle()
+        
     }
 //// Кнопка перехода в другую программу
     //        @IBAction func binatrixButton(_ sender: Any) {

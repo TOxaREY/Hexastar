@@ -72,7 +72,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D4-2p-BDI">
                                 <rect key="frame" x="0.0" y="64" width="320" height="331"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-Bp-TF3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-Bp-TF3">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
                                         <color key="backgroundColor" red="0.12549019610000001" green="0.76078431369999999" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -109,49 +109,52 @@
                                             <action selector="inputTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="OV1-nP-hZo"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCZ-da-0Go">
-                                        <rect key="frame" x="20" y="8" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Copy"/>
-                                        <connections>
-                                            <action selector="copyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUg-NS-Ikq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-xd-mG9">
-                                        <rect key="frame" x="259" y="8" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-xd-mG9">
+                                        <rect key="frame" x="273" y="173" width="39" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Paste"/>
                                         <connections>
                                             <action selector="pasterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m18-5D-gya"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-Hf-F3y">
-                                        <rect key="frame" x="259" y="131" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-Hf-F3y">
+                                        <rect key="frame" x="8" y="173" width="36" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Clear"/>
                                         <connections>
                                             <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oY4-90-Xs8"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCZ-da-0Go">
+                                        <rect key="frame" x="142" y="123" width="36" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Copy"/>
+                                        <connections>
+                                            <action selector="copyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUg-NS-Ikq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="A0Z-Pr-kgR" secondAttribute="trailing" id="66m-cw-UiH"/>
+                                    <constraint firstAttribute="trailing" secondItem="kZe-xd-mG9" secondAttribute="trailing" constant="8" id="BCE-nk-LKy"/>
                                     <constraint firstItem="yAb-Bp-TF3" firstAttribute="top" secondItem="0D4-2p-BDI" secondAttribute="top" id="DuZ-Pb-MzM"/>
                                     <constraint firstItem="s1J-N7-F90" firstAttribute="width" secondItem="A0Z-Pr-kgR" secondAttribute="width" id="J5Z-B3-Sfi"/>
                                     <constraint firstAttribute="bottom" secondItem="A0Z-Pr-kgR" secondAttribute="bottom" id="LLW-wR-49r"/>
                                     <constraint firstItem="yAb-Bp-TF3" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="MZE-Cf-JgG"/>
                                     <constraint firstItem="s1J-N7-F90" firstAttribute="top" secondItem="Q8Z-hz-N0p" secondAttribute="bottom" constant="20" id="OvQ-gl-kUW"/>
                                     <constraint firstItem="s1J-N7-F90" firstAttribute="leading" secondItem="0D4-2p-BDI" secondAttribute="leading" id="TCb-c6-fbI"/>
+                                    <constraint firstItem="CpE-Hf-F3y" firstAttribute="top" secondItem="yAb-Bp-TF3" secondAttribute="bottom" id="VS2-Gl-Wc6"/>
                                     <constraint firstItem="s1J-N7-F90" firstAttribute="height" secondItem="A0Z-Pr-kgR" secondAttribute="height" id="dm0-Qa-OyP"/>
                                     <constraint firstAttribute="trailing" secondItem="yAb-Bp-TF3" secondAttribute="trailing" id="eCy-ja-ZMH"/>
                                     <constraint firstItem="A0Z-Pr-kgR" firstAttribute="leading" secondItem="s1J-N7-F90" secondAttribute="trailing" id="eGD-SL-HWx"/>
+                                    <constraint firstItem="tCZ-da-0Go" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="hGd-xU-u8i"/>
+                                    <constraint firstItem="kZe-xd-mG9" firstAttribute="top" secondItem="yAb-Bp-TF3" secondAttribute="bottom" id="jcr-7n-hPq"/>
+                                    <constraint firstItem="tCZ-da-0Go" firstAttribute="top" secondItem="yAb-Bp-TF3" secondAttribute="bottom" constant="-50" id="kMz-Rg-gXz"/>
                                     <constraint firstItem="Q8Z-hz-N0p" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="nft-Yb-dwN"/>
                                     <constraint firstItem="yAb-Bp-TF3" firstAttribute="leading" secondItem="0D4-2p-BDI" secondAttribute="leading" id="ntp-FU-fXd"/>
                                     <constraint firstAttribute="bottom" secondItem="s1J-N7-F90" secondAttribute="bottom" id="pvY-bn-jYj"/>
                                     <constraint firstItem="A0Z-Pr-kgR" firstAttribute="leading" secondItem="s1J-N7-F90" secondAttribute="trailing" id="ukJ-aL-wmJ"/>
+                                    <constraint firstItem="CpE-Hf-F3y" firstAttribute="leading" secondItem="0D4-2p-BDI" secondAttribute="leading" constant="8" id="y5D-GF-k6t"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BT-gf-V2s">
