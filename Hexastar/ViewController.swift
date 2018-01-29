@@ -66,8 +66,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         return false
     }
 ////
+//// Ошибка
     func wrong() {
-          view.endEditing(true)
+        view.endEditing(true)
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: font]
         textField.attributedText = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
@@ -75,7 +76,7 @@ class ViewController: UIViewController, KeyboardDelegate {
             self.textField.text?.removeAll()
         }
     }
-
+////
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var leftKey: UIButton!
@@ -89,6 +90,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     
     @IBAction func clearButton(_ sender: Any) {
         textField.text?.removeAll()
+        labelRes.text?.removeAll()
         view.endEditing(true)
     }
     @IBAction func copyButton(_ sender: Any) {
@@ -104,56 +106,155 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
         view.endEditing(true)
     }
+//// Вставка
+    var pasteBoardString: String? = nil
     @IBAction func pasterButton(_ sender: Any) {
-        var pasteBoardString: String? = UIPasteboard.general.string
+        pasteBoardString = UIPasteboard.general.string?.replacingOccurrences(of: ",", with: ".")
+        if leftKey.isSelected != false || rightKey.isSelected != false {
         if pasteBoardString == nil {
             wrong()
         } else {
+            var i = 0
+            for character in pasteBoardString! {
+                if character == "." || character == "," {
+                    i += 1
+                }
+            }
+                if i > 1 {
+                    wrong()
+                } else {
+
             if pasteBoardString!.count > 13 {
             let overCount = pasteBoardString!.count - 13
                 pasteBoardString = String(pasteBoardString!.dropLast(overCount))
             }
             if ((pasteBoardString)!).count <= 13 {
-                for i in pasteBoardString! {
-                    guard i == "0" ||
-                        i == "1" ||
-                        i == "2" ||
-                        i == "3" ||
-                        i == "4" ||
-                        i == "5" ||
-                        i == "6" ||
-                        i == "7" ||
-                        i == "8" ||
-                        i == "9" ||
-                        i == "." ||
-                        i == "," else {
-                            wrong()
-                            return
-                    }
-                }
-                textField.text = pasteBoardString
-                var i = 0
-                for character in (pasteBoardString)! {
-                    if character == "." || character == "," {
-                        i += 1
-                    }
-                    if i == 2 {
-                        wrong()
-                    }
-                }
-                //func calc
-                leftButtonDecHex()
-            } else {
-                wrong()
+                pasteCheck()
+          }
+        }
+      }
+   }
+}
+////
+//// Проверка вставки для разных направлений и вычисления
+    func pasteCheckDec() {
+        print("DEC")
+        for i in pasteBoardString! {
+            guard i == "0" ||
+                i == "1" ||
+                i == "2" ||
+                i == "3" ||
+                i == "4" ||
+                i == "5" ||
+                i == "6" ||
+                i == "7" ||
+                i == "8" ||
+                i == "9" ||
+                i == "." ||
+                i == "," else {
+                    wrong()
+                    return
             }
         }
+        textField.text = pasteBoardString
+        switch labelTitle.text {
+        case "hexadecimal"?: leftButtonDecHex()
+        case "octal"?: leftButtonDecOct()
+        default:
+            break
+        }
     }
+    func pasteCheckHex() {
+        print("HEX")
+        self.pasteBoardString = pasteBoardString?.uppercased()
+        for i in pasteBoardString! {
+            guard i == "0" ||
+                i == "1" ||
+                i == "2" ||
+                i == "3" ||
+                i == "4" ||
+                i == "5" ||
+                i == "6" ||
+                i == "7" ||
+                i == "8" ||
+                i == "9" ||
+                i == "A" ||
+                i == "B" ||
+                i == "C" ||
+                i == "D" ||
+                i == "E" ||
+                i == "F" ||
+                i == "a" ||
+                i == "b" ||
+                i == "c" ||
+                i == "d" ||
+                i == "e" ||
+                i == "f" ||
+                i == "." ||
+                i == "," else {
+                    wrong()
+                    return
+            }
+        }
+        textField.text = pasteBoardString
+        switch labelTitle.text {
+        case "octal"?: rightButtonHexOct()
+        case "decimal"?: leftButtonHexDec()
+        default:
+            break
+        }
+    }
+
+    func pasteCheckOct() {
+        print("OCT")
+        for i in pasteBoardString! {
+            guard i == "0" ||
+                i == "1" ||
+                i == "2" ||
+                i == "3" ||
+                i == "4" ||
+                i == "5" ||
+                i == "6" ||
+                i == "7" ||
+                i == "." ||
+                i == "," else {
+                    wrong()
+                    return
+            }
+        }
+        textField.text = pasteBoardString
+        switch labelTitle.text {
+        case "hexadecimal"?:rightButtonOctHex()
+        case "decimal"?: rightButtonOctDec()
+        default: break
+        }
+    }
+    func pasteCheck() {
+        switch labelTitle.text {
+        case "hexadecimal"?: if leftKey.isSelected ==  true {
+            pasteCheckDec()
+        } else {
+            pasteCheckOct()
+            }
+        case "octal"?: if leftKey.isSelected ==  true {
+            pasteCheckDec()
+        } else {
+            pasteCheckHex()
+            }
+        case "decimal"?: if leftKey.isSelected ==  true {
+            pasteCheckHex()
+        } else {
+            pasteCheckOct()
+            }
+        default:
+            break
+        }
+        
+    }
+////
     
     
-    
-    
-    
-    //// Две точки и первая точка
+//// Две точки и первая точка
     func dotta() {
         if textField.text?.count != 0 {
         let startIndex = textField.text?.startIndex
@@ -270,7 +371,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите шестадцатиричное число", comment: "enter the decimal number"), attributes: attributes)
     }
 ////
-//// Поле ввода
+//// Поле ввода и вычисления
     @IBAction func inputTextField(_ sender: Any) {
         dotta()
         if textField.text!.count > 13 {
