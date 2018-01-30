@@ -58,6 +58,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         pasteButton.isEnabled = true
         clearButton.isHidden = true
         copyButton.isHidden = true
+        labelRes.text?.removeAll()
         view.endEditing(true)
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: font]
@@ -365,10 +366,10 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
 ////
 //// Видимость кнопок стиреть и копировать
-//    func copyClearHiddenButton() {
-//        copyButton.isHidden = true
-//        clearButton.isHidden = true
-//    }
+    func copyClearHiddenButton() {
+        copyButton.isHidden = true
+        clearButton.isHidden = true
+    }
 ////
 //// Поле ввода и вычисления
     @IBAction func inputTextField(_ sender: Any) {
@@ -381,6 +382,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         case "octal"?: leftButtonDecOct(); rightButtonHexOct()
         case "decimal"?: leftButtonHexDec(); rightButtonOctDec()
         default: break
+        }
+        if textField.text?.count == 0 {
+            copyClearHiddenButton()
         }
     }
     func leftButtonDecHex () {
@@ -513,6 +517,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelButton()
         keyboardOff()
         placeHoldersTitle()
+
         
     }
 //// Кнопка перехода в другую программу
