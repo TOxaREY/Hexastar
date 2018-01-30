@@ -22,19 +22,6 @@ extension UIImageView {
         layer.add(flash, forKey: nil)
     }
 }
-//extension UILabel {
-//    func flash() {
-//        let flash = CABasicAnimation(keyPath: "opacity")
-//        flash.duration = 3
-//        flash.fromValue = 1
-//        flash.toValue = 0.3
-//        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        flash.autoreverses = true
-//        flash.repeatCount = 1000000
-//        layer.add(flash, forKey: nil)
-//    }
-//}
-////
 //// Определение высоты девайса
 public var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
@@ -68,6 +55,9 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Ошибка
     func wrong() {
+        pasteButton.isEnabled = true
+        clearButton.isHidden = true
+        copyButton.isHidden = true
         view.endEditing(true)
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: font]
@@ -247,8 +237,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         
     }
 ////
-    
-    
 //// Две точки и первая точка
     func dotta() {
         if textField.text?.count != 0 {
@@ -313,13 +301,12 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Нажатие кнопок
     @IBAction func leftPush(_ sender: UIButton) {
-
-
         textField.isEnabled = true
         rightKey.isSelected = false
         leftKey.isSelected = true
         textField.text = ""
         labelRes.text = ""
+        pasteButton.isHidden = false
         view.endEditing(true)
         switch labelTitle.text {
         case "hexadecimal"?: keyboardDec(); placeHoldersDec()
@@ -335,6 +322,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         rightKey.isSelected = true
         textField.text = ""
         labelRes.text = ""
+        pasteButton.isHidden = false
         view.endEditing(true)
         switch labelTitle.text {
         case "hexadecimal"?: keyboardOct(); placeHoldersOct()
@@ -350,6 +338,9 @@ class ViewController: UIViewController, KeyboardDelegate {
     let font = UIFont(name: "Menlo", size: 20.0)!
     let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
     textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выберите направление конвертации", comment: "select the direction of conversion"), attributes: attributes)
+        clearButton.isHidden = true
+        copyButton.isHidden = true
+        pasteButton.isHidden = true
     }
     func placeHoldersDec() {
         let font = UIFont(name: "Menlo", size: 20.0)!
@@ -367,6 +358,18 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите шестадцатиричное число", comment: "enter the decimal number"), attributes: attributes)
     }
 ////
+//// Видимость кнопок стиреть и копировать
+    func copyClearDontHiddenButton() {
+        copyButton.isHidden = false
+        clearButton.isHidden = false
+    }
+////
+//// Видимость кнопок стиреть и копировать
+//    func copyClearHiddenButton() {
+//        copyButton.isHidden = true
+//        clearButton.isHidden = true
+//    }
+////
 //// Поле ввода и вычисления
     @IBAction func inputTextField(_ sender: Any) {
         dotta()
@@ -381,6 +384,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
     func leftButtonDecHex () {
+        copyClearDontHiddenButton()
         if textField.text?.count != 0 {
             if leftKey.isSelected == true {
                 decHexCalc.inputDecString = textField.text!
@@ -391,6 +395,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
     func rightButtonOctHex () {
+        copyClearDontHiddenButton()
         if textField.text?.count != 0 {
             if rightKey.isSelected == true {
                 octDecCalc.inputOctString = textField.text!
@@ -402,6 +407,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
     func leftButtonDecOct () {
+        copyClearDontHiddenButton()
         if textField.text?.count != 0 {
             if leftKey.isSelected == true {
                 decOctCalc.inputDecString = textField.text!
@@ -412,6 +418,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
     func rightButtonHexOct () {
+        copyClearDontHiddenButton()
         if textField.text?.count != 0 {
             if rightKey.isSelected == true {
                 hexDecCalc.inputHexString = textField.text!
@@ -423,6 +430,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
     func leftButtonHexDec () {
+        copyClearDontHiddenButton()
         if textField.text?.count != 0 {
             if leftKey.isSelected == true {
                 hexDecCalc.inputHexString = textField.text!
@@ -433,6 +441,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
     func rightButtonOctDec () {
+        copyClearDontHiddenButton()
         if textField.text?.count != 0 {
             if rightKey.isSelected == true {
                 octDecCalc.inputOctString = textField.text!
@@ -498,7 +507,6 @@ class ViewController: UIViewController, KeyboardDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         constraintTextField()
-//        labelTitle.flash()
         leftYoda.flash()
         rightYoda.flash()
         labelTitleTap()
