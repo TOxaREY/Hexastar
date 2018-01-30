@@ -313,6 +313,8 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Нажатие кнопок
     @IBAction func leftPush(_ sender: UIButton) {
+
+
         textField.isEnabled = true
         rightKey.isSelected = false
         leftKey.isSelected = true
