@@ -13,7 +13,7 @@ import Foundation
 extension UIImageView {
     func flash() {
         let flash = CABasicAnimation(keyPath: "opacity")
-        flash.duration = 1
+        flash.duration = 3
         flash.fromValue = 1
         flash.toValue = 0
         flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -61,7 +61,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelRes.text?.removeAll()
         view.endEditing(true)
         let font = UIFont(name: "Menlo", size: 20.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedText = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.textField.text?.removeAll()
@@ -151,6 +151,7 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
         textField.text = pasteBoardString
+        colorLetterTextField()
         switch labelTitle.text {
         case "hexadecimal"?: leftButtonDecHex()
         case "octal"?: leftButtonDecOct()
@@ -184,6 +185,7 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
         textField.text = pasteBoardString
+        colorLetterTextField()
         switch labelTitle.text {
         case "octal"?: rightButtonHexOct()
         case "decimal"?: leftButtonHexDec()
@@ -209,6 +211,7 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
         textField.text = pasteBoardString
+        colorLetterTextField()
         switch labelTitle.text {
         case "hexadecimal"?:rightButtonOctHex()
         case "decimal"?: rightButtonOctDec()
@@ -293,9 +296,9 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Надпись на кнопке в зависисмоти от заголовка
     func labelButton() {
         switch labelTitle.text {
-        case "hexadecimal"?: leftKey.setTitle("dec", for: UIControlState.normal); rightKey.setTitle("oct", for: UIControlState.normal)
-        case "octal"?: leftKey.setTitle("dec", for: UIControlState.normal); rightKey.setTitle("hex", for: UIControlState.normal)
-        case "decimal"?: leftKey.setTitle("hex", for: UIControlState.normal); rightKey.setTitle("oct", for: UIControlState.normal)
+        case "hexadecimal"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
+        case "octal"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("HEX", for: UIControlState.normal)
+        case "decimal"?: leftKey.setTitle("HEX", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
         default: break
         }
     }
@@ -337,25 +340,25 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Плейсхолдеры
     func placeHoldersTitle() {
     let font = UIFont(name: "Menlo", size: 20.0)!
-    let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
-    textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выберите направление конвертации", comment: "select the direction of conversion"), attributes: attributes)
+    let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+    textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выбери сторону конвертации", comment: "select the direction of conversion"), attributes: attributes)
         clearButton.isHidden = true
         copyButton.isHidden = true
         pasteButton.isHidden = true
     }
     func placeHoldersDec() {
         let font = UIFont(name: "Menlo", size: 20.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите десятичное число", comment: "enter the decimal number"), attributes: attributes)
     }
     func placeHoldersOct() {
         let font = UIFont(name: "Menlo", size: 20.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите восьмеричное число", comment: "enter the decimal number"), attributes: attributes)
     }
     func placeHoldersHex() {
         let font = UIFont(name: "Menlo", size: 20.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите шестадцатиричное число", comment: "enter the decimal number"), attributes: attributes)
     }
 ////
@@ -371,11 +374,38 @@ class ViewController: UIViewController, KeyboardDelegate {
         clearButton.isHidden = true
     }
 ////
+//// Разноцветные буквы
+    func colorLetterTextField() {
+        if textField.text!.count > 1 {
+            var myMutableString = NSMutableAttributedString()
+            myMutableString = NSMutableAttributedString(string: textField.text!, attributes: [NSAttributedStringKey.font:UIFont(name: "STARWARS", size: 30.0)!])
+            func blueLetter(a:Int,b:Int,c:Int,d:Int,e:Int,f:Int) {
+            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:a,length:1))
+            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:b,length:1))
+            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:c,length:1))
+            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:d,length:1))
+            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:e,length:1))
+            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:f,length:1))
+            }
+            switch textField.text!.count {
+            case 1,2,3: blueLetter(a: 1, b: 1, c: 1, d: 1, e: 1, f: 1)
+            case 4,5: blueLetter(a: 1, b: 3, c: 1, d: 1, e: 1, f: 1)
+            case 6,7: blueLetter(a: 1, b: 3, c: 5, d: 1, e: 1, f: 1)
+            case 8,9: blueLetter(a: 1, b: 3, c: 5, d: 7, e: 1, f: 1)
+            case 10,11: blueLetter(a: 1, b: 3, c: 5, d: 7, e: 9, f: 1)
+            case 12,13: blueLetter(a: 1, b: 3, c: 5, d: 7, e: 9, f: 11)
+            default: break
+            }
+            textField.attributedText = myMutableString
+        }
+    }
+////
 //// Поле ввода и вычисления
     @IBAction func inputTextField(_ sender: Any) {
         dotta()
+        colorLetterTextField()
         if textField.text!.count > 13 {
-            textField.text?.removeLast()
+            textField.deleteBackward()
         }
         switch labelTitle.text {
         case "hexadecimal"?: leftButtonDecHex(); rightButtonOctHex()
@@ -506,7 +536,8 @@ class ViewController: UIViewController, KeyboardDelegate {
     var decOctCalc = DecOctCalc()
     var octDecCalc = OctDecCalc()
 ////
-    
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -517,6 +548,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelButton()
         keyboardOff()
         placeHoldersTitle()
+        UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
+        
 
         
     }
