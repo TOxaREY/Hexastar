@@ -13,7 +13,7 @@ import Foundation
 extension UIImageView {
     func flash() {
         let flash = CABasicAnimation(keyPath: "opacity")
-        flash.duration = 3
+        flash.duration = 4
         flash.fromValue = 1
         flash.toValue = 0
         flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -56,8 +56,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Ошибка
     func wrong() {
         pasteButton.isEnabled = true
-        clearButton.isHidden = true
-        copyButton.isHidden = true
+        copyClearHiddenButton()
         labelRes.text?.removeAll()
         view.endEditing(true)
         let font = UIFont(name: "Menlo", size: 20.0)!
@@ -133,7 +132,6 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Проверка вставки для разных направлений и вычисления
     func pasteCheckDec() {
-        print("DEC")
         for i in pasteBoardString! {
             guard i == "0" ||
                 i == "1" ||
@@ -151,16 +149,14 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
         textField.text = pasteBoardString
-        colorLetterTextField()
         switch labelTitle.text {
-        case "hexadecimal"?: leftButtonDecHex()
-        case "octal"?: leftButtonDecOct()
+        case "hexadecimal"?: colorLetterTextField(); leftButtonDecHex()
+        case "octal"?: colorLetterTextField(); leftButtonDecOct()
         default:
             break
         }
     }
     func pasteCheckHex() {
-        print("HEX")
         self.pasteBoardString = pasteBoardString?.uppercased()
         for i in pasteBoardString! {
             guard i == "0" ||
@@ -185,17 +181,15 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
         textField.text = pasteBoardString
-        colorLetterTextField()
         switch labelTitle.text {
-        case "octal"?: rightButtonHexOct()
-        case "decimal"?: leftButtonHexDec()
+        case "octal"?: colorLetterTextField(); rightButtonHexOct()
+        case "decimal"?: colorLetterTextField(); leftButtonHexDec()
         default:
             break
         }
     }
 
     func pasteCheckOct() {
-        print("OCT")
         for i in pasteBoardString! {
             guard i == "0" ||
                 i == "1" ||
@@ -211,10 +205,9 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
         textField.text = pasteBoardString
-        colorLetterTextField()
         switch labelTitle.text {
-        case "hexadecimal"?:rightButtonOctHex()
-        case "decimal"?: rightButtonOctDec()
+        case "hexadecimal"?: colorLetterTextField(); rightButtonOctHex()
+        case "decimal"?: colorLetterTextField(); rightButtonOctDec()
         default: break
         }
     }
@@ -310,6 +303,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftKey.isSelected = true
         textField.text = ""
         labelRes.text = ""
+        copyClearHiddenButton()
         pasteButton.isHidden = false
         view.endEditing(true)
         switch labelTitle.text {
@@ -326,6 +320,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         rightKey.isSelected = true
         textField.text = ""
         labelRes.text = ""
+        copyClearHiddenButton()
         pasteButton.isHidden = false
         view.endEditing(true)
         switch labelTitle.text {
@@ -342,8 +337,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     let font = UIFont(name: "Menlo", size: 20.0)!
     let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
     textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выбери сторону конвертации", comment: "select the direction of conversion"), attributes: attributes)
-        clearButton.isHidden = true
-        copyButton.isHidden = true
+        copyClearHiddenButton()
         pasteButton.isHidden = true
     }
     func placeHoldersDec() {
