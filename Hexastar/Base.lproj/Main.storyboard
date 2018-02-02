@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,30 +24,30 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hexastar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="414_812" translatesAutoresizingMaskIntoConstraints="NO" id="7SS-j0-JXX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nir-cS-6Xf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hexadecimal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="46.5" y="20.5" width="228" height="48"/>
+                                        <rect key="frame" x="93" y="20.666666666666671" width="228" height="48"/>
                                         <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yoda_5_render_by_aracnify-d9313br" translatesAutoresizingMaskIntoConstraints="NO" id="zVz-ye-iBY">
-                                        <rect key="frame" x="0.5" y="34" width="46" height="30"/>
+                                        <rect key="frame" x="47" y="34" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zVz-ye-iBY" secondAttribute="height" multiplier="46:30" id="CfP-I8-rYr"/>
                                             <constraint firstAttribute="height" constant="30" id="Iwz-W6-rPs"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Yoda_5_render_by_aracnify-d9313br2 копия" translatesAutoresizingMaskIntoConstraints="NO" id="DVL-Cw-9eX">
-                                        <rect key="frame" x="274.5" y="34" width="46" height="30"/>
+                                        <rect key="frame" x="321" y="34" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DVL-Cw-9eX" secondAttribute="height" multiplier="46:30" id="FSE-EP-HNr"/>
                                             <constraint firstAttribute="height" constant="30" id="c0U-Tx-6IO"/>
@@ -70,16 +70,16 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D4-2p-BDI">
-                                <rect key="frame" x="0.0" y="64" width="320" height="331"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="448"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-Bp-TF3">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="40"/>
                                         <color key="textColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1J-N7-F90">
-                                        <rect key="frame" x="0.0" y="284.5" width="160" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="388" width="207.33333333333334" height="60"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="titleShadowOffset" width="3" height="2"/>
@@ -92,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Z-Pr-kgR">
-                                        <rect key="frame" x="160" y="284.5" width="160" height="46.5"/>
+                                        <rect key="frame" x="207.33333333333337" y="388" width="206.66666666666663" height="60"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="titleShadowOffset" width="3" height="2"/>
@@ -105,7 +105,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p" customClass="NMTextField" customModule="Hexastar" customModuleProvider="target">
-                                        <rect key="frame" x="140.5" y="224.5" width="39" height="40"/>
+                                        <rect key="frame" x="188" y="328" width="39" height="40"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="textColor" red="0.16470588235294117" green="0.6470588235294118" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
@@ -115,7 +115,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-xd-mG9">
-                                        <rect key="frame" x="281.5" y="173" width="30.5" height="31"/>
+                                        <rect key="frame" x="365" y="224" width="41" height="41.333333333333314"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kZe-xd-mG9" secondAttribute="height" multiplier="1:1" id="6vM-Xb-Fkp"/>
                                         </constraints>
@@ -125,7 +125,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-Hf-F3y">
-                                        <rect key="frame" x="8" y="173" width="30.5" height="31"/>
+                                        <rect key="frame" x="8" y="224" width="41" height="41.333333333333314"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CpE-Hf-F3y" secondAttribute="height" multiplier="1:1" id="0Ye-4I-Xfl"/>
                                         </constraints>
@@ -135,7 +135,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCZ-da-0Go">
-                                        <rect key="frame" x="145" y="123" width="30" height="30"/>
+                                        <rect key="frame" x="186.66666666666666" y="174" width="40.666666666666657" height="40.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tCZ-da-0Go" secondAttribute="height" multiplier="1:1" id="y2z-Yj-lAl"/>
                                         </constraints>
@@ -145,14 +145,14 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shipL" translatesAutoresizingMaskIntoConstraints="NO" id="S12-XP-iRY">
-                                        <rect key="frame" x="100.5" y="224.5" width="40" height="40"/>
+                                        <rect key="frame" x="148" y="328" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="1vw-5f-5a4"/>
                                             <constraint firstAttribute="height" constant="40" id="bL6-YP-KYJ"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shipR" translatesAutoresizingMaskIntoConstraints="NO" id="VBF-GK-GcV">
-                                        <rect key="frame" x="179.5" y="224.5" width="40" height="40"/>
+                                        <rect key="frame" x="227" y="328" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="iMT-Oc-5Xi"/>
                                         </constraints>
@@ -191,7 +191,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BT-gf-V2s">
-                                <rect key="frame" x="0.0" y="395" width="320" height="173"/>
+                                <rect key="frame" x="0.0" y="512" width="414" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2BT-gf-V2s" secondAttribute="height" multiplier="414:224" id="969-0o-SDW"/>
                                 </constraints>

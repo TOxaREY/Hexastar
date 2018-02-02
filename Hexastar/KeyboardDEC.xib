@@ -20,6 +20,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdV-wQ-YHH">
                     <rect key="frame" x="0.0" y="464" width="375" height="203"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="небо" translatesAutoresizingMaskIntoConstraints="NO" id="mLR-fJ-cRO">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDc-KQ-5bc">
                             <rect key="frame" x="4.5" y="101.5" width="53.5" height="57.5"/>
                             <constraints>
@@ -78,7 +81,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrD-41-pgS">
-                            <rect key="frame" x="4.5" y="35.5" width="53.5" height="58"/>
+                            <rect key="frame" x="4.5" y="36" width="53.5" height="57.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="xrD-41-pgS" secondAttribute="height" multiplier="60:64" id="I8o-NK-3Xl"/>
                             </constraints>
@@ -90,7 +93,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssk-aw-KqO">
-                            <rect key="frame" x="67" y="35.5" width="54.5" height="58"/>
+                            <rect key="frame" x="67" y="36" width="54.5" height="57.5"/>
                             <state key="normal" image="1">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -99,7 +102,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-ZT-JBS">
-                            <rect key="frame" x="130.5" y="35.5" width="53" height="58"/>
+                            <rect key="frame" x="130.5" y="36" width="53" height="57.5"/>
                             <state key="normal" image="2">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -108,7 +111,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o33-bN-nfk">
-                            <rect key="frame" x="192.5" y="35.5" width="53" height="58"/>
+                            <rect key="frame" x="192.5" y="36" width="53" height="57.5"/>
                             <state key="normal" image="3">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -117,7 +120,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpE-rD-He7">
-                            <rect key="frame" x="254.5" y="35.5" width="54" height="58"/>
+                            <rect key="frame" x="254.5" y="36" width="54" height="57.5"/>
                             <state key="normal" image="4">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -126,7 +129,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-Cd-N05">
-                            <rect key="frame" x="317.5" y="35.5" width="53" height="58"/>
+                            <rect key="frame" x="317.5" y="36" width="53" height="57.5"/>
                             <state key="normal" image="Delete">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -135,7 +138,6 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <constraints>
                         <constraint firstItem="TDc-KQ-5bc" firstAttribute="width" secondItem="mix-q7-IoS" secondAttribute="width" id="1v5-Sk-kdp"/>
                         <constraint firstItem="xrD-41-pgS" firstAttribute="width" secondItem="ssk-aw-KqO" secondAttribute="width" id="2zb-2r-4xx"/>
@@ -148,6 +150,8 @@
                         <constraint firstItem="TDc-KQ-5bc" firstAttribute="width" secondItem="dua-vE-y0b" secondAttribute="width" id="Awn-Mx-ksg"/>
                         <constraint firstItem="xrD-41-pgS" firstAttribute="height" secondItem="o33-bN-nfk" secondAttribute="height" id="Bav-0v-vO7"/>
                         <constraint firstAttribute="bottom" secondItem="xx6-hR-CrE" secondAttribute="bottom" constant="44" id="E7K-cE-BDA"/>
+                        <constraint firstItem="mLR-fJ-cRO" firstAttribute="leading" secondItem="KdV-wQ-YHH" secondAttribute="leading" id="Gtz-F0-MtR"/>
+                        <constraint firstAttribute="trailing" secondItem="mLR-fJ-cRO" secondAttribute="trailing" id="H9O-Xg-3dh"/>
                         <constraint firstItem="xrD-41-pgS" firstAttribute="height" secondItem="PpE-rD-He7" secondAttribute="height" id="ILZ-mi-quG"/>
                         <constraint firstItem="dua-vE-y0b" firstAttribute="leading" secondItem="TDc-KQ-5bc" secondAttribute="trailing" constant="9" id="IZS-VW-uaP"/>
                         <constraint firstItem="o33-bN-nfk" firstAttribute="leading" secondItem="V1L-ZT-JBS" secondAttribute="trailing" constant="9" id="IkO-GK-xu8"/>
@@ -156,6 +160,7 @@
                         <constraint firstItem="xrD-41-pgS" firstAttribute="width" secondItem="6pQ-Cd-N05" secondAttribute="width" id="LDC-fa-fZR"/>
                         <constraint firstItem="TDc-KQ-5bc" firstAttribute="top" secondItem="xrD-41-pgS" secondAttribute="bottom" constant="8" id="Lvs-un-sNS"/>
                         <constraint firstItem="6kD-jC-QtB" firstAttribute="leading" secondItem="mix-q7-IoS" secondAttribute="trailing" constant="9" id="M1Y-1P-wp4"/>
+                        <constraint firstAttribute="bottom" secondItem="mLR-fJ-cRO" secondAttribute="bottom" id="Mdn-qH-0TP"/>
                         <constraint firstItem="xrD-41-pgS" firstAttribute="width" secondItem="PpE-rD-He7" secondAttribute="width" id="P2M-Oa-wgQ"/>
                         <constraint firstItem="6kD-jC-QtB" firstAttribute="top" secondItem="o33-bN-nfk" secondAttribute="bottom" constant="8" id="P6Q-SI-7H7"/>
                         <constraint firstAttribute="trailing" secondItem="xx6-hR-CrE" secondAttribute="trailing" constant="4.5" id="SGS-7D-Ffl"/>
@@ -183,6 +188,7 @@
                         <constraint firstItem="xx6-hR-CrE" firstAttribute="leading" secondItem="hdo-MZ-rD1" secondAttribute="trailing" constant="9" id="mYR-B2-EYj"/>
                         <constraint firstItem="hdo-MZ-rD1" firstAttribute="leading" secondItem="6kD-jC-QtB" secondAttribute="trailing" constant="9" id="r7B-7e-2nV"/>
                         <constraint firstAttribute="bottom" secondItem="TDc-KQ-5bc" secondAttribute="bottom" constant="44" id="uOF-hb-gKH"/>
+                        <constraint firstItem="mLR-fJ-cRO" firstAttribute="top" secondItem="KdV-wQ-YHH" secondAttribute="top" id="vi0-At-Jza"/>
                     </constraints>
                 </view>
             </subviews>
@@ -193,6 +199,7 @@
                 <constraint firstAttribute="trailing" secondItem="KdV-wQ-YHH" secondAttribute="trailing" id="hkf-UR-QUQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
     </objects>
     <resources>
@@ -208,5 +215,6 @@
         <image name="9" width="100" height="116"/>
         <image name="Delete" width="128" height="128"/>
         <image name="dotta" width="100" height="116"/>
+        <image name="небо" width="414" height="224"/>
     </resources>
 </document>

@@ -7,45 +7,45 @@
 //
 
 import UIKit
-
+import SpriteKit
 class ViewController: UIViewController {
-    var box : UIView?
-    
-    func addBox(location: CGRect) {
-        let newBox = UIView(frame: location)
-        newBox.backgroundColor = UIColor.red
-        
-        view.insertSubview(newBox, at: 0)
-        box = newBox
-    }
-    var animator:UIDynamicAnimator? = nil
-    let gravity = UIGravityBehavior()
-    let collider = UICollisionBehavior()
-    func createAnimatorStuff() {
-        animator = UIDynamicAnimator(referenceView:self.view)
-        animator?.addBehavior(collider)
-        
-        gravity.addItem(box!)
-        gravity.gravityDirection = CGVector(dx: 5, dy: 5)
-        animator?.addBehavior(gravity)
-        collider.addItem(box!)
-        collider.translatesReferenceBoundsIntoBoundary = true
-        animator?.addBehavior(collider)
-        
-    }
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBox(location: CGRect(x: 100, y: 100, width: 30, height: 30))
-        createAnimatorStuff()
         
-        
-        
+        if let scene = GameScene(fileNamed:"GameScene") {
+            // Configure the view.
+            let skView = self.view as! SKView
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            
+            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            skView.ignoresSiblingOrder = true
+            
+            /* Set the scale mode to scale to fit the window */
+            scene.scaleMode = .aspectFit
+            
+            skView.presentScene(scene)
+        }
     }
-
-
-
-
+    
+    override var shouldAutorotate : Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
+        } else {
+            return .all
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Release any cached data, images, etc that aren't in use.
+    }
+    
+    override var prefersStatusBarHidden : Bool {
+        return true
+    }
 }
-

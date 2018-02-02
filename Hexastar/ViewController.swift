@@ -64,6 +64,25 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.attributedText = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.textField.text?.removeAll()
+            switch self.labelTitle.text {
+            case "hexadecimal"?: if self.leftKey.isSelected == true {
+                self.placeHoldersDec()
+            } else {
+                self.placeHoldersOct()
+                }
+            case "octal"?: if self.leftKey.isSelected == true {
+                self.placeHoldersDec()
+            } else {
+                self.placeHoldersHex()
+                }
+            case "decimal"?: if self.leftKey.isSelected == true {
+                self.placeHoldersHex()
+            } else {
+                self.placeHoldersOct()
+                }
+            default: break
+            }
+
         }
     }
 ////
@@ -106,6 +125,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Вставка
     var pasteBoardString: String? = nil
     @IBAction func pasterButton(_ sender: Any) {
+        textField.placeholder?.removeAll()
         pasteBoardString = UIPasteboard.general.string?.replacingOccurrences(of: ",", with: ".")
         if leftKey.isSelected != false || rightKey.isSelected != false {
         if pasteBoardString == nil {
