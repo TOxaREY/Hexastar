@@ -325,7 +325,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         rightKey.isSelected = false
         leftKey.isSelected = true
         leftKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
-        rightKey.setTitleColor(UIColor(red:0.06, green:0.32, blue:0.38, alpha:1.0), for: UIControlState.normal)
+        rightKey.setTitleColor(UIColor(red:0.06, green:0.32, blue:0.38, alpha:0.8), for: UIControlState.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -344,7 +344,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftKey.isSelected = false
         rightKey.isSelected = true
         rightKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
-        leftKey.setTitleColor(UIColor(red:0.06, green:0.32, blue:0.38, alpha:1.0), for: UIControlState.normal)
+        leftKey.setTitleColor(UIColor(red:0.06, green:0.32, blue:0.38, alpha:0.8), for: UIControlState.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -366,21 +366,32 @@ class ViewController: UIViewController, KeyboardDelegate {
     textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выбери сторону конвертации", comment: "choose side of conversion"), attributes: attributes)
         copyClearHiddenButton()
         pasteButton.isHidden = true
+        leftImage.isHidden = true
+        rightImage.isHidden = true
     }
     func placeHoldersDec() {
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 10-ное число", comment: "enter the decimal number"), attributes: attributes)
+        imageDontHidden()
     }
     func placeHoldersOct() {
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 8-ное число", comment: "enter the octal number"), attributes: attributes)
+       imageDontHidden()
     }
     func placeHoldersHex() {
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 16-ное число", comment: "enter the hexadecimal number"), attributes: attributes)
+        imageDontHidden()
+    }
+////
+//// Видимость картинок сбоку от textField
+    func imageDontHidden() {
+        leftImage.isHidden = false
+        rightImage.isHidden = false
     }
 ////
 //// Видимость кнопок стиреть и копировать
@@ -397,6 +408,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Поле ввода и вычисления
     @IBAction func inputTextField(_ sender: Any) {
+        textField.placeholder?.removeAll()
         dotta()
         if textField.text!.count > 13 {
             textField.deleteBackward()
@@ -420,6 +432,9 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         } else {
             labelRes.text = ""
+            if leftKey.isSelected == true {
+               placeHoldersDec()
+            }
         }
     }
     func rightButtonOctHex () {
@@ -432,6 +447,9 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         } else {
             labelRes.text = ""
+            if rightKey.isSelected == true {
+                placeHoldersOct()
+            }
         }
     }
     func leftButtonDecOct () {
@@ -443,6 +461,9 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         } else {
             labelRes.text = ""
+            if leftKey.isSelected == true {
+                placeHoldersDec()
+            }
         }
     }
     func rightButtonHexOct () {
@@ -455,6 +476,9 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         } else {
             labelRes.text = ""
+            if rightKey.isSelected == true {
+                placeHoldersHex()
+            }
         }
     }
     func leftButtonHexDec () {
@@ -466,6 +490,9 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         } else {
             labelRes.text = ""
+            if leftKey.isSelected == true {
+                placeHoldersHex()
+            }
         }
     }
     func rightButtonOctDec () {
@@ -477,6 +504,9 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         } else {
             labelRes.text = ""
+            if rightKey.isSelected == true {
+                placeHoldersOct()
+            }
         }
     }
 ////
