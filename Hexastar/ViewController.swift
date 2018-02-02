@@ -150,8 +150,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
         textField.text = pasteBoardString
         switch labelTitle.text {
-        case "hexadecimal"?: colorLetterTextField(); leftButtonDecHex()
-        case "octal"?: colorLetterTextField(); leftButtonDecOct()
+        case "hexadecimal"?: leftButtonDecHex()
+        case "octal"?: leftButtonDecOct()
         default:
             break
         }
@@ -182,8 +182,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
         textField.text = pasteBoardString
         switch labelTitle.text {
-        case "octal"?: colorLetterTextField(); rightButtonHexOct()
-        case "decimal"?: colorLetterTextField(); leftButtonHexDec()
+        case "octal"?: rightButtonHexOct()
+        case "decimal"?: leftButtonHexDec()
         default:
             break
         }
@@ -206,8 +206,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
         textField.text = pasteBoardString
         switch labelTitle.text {
-        case "hexadecimal"?: colorLetterTextField(); rightButtonOctHex()
-        case "decimal"?: colorLetterTextField(); rightButtonOctDec()
+        case "hexadecimal"?: rightButtonOctHex()
+        case "decimal"?: rightButtonOctDec()
         default: break
         }
     }
@@ -288,8 +288,11 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Надпись на кнопке в зависисмоти от заголовка
     func labelButton() {
+        leftKey.reversesTitleShadowWhenHighlighted = true
+        rightKey.reversesTitleShadowWhenHighlighted = true
         switch labelTitle.text {
-        case "hexadecimal"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
+        case "hexadecimal"?: leftKey.setTitle("DEC", for: UIControlState.normal);
+        rightKey.setTitle("OCT", for: UIControlState.normal)
         case "octal"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("HEX", for: UIControlState.normal)
         case "decimal"?: leftKey.setTitle("HEX", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
         default: break
@@ -301,6 +304,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.isEnabled = true
         rightKey.isSelected = false
         leftKey.isSelected = true
+        leftKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+        rightKey.setTitleColor(UIColor(red:0.06, green:0.32, blue:0.38, alpha:1.0), for: UIControlState.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -318,6 +323,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.isEnabled = true
         leftKey.isSelected = false
         rightKey.isSelected = true
+        rightKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+        leftKey.setTitleColor(UIColor(red:0.06, green:0.32, blue:0.38, alpha:1.0), for: UIControlState.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -336,24 +343,24 @@ class ViewController: UIViewController, KeyboardDelegate {
     func placeHoldersTitle() {
     let font = UIFont(name: "Menlo", size: 20.0)!
     let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
-    textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выбери сторону конвертации", comment: "select the direction of conversion"), attributes: attributes)
+    textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выбери сторону конвертации", comment: "choose side of conversion"), attributes: attributes)
         copyClearHiddenButton()
         pasteButton.isHidden = true
     }
     func placeHoldersDec() {
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
-        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите десятичное число", comment: "enter the decimal number"), attributes: attributes)
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 10-ное число", comment: "enter the decimal number"), attributes: attributes)
     }
     func placeHoldersOct() {
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
-        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите восьмеричное число", comment: "enter the decimal number"), attributes: attributes)
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 8-ное число", comment: "enter the octal number"), attributes: attributes)
     }
     func placeHoldersHex() {
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
-        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите шестадцатиричное число", comment: "enter the decimal number"), attributes: attributes)
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 16-ное число", comment: "enter the hexadecimal number"), attributes: attributes)
     }
 ////
 //// Видимость кнопок стиреть и копировать
@@ -368,36 +375,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         clearButton.isHidden = true
     }
 ////
-//// Разноцветные буквы
-    func colorLetterTextField() {
-        if textField.text!.count > 1 {
-            var myMutableString = NSMutableAttributedString()
-            myMutableString = NSMutableAttributedString(string: textField.text!, attributes: [NSAttributedStringKey.font:UIFont(name: "STARWARS", size: 30.0)!])
-            func blueLetter(a:Int,b:Int,c:Int,d:Int,e:Int,f:Int) {
-            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:a,length:1))
-            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:b,length:1))
-            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:c,length:1))
-            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:d,length:1))
-            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:e,length:1))
-            myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0), range: NSRange(location:f,length:1))
-            }
-            switch textField.text!.count {
-            case 1,2,3: blueLetter(a: 1, b: 1, c: 1, d: 1, e: 1, f: 1)
-            case 4,5: blueLetter(a: 1, b: 3, c: 1, d: 1, e: 1, f: 1)
-            case 6,7: blueLetter(a: 1, b: 3, c: 5, d: 1, e: 1, f: 1)
-            case 8,9: blueLetter(a: 1, b: 3, c: 5, d: 7, e: 1, f: 1)
-            case 10,11: blueLetter(a: 1, b: 3, c: 5, d: 7, e: 9, f: 1)
-            case 12,13: blueLetter(a: 1, b: 3, c: 5, d: 7, e: 9, f: 11)
-            default: break
-            }
-            textField.attributedText = myMutableString
-        }
-    }
-////
 //// Поле ввода и вычисления
     @IBAction func inputTextField(_ sender: Any) {
         dotta()
-        colorLetterTextField()
         if textField.text!.count > 13 {
             textField.deleteBackward()
         }

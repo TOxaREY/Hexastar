@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,30 +24,30 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hexastar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="414_812" translatesAutoresizingMaskIntoConstraints="NO" id="7SS-j0-JXX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nir-cS-6Xf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hexadecimal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="93" y="20.666666666666671" width="228" height="48"/>
+                                        <rect key="frame" x="46" y="20.5" width="228" height="48"/>
                                         <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yoda_5_render_by_aracnify-d9313br" translatesAutoresizingMaskIntoConstraints="NO" id="zVz-ye-iBY">
-                                        <rect key="frame" x="47" y="34" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="34" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zVz-ye-iBY" secondAttribute="height" multiplier="46:30" id="CfP-I8-rYr"/>
                                             <constraint firstAttribute="height" constant="30" id="Iwz-W6-rPs"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Yoda_5_render_by_aracnify-d9313br2 копия" translatesAutoresizingMaskIntoConstraints="NO" id="DVL-Cw-9eX">
-                                        <rect key="frame" x="321" y="34" width="46" height="30"/>
+                                        <rect key="frame" x="274" y="34" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DVL-Cw-9eX" secondAttribute="height" multiplier="46:30" id="FSE-EP-HNr"/>
                                             <constraint firstAttribute="height" constant="30" id="c0U-Tx-6IO"/>
@@ -70,19 +70,19 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D4-2p-BDI">
-                                <rect key="frame" x="0.0" y="64" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-Bp-TF3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
-                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="40"/>
                                         <color key="textColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1J-N7-F90">
-                                        <rect key="frame" x="0.0" y="388" width="207" height="60"/>
-                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1J-N7-F90">
+                                        <rect key="frame" x="0.0" y="284.5" width="160" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <size key="titleShadowOffset" width="3" height="2"/>
                                         <state key="normal" backgroundImage="Star-Wars-Ship-Vector-PNG">
                                             <color key="titleColor" red="0.88627450980392153" green="0.0078431372549019607" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,13 +91,13 @@
                                             <action selector="leftPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oXW-7l-jF7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Z-Pr-kgR">
-                                        <rect key="frame" x="207" y="388" width="207" height="60"/>
-                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Z-Pr-kgR">
+                                        <rect key="frame" x="160" y="284.5" width="160" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <size key="titleShadowOffset" width="3" height="2"/>
                                         <state key="normal" backgroundImage="Basileus_Star_Destroyer">
-                                            <color key="titleColor" red="0.16470588235294117" green="0.6470588235294118" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -105,17 +105,17 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p" customClass="NMTextField" customModule="Hexastar" customModuleProvider="target">
-                                        <rect key="frame" x="198.33333333333334" y="342" width="19" height="26"/>
+                                        <rect key="frame" x="149" y="234.5" width="22" height="30"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <color key="textColor" red="0.88627450980392153" green="0.0078431372549019607" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="30"/>
+                                        <color key="textColor" red="0.16470588235294117" green="0.6470588235294118" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="inputTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="OV1-nP-hZo"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-xd-mG9">
-                                        <rect key="frame" x="365.33333333333331" y="224" width="40.666666666666686" height="40.333333333333314"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-xd-mG9">
+                                        <rect key="frame" x="282" y="173" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kZe-xd-mG9" secondAttribute="height" multiplier="1:1" id="6vM-Xb-Fkp"/>
                                         </constraints>
@@ -124,8 +124,8 @@
                                             <action selector="pasterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m18-5D-gya"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-Hf-F3y">
-                                        <rect key="frame" x="8" y="224" width="40.666666666666664" height="40.333333333333314"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-Hf-F3y">
+                                        <rect key="frame" x="8" y="173" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CpE-Hf-F3y" secondAttribute="height" multiplier="1:1" id="0Ye-4I-Xfl"/>
                                         </constraints>
@@ -134,8 +134,8 @@
                                             <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oY4-90-Xs8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCZ-da-0Go">
-                                        <rect key="frame" x="186.66666666666666" y="174" width="40.666666666666657" height="40.333333333333343"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCZ-da-0Go">
+                                        <rect key="frame" x="145" y="123" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tCZ-da-0Go" secondAttribute="height" multiplier="1:1" id="y2z-Yj-lAl"/>
                                         </constraints>
@@ -172,7 +172,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BT-gf-V2s">
-                                <rect key="frame" x="0.0" y="512" width="414" height="224"/>
+                                <rect key="frame" x="0.0" y="395" width="320" height="173"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2BT-gf-V2s" secondAttribute="height" multiplier="414:224" id="969-0o-SDW"/>
                                 </constraints>
