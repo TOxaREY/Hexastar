@@ -34,20 +34,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hexadecimal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="46" y="20.5" width="228" height="48"/>
+                                        <rect key="frame" x="46.5" y="20.5" width="228" height="48"/>
                                         <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yoda_5_render_by_aracnify-d9313br" translatesAutoresizingMaskIntoConstraints="NO" id="zVz-ye-iBY">
-                                        <rect key="frame" x="0.0" y="34" width="46" height="30"/>
+                                        <rect key="frame" x="0.5" y="34" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zVz-ye-iBY" secondAttribute="height" multiplier="46:30" id="CfP-I8-rYr"/>
                                             <constraint firstAttribute="height" constant="30" id="Iwz-W6-rPs"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Yoda_5_render_by_aracnify-d9313br2 копия" translatesAutoresizingMaskIntoConstraints="NO" id="DVL-Cw-9eX">
-                                        <rect key="frame" x="274" y="34" width="46" height="30"/>
+                                        <rect key="frame" x="274.5" y="34" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DVL-Cw-9eX" secondAttribute="height" multiplier="46:30" id="FSE-EP-HNr"/>
                                             <constraint firstAttribute="height" constant="30" id="c0U-Tx-6IO"/>
@@ -104,8 +104,8 @@
                                             <action selector="rightPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5f-bT-lSb"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p" customClass="NMTextField" customModule="Hexastar" customModuleProvider="target">
-                                        <rect key="frame" x="149" y="234.5" width="22" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p" customClass="NMTextField" customModule="Hexastar" customModuleProvider="target">
+                                        <rect key="frame" x="140.5" y="224.5" width="39" height="40"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="textColor" red="0.16470588235294117" green="0.6470588235294118" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
@@ -115,7 +115,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-xd-mG9">
-                                        <rect key="frame" x="282" y="173" width="30" height="30"/>
+                                        <rect key="frame" x="281.5" y="173" width="30.5" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kZe-xd-mG9" secondAttribute="height" multiplier="1:1" id="6vM-Xb-Fkp"/>
                                         </constraints>
@@ -125,7 +125,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-Hf-F3y">
-                                        <rect key="frame" x="8" y="173" width="30" height="30"/>
+                                        <rect key="frame" x="8" y="173" width="30.5" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CpE-Hf-F3y" secondAttribute="height" multiplier="1:1" id="0Ye-4I-Xfl"/>
                                         </constraints>
@@ -144,12 +144,27 @@
                                             <action selector="copyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUg-NS-Ikq"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shipL" translatesAutoresizingMaskIntoConstraints="NO" id="S12-XP-iRY">
+                                        <rect key="frame" x="100.5" y="224.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="1vw-5f-5a4"/>
+                                            <constraint firstAttribute="height" constant="40" id="bL6-YP-KYJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shipR" translatesAutoresizingMaskIntoConstraints="NO" id="VBF-GK-GcV">
+                                        <rect key="frame" x="179.5" y="224.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="iMT-Oc-5Xi"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="kZe-xd-mG9" firstAttribute="width" secondItem="0D4-2p-BDI" secondAttribute="height" multiplier="30:331" id="27a-Cj-9h5"/>
+                                    <constraint firstItem="VBF-GK-GcV" firstAttribute="leading" secondItem="Q8Z-hz-N0p" secondAttribute="trailing" id="2dq-Z0-45W"/>
                                     <constraint firstAttribute="trailing" secondItem="A0Z-Pr-kgR" secondAttribute="trailing" id="66m-cw-UiH"/>
                                     <constraint firstAttribute="trailing" secondItem="kZe-xd-mG9" secondAttribute="trailing" constant="8" id="BCE-nk-LKy"/>
                                     <constraint firstItem="yAb-Bp-TF3" firstAttribute="top" secondItem="0D4-2p-BDI" secondAttribute="top" id="DuZ-Pb-MzM"/>
+                                    <constraint firstItem="Q8Z-hz-N0p" firstAttribute="height" secondItem="VBF-GK-GcV" secondAttribute="height" id="I1r-VY-9Tl"/>
                                     <constraint firstItem="s1J-N7-F90" firstAttribute="width" secondItem="A0Z-Pr-kgR" secondAttribute="width" id="J5Z-B3-Sfi"/>
                                     <constraint firstAttribute="bottom" secondItem="A0Z-Pr-kgR" secondAttribute="bottom" id="LLW-wR-49r"/>
                                     <constraint firstItem="yAb-Bp-TF3" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="MZE-Cf-JgG"/>
@@ -164,10 +179,14 @@
                                     <constraint firstItem="tCZ-da-0Go" firstAttribute="width" secondItem="0D4-2p-BDI" secondAttribute="height" multiplier="30:331" id="kJL-Dl-6mP"/>
                                     <constraint firstItem="tCZ-da-0Go" firstAttribute="top" secondItem="yAb-Bp-TF3" secondAttribute="bottom" constant="-50" id="kMz-Rg-gXz"/>
                                     <constraint firstItem="CpE-Hf-F3y" firstAttribute="width" secondItem="0D4-2p-BDI" secondAttribute="height" multiplier="30:331" id="kaB-z6-OvM"/>
+                                    <constraint firstItem="A0Z-Pr-kgR" firstAttribute="top" secondItem="VBF-GK-GcV" secondAttribute="bottom" constant="20" id="l0O-Rq-lOC"/>
+                                    <constraint firstItem="s1J-N7-F90" firstAttribute="top" secondItem="S12-XP-iRY" secondAttribute="bottom" constant="20" id="lj8-bO-XlL"/>
                                     <constraint firstItem="Q8Z-hz-N0p" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="nft-Yb-dwN"/>
                                     <constraint firstItem="yAb-Bp-TF3" firstAttribute="leading" secondItem="0D4-2p-BDI" secondAttribute="leading" id="ntp-FU-fXd"/>
+                                    <constraint firstItem="Q8Z-hz-N0p" firstAttribute="leading" secondItem="S12-XP-iRY" secondAttribute="trailing" id="oKL-5A-FYx"/>
                                     <constraint firstAttribute="bottom" secondItem="s1J-N7-F90" secondAttribute="bottom" id="pvY-bn-jYj"/>
                                     <constraint firstItem="A0Z-Pr-kgR" firstAttribute="leading" secondItem="s1J-N7-F90" secondAttribute="trailing" id="ukJ-aL-wmJ"/>
+                                    <constraint firstItem="Q8Z-hz-N0p" firstAttribute="height" secondItem="S12-XP-iRY" secondAttribute="height" id="wiV-GW-rhm"/>
                                     <constraint firstItem="CpE-Hf-F3y" firstAttribute="leading" secondItem="0D4-2p-BDI" secondAttribute="leading" constant="8" id="y5D-GF-k6t"/>
                                 </constraints>
                             </view>
@@ -204,9 +223,11 @@
                         <outlet property="copyButton" destination="tCZ-da-0Go" id="4R6-2t-osX"/>
                         <outlet property="labelRes" destination="yAb-Bp-TF3" id="GQ4-gw-Ekq"/>
                         <outlet property="labelTitle" destination="mut-tC-wbi" id="VGn-0x-ewb"/>
+                        <outlet property="leftImage" destination="S12-XP-iRY" id="fH3-w2-DbW"/>
                         <outlet property="leftKey" destination="s1J-N7-F90" id="o4E-mh-wwH"/>
                         <outlet property="leftYoda" destination="zVz-ye-iBY" id="19e-LR-XVe"/>
                         <outlet property="pasteButton" destination="kZe-xd-mG9" id="pp6-HO-B7Y"/>
+                        <outlet property="rightImage" destination="VBF-GK-GcV" id="8sN-yr-cRT"/>
                         <outlet property="rightKey" destination="A0Z-Pr-kgR" id="Xg4-8W-HFY"/>
                         <outlet property="rightYoda" destination="DVL-Cw-9eX" id="v6f-Y4-Omj"/>
                         <outlet property="textField" destination="Q8Z-hz-N0p" id="lbx-4e-52z"/>
@@ -219,7 +240,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="20.625" y="25.35211267605634"/>
+            <point key="canvasLocation" x="20.289855072463769" y="25.271739130434785"/>
         </scene>
     </scenes>
     <resources>
@@ -231,5 +252,7 @@
         <image name="clear" width="256" height="256"/>
         <image name="copy" width="256" height="256"/>
         <image name="paste" width="256" height="256"/>
+        <image name="shipL" width="250" height="250"/>
+        <image name="shipR" width="250" height="250"/>
     </resources>
 </document>

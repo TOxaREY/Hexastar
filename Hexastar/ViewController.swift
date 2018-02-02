@@ -68,6 +68,8 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
 ////
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var leftImage: UIImageView!
+    @IBOutlet weak var rightImage: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var leftKey: UIButton!
     @IBOutlet weak var rightKey: UIButton!
@@ -85,6 +87,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelRes.text?.removeAll()
         leftKey.isSelected = false
         rightKey.isSelected = false
+        redColorButton()
         view.endEditing(true)
     }
     @IBAction func copyButton(_ sender: Any) {
@@ -253,14 +256,25 @@ class ViewController: UIViewController, KeyboardDelegate {
       }
     }
 ////
-//// Положение поля ввода
+//// Положение поля ввода и рисунка
     func constraintTextField() {
         textField.translatesAutoresizingMaskIntoConstraints = false
         switch screenHeight {
-        case 736: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -127).isActive = true
-        case 812: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -166).isActive = true
-        case 667: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -111).isActive = true
-        case 568: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -87).isActive = true
+        case 736: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -122).isActive = true
+        case 812: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -161).isActive = true
+        case 667: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -106).isActive = true
+        case 568: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -82).isActive = true
+        default: break
+        }
+    }
+    func constraintImage() {
+        leftImage.translatesAutoresizingMaskIntoConstraints = false
+        rightImage.translatesAutoresizingMaskIntoConstraints = false
+        switch screenHeight {
+        case 736: leftImage.bottomAnchor.constraint(equalTo: leftImage.superview!.bottomAnchor, constant: -122).isActive = true; rightImage.bottomAnchor.constraint(equalTo: rightImage.superview!.bottomAnchor, constant: -122).isActive = true
+        case 812: leftImage.bottomAnchor.constraint(equalTo: leftImage.superview!.bottomAnchor, constant: -161).isActive = true; rightImage.bottomAnchor.constraint(equalTo: rightImage.superview!.bottomAnchor, constant: -161).isActive = true
+        case 667: leftImage.bottomAnchor.constraint(equalTo: leftImage.superview!.bottomAnchor, constant: -106).isActive = true; rightImage.bottomAnchor.constraint(equalTo: rightImage.superview!.bottomAnchor, constant: -106).isActive = true
+        case 568: leftImage.bottomAnchor.constraint(equalTo: leftImage.superview!.bottomAnchor, constant: -82).isActive = true; rightImage.bottomAnchor.constraint(equalTo: rightImage.superview!.bottomAnchor, constant: -82).isActive = true
         default: break
         }
     }
@@ -284,6 +298,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         view.endEditing(true)
         selectOff()
         labelButton()
+        redColorButton()
     }
 ////
 //// Надпись на кнопке в зависисмоти от заголовка
@@ -299,6 +314,11 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
+//// Исходный красный на кнопках
+    func redColorButton() {
+        leftKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+        rightKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+    }
 //// Нажатие кнопок
     @IBAction func leftPush(_ sender: UIButton) {
         textField.isEnabled = true
@@ -504,6 +524,15 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
     
 ////
+//// Пользовательский бордюр textField
+    func borderTextField() {
+        let borderColor : UIColor = UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0)
+        textField.layer.borderWidth = 2
+        textField.layer.borderColor = borderColor.cgColor
+        textField.layer.cornerRadius = 5.0
+
+    }
+////
 //// Классы вычислений
     var decHexCalc = DecHexCalc()
     var hexDecCalc = HexDecCalc()
@@ -516,6 +545,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         constraintTextField()
+        constraintImage()
         leftYoda.flash()
         rightYoda.flash()
         labelTitleTap()
@@ -523,7 +553,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         keyboardOff()
         placeHoldersTitle()
         UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
-        
+        borderTextField()
 
         
     }

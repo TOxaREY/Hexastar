@@ -39,7 +39,6 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>STARWARS.TTF</string>
-		<string>Starjhol.ttf</string>
 		<string>Starjout.ttf</string>
 	</array>
 </dict>
