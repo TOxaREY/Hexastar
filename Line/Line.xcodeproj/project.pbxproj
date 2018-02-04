@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F29A28E6202395A5004F9CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A28E5202395A5004F9CD8 /* AppDelegate.swift */; };
-		F29A28E8202395A5004F9CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A28E7202395A5004F9CD8 /* ViewController.swift */; };
-		F29A28EB202395A5004F9CD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A28E9202395A5004F9CD8 /* Main.storyboard */; };
-		F29A28ED202395A5004F9CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29A28EC202395A5004F9CD8 /* Assets.xcassets */; };
-		F29A28F0202395A5004F9CD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29A28EE202395A5004F9CD8 /* LaunchScreen.storyboard */; };
-		F2AEE1DE2024A4CE00C0ED5C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEE1DD2024A4CE00C0ED5C /* GameScene.swift */; };
-		F2AEE1E02024A50100C0ED5C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2AEE1DF2024A50100C0ED5C /* GameScene.sks */; };
+		F205789A2024CB0900198DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20578992024CB0900198DF5 /* AppDelegate.swift */; };
+		F205789C2024CB0900198DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F205789B2024CB0900198DF5 /* ViewController.swift */; };
+		F205789F2024CB0900198DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F205789D2024CB0900198DF5 /* Main.storyboard */; };
+		F20578A12024CB0900198DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20578A02024CB0900198DF5 /* Assets.xcassets */; };
+		F20578A42024CB0900198DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20578A22024CB0900198DF5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F29A28E2202395A5004F9CD8 /* Anima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anima.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F29A28E5202395A5004F9CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F29A28E7202395A5004F9CD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F29A28EA202395A5004F9CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F29A28EC202395A5004F9CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F29A28EF202395A5004F9CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F29A28F1202395A5004F9CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2AEE1DD2024A4CE00C0ED5C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		F2AEE1DF2024A50100C0ED5C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F20578962024CB0900198DF5 /* Line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Line.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F20578992024CB0900198DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F205789B2024CB0900198DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F205789E2024CB0900198DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F20578A02024CB0900198DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F20578A32024CB0900198DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F20578A52024CB0900198DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F29A28DF202395A5004F9CD8 /* Frameworks */ = {
+		F20578932024CB0900198DF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,74 +35,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F29A28D9202395A5004F9CD8 = {
+		F205788D2024CB0900198DF5 = {
 			isa = PBXGroup;
 			children = (
-				F29A28E4202395A5004F9CD8 /* Anima */,
-				F29A28E3202395A5004F9CD8 /* Products */,
+				F20578982024CB0900198DF5 /* Line */,
+				F20578972024CB0900198DF5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F29A28E3202395A5004F9CD8 /* Products */ = {
+		F20578972024CB0900198DF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F29A28E2202395A5004F9CD8 /* Anima.app */,
+				F20578962024CB0900198DF5 /* Line.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F29A28E4202395A5004F9CD8 /* Anima */ = {
+		F20578982024CB0900198DF5 /* Line */ = {
 			isa = PBXGroup;
 			children = (
-				F29A28E5202395A5004F9CD8 /* AppDelegate.swift */,
-				F29A28E7202395A5004F9CD8 /* ViewController.swift */,
-				F2AEE1DD2024A4CE00C0ED5C /* GameScene.swift */,
-				F2AEE1DF2024A50100C0ED5C /* GameScene.sks */,
-				F29A28E9202395A5004F9CD8 /* Main.storyboard */,
-				F29A28EC202395A5004F9CD8 /* Assets.xcassets */,
-				F29A28EE202395A5004F9CD8 /* LaunchScreen.storyboard */,
-				F29A28F1202395A5004F9CD8 /* Info.plist */,
+				F20578992024CB0900198DF5 /* AppDelegate.swift */,
+				F205789B2024CB0900198DF5 /* ViewController.swift */,
+				F205789D2024CB0900198DF5 /* Main.storyboard */,
+				F20578A02024CB0900198DF5 /* Assets.xcassets */,
+				F20578A22024CB0900198DF5 /* LaunchScreen.storyboard */,
+				F20578A52024CB0900198DF5 /* Info.plist */,
 			);
-			path = Anima;
+			path = Line;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F29A28E1202395A5004F9CD8 /* Anima */ = {
+		F20578952024CB0900198DF5 /* Line */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F29A28F4202395A5004F9CD8 /* Build configuration list for PBXNativeTarget "Anima" */;
+			buildConfigurationList = F20578A82024CB0900198DF5 /* Build configuration list for PBXNativeTarget "Line" */;
 			buildPhases = (
-				F29A28DE202395A5004F9CD8 /* Sources */,
-				F29A28DF202395A5004F9CD8 /* Frameworks */,
-				F29A28E0202395A5004F9CD8 /* Resources */,
+				F20578922024CB0900198DF5 /* Sources */,
+				F20578932024CB0900198DF5 /* Frameworks */,
+				F20578942024CB0900198DF5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Anima;
-			productName = Anima;
-			productReference = F29A28E2202395A5004F9CD8 /* Anima.app */;
+			name = Line;
+			productName = Line;
+			productReference = F20578962024CB0900198DF5 /* Line.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F29A28DA202395A5004F9CD8 /* Project object */ = {
+		F205788E2024CB0900198DF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "REYNIKOV ANTON";
 				TargetAttributes = {
-					F29A28E1202395A5004F9CD8 = {
+					F20578952024CB0900198DF5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = F29A28DD202395A5004F9CD8 /* Build configuration list for PBXProject "Anima" */;
+			buildConfigurationList = F20578912024CB0900198DF5 /* Build configuration list for PBXProject "Line" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,56 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = F29A28D9202395A5004F9CD8;
-			productRefGroup = F29A28E3202395A5004F9CD8 /* Products */;
+			mainGroup = F205788D2024CB0900198DF5;
+			productRefGroup = F20578972024CB0900198DF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F29A28E1202395A5004F9CD8 /* Anima */,
+				F20578952024CB0900198DF5 /* Line */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F29A28E0202395A5004F9CD8 /* Resources */ = {
+		F20578942024CB0900198DF5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2AEE1E02024A50100C0ED5C /* GameScene.sks in Resources */,
-				F29A28F0202395A5004F9CD8 /* LaunchScreen.storyboard in Resources */,
-				F29A28ED202395A5004F9CD8 /* Assets.xcassets in Resources */,
-				F29A28EB202395A5004F9CD8 /* Main.storyboard in Resources */,
+				F20578A42024CB0900198DF5 /* LaunchScreen.storyboard in Resources */,
+				F20578A12024CB0900198DF5 /* Assets.xcassets in Resources */,
+				F205789F2024CB0900198DF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F29A28DE202395A5004F9CD8 /* Sources */ = {
+		F20578922024CB0900198DF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2AEE1DE2024A4CE00C0ED5C /* GameScene.swift in Sources */,
-				F29A28E8202395A5004F9CD8 /* ViewController.swift in Sources */,
-				F29A28E6202395A5004F9CD8 /* AppDelegate.swift in Sources */,
+				F205789C2024CB0900198DF5 /* ViewController.swift in Sources */,
+				F205789A2024CB0900198DF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F29A28E9202395A5004F9CD8 /* Main.storyboard */ = {
+		F205789D2024CB0900198DF5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F29A28EA202395A5004F9CD8 /* Base */,
+				F205789E2024CB0900198DF5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F29A28EE202395A5004F9CD8 /* LaunchScreen.storyboard */ = {
+		F20578A22024CB0900198DF5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F29A28EF202395A5004F9CD8 /* Base */,
+				F20578A32024CB0900198DF5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -171,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F29A28F2202395A5004F9CD8 /* Debug */ = {
+		F20578A62024CB0900198DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		F29A28F3202395A5004F9CD8 /* Release */ = {
+		F20578A72024CB0900198DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,30 +270,30 @@
 			};
 			name = Release;
 		};
-		F29A28F5202395A5004F9CD8 /* Debug */ = {
+		F20578A92024CB0900198DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EB6R5QS764;
-				INFOPLIST_FILE = Anima/Info.plist;
+				INFOPLIST_FILE = Line/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Anima";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.Line";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F29A28F6202395A5004F9CD8 /* Release */ = {
+		F20578AA2024CB0900198DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EB6R5QS764;
-				INFOPLIST_FILE = Anima/Info.plist;
+				INFOPLIST_FILE = Line/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Anima";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.Line";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,25 +303,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F29A28DD202395A5004F9CD8 /* Build configuration list for PBXProject "Anima" */ = {
+		F20578912024CB0900198DF5 /* Build configuration list for PBXProject "Line" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F29A28F2202395A5004F9CD8 /* Debug */,
-				F29A28F3202395A5004F9CD8 /* Release */,
+				F20578A62024CB0900198DF5 /* Debug */,
+				F20578A72024CB0900198DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F29A28F4202395A5004F9CD8 /* Build configuration list for PBXNativeTarget "Anima" */ = {
+		F20578A82024CB0900198DF5 /* Build configuration list for PBXNativeTarget "Line" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F29A28F5202395A5004F9CD8 /* Debug */,
-				F29A28F6202395A5004F9CD8 /* Release */,
+				F20578A92024CB0900198DF5 /* Debug */,
+				F20578AA2024CB0900198DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F29A28DA202395A5004F9CD8 /* Project object */;
+	rootObject = F205788E2024CB0900198DF5 /* Project object */;
 }

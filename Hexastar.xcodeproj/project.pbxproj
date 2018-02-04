@@ -21,7 +21,6 @@
 		F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */; };
 		F2EF3C562017848D00B899DA /* KeyboardDEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EF3C552017848D00B899DA /* KeyboardDEC.swift */; };
 		F2EF3C582017849F00B899DA /* KeyboardOCT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EF3C572017849F00B899DA /* KeyboardOCT.swift */; };
-		F2FC35AB2010E02200C6B9CB /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2FC35AA2010E01500C6B9CB /* Starjout.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardOCT.xib; sourceTree = "<group>"; };
 		F2EF3C552017848D00B899DA /* KeyboardDEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDEC.swift; sourceTree = "<group>"; };
 		F2EF3C572017849F00B899DA /* KeyboardOCT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOCT.swift; sourceTree = "<group>"; };
-		F2FC35AA2010E01500C6B9CB /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				F2B10B3E200FAB36003DD679 /* STARWARS.TTF */,
-				F2FC35AA2010E01500C6B9CB /* Starjout.ttf */,
 				F27B5B5E2018B7910096D98A /* HexCalc.swift */,
 				F27EB08F2019D5C20061E461 /* OctCalc.swift */,
 				F297B231200E20750072E484 /* AppDelegate.swift */,
@@ -156,7 +153,6 @@
 				F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */,
 				F297B239200E20760072E484 /* Assets.xcassets in Resources */,
 				F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */,
-				F2FC35AB2010E02200C6B9CB /* Starjout.ttf in Resources */,
 				F2EF3C4E20177C3300B899DA /* KeyboardDEC.xib in Resources */,
 				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
 				F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */,

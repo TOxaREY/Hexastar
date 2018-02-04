@@ -65,17 +65,17 @@ class ViewController: UIViewController, KeyboardDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.textField.text?.removeAll()
             switch self.labelTitle.text {
-            case "hexadecimal"?: if self.leftKey.isSelected == true {
+            case "HEXADECIMAL"?: if self.leftKey.isSelected == true {
                 self.placeHoldersDec()
             } else {
                 self.placeHoldersOct()
                 }
-            case "octal"?: if self.leftKey.isSelected == true {
+            case "OCTAL"?: if self.leftKey.isSelected == true {
                 self.placeHoldersDec()
             } else {
                 self.placeHoldersHex()
                 }
-            case "decimal"?: if self.leftKey.isSelected == true {
+            case "DECIMAL"?: if self.leftKey.isSelected == true {
                 self.placeHoldersHex()
             } else {
                 self.placeHoldersOct()
@@ -173,8 +173,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
         textField.text = pasteBoardString
         switch labelTitle.text {
-        case "hexadecimal"?: leftButtonDecHex()
-        case "octal"?: leftButtonDecOct()
+        case "HEXADECIMAL"?: leftButtonDecHex()
+        case "OCTAL"?: leftButtonDecOct()
         default:
             break
         }
@@ -205,8 +205,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
         textField.text = pasteBoardString
         switch labelTitle.text {
-        case "octal"?: rightButtonHexOct()
-        case "decimal"?: leftButtonHexDec()
+        case "OCTAL"?: rightButtonHexOct()
+        case "DECIMAL"?: leftButtonHexDec()
         default:
             break
         }
@@ -229,24 +229,24 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
         textField.text = pasteBoardString
         switch labelTitle.text {
-        case "hexadecimal"?: rightButtonOctHex()
-        case "decimal"?: rightButtonOctDec()
+        case "HEXADECIMAL"?: rightButtonOctHex()
+        case "DECIMAL"?: rightButtonOctDec()
         default: break
         }
     }
     func pasteCheck() {
         switch labelTitle.text {
-        case "hexadecimal"?: if leftKey.isSelected ==  true {
+        case "HEXADECIMAL"?: if leftKey.isSelected ==  true {
             pasteCheckDec()
         } else {
             pasteCheckOct()
             }
-        case "octal"?: if leftKey.isSelected ==  true {
+        case "OCTAL"?: if leftKey.isSelected ==  true {
             pasteCheckDec()
         } else {
             pasteCheckHex()
             }
-        case "decimal"?: if leftKey.isSelected ==  true {
+        case "DECIMAL"?: if leftKey.isSelected ==  true {
             pasteCheckHex()
         } else {
             pasteCheckOct()
@@ -306,12 +306,12 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
     var tap = 0
     func labelTitleTap() {
-        let fontTitle = UIFont(name: "StarJediOutline", size: 30.0)!
+        let fontTitle = UIFont(name: "STARWARS", size: 30.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: fontTitle]
         switch tap {
-        case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("hexadecimal", comment: "hexadecimal") , attributes: attributes); tap += 1; placeHoldersTitle()
-        case 1: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("octal", comment: "octal") , attributes: attributes); tap += 1; placeHoldersTitle()
-        case 2: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("decimal", comment: "decimal") , attributes: attributes); tap = 0; placeHoldersTitle()
+        case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("HEXADECIMAL", comment: "HEXADECIMAL") , attributes: attributes); tap += 1; placeHoldersTitle()
+        case 1: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("OCTAL", comment: "OCTAL") , attributes: attributes); tap += 1; placeHoldersTitle()
+        case 2: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("DECIMAL", comment: "DECIMAL") , attributes: attributes); tap = 0; placeHoldersTitle()
         default: break
         }
         textField.text = ""
@@ -326,10 +326,10 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftKey.reversesTitleShadowWhenHighlighted = true
         rightKey.reversesTitleShadowWhenHighlighted = true
         switch labelTitle.text {
-        case "hexadecimal"?: leftKey.setTitle("DEC", for: UIControlState.normal);
+        case "HEXADECIMAL"?: leftKey.setTitle("DEC", for: UIControlState.normal);
         rightKey.setTitle("OCT", for: UIControlState.normal)
-        case "octal"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("HEX", for: UIControlState.normal)
-        case "decimal"?: leftKey.setTitle("HEX", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
+        case "OCTAL"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("HEX", for: UIControlState.normal)
+        case "DECIMAL"?: leftKey.setTitle("HEX", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
         default: break
         }
     }
@@ -352,9 +352,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         pasteButton.isHidden = false
         view.endEditing(true)
         switch labelTitle.text {
-        case "hexadecimal"?: keyboardDec(); placeHoldersDec()
-        case "octal"?: keyboardDec(); placeHoldersDec()
-        case "decimal"?: keyboardHex(); placeHoldersHex()
+        case "HEXADECIMAL"?: keyboardDec(); placeHoldersDec()
+        case "OCTAL"?: keyboardDec(); placeHoldersDec()
+        case "DECIMAL"?: keyboardHex(); placeHoldersHex()
         default:
             break
         }
@@ -371,9 +371,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         pasteButton.isHidden = false
         view.endEditing(true)
         switch labelTitle.text {
-        case "hexadecimal"?: keyboardOct(); placeHoldersOct()
-        case "octal"?: keyboardHex(); placeHoldersHex()
-        case "decimal"?: keyboardOct(); placeHoldersOct()
+        case "HEXADECIMAL"?: keyboardOct(); placeHoldersOct()
+        case "OCTAL"?: keyboardHex(); placeHoldersHex()
+        case "DECIMAL"?: keyboardOct(); placeHoldersOct()
         default:
             break
         }
@@ -434,9 +434,9 @@ class ViewController: UIViewController, KeyboardDelegate {
             textField.deleteBackward()
         }
         switch labelTitle.text {
-        case "hexadecimal"?: leftButtonDecHex(); rightButtonOctHex()
-        case "octal"?: leftButtonDecOct(); rightButtonHexOct()
-        case "decimal"?: leftButtonHexDec(); rightButtonOctDec()
+        case "HEXADECIMAL"?: leftButtonDecHex(); rightButtonOctHex()
+        case "OCTAL"?: leftButtonDecOct(); rightButtonHexOct()
+        case "DECIMAL"?: leftButtonHexDec(); rightButtonOctDec()
         default: break
         }
         if textField.text?.count == 0 {

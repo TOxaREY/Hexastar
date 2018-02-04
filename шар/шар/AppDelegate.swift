@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Anima
+//  шар
 //
-//  Created by REYNIKOV ANTON on 01.02.2018.
+//  Created by REYNIKOV ANTON on 02.02.2018.
 //  Copyright © 2018 REYNIKOV ANTON. All rights reserved.
 //
 
