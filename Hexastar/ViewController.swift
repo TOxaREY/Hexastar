@@ -9,19 +9,6 @@
 import UIKit
 import Foundation
 
-//// Мигание йоды
-extension UIImageView {
-    func flash() {
-        let flash = CABasicAnimation(keyPath: "opacity")
-        flash.duration = 4
-        flash.fromValue = 1
-        flash.toValue = 0
-        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        flash.autoreverses = true
-        flash.repeatCount = 1000000
-        layer.add(flash, forKey: nil)
-    }
-}
 //// Определение высоты девайса
 public var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
@@ -306,7 +293,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
     var tap = 0
     func labelTitleTap() {
-        let fontTitle = UIFont(name: "STARWARS", size: 30.0)!
+        let fontTitle = UIFont(name: "moonhouse", size: 35.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: fontTitle]
         switch tap {
         case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("HEXADECIMAL", comment: "HEXADECIMAL") , attributes: attributes); tap += 1; placeHoldersTitle()
@@ -596,8 +583,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         super.viewDidLoad()
         constraintTextField()
         constraintImage()
-        leftYoda.flash()
-        rightYoda.flash()
         labelTitleTap()
         labelButton()
         keyboardOff()

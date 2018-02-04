@@ -85,6 +85,5 @@ class KeyboardHex: UIView {
     @IBAction func keyTappedDelete(sender: UIButton) {
         self.delegate?.keyWasTapped(character: "delete")
     }
-    
 }
 

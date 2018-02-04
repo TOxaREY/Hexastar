@@ -39,6 +39,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>STARWARS.TTF</string>
+		<string>moonhouse.ttf</string>
 	</array>
 </dict>
 </plist>

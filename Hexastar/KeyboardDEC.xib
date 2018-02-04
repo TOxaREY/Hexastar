@@ -20,10 +20,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdV-wQ-YHH">
                     <rect key="frame" x="0.0" y="464" width="375" height="203"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="небо" translatesAutoresizingMaskIntoConstraints="NO" id="mLR-fJ-cRO">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="414_224" translatesAutoresizingMaskIntoConstraints="NO" id="mLR-fJ-cRO">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDc-KQ-5bc">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDc-KQ-5bc">
                             <rect key="frame" x="4.5" y="101.5" width="53.5" height="57.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="TDc-KQ-5bc" secondAttribute="height" multiplier="60:64" id="6Gg-iP-7dK"/>
@@ -35,7 +35,7 @@
                                 <action selector="keyTapped5WithSender:" destination="-1" eventType="touchUpInside" id="aav-Tx-GMg"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dua-vE-y0b">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dua-vE-y0b">
                             <rect key="frame" x="67" y="101.5" width="54.5" height="57.5"/>
                             <state key="normal" image="6">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,7 +44,7 @@
                                 <action selector="keyTapped6WithSender:" destination="-1" eventType="touchUpInside" id="TN6-4G-huE"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mix-q7-IoS">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mix-q7-IoS">
                             <rect key="frame" x="130.5" y="101.5" width="53" height="57.5"/>
                             <state key="normal" image="7">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,7 +53,7 @@
                                 <action selector="keyTapped7WithSender:" destination="-1" eventType="touchUpInside" id="c5e-M8-GBG"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kD-jC-QtB">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kD-jC-QtB">
                             <rect key="frame" x="192.5" y="101.5" width="53" height="57.5"/>
                             <state key="normal" image="8">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,7 +62,7 @@
                                 <action selector="keyTapped8WithSender:" destination="-1" eventType="touchUpInside" id="3LT-PW-6UZ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdo-MZ-rD1">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdo-MZ-rD1">
                             <rect key="frame" x="254.5" y="101.5" width="54" height="57.5"/>
                             <state key="normal" image="9">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,7 +71,7 @@
                                 <action selector="keyTapped9WithSender:" destination="-1" eventType="touchUpInside" id="HbM-WF-rv3"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-hR-CrE">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-hR-CrE">
                             <rect key="frame" x="317.5" y="101.5" width="53" height="57.5"/>
                             <state key="normal" image="dotta">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,7 +80,7 @@
                                 <action selector="keyTappedDottaWithSender:" destination="-1" eventType="touchUpInside" id="Ure-Op-Kab"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrD-41-pgS">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrD-41-pgS">
                             <rect key="frame" x="4.5" y="36" width="53.5" height="57.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="xrD-41-pgS" secondAttribute="height" multiplier="60:64" id="I8o-NK-3Xl"/>
@@ -92,7 +92,7 @@
                                 <action selector="keyTappedWithSender:" destination="-1" eventType="touchUpInside" id="8ih-Hq-7xh"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssk-aw-KqO">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssk-aw-KqO">
                             <rect key="frame" x="67" y="36" width="54.5" height="57.5"/>
                             <state key="normal" image="1">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,7 +101,7 @@
                                 <action selector="keyTapped1WithSender:" destination="-1" eventType="touchUpInside" id="dXt-Tz-yz8"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-ZT-JBS">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-ZT-JBS">
                             <rect key="frame" x="130.5" y="36" width="53" height="57.5"/>
                             <state key="normal" image="2">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,7 +110,7 @@
                                 <action selector="keyTapped2WithSender:" destination="-1" eventType="touchUpInside" id="Vk1-ic-4lq"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o33-bN-nfk">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o33-bN-nfk">
                             <rect key="frame" x="192.5" y="36" width="53" height="57.5"/>
                             <state key="normal" image="3">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,7 +119,7 @@
                                 <action selector="keyTapped3WithSender:" destination="-1" eventType="touchUpInside" id="sXq-gx-cg8"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpE-rD-He7">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpE-rD-He7">
                             <rect key="frame" x="254.5" y="36" width="54" height="57.5"/>
                             <state key="normal" image="4">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,7 +128,7 @@
                                 <action selector="keyTapped4WithSender:" destination="-1" eventType="touchUpInside" id="qJt-ye-s2b"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-Cd-N05">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-Cd-N05">
                             <rect key="frame" x="317.5" y="36" width="53" height="57.5"/>
                             <state key="normal" image="Delete">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -208,6 +208,7 @@
         <image name="2" width="100" height="116"/>
         <image name="3" width="100" height="116"/>
         <image name="4" width="100" height="116"/>
+        <image name="414_224" width="863" height="515"/>
         <image name="5" width="100" height="116"/>
         <image name="6" width="100" height="116"/>
         <image name="7" width="100" height="116"/>
@@ -215,6 +216,5 @@
         <image name="9" width="100" height="116"/>
         <image name="Delete" width="128" height="128"/>
         <image name="dotta" width="100" height="116"/>
-        <image name="небо" width="414" height="224"/>
     </resources>
 </document>

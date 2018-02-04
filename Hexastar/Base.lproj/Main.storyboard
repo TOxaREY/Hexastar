@@ -14,6 +14,9 @@
         <array key="STARWARS.TTF">
             <string>STARWARS</string>
         </array>
+        <array key="moonhouse.ttf">
+            <string>moonhouse</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -31,35 +34,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEXADECIMAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="89.333333333333329" y="32" width="235.66666666666669" height="25.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="30"/>
+                                        <rect key="frame" x="75" y="35" width="265.66666666666669" height="30"/>
+                                        <fontDescription key="fontDescription" name="moonhouse" family="moonhouse" pointSize="30"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yoda_5_render_by_aracnify-d9313br" translatesAutoresizingMaskIntoConstraints="NO" id="zVz-ye-iBY">
-                                        <rect key="frame" x="43.333333333333343" y="34" width="46" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="zVz-ye-iBY" secondAttribute="height" multiplier="46:30" id="CfP-I8-rYr"/>
-                                            <constraint firstAttribute="height" constant="30" id="Iwz-W6-rPs"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Yoda_5_render_by_aracnify-d9313br2 копия" translatesAutoresizingMaskIntoConstraints="NO" id="DVL-Cw-9eX">
-                                        <rect key="frame" x="325" y="34" width="46" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="DVL-Cw-9eX" secondAttribute="height" multiplier="46:30" id="FSE-EP-HNr"/>
-                                            <constraint firstAttribute="height" constant="30" id="c0U-Tx-6IO"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.88627450980392153" green="0.0078431372549019607" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zVz-ye-iBY" secondAttribute="bottom" id="MQh-wA-XwD"/>
                                     <constraint firstAttribute="height" constant="64" id="SPf-lq-OZQ"/>
-                                    <constraint firstItem="mut-tC-wbi" firstAttribute="centerY" secondItem="Nir-cS-6Xf" secondAttribute="centerY" constant="12" id="TzQ-34-AoF"/>
-                                    <constraint firstAttribute="bottom" secondItem="DVL-Cw-9eX" secondAttribute="bottom" id="XeE-qf-X1N"/>
+                                    <constraint firstItem="mut-tC-wbi" firstAttribute="centerY" secondItem="Nir-cS-6Xf" secondAttribute="centerY" constant="18" id="TzQ-34-AoF"/>
                                     <constraint firstItem="mut-tC-wbi" firstAttribute="centerX" secondItem="Nir-cS-6Xf" secondAttribute="centerX" id="cro-zv-zuh"/>
-                                    <constraint firstItem="DVL-Cw-9eX" firstAttribute="leading" secondItem="mut-tC-wbi" secondAttribute="trailing" id="u5f-kh-bNO"/>
-                                    <constraint firstItem="mut-tC-wbi" firstAttribute="leading" secondItem="zVz-ye-iBY" secondAttribute="trailing" id="yys-qL-qq8"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="QC9-dn-FxJ" appends="YES" id="cvo-u6-eCg"/>
@@ -75,7 +60,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1J-N7-F90">
-                                        <rect key="frame" x="0.0" y="388" width="207.33333333333334" height="60"/>
+                                        <rect key="frame" x="0.0" y="388" width="207" height="60"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="titleShadowOffset" width="3" height="2"/>
@@ -88,7 +73,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Z-Pr-kgR">
-                                        <rect key="frame" x="207.33333333333337" y="388" width="206.66666666666663" height="60"/>
+                                        <rect key="frame" x="207" y="388" width="207" height="60"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="titleShadowOffset" width="3" height="2"/>
@@ -101,7 +86,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p" customClass="NMTextField" customModule="Hexastar" customModuleProvider="target">
-                                        <rect key="frame" x="188.33333333333334" y="328" width="39" height="40"/>
+                                        <rect key="frame" x="187.66666666666666" y="328" width="39" height="40"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="textColor" red="0.16470588235294117" green="0.6470588235294118" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
@@ -111,7 +96,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-xd-mG9">
-                                        <rect key="frame" x="365" y="224" width="41" height="41.333333333333314"/>
+                                        <rect key="frame" x="365.33333333333331" y="224" width="40.666666666666686" height="40.333333333333314"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kZe-xd-mG9" secondAttribute="height" multiplier="1:1" id="6vM-Xb-Fkp"/>
                                         </constraints>
@@ -121,7 +106,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-Hf-F3y">
-                                        <rect key="frame" x="8" y="224" width="41" height="41.333333333333314"/>
+                                        <rect key="frame" x="8" y="224" width="40.666666666666664" height="40.333333333333314"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CpE-Hf-F3y" secondAttribute="height" multiplier="1:1" id="0Ye-4I-Xfl"/>
                                         </constraints>
@@ -141,14 +126,14 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shipL" translatesAutoresizingMaskIntoConstraints="NO" id="S12-XP-iRY">
-                                        <rect key="frame" x="148.33333333333334" y="328" width="40" height="40"/>
+                                        <rect key="frame" x="147.66666666666666" y="328" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="1vw-5f-5a4"/>
                                             <constraint firstAttribute="height" constant="40" id="bL6-YP-KYJ"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shipR" translatesAutoresizingMaskIntoConstraints="NO" id="VBF-GK-GcV">
-                                        <rect key="frame" x="227.33333333333334" y="328" width="40.000000000000028" height="40"/>
+                                        <rect key="frame" x="226.66666666666666" y="328" width="39.999999999999972" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="iMT-Oc-5Xi"/>
                                         </constraints>
@@ -221,11 +206,9 @@
                         <outlet property="labelTitle" destination="mut-tC-wbi" id="VGn-0x-ewb"/>
                         <outlet property="leftImage" destination="S12-XP-iRY" id="fH3-w2-DbW"/>
                         <outlet property="leftKey" destination="s1J-N7-F90" id="o4E-mh-wwH"/>
-                        <outlet property="leftYoda" destination="zVz-ye-iBY" id="19e-LR-XVe"/>
                         <outlet property="pasteButton" destination="kZe-xd-mG9" id="pp6-HO-B7Y"/>
                         <outlet property="rightImage" destination="VBF-GK-GcV" id="8sN-yr-cRT"/>
                         <outlet property="rightKey" destination="A0Z-Pr-kgR" id="Xg4-8W-HFY"/>
-                        <outlet property="rightYoda" destination="DVL-Cw-9eX" id="v6f-Y4-Omj"/>
                         <outlet property="textField" destination="Q8Z-hz-N0p" id="lbx-4e-52z"/>
                     </connections>
                 </viewController>
@@ -243,8 +226,6 @@
         <image name="414_812" width="287" height="564"/>
         <image name="Basileus_Star_Destroyer" width="1826" height="806"/>
         <image name="Star-Wars-Ship-Vector-PNG" width="640" height="336"/>
-        <image name="Yoda_5_render_by_aracnify-d9313br" width="1233" height="647"/>
-        <image name="Yoda_5_render_by_aracnify-d9313br2 копия" width="1233" height="647"/>
         <image name="clear" width="256" height="256"/>
         <image name="copy" width="256" height="256"/>
         <image name="paste" width="256" height="256"/>
