@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEXADECIMAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="89.666666666666686" y="38" width="235" height="25"/>
+                                        <rect key="frame" x="90" y="38" width="235" height="25"/>
                                         <fontDescription key="fontDescription" name="SFDistantGalaxyAlternate" family="SF Distant Galaxy Alternate" pointSize="30"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -53,7 +53,7 @@
                                     <outletCollection property="gestureRecognizers" destination="QC9-dn-FxJ" appends="YES" id="cvo-u6-eCg"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D4-2p-BDI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0D4-2p-BDI" customClass="Star" customModule="Hexastar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="414" height="448"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-Bp-TF3">
@@ -89,7 +89,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Z-hz-N0p" customClass="NMTextField" customModule="Hexastar" customModuleProvider="target">
-                                        <rect key="frame" x="187.66666666666666" y="328" width="39" height="40"/>
+                                        <rect key="frame" x="188" y="328" width="39" height="40"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="textColor" red="0.16470588235294117" green="0.6470588235294118" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
@@ -129,14 +129,14 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shipL" translatesAutoresizingMaskIntoConstraints="NO" id="S12-XP-iRY">
-                                        <rect key="frame" x="147.66666666666666" y="328" width="40" height="40"/>
+                                        <rect key="frame" x="148" y="328" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="1vw-5f-5a4"/>
                                             <constraint firstAttribute="height" constant="40" id="bL6-YP-KYJ"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shipR" translatesAutoresizingMaskIntoConstraints="NO" id="VBF-GK-GcV">
-                                        <rect key="frame" x="226.66666666666666" y="328" width="39.999999999999972" height="40"/>
+                                        <rect key="frame" x="227" y="328" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="iMT-Oc-5Xi"/>
                                         </constraints>
