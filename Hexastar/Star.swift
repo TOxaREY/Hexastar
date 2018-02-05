@@ -20,9 +20,10 @@ extension SKAction {
     }
 }
 class Star: SKView {
-
+   let spaceship = SKSpriteNode(imageNamed: "ball.png")
+   let explosion = SKSpriteNode(fileNamed: "expl.sks")
+   
     override func didMoveToSuperview() {
-        let spaceship = SKSpriteNode(imageNamed: "ball.png")
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear
         self.presentScene(scene)
@@ -39,7 +40,15 @@ class Star: SKView {
         let loop = SKAction.repeatForever(seq)
         spaceship.run(loop)
         
-
+        explosion?.position = CGPoint(x: spaceship.position.x, y: spaceship.position.y)
+        explosion?.isHidden = true
+        scene.addChild(explosion!)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(explosionStar), name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
     }
-}
+    @objc func explosionStar() {
+        spaceship.isHidden = true
+//        explosion?.run(SKAction.)
+    }
+  }
 

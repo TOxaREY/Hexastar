@@ -20,6 +20,7 @@
 		F297B239200E20760072E484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F297B238200E20760072E484 /* Assets.xcassets */; };
 		F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B23A200E20760072E484 /* LaunchScreen.storyboard */; };
 		F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F2B10B3E200FAB36003DD679 /* STARWARS.TTF */; };
+		F2C252CB2028E22F00A23854 /* expl.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2C252CA2028E22F00A23854 /* expl.sks */; };
 		F2EE6FD6200FC39900134DDE /* KeyboardHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */; };
 		F2EF3C4E20177C3300B899DA /* KeyboardDEC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EF3C4D20177C3300B899DA /* KeyboardDEC.xib */; };
 		F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */; };
@@ -43,6 +44,7 @@
 		F297B23B200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F297B23D200E20760072E484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
+		F2C252CA2028E22F00A23854 /* expl.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = expl.sks; sourceTree = "<group>"; };
 		F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHEX.swift; sourceTree = "<group>"; };
 		F2EF3C4D20177C3300B899DA /* KeyboardDEC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardDEC.xib; sourceTree = "<group>"; };
 		F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardOCT.xib; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				F297B231200E20750072E484 /* AppDelegate.swift */,
 				F297B233200E20760072E484 /* ViewController.swift */,
 				F24BDE6A20287DBF0007C8C5 /* Star.swift */,
+				F2C252CA2028E22F00A23854 /* expl.sks */,
 				F297B235200E20760072E484 /* Main.storyboard */,
 				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
 				F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */,
@@ -164,6 +167,7 @@
 			files = (
 				F24306B420281E2600B1ED08 /* TIE-Wing.ttf in Resources */,
 				F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */,
+				F2C252CB2028E22F00A23854 /* expl.sks in Resources */,
 				F297B239200E20760072E484 /* Assets.xcassets in Resources */,
 				F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */,
 				F2EF3C4E20177C3300B899DA /* KeyboardDEC.xib in Resources */,
