@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */ = {isa = PBXBuildFile; fileRef = F239826D200F8976003A0BBC /* KeyboardHEX.xib */; };
+		F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */; };
+		F24306B420281E2600B1ED08 /* TIE-Wing.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24306B020281DFA00B1ED08 /* TIE-Wing.ttf */; };
 		F25DEFCF2027851400BA8348 /* moonhouse.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F25DEFCE2027840F00BA8348 /* moonhouse.ttf */; };
 		F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B5B5E2018B7910096D98A /* HexCalc.swift */; };
 		F27EB0902019D5C20061E461 /* OctCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EB08F2019D5C20061E461 /* OctCalc.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		F239826D200F8976003A0BBC /* KeyboardHEX.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardHEX.xib; sourceTree = "<group>"; };
+		F24306B020281DFA00B1ED08 /* TIE-Wing.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TIE-Wing.ttf"; sourceTree = "<group>"; };
+		F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFDistantGalaxyAlternate.ttf; sourceTree = "<group>"; };
 		F25DEFCE2027840F00BA8348 /* moonhouse.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = moonhouse.ttf; sourceTree = "<group>"; };
 		F27B5B5E2018B7910096D98A /* HexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCalc.swift; sourceTree = "<group>"; };
 		F27EB08F2019D5C20061E461 /* OctCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctCalc.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 			children = (
 				F2B10B3E200FAB36003DD679 /* STARWARS.TTF */,
 				F25DEFCE2027840F00BA8348 /* moonhouse.ttf */,
+				F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */,
+				F24306B020281DFA00B1ED08 /* TIE-Wing.ttf */,
 				F27B5B5E2018B7910096D98A /* HexCalc.swift */,
 				F27EB08F2019D5C20061E461 /* OctCalc.swift */,
 				F297B231200E20750072E484 /* AppDelegate.swift */,
@@ -153,11 +159,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24306B420281E2600B1ED08 /* TIE-Wing.ttf in Resources */,
 				F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */,
 				F297B239200E20760072E484 /* Assets.xcassets in Resources */,
 				F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */,
 				F2EF3C4E20177C3300B899DA /* KeyboardDEC.xib in Resources */,
 				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
+				F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */,
 				F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */,
 				F25DEFCF2027851400BA8348 /* moonhouse.ttf in Resources */,
 				F297B237200E20760072E484 /* Main.storyboard in Resources */,

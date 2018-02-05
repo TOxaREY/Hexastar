@@ -40,6 +40,8 @@
 	<array>
 		<string>STARWARS.TTF</string>
 		<string>moonhouse.ttf</string>
+		<string>TIE-Wing.ttf</string>
+		<string>SFDistantGalaxyAlternate.ttf</string>
 	</array>
 </dict>
 </plist>

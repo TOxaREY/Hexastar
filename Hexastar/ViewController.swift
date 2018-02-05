@@ -93,7 +93,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelRes.text?.removeAll()
         leftKey.isSelected = false
         rightKey.isSelected = false
-        redColorButton()
+        blackColorButton()
         view.endEditing(true)
     }
     @IBAction func copyButton(_ sender: Any) {
@@ -293,7 +293,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
     var tap = 0
     func labelTitleTap() {
-        let fontTitle = UIFont(name: "moonhouse", size: 35.0)!
+        let fontTitle = UIFont(name: "SFDistantGalaxyAlternate", size: 35.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: fontTitle]
         switch tap {
         case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("HEXADECIMAL", comment: "HEXADECIMAL") , attributes: attributes); tap += 1; placeHoldersTitle()
@@ -305,7 +305,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         view.endEditing(true)
         selectOff()
         labelButton()
-        redColorButton()
+        blackColorButton()
     }
 ////
 //// Надпись на кнопке в зависисмоти от заголовка
@@ -322,9 +322,11 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
 ////
 //// Исходный красный на кнопках
-    func redColorButton() {
-        leftKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
-        rightKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+    func blackColorButton() {
+        leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
+        leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+        rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
+        rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
     }
 //// Нажатие кнопок
     @IBAction func leftPush(_ sender: UIButton) {
@@ -332,7 +334,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         rightKey.isSelected = false
         leftKey.isSelected = true
         leftKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
-        rightKey.setTitleColor(UIColor(red:0.06, green:0.32, blue:0.38, alpha:0.8), for: UIControlState.normal)
+        leftKey.setTitleShadowColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
+        rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.7), for: UIControlState.normal)
+        rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -351,7 +355,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftKey.isSelected = false
         rightKey.isSelected = true
         rightKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
-        leftKey.setTitleColor(UIColor(red:0.06, green:0.32, blue:0.38, alpha:0.8), for: UIControlState.normal)
+        rightKey.setTitleShadowColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
+        leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.7), for: UIControlState.normal)
+        leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()

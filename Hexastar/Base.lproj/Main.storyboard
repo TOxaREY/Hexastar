@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SFDistantGalaxyAlternate.ttf">
+            <string>SFDistantGalaxyAlternate</string>
+        </array>
         <array key="STARWARS.TTF">
             <string>STARWARS</string>
         </array>
@@ -34,8 +37,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEXADECIMAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="75" y="35" width="265.66666666666669" height="30"/>
-                                        <fontDescription key="fontDescription" name="moonhouse" family="moonhouse" pointSize="30"/>
+                                        <rect key="frame" x="89.666666666666686" y="38" width="235" height="25"/>
+                                        <fontDescription key="fontDescription" name="SFDistantGalaxyAlternate" family="SF Distant Galaxy Alternate" pointSize="30"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -61,12 +64,12 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1J-N7-F90">
                                         <rect key="frame" x="0.0" y="388" width="207" height="60"/>
-                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="moonhouse" family="moonhouse" pointSize="40"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="titleShadowOffset" width="3" height="2"/>
                                         <state key="normal" backgroundImage="Star-Wars-Ship-Vector-PNG">
-                                            <color key="titleColor" red="0.88627450980392153" green="0.0078431372549019607" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="leftPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oXW-7l-jF7"/>
@@ -74,12 +77,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Z-Pr-kgR">
                                         <rect key="frame" x="207" y="388" width="207" height="60"/>
-                                        <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="moonhouse" family="moonhouse" pointSize="40"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="titleShadowOffset" width="3" height="2"/>
                                         <state key="normal" backgroundImage="Basileus_Star_Destroyer">
-                                            <color key="titleColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="rightPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5f-bT-lSb"/>
