@@ -22,6 +22,9 @@ extension SKAction {
 class Star: SKView {
    let spaceship = SKSpriteNode(imageNamed: "ball.png")
    let explosion = SKSpriteNode(fileNamed: "expl.sks")
+    let exp111 = SKSpriteNode(imageNamed: "ball.png")
+    let exp100 = SKTexture(imageNamed: "100.png")
+    let exp101 = SKTexture(imageNamed: "101.png")
    
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
@@ -40,15 +43,53 @@ class Star: SKView {
         let loop = SKAction.repeatForever(seq)
         spaceship.run(loop)
         
-        explosion?.position = CGPoint(x: spaceship.position.x, y: spaceship.position.y)
-        explosion?.isHidden = true
-        scene.addChild(explosion!)
+
+        
+        
+        
+//        exp111.isHidden = true
+        scene.addChild(exp111)
         
         NotificationCenter.default.addObserver(self, selector: #selector(explosionStar), name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
+        
     }
-    @objc func explosionStar() {
-        spaceship.isHidden = true
-//        explosion?.run(SKAction.)
-    }
-  }
+            @objc func explosionStar() {
+                if spaceship.isHidden == false {
+                    let animateExplosion = SKAction.sequence([
+                        SKAction.wait(forDuration: 0, withRange: 0),
+                        SKAction.animate(with: [exp100,exp101,exp100,exp101,exp100,exp101], timePerFrame: 0.2)
+                        ])
+                spaceship.isHidden = true
+                    exp111.isHidden = false
+                    exp111.position = CGPoint(x: self.spaceship.position.x, y: self.spaceship.position.y)
+                    exp111.run(animateExplosion)
+          }
+            }
+}
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        explosion?.isHidden = true
+//        scene.addChild(explosion!)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(explosionStar), name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
+//    }
+//    @objc func explosionStar() {
+//        if spaceship.isHidden == false {
+//        spaceship.isHidden = true
+//        explosion?.position = CGPoint(x: self.spaceship.position.x, y: self.spaceship.position.y)
+//        explosion?.isHidden = false
+//  }
+//    }
+//}
 

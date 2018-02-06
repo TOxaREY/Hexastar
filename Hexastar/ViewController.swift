@@ -42,6 +42,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Ошибка
     func wrong() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         pasteButton.isEnabled = true
         copyClearHiddenButton()
         labelRes.text?.removeAll()
@@ -98,7 +99,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         view.endEditing(true)
     }
     @IBAction func copyButton(_ sender: Any) {
-         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         if labelRes.text?.count != 0 {
         if labelRes.text!.count > 18 {
             var labelRes18:String = ""
@@ -114,7 +114,6 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Вставка
     var pasteBoardString: String? = nil
     @IBAction func pasterButton(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         textField.placeholder?.removeAll()
         pasteBoardString = UIPasteboard.general.string?.replacingOccurrences(of: ",", with: ".")
         if leftKey.isSelected != false || rightKey.isSelected != false {
@@ -291,7 +290,6 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Нажатие меняет заголовок
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         labelTitleTap()
         keyboardOff()
     }
