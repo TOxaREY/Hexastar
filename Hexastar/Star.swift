@@ -21,10 +21,23 @@ extension SKAction {
 }
 class Star: SKView {
    let spaceship = SKSpriteNode(imageNamed: "ball.png")
-   let explosion = SKSpriteNode(fileNamed: "expl.sks")
-    let exp111 = SKSpriteNode(imageNamed: "ball.png")
-    let exp100 = SKTexture(imageNamed: "100.png")
-    let exp101 = SKTexture(imageNamed: "101.png")
+    let expStart = SKSpriteNode(imageNamed: "ballStart.png")
+    let expFrame1 = SKTexture(imageNamed: "ball 1.png")
+    let expFrame2 = SKTexture(imageNamed: "ball 2.png")
+    let expFrame3 = SKTexture(imageNamed: "ball 3.png")
+    let expFrame3a = SKTexture(imageNamed: "ball 3a.png")
+    let expFrame3b = SKTexture(imageNamed: "ball 3b.png")
+    let expFrame4 = SKTexture(imageNamed: "ball 4.png")
+    let expFrame5 = SKTexture(imageNamed: "ball 5.png")
+    let expFrame6 = SKTexture(imageNamed: "ball 6.png")
+    let expFrame7 = SKTexture(imageNamed: "ball 7.png")
+    let expFrame8 = SKTexture(imageNamed: "ball 8.png")
+    let expFrame9 = SKTexture(imageNamed: "ball 9.png")
+    let expFrame10 = SKTexture(imageNamed: "ball 10.png")
+    let expFrame11 = SKTexture(imageNamed: "ball 11.png")
+    let expFrame12 = SKTexture(imageNamed: "ball 12.png")
+    let expFrame13 = SKTexture(imageNamed: "ball 13.png")
+    let expFrame14 = SKTexture(imageNamed: "ball 14.png")
    
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
@@ -42,54 +55,22 @@ class Star: SKView {
         let seq = SKAction.sequence([moveRight, SKAction.hide(), returnLeft, SKAction.unhide()])
         let loop = SKAction.repeatForever(seq)
         spaceship.run(loop)
-        
 
-        
-        
-        
-//        exp111.isHidden = true
-        scene.addChild(exp111)
+        expStart.isHidden = true
+        scene.addChild(expStart)
         
         NotificationCenter.default.addObserver(self, selector: #selector(explosionStar), name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         
     }
             @objc func explosionStar() {
                 if spaceship.isHidden == false {
-                    let animateExplosion = SKAction.sequence([
-                        SKAction.wait(forDuration: 0, withRange: 0),
-                        SKAction.animate(with: [exp100,exp101,exp100,exp101,exp100,exp101], timePerFrame: 0.2)
-                        ])
-                spaceship.isHidden = true
-                    exp111.isHidden = false
-                    exp111.position = CGPoint(x: self.spaceship.position.x, y: self.spaceship.position.y)
-                    exp111.run(animateExplosion)
+                    let animateExplosion = SKAction.animate(with: [expFrame1,expFrame2,expFrame3,expFrame3a,expFrame3b,expFrame4,expFrame5,expFrame6,expFrame7,expFrame8,expFrame9,expFrame10,expFrame11,expFrame12,expFrame13,expFrame14], timePerFrame: 0.1)
+                    spaceship.isHidden = true
+                    expStart.position = CGPoint(x: self.spaceship.position.x, y: self.spaceship.position.y)
+                    expStart.isHidden = false
+                    expStart.run(animateExplosion, completion: {self.expStart.isHidden = true})
           }
-            }
+    }
 }
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//        explosion?.isHidden = true
-//        scene.addChild(explosion!)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(explosionStar), name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
-//    }
-//    @objc func explosionStar() {
-//        if spaceship.isHidden == false {
-//        spaceship.isHidden = true
-//        explosion?.position = CGPoint(x: self.spaceship.position.x, y: self.spaceship.position.y)
-//        explosion?.isHidden = false
-//  }
-//    }
-//}
 
