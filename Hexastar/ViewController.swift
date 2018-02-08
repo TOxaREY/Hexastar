@@ -91,7 +91,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         textField.text?.removeAll()
         textField.isEnabled = false
-        placeHoldersTitle()
+        textLabelTitle()
         labelRes.text?.removeAll()
         leftKey.isSelected = false
         rightKey.isSelected = false
@@ -298,9 +298,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         let fontTitle = UIFont(name: "SFDistantGalaxyAlternate", size: 35.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: fontTitle]
         switch tap {
-        case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("HEXADECIMAL", comment: "HEXADECIMAL") , attributes: attributes); tap += 1; placeHoldersTitle()
-        case 1: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("OCTAL", comment: "OCTAL") , attributes: attributes); tap += 1; placeHoldersTitle()
-        case 2: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("DECIMAL", comment: "DECIMAL") , attributes: attributes); tap = 0; placeHoldersTitle()
+        case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("HEXADECIMAL", comment: "HEXADECIMAL") , attributes: attributes); tap += 1; textLabelTitle()
+        case 1: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("OCTAL", comment: "OCTAL") , attributes: attributes); tap += 1; textLabelTitle()
+        case 2: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("DECIMAL", comment: "DECIMAL") , attributes: attributes); tap = 0; textLabelTitle()
         default: break
         }
         textField.text = ""
@@ -374,29 +374,32 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
-//// Плейсхолдеры
-    func placeHoldersTitle() {
-    let font = UIFont(name: "Menlo", size: 20.0)!
-    let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
-    textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("выбери сторону конвертации", comment: "choose side of conversion"), attributes: attributes)
+//// Надпись на стартах
+    func textLabelTitle() {
+        textField.isHidden = true
         copyClearHiddenButton()
         pasteButton.isHidden = true
         leftImage.isHidden = true
         rightImage.isHidden = true
     }
+////
+//// Плейсхолдеры
     func placeHoldersDec() {
+        textField.isHidden = false
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 10-ное число", comment: "enter the decimal number"), attributes: attributes)
         imageDontHidden()
     }
     func placeHoldersOct() {
+        textField.isHidden = false
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 8-ное число", comment: "enter the octal number"), attributes: attributes)
        imageDontHidden()
     }
     func placeHoldersHex() {
+        textField.isHidden = false
         let font = UIFont(name: "Menlo", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 16-ное число", comment: "enter the hexadecimal number"), attributes: attributes)
@@ -595,7 +598,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelTitleTap()
         labelButton()
         keyboardOff()
-        placeHoldersTitle()
+        textLabelTitle()
         UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
         borderTextField()
 

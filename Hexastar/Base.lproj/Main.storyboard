@@ -174,7 +174,7 @@
                                     <constraint firstItem="CpE-Hf-F3y" firstAttribute="leading" secondItem="0D4-2p-BDI" secondAttribute="leading" constant="8" id="y5D-GF-k6t"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BT-gf-V2s">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BT-gf-V2s" customClass="Ship" customModule="Hexastar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="512" width="414" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2BT-gf-V2s" secondAttribute="height" multiplier="414:224" id="969-0o-SDW"/>

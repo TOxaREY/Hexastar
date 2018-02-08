@@ -14,6 +14,7 @@
 		F25DEFCF2027851400BA8348 /* moonhouse.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F25DEFCE2027840F00BA8348 /* moonhouse.ttf */; };
 		F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B5B5E2018B7910096D98A /* HexCalc.swift */; };
 		F27EB0902019D5C20061E461 /* OctCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EB08F2019D5C20061E461 /* OctCalc.swift */; };
+		F2887EC9202CC6B0006F0075 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2887EC8202CC6B0006F0075 /* Ship.swift */; };
 		F297B232200E20750072E484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297B231200E20750072E484 /* AppDelegate.swift */; };
 		F297B234200E20760072E484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297B233200E20760072E484 /* ViewController.swift */; };
 		F297B237200E20760072E484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B235200E20760072E484 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		F25DEFCE2027840F00BA8348 /* moonhouse.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = moonhouse.ttf; sourceTree = "<group>"; };
 		F27B5B5E2018B7910096D98A /* HexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCalc.swift; sourceTree = "<group>"; };
 		F27EB08F2019D5C20061E461 /* OctCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctCalc.swift; sourceTree = "<group>"; };
+		F2887EC8202CC6B0006F0075 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		F297B22E200E20750072E484 /* Hexastar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hexastar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F297B231200E20750072E484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F297B233200E20760072E484 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				F297B231200E20750072E484 /* AppDelegate.swift */,
 				F297B233200E20760072E484 /* ViewController.swift */,
 				F24BDE6A20287DBF0007C8C5 /* Star.swift */,
+				F2887EC8202CC6B0006F0075 /* Ship.swift */,
 				F297B235200E20760072E484 /* Main.storyboard */,
 				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
 				F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */,
@@ -186,6 +189,7 @@
 				F2EF3C582017849F00B899DA /* KeyboardOCT.swift in Sources */,
 				F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */,
 				F2EF3C562017848D00B899DA /* KeyboardDEC.swift in Sources */,
+				F2887EC9202CC6B0006F0075 /* Ship.swift in Sources */,
 				F27EB0902019D5C20061E461 /* OctCalc.swift in Sources */,
 				F297B234200E20760072E484 /* ViewController.swift in Sources */,
 				F297B232200E20750072E484 /* AppDelegate.swift in Sources */,
