@@ -1,6 +1,6 @@
 import UIKit
 import Foundation
-let myString = "🇺🇦"
+let myString = "⚾️"
 var myUni = [UInt32]()
 var myUnic = [UInt32]()
 var multiUni = [String]()
@@ -42,12 +42,12 @@ default: break
 while myUni.count > 0 {
     multiUni.append(hexConv())
 }
-//for i in multiUni {
-//    printStringHex.append("U+\(i) ")
-//}
-//print(printStringHex)
+for i in multiUni {
+    printStringHex.append("U+\(i) ")
+}
+print(printStringHex)
 //hex to decimal
-multiUni = ["4A"]
+multiUni = ["FE0F"]
 var multiDec = [String]()
 var multiDecString = [String]()
 var hexStr = ""

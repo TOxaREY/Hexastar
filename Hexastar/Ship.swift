@@ -23,13 +23,10 @@ class Ship: SKView {
         
         let oscillate = SKAction.oscillation(amplitude: 55, timePeriod: 5, midPoint: spaceship.position)
         spaceship.run(SKAction.repeatForever(oscillate))
-        let moveRight = SKAction.moveBy(x: -475, y: 0, duration: 5)
+        let moveRight = SKAction.moveBy(x: -475, y: 0, duration: 13)
         let returnLeft = SKAction.moveBy(x: 475, y: 0, duration: 0.1)
         let seq = SKAction.sequence([moveRight, SKAction.hide(), returnLeft, SKAction.unhide()])
         let loop = SKAction.repeatForever(seq)
         spaceship.run(loop)
     }
 }
-
-
-

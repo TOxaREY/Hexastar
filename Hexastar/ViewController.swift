@@ -78,14 +78,14 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var rightImage: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelStart: UILabel!
     @IBOutlet weak var leftKey: UIButton!
     @IBOutlet weak var rightKey: UIButton!
     @IBOutlet weak var labelRes: UILabel!
-    @IBOutlet weak var leftYoda: UIImageView!
-    @IBOutlet weak var rightYoda: UIImageView!
     @IBOutlet weak var copyButton: UIButton!
     @IBOutlet weak var pasteButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var binatrixLabel: UILabel!
 
     @IBAction func clearButton(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
@@ -303,6 +303,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         case 2: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("DECIMAL", comment: "DECIMAL") , attributes: attributes); tap = 0; textLabelTitle()
         default: break
         }
+        labelStart.isHidden = false
         textField.text = ""
         view.endEditing(true)
         selectOff()
@@ -332,6 +333,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
 //// Нажатие кнопок
     @IBAction func leftPush(_ sender: UIButton) {
+        labelStart.isHidden = true
         textField.isEnabled = true
         rightKey.isSelected = false
         leftKey.isSelected = true
@@ -353,6 +355,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
     @IBAction func rightPush(_ sender: UIButton) {
+        labelStart.isHidden = true
         textField.isEnabled = true
         leftKey.isSelected = false
         rightKey.isSelected = true
@@ -601,21 +604,55 @@ class ViewController: UIViewController, KeyboardDelegate {
         textLabelTitle()
         UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
         borderTextField()
+        runString(string: "CONVERTER DECIMAL <-> BINARY")
+
 
         
     }
 //// Кнопка перехода в другую программу
-    //        @IBAction func binatrixButton(_ sender: Any) {
-    //            let appURL = NSURL(string: "binatrixHexastar://")!
-    //            let webURL = NSURL(string: "https://itunes.apple.com/ru/app/binatrix/id1296545616")!
-    //            let application = UIApplication.shared
-    //
-    //            if application.canOpenURL(appURL as URL) {
-    //                application.open(appURL as URL)
-    //            } else {
-    //                application.open(webURL as URL)
-    //            }
-////           }
+    @IBAction func buttonBinatrix(_ sender: Any) {
+                let appURL = NSURL(string: "binatrixHexastar://")!
+                let webURL = NSURL(string: "https://itunes.apple.com/ru/app/binatrix/id1296545616")!
+                let application = UIApplication.shared
+    
+                if application.canOpenURL(appURL as URL) {
+                    application.open(appURL as URL)
+                } else {
+                    application.open(webURL as URL)
+                }
+    }
+////
+//// Бегущая строка
+    func runStringArray(string:String) -> ([String]) {
+        let myString = string
+        var myStringAdd = myString
+        var newString:String
+        var substring:Substring
+        var arrayRunString = [String]()
+        myStringAdd.append(String(myString[myString.index(myString.startIndex, offsetBy: 0)..<myString.index(myString.startIndex, offsetBy: 6)]))
+        var countString = 0
+        for _ in myString {
+            countString += 1
+        }
+        for i in 0...countString - 1 {
+            substring = myStringAdd[myStringAdd.index(myStringAdd.startIndex, offsetBy: i)..<myStringAdd.index(myStringAdd.startIndex, offsetBy: i + 6)]
+            newString = String(substring)
+            arrayRunString.append(newString)
+        }
+        return arrayRunString
+    }
+    func runString(string:String) {
+        let count = runStringArray(string: string).count
+        var q = 0
+        _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
+            self.binatrixLabel.text = self.runStringArray(string: string)[q]
+            q += 1
+            if q >= count {
+                q = 0
+            }
+        }
+    }
+////
 //// Тач в любую область чтоб убрать экран
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
