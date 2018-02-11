@@ -1,0 +1,18 @@
+/* CONVERT DECIMAL <-> BINARY */
+"CONVERT DECIMAL <-> BINARY " = "КОНВЕРТИРОВАТЬ ДЕСЯТИЧНОЕ <-> ДВОИЧНОЕ ";
+
+/* startLabel */
+"It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below" = "Пришло время выбрать сторону конвертации! Вверху выбрать касанием формат результата, ниже  выбрать формат ввода";
+
+/* enter a decimal number */
+"enter a decimal number" = "введите десятичное число";
+
+/* enter a hexadecimal number */
+"enter a hexadecimal number" = "введите 16-чное число";
+
+/* enter a octal number */
+"enter a octal number" = "введите восьмеричное число";
+
+/* invalid value */
+"invalid value" = "недопустимое значение";
+

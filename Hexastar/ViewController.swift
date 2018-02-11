@@ -47,7 +47,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         copyClearHiddenButton()
         labelRes.text?.removeAll()
         view.endEditing(true)
-        let font = UIFont(name: "Menlo", size: 20.0)!
+        let font = UIFont(name: "neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedText = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
@@ -96,6 +96,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftKey.isSelected = false
         rightKey.isSelected = false
         blackColorButton()
+        labelStart.isHidden = false
         view.endEditing(true)
     }
     @IBAction func copyButton(_ sender: Any) {
@@ -389,23 +390,23 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Плейсхолдеры
     func placeHoldersDec() {
         textField.isHidden = false
-        let font = UIFont(name: "Menlo", size: 20.0)!
+        let font = UIFont(name: "neuropol", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
-        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 10-ное число", comment: "enter the decimal number"), attributes: attributes)
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a decimal number", comment: "enter a decimal number"), attributes: attributes)
         imageDontHidden()
     }
     func placeHoldersOct() {
         textField.isHidden = false
-        let font = UIFont(name: "Menlo", size: 20.0)!
+        let font = UIFont(name: "neuropol", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
-        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 8-ное число", comment: "enter the octal number"), attributes: attributes)
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a octal number", comment: "enter a octal number"), attributes: attributes)
        imageDontHidden()
     }
     func placeHoldersHex() {
         textField.isHidden = false
-        let font = UIFont(name: "Menlo", size: 20.0)!
+        let font = UIFont(name: "neuropol", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
-        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("введите 16-ное число", comment: "enter the hexadecimal number"), attributes: attributes)
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a hexadecimal number", comment: "enter a hexadecimal number"), attributes: attributes)
         imageDontHidden()
     }
 ////
@@ -602,9 +603,12 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelButton()
         keyboardOff()
         textLabelTitle()
+        let font = UIFont(name: "neuropol", size: 20.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
+        labelStart.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
         UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
         borderTextField()
-        runString(string: "CONVERTER DECIMAL <-> BINARY")
+        runString(string: NSLocalizedString("CONVERT DECIMAL <-> BINARY ", comment: "CONVERT DECIMAL <-> BINARY "))
 
 
         
@@ -629,23 +633,25 @@ class ViewController: UIViewController, KeyboardDelegate {
         var newString:String
         var substring:Substring
         var arrayRunString = [String]()
-        myStringAdd.append(String(myString[myString.index(myString.startIndex, offsetBy: 0)..<myString.index(myString.startIndex, offsetBy: 6)]))
+        myStringAdd.append(String(myString[myString.index(myString.startIndex, offsetBy: 0)..<myString.index(myString.startIndex, offsetBy: 7)]))
         var countString = 0
         for _ in myString {
             countString += 1
         }
         for i in 0...countString - 1 {
-            substring = myStringAdd[myStringAdd.index(myStringAdd.startIndex, offsetBy: i)..<myStringAdd.index(myStringAdd.startIndex, offsetBy: i + 6)]
+            substring = myStringAdd[myStringAdd.index(myStringAdd.startIndex, offsetBy: i)..<myStringAdd.index(myStringAdd.startIndex, offsetBy: i + 7)]
             newString = String(substring)
             arrayRunString.append(newString)
         }
         return arrayRunString
     }
     func runString(string:String) {
+        let font = UIFont(name: "neuropol", size: 17.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.13, green:0.76, blue:0.05, alpha:1.0), NSAttributedStringKey.font: font]
         let count = runStringArray(string: string).count
         var q = 0
         _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
-            self.binatrixLabel.text = self.runStringArray(string: string)[q]
+            self.binatrixLabel.attributedText = NSAttributedString(string: self.runStringArray(string: string)[q], attributes: attributes)
             q += 1
             if q >= count {
                 q = 0
