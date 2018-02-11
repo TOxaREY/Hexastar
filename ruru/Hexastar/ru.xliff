@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Hexastar/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.2" build-num="9C40b"/>
+    </header>
+    <body/>
+  </file>
+  <file original="Hexastar/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.2" build-num="9C40b"/>
+    </header>
+    <body>
+      <trans-unit id="mut-tC-wbi.text">
+        <source>HEXADECIMAL</source>
+        <target>HEXADECIMAL</target>
+        <note>Class = "UILabel"; text = "HEXADECIMAL"; ObjectID = "mut-tC-wbi";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Hexastar/Info.plist" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.2" build-num="9C40b"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Hexastar/Localizable.strings" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.2" build-num="9C40b"/>
+    </header>
+    <body>
+      <trans-unit id="Convert Decimal &lt;-&gt; Binary ">
+        <source>Convert Decimal &lt;-&gt; Binary </source>
+        <target>Конвертировать Десятичное &lt;-&gt; Двоичное </target>
+        <note>Convert Decimal &lt;-&gt; Binary</note>
+      </trans-unit>
+      <trans-unit id="DECIMAL">
+        <source>DECIMAL</source>
+        <note>DECIMAL</note>
+      </trans-unit>
+      <trans-unit id="HEXADECIMAL">
+        <source>HEXADECIMAL</source>
+        <note>HEXADECIMAL</note>
+      </trans-unit>
+      <trans-unit id="It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below">
+        <source>It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below</source>
+        <target>Пришло время выбрать сторону конвертации! Вверху выбрать касанием формат результата, ниже  выбрать формат ввода</target>
+        <note>startLabel</note>
+      </trans-unit>
+      <trans-unit id="OCTAL">
+        <source>OCTAL</source>
+        <note>OCTAL</note>
+      </trans-unit>
+      <trans-unit id="enter a decimal number">
+        <source>enter a decimal number</source>
+        <target>введите 10-чное число</target>
+        <note>enter a decimal number</note>
+      </trans-unit>
+      <trans-unit id="enter a hexadecimal number">
+        <source>enter a hexadecimal number</source>
+                <target>введите 16-чное число</target>
+        <note>enter a hexadecimal number</note>
+      </trans-unit>
+      <trans-unit id="enter a octal number">
+        <source>enter a octal number</source>
+        <target>введите 8-чное число</target>
+        <note>enter a octal number</note>
+      </trans-unit>
+      <trans-unit id="invalid value">
+        <source>invalid value</source>
+        <target>недопустимое значение</target>
+        <note>invalid value</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

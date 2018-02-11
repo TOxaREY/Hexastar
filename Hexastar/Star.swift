@@ -53,7 +53,6 @@ class Star: SKView {
         default:
             spaceship.position = CGPoint(x: -25, y: 0)
         }
-        print(screenHeight)
         scene.addChild(spaceship)
         
         let oscillate = SKAction.oscillation(amplitude: 160, timePeriod: 30, midPoint: spaceship.position)

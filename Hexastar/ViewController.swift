@@ -47,7 +47,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         copyClearHiddenButton()
         labelRes.text?.removeAll()
         view.endEditing(true)
-        let font = UIFont(name: "neuropol", size: 20.0)!
+        let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedText = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
@@ -390,21 +390,21 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Плейсхолдеры
     func placeHoldersDec() {
         textField.isHidden = false
-        let font = UIFont(name: "neuropol", size: 13.0)!
+        let font = UIFont(name: "Neuropol", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a decimal number", comment: "enter a decimal number"), attributes: attributes)
         imageDontHidden()
     }
     func placeHoldersOct() {
         textField.isHidden = false
-        let font = UIFont(name: "neuropol", size: 13.0)!
+        let font = UIFont(name: "Neuropol", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a octal number", comment: "enter a octal number"), attributes: attributes)
        imageDontHidden()
     }
     func placeHoldersHex() {
         textField.isHidden = false
-        let font = UIFont(name: "neuropol", size: 13.0)!
+        let font = UIFont(name: "Neuropol", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a hexadecimal number", comment: "enter a hexadecimal number"), attributes: attributes)
         imageDontHidden()
@@ -592,9 +592,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     var octDecCalc = OctDecCalc()
 ////
 
-
-
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         constraintTextField()
@@ -603,16 +601,15 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelButton()
         keyboardOff()
         textLabelTitle()
-        let font = UIFont(name: "neuropol", size: 20.0)!
+        let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         labelStart.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
         UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
         borderTextField()
-        runString(string: NSLocalizedString("CONVERT DECIMAL <-> BINARY ", comment: "CONVERT DECIMAL <-> BINARY "))
-
-
-        
+        runString(string: NSLocalizedString("Convert Decimal <-> Binary ", comment: "Convert Decimal <-> Binary "))
+  
     }
+    
 //// Кнопка перехода в другую программу
     @IBAction func buttonBinatrix(_ sender: Any) {
                 let appURL = NSURL(string: "binatrixHexastar://")!
@@ -646,7 +643,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         return arrayRunString
     }
     func runString(string:String) {
-        let font = UIFont(name: "neuropol", size: 17.0)!
+        let font = UIFont(name: "Neuropol", size: 15.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.13, green:0.76, blue:0.05, alpha:1.0), NSAttributedStringKey.font: font]
         let count = runStringArray(string: string).count
         var q = 0
