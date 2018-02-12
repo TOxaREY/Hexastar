@@ -24,7 +24,7 @@ class Ship: SKView {
         case 667: spaceship.position = CGPoint(x: 450, y: 102)
         case 568: spaceship.position = CGPoint(x: 395, y: 86)
         default:
-            spaceship.position = CGPoint(x: 415, y: 0)
+            spaceship.position = CGPoint(x: screenHeight * 0.678, y: screenHeight * 0.1522)
         }
         scene.addChild(spaceship)
         
@@ -42,8 +42,8 @@ class Ship: SKView {
         case 568: moveRight = SKAction.moveBy(x: -420, y: 0, duration: 13);
         returnLeft = SKAction.moveBy(x: 420, y: 0, duration: 0.1)
         default:
-            moveRight = SKAction.moveBy(x: -475, y: 0, duration: 13);
-            returnLeft = SKAction.moveBy(x: 475, y: 0, duration: 0.1)
+            moveRight = SKAction.moveBy(x: -514, y: 0, duration: 13);
+            returnLeft = SKAction.moveBy(x: 514, y: 0, duration: 0.1)
         }
         let seq = SKAction.sequence([moveRight, SKAction.hide(), returnLeft, SKAction.unhide()])
         let loop = SKAction.repeatForever(seq)

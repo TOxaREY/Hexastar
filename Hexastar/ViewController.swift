@@ -47,7 +47,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         copyClearHiddenButton()
         labelRes.text?.removeAll()
         view.endEditing(true)
-        let font = UIFont(name: "Neuropol", size: 20.0)!
+        let font = UIFont(name: "Neuropol", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedText = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
@@ -96,7 +96,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftKey.isSelected = false
         rightKey.isSelected = false
         blackColorButton()
-        labelStart.isHidden = false
         view.endEditing(true)
     }
     @IBAction func copyButton(_ sender: Any) {
@@ -291,8 +290,10 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Нажатие меняет заголовок
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
+        if textField.text != NSLocalizedString("invalid value", comment: "invalid value") {
         labelTitleTap()
         keyboardOff()
+       }
     }
     var tap = 0
     func labelTitleTap() {
@@ -304,7 +305,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         case 2: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("DECIMAL", comment: "DECIMAL") , attributes: attributes); tap = 0; textLabelTitle()
         default: break
         }
-        labelStart.isHidden = false
         textField.text = ""
         view.endEditing(true)
         selectOff()
@@ -378,7 +378,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
-//// Надпись на стартах
+//// Надпись на старте
     func textLabelTitle() {
         textField.isHidden = true
         copyClearHiddenButton()
@@ -647,7 +647,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.13, green:0.76, blue:0.05, alpha:1.0), NSAttributedStringKey.font: font]
         let count = runStringArray(string: string).count
         var q = 0
-        _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
+        _ = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { (timer) in
             self.binatrixLabel.attributedText = NSAttributedString(string: self.runStringArray(string: string)[q], attributes: attributes)
             q += 1
             if q >= count {
