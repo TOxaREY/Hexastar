@@ -28,7 +28,7 @@ class Ship: SKView {
         }
         scene.addChild(spaceship)
         
-        let oscillate = SKAction.oscillation(amplitude: 55, timePeriod: 5, midPoint: spaceship.position)
+        let oscillate = SKAction.oscillation(amplitude: 40, timePeriod: 5, midPoint: spaceship.position)
         spaceship.run(SKAction.repeatForever(oscillate))
         let moveRight:SKAction
         let returnLeft:SKAction
