@@ -13,6 +13,7 @@
 		F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */; };
 		F24306B420281E2600B1ED08 /* TIE-Wing.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24306B020281DFA00B1ED08 /* TIE-Wing.ttf */; };
 		F24BDE6B20287DBF0007C8C5 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BDE6A20287DBF0007C8C5 /* Star.swift */; };
+		F24E38AF2031AA0E00E93B81 /* ViewController 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E38AE2031AA0E00E93B81 /* ViewController 3.swift */; };
 		F24FD1AA203081DC003A7EFA /* neu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24FD1A9203081D8003A7EFA /* neu.ttf */; };
 		F24FD1BC20308894003A7EFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24FD1BE20308894003A7EFA /* InfoPlist.strings */; };
 		F24FD1C120308894003A7EFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24FD1C320308894003A7EFA /* Localizable.strings */; };
@@ -41,6 +42,7 @@
 		F24306B020281DFA00B1ED08 /* TIE-Wing.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TIE-Wing.ttf"; sourceTree = "<group>"; };
 		F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFDistantGalaxyAlternate.ttf; sourceTree = "<group>"; };
 		F24BDE6A20287DBF0007C8C5 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		F24E38AE2031AA0E00E93B81 /* ViewController 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController 3.swift"; sourceTree = "<group>"; };
 		F24FD1A9203081D8003A7EFA /* neu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = neu.ttf; sourceTree = "<group>"; };
 		F24FD1B7203087FB003A7EFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		F24FD1BD20308894003A7EFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				F297B231200E20750072E484 /* AppDelegate.swift */,
 				F297B233200E20760072E484 /* ViewController.swift */,
 				F23395612031952900C8D6F2 /* ViewController 2.swift */,
+				F24E38AE2031AA0E00E93B81 /* ViewController 3.swift */,
 				F24BDE6A20287DBF0007C8C5 /* Star.swift */,
 				F2887EC8202CC6B0006F0075 /* Ship.swift */,
 				F297B235200E20760072E484 /* Main.storyboard */,
@@ -212,6 +215,7 @@
 				F2EF3C562017848D00B899DA /* KeyboardDEC.swift in Sources */,
 				F2887EC9202CC6B0006F0075 /* Ship.swift in Sources */,
 				F27EB0902019D5C20061E461 /* OctCalc.swift in Sources */,
+				F24E38AF2031AA0E00E93B81 /* ViewController 3.swift in Sources */,
 				F297B234200E20760072E484 /* ViewController.swift in Sources */,
 				F297B232200E20750072E484 /* AppDelegate.swift in Sources */,
 				F23395622031952900C8D6F2 /* ViewController 2.swift in Sources */,

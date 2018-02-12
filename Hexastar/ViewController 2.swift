@@ -10,25 +10,52 @@ import UIKit
 import Foundation
 
 class ViewController2: UIViewController {
-
+//// Блокировка поворота
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+////
+ var characterUnicode = CharacterUnicodeConverter()
     @IBOutlet weak var textField: UITextField!
     @IBAction func characterInput(_ sender: Any) {
         characterUnicode.inputCharacter = textField.text!
         resultLabel.text = characterUnicode.simbolUnicodeConvert()    }
-    
     @IBOutlet weak var resultLabel: UILabel!
-    
-    
-    
-    
-   var characterUnicode = CharacterUnicodeConverter()
+
     
 
+//// Положение поля ввода
+    func constraintTextField() {
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        switch screenHeight {
+        case 736: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -265).isActive = true
+        case 812: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -298).isActive = true
+        case 667: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -256).isActive = true
+        case 568: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -256).isActive = true
+        default: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -300).isActive = true
+        }
+    }
+////
+//// Положение поля результата
+    func constraintResultLabel() {
+        resultLabel.translatesAutoresizingMaskIntoConstraints = false
+        switch screenHeight {
+        case 736: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -310).isActive = true
+        case 812: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -343).isActive = true
+        case 667: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -301).isActive = true
+        case 568: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -301).isActive = true
+        default: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -345).isActive = true
+        }
+    }
+////
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        constraintTextField()
+        constraintResultLabel()
         
         
    }

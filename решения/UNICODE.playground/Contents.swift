@@ -47,7 +47,7 @@ for i in multiUni {
 }
 print(printStringHex)
 //hex to decimal
-multiUni = ["FE0F"]
+multiUni = ["1F1AC"]
 var multiDec = [String]()
 var multiDecString = [String]()
 var hexStr = ""
