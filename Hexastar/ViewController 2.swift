@@ -25,20 +25,7 @@ class ViewController2: UIViewController {
         resultLabel.text = characterUnicode.simbolUnicodeConvert()    }
     @IBOutlet weak var resultLabel: UILabel!
 
-    
 
-//// Положение поля ввода
-    func constraintTextField() {
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        switch screenHeight {
-        case 736: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -265).isActive = true
-        case 812: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -298).isActive = true
-        case 667: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -256).isActive = true
-        case 568: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -256).isActive = true
-        default: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -300).isActive = true
-        }
-    }
-////
 //// Положение поля результата
     func constraintResultLabel() {
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +41,6 @@ class ViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        constraintTextField()
         constraintResultLabel()
         
         
