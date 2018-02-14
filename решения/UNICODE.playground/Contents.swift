@@ -45,9 +45,9 @@ while myUni.count > 0 {
 for i in multiUni {
     printStringHex.append("U+\(i) ")
 }
-print(printStringHex)
+//print(printStringHex)
 //hex to decimal
-multiUni = ["1F1AC"]
+multiUni = ["U+00000","U+000F0"]
 var multiDec = [String]()
 var multiDecString = [String]()
 var hexStr = ""
