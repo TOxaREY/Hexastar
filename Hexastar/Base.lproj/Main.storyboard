@@ -310,13 +310,23 @@
                                         <color key="textColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ns-9V-MUr">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                        <connections>
+                                            <segue destination="Wea-Qg-2gK" kind="show" animates="NO" id="uhW-ID-6mR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="9ns-9V-MUr" firstAttribute="leading" secondItem="yPM-QG-Vrh" secondAttribute="leading" id="9hn-V6-7Pb"/>
                                     <constraint firstItem="VhV-Ic-5IQ" firstAttribute="centerX" secondItem="yPM-QG-Vrh" secondAttribute="centerX" id="dhv-ox-FeG"/>
+                                    <constraint firstAttribute="bottom" secondItem="9ns-9V-MUr" secondAttribute="bottom" id="e9Y-fT-a5c"/>
                                     <constraint firstItem="VhV-Ic-5IQ" firstAttribute="centerY" secondItem="yPM-QG-Vrh" secondAttribute="centerY" constant="18" id="fjD-xU-21J"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ns-9V-MUr" secondAttribute="trailing" id="pEm-Yu-3nK"/>
                                     <constraint firstAttribute="height" constant="64" id="vXB-lA-3zX"/>
+                                    <constraint firstItem="9ns-9V-MUr" firstAttribute="top" secondItem="yPM-QG-Vrh" secondAttribute="top" id="zxy-0F-oqG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwR-Hg-h9h">
@@ -324,12 +334,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKD-57-V2S">
                                         <rect key="frame" x="8" y="8" width="304" height="0.0"/>
+                                        <color key="backgroundColor" red="0.1647058824" green="0.64705882349999999" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="STARWARS" family="STARWARS" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-OK-7fe">
-                                        <rect key="frame" x="144" y="16" width="32" height="30"/>
+                                        <rect key="frame" x="8" y="8" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -339,7 +350,8 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="tdg-OK-7fe" firstAttribute="top" secondItem="aKD-57-V2S" secondAttribute="bottom" constant="8" id="5Ep-xB-QOK"/>
+                                    <constraint firstItem="tdg-OK-7fe" firstAttribute="top" secondItem="aKD-57-V2S" secondAttribute="bottom" id="5Ep-xB-QOK"/>
+                                    <constraint firstAttribute="trailing" secondItem="tdg-OK-7fe" secondAttribute="trailing" constant="8" id="7Z5-67-Ggy"/>
                                     <constraint firstItem="aKD-57-V2S" firstAttribute="leading" secondItem="hwR-Hg-h9h" secondAttribute="leading" constant="8" id="BiB-9O-nT2"/>
                                     <constraint firstItem="aKD-57-V2S" firstAttribute="top" secondItem="hwR-Hg-h9h" secondAttribute="top" constant="8" id="XGx-p3-aKE"/>
                                     <constraint firstAttribute="trailing" secondItem="aKD-57-V2S" secondAttribute="trailing" constant="8" id="bYs-pY-qpT"/>
@@ -392,12 +404,22 @@
                                         <color key="textColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUw-OG-GBw">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                        <connections>
+                                            <segue destination="IPC-Vb-XJa" kind="show" animates="NO" id="lS7-c6-oOc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="lUw-OG-GBw" firstAttribute="top" secondItem="GW1-Hb-Ld2" secondAttribute="top" id="7RP-RY-2WV"/>
+                                    <constraint firstAttribute="trailing" secondItem="lUw-OG-GBw" secondAttribute="trailing" id="7Ul-T5-YHe"/>
+                                    <constraint firstItem="lUw-OG-GBw" firstAttribute="leading" secondItem="GW1-Hb-Ld2" secondAttribute="leading" id="TIF-ci-gIm"/>
                                     <constraint firstAttribute="height" constant="64" id="cFj-I5-8aQ"/>
                                     <constraint firstItem="zGW-kW-f2r" firstAttribute="centerY" secondItem="GW1-Hb-Ld2" secondAttribute="centerY" constant="18" id="nJV-dI-ssC"/>
+                                    <constraint firstAttribute="bottom" secondItem="lUw-OG-GBw" secondAttribute="bottom" id="rkz-p6-xDa"/>
                                     <constraint firstItem="zGW-kW-f2r" firstAttribute="centerX" secondItem="GW1-Hb-Ld2" secondAttribute="centerX" id="whY-eJ-CKb"/>
                                 </constraints>
                             </view>
@@ -423,7 +445,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="TwC-7T-jtg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <color key="textColor" red="0.1647058824" green="0.64705882349999999" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>

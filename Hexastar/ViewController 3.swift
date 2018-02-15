@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ViewController3: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
 
     
     
@@ -43,17 +43,15 @@ class ViewController3: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         for index in 0...4 {
             picker1.selectRow(0, inComponent: index, animated: true)
         }
-        comp1 = "U+00000"
-        uniChar.inputUnicode = [comp1, comp2]
-        resultLabel.text = uniChar.unicodeSimbolConvert()
+        res1 = ""
+        resultLabel.text! = res2
     }
     func resetPicker2() {
         for index in 0...4 {
             picker2.selectRow(0, inComponent: index, animated: true)
         }
-        comp2 = "U+00000"
-        uniChar.inputUnicode = [comp1, comp2]
-        resultLabel.text = uniChar.unicodeSimbolConvert()
+           res2 = ""
+           resultLabel.text! = res1
     }
     @IBAction func clear1(_ sender: Any) {
               resetPicker1()
@@ -89,19 +87,35 @@ class ViewController3: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 5
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 16
     }
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "Neuropol", size: 20.0)!
+            pickerLabel?.textAlignment = .center
+        }
+        picker1.backgroundColor = UIColor.clear
+        picker2.backgroundColor = UIColor.clear
+        pickerLabel?.text = pickerData1[component][row]
+        pickerLabel?.textColor = UIColor.red
+        
+        return pickerLabel!
+    }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         if pickerView == picker1 {
         return pickerData1[component][row]
-        } else {
-        return pickerData2[component][row]
         }
+        return pickerData2[component][row]
       }
     var comp1:String = "U+00000"
     var comp2:String = "U+00000"
+    var res1 = String ()
+    var res2 = String ()
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == picker1 {
         let comp10 = pickerData1[0][pickerView.selectedRow(inComponent: 0)]
@@ -110,6 +124,8 @@ class ViewController3: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         let comp13 = pickerData1[3][pickerView.selectedRow(inComponent: 3)]
         let comp14 = pickerData1[4][pickerView.selectedRow(inComponent: 4)]
              comp1 = "U+\(comp10 + comp11 + comp12 + comp13 + comp14)"
+             uniChar.inputUnicode = comp1
+             res1 = uniChar.unicodeSimbolConvert()
         } else if pickerView == picker2 {
         let comp20 = pickerData2[0][pickerView.selectedRow(inComponent: 0)]
         let comp21 = pickerData2[1][pickerView.selectedRow(inComponent: 1)]
@@ -117,10 +133,10 @@ class ViewController3: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         let comp23 = pickerData2[3][pickerView.selectedRow(inComponent: 3)]
         let comp24 = pickerData2[4][pickerView.selectedRow(inComponent: 4)]
              comp2 = "U+\(comp20 + comp21 + comp22 + comp23 + comp24)"
+             uniChar.inputUnicode = comp2
+             res2 = uniChar.unicodeSimbolConvert()
     }
-        uniChar.inputUnicode = [comp2, comp1]
-        resultLabel.text! = uniChar.unicodeSimbolConvert()
-        print(resultLabel.text!)
+        resultLabel.text! = res1 + res2
     }
 ////
     
@@ -129,7 +145,6 @@ class ViewController3: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         super.viewDidLoad()
         pikers()
 
-        
         
         
         

@@ -10,8 +10,8 @@ import UIKit
 import Foundation
 
 class UnicodeCharacterConverter {
-    private var _inputUnicode:[String] = [""]
-    var inputUnicode:[String] {
+    private var _inputUnicode:String = ""
+    var inputUnicode:String {
         get {
             return _inputUnicode
         } set {
@@ -19,14 +19,12 @@ class UnicodeCharacterConverter {
         }
     }
     func unicodeSimbolConvert() -> String {
-        var multiDec = [String]()
-        var multiDecString = [String]()
-        var hexStr = ""
+        var multiDec = String()
         func decimalConv() -> (String) {
             var hexArray = [Character]()
             var hexArrayInt = [Int]()
             var decimal = [Int]()
-            for char in hexStr {
+            for char in inputUnicode {
                 hexArray.append(char)
             }
             for i in hexArray {
@@ -54,14 +52,12 @@ class UnicodeCharacterConverter {
             for i in 0...decArr.count - 1 {
                 decimal.append(decArr[i] * Int(pow(16, Double(i))))
             }
-            inputUnicode.removeLast()
+            if UnicodeScalar(Int(decimal.reduce(0, +))) == nil {
+                return ""
+            }
             return String(UnicodeScalar(Int(decimal.reduce(0, +)))!)
         }
-        while inputUnicode.count > 0 {
-            hexStr = inputUnicode[inputUnicode.count - 1]
             multiDec.append(decimalConv())
-        }
-        multiDecString = multiDec.reversed()
-        return multiDecString.reduce("", +)
-   }
+            return multiDec
+     }
 }

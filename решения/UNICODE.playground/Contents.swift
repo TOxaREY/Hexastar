@@ -1,6 +1,6 @@
 import UIKit
 import Foundation
-let myString = "⚾️"
+let myString = "👨🏾‍⚕️"
 var myUni = [UInt32]()
 var myUnic = [UInt32]()
 var multiUni = [String]()
@@ -47,7 +47,7 @@ for i in multiUni {
 }
 //print(printStringHex)
 //hex to decimal
-multiUni = ["U+00000","U+000F0"]
+multiUni = ["U+005E0", "U+00000", "U+00000", "U+00000"]
 var multiDec = [String]()
 var multiDecString = [String]()
 var hexStr = ""
@@ -84,14 +84,17 @@ for i in 0...decArr.count - 1 {
     decimal.append(decArr[i] * Int(pow(16, Double(i))))
 }
        multiUni.removeLast()
+    if UnicodeScalar(Int(decimal.reduce(0, +))) == nil {
+    return ""
+    }
     return String(UnicodeScalar(Int(decimal.reduce(0, +)))!)
 }
 while multiUni.count > 0 {
     hexStr = multiUni[multiUni.count - 1]
     multiDec.append(decimalConv())
 }
-multiDecString = multiDec.reversed()
+    multiDecString = multiDec.reversed()
 var totalDec = multiDecString.reduce("", +)
-print(totalDec)
+//print(totalDec)
 
 
