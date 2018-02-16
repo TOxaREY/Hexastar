@@ -265,7 +265,7 @@ class ViewController: UIViewController, KeyboardDelegate {
       }
     }
 ////
-//// Положение поля ввода и рисунка
+//// Положение поля ввода
     func constraintTextField() {
         textField.translatesAutoresizingMaskIntoConstraints = false
         switch screenHeight {
@@ -273,17 +273,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         case 812: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -161).isActive = true
         case 667: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -106).isActive = true
         case 568: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -82).isActive = true
-        default: break
-        }
-    }
-    func constraintImage() {
-        leftImage.translatesAutoresizingMaskIntoConstraints = false
-        rightImage.translatesAutoresizingMaskIntoConstraints = false
-        switch screenHeight {
-        case 736: leftImage.bottomAnchor.constraint(equalTo: leftImage.superview!.bottomAnchor, constant: -122).isActive = true; rightImage.bottomAnchor.constraint(equalTo: rightImage.superview!.bottomAnchor, constant: -122).isActive = true
-        case 812: leftImage.bottomAnchor.constraint(equalTo: leftImage.superview!.bottomAnchor, constant: -161).isActive = true; rightImage.bottomAnchor.constraint(equalTo: rightImage.superview!.bottomAnchor, constant: -161).isActive = true
-        case 667: leftImage.bottomAnchor.constraint(equalTo: leftImage.superview!.bottomAnchor, constant: -106).isActive = true; rightImage.bottomAnchor.constraint(equalTo: rightImage.superview!.bottomAnchor, constant: -106).isActive = true
-        case 568: leftImage.bottomAnchor.constraint(equalTo: leftImage.superview!.bottomAnchor, constant: -82).isActive = true; rightImage.bottomAnchor.constraint(equalTo: rightImage.superview!.bottomAnchor, constant: -82).isActive = true
         default: break
         }
     }
@@ -596,7 +585,6 @@ class ViewController: UIViewController, KeyboardDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         constraintTextField()
-        constraintImage()
         labelTitleTap()
         labelButton()
         keyboardOff()

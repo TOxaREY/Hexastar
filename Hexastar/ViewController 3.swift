@@ -24,40 +24,183 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 //// Вызов вычисления
     var uniChar = UnicodeCharacterConverter()
 ////
+    @IBOutlet weak var view3: UIView!
     @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var addButton2: UIButton!
+    @IBOutlet weak var addButton3: UIButton!
+    @IBOutlet weak var addButton4: UIButton!
+    @IBOutlet weak var addButton5: UIButton!
+    @IBOutlet weak var addButton6: UIButton!
+    @IBOutlet weak var addButton7: UIButton!
     @IBOutlet weak var clear1: UIButton!
     @IBOutlet weak var clear2: UIButton!
-    @IBAction func addButton(_ sender: Any) {
+    @IBOutlet weak var clear3: UIButton!
+    @IBOutlet weak var clear4: UIButton!
+    @IBOutlet weak var clear5: UIButton!
+    @IBOutlet weak var clear6: UIButton!
+    @IBOutlet weak var clear7: UIButton!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var label5: UILabel!
+    @IBOutlet weak var label6: UILabel!
+    @IBOutlet weak var label7: UILabel!
+    
+    @IBAction func addButton2(_ sender: Any) {
         if picker2.isHidden == true {
-       picker2.isHidden = false
+            picker2.isHidden = false
+            label2.isHidden = false
+            addButton2.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
             clear2.isHidden = false
         } else {
             picker2.isHidden = true
             clear2.isHidden = true
+            label2.isHidden = true
+            addButton2.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
             resetPicker2()
         }
     }
+    @IBAction func addButton3(_ sender: Any) {
+        if picker3.isHidden == true {
+            picker3.isHidden = false
+            label3.isHidden = false
+            addButton3.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            clear3.isHidden = false
+        } else {
+            picker3.isHidden = true
+            clear3.isHidden = true
+            label3.isHidden = true
+            addButton3.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            resetPicker3()
+        }
+    }
+    @IBAction func addButton4(_ sender: Any) {
+        if picker4.isHidden == true {
+            picker4.isHidden = false
+            label4.isHidden = false
+            addButton4.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            clear4.isHidden = false
+        } else {
+            picker4.isHidden = true
+            clear4.isHidden = true
+            addButton4.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            label4.isHidden = true
+            resetPicker4()
+        }
+    }
+    @IBAction func addButton5(_ sender: Any) {
+        if picker5.isHidden == true {
+            picker5.isHidden = false
+            label5.isHidden = false
+            addButton5.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            clear5.isHidden = false
+        } else {
+            picker5.isHidden = true
+            label5.isHidden = true
+            addButton5.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            clear5.isHidden = true
+            resetPicker5()
+        }
+    }
+    @IBAction func addButton6(_ sender: Any) {
+        if picker6.isHidden == true {
+            picker6.isHidden = false
+            label6.isHidden = false
+            addButton6.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            clear6.isHidden = false
+        } else {
+            picker6.isHidden = true
+            label6.isHidden = true
+            addButton6.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            clear6.isHidden = true
+            resetPicker6()
+        }
+    }
+    @IBAction func addButton7(_ sender: Any) {
+        if picker7.isHidden == true {
+            picker7.isHidden = false
+            label7.isHidden = false
+            addButton7.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            clear7.isHidden = false
+        } else {
+            picker7.isHidden = true
+            label7.isHidden = true
+            addButton7.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            clear7.isHidden = true
+            resetPicker7()
+        }
+    }
+    
 //// Сброс пикервью
     func resetPicker1() {
         for index in 0...4 {
             picker1.selectRow(0, inComponent: index, animated: true)
         }
         res1 = ""
-        resultLabel.text! = res2
+        resultLabel.text! = res2 + res3 + res4 + res5 + res6 + res7
     }
     func resetPicker2() {
         for index in 0...4 {
             picker2.selectRow(0, inComponent: index, animated: true)
         }
            res2 = ""
-           resultLabel.text! = res1
+           resultLabel.text! = res1 + res3 + res4 + res5 + res6 + res7
+    }
+    func resetPicker3() {
+        for index in 0...4 {
+            picker3.selectRow(0, inComponent: index, animated: true)
+        }
+        res3 = ""
+        resultLabel.text! = res1 + res2 + res4 + res5 + res6 + res7
+    }
+    func resetPicker4() {
+        for index in 0...4 {
+            picker4.selectRow(0, inComponent: index, animated: true)
+        }
+        res4 = ""
+        resultLabel.text! = res1 + res2 + res3 + res5 + res6 + res7
+    }
+    func resetPicker5() {
+        for index in 0...4 {
+            picker5.selectRow(0, inComponent: index, animated: true)
+        }
+        res5 = ""
+        resultLabel.text! = res1 + res2 + res3 + res4 + res6 + res7
+    }
+    func resetPicker6() {
+        for index in 0...4 {
+            picker6.selectRow(0, inComponent: index, animated: true)
+        }
+        res6 = ""
+        resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res7
+    }
+    func resetPicker7() {
+        for index in 0...4 {
+            picker7.selectRow(0, inComponent: index, animated: true)
+        }
+        res7 = ""
+        resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6
     }
     @IBAction func clear1(_ sender: Any) {
               resetPicker1()
     }
     @IBAction func clear2(_ sender: Any) {
               resetPicker2()
+    }
+    @IBAction func clear3(_ sender: Any) {
+        resetPicker3()
+    }
+    @IBAction func clear4(_ sender: Any) {
+        resetPicker4()
+    }
+    @IBAction func clear5(_ sender: Any) {
+        resetPicker5()
+    }
+    @IBAction func clear6(_ sender: Any) {
+        resetPicker6()
+    }
+    @IBAction func clear7(_ sender: Any) {
+        resetPicker7()
     }
 ////
     
@@ -69,20 +212,50 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     
 
 //// Pickers
-    @IBOutlet weak var picker2: UIPickerView!
     @IBOutlet weak var picker1: UIPickerView!
-    var pickerData1: [[String]] = [[String]]()
-    var pickerData2: [[String]] = [[String]]()
+    @IBOutlet weak var picker2: UIPickerView!
+    @IBOutlet weak var picker3: UIPickerView!
+    @IBOutlet weak var picker4: UIPickerView!
+    @IBOutlet weak var picker5: UIPickerView!
+    @IBOutlet weak var picker6: UIPickerView!
+    @IBOutlet weak var picker7: UIPickerView!
+    
+    var pickerData: [[String]] = [[String]]()
     let hexadecimal = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]
     func pikers() {
         self.picker1.delegate = self
         self.picker2.delegate = self
+        self.picker3.delegate = self
+        self.picker4.delegate = self
+        self.picker5.delegate = self
+        self.picker6.delegate = self
+        self.picker7.delegate = self
         self.picker1.dataSource = self
         self.picker2.dataSource = self
+        self.picker3.dataSource = self
+        self.picker4.dataSource = self
+        self.picker5.dataSource = self
+        self.picker6.dataSource = self
+        self.picker7.dataSource = self
+        label2.isHidden = true
+        label3.isHidden = true
+        label4.isHidden = true
+        label5.isHidden = true
+        label6.isHidden = true
+        label7.isHidden = true
         picker2.isHidden = true
         clear2.isHidden = true
-        pickerData1 = [[String]](repeatElement(hexadecimal, count: 5))
-        pickerData2 = [[String]](repeatElement(hexadecimal, count: 5))
+        picker3.isHidden = true
+        clear3.isHidden = true
+        picker4.isHidden = true
+        clear4.isHidden = true
+        picker5.isHidden = true
+        clear5.isHidden = true
+        picker6.isHidden = true
+        clear6.isHidden = true
+        picker7.isHidden = true
+        clear7.isHidden = true
+        pickerData = [[String]](repeatElement(hexadecimal, count: 5))
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 5
@@ -95,59 +268,72 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         var pickerLabel: UILabel? = (view as? UILabel)
         if pickerLabel == nil {
             pickerLabel = UILabel()
-            pickerLabel?.font = UIFont(name: "Neuropol", size: 20.0)!
+            pickerLabel?.font = UIFont(name: "STARWARS", size: 30.0)!
             pickerLabel?.textAlignment = .center
         }
-        picker1.backgroundColor = UIColor.clear
-        picker2.backgroundColor = UIColor.clear
-        pickerLabel?.text = pickerData1[component][row]
-        pickerLabel?.textColor = UIColor.red
+        pickerView.backgroundColor = UIColor.clear
+        pickerLabel?.text = pickerData[component][row]
+        pickerLabel?.textColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
         
         return pickerLabel!
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        if pickerView == picker1 {
-        return pickerData1[component][row]
-        }
-        return pickerData2[component][row]
+        return pickerData[component][row]
       }
     var comp1:String = "U+00000"
     var comp2:String = "U+00000"
+    var comp3:String = "U+00000"
+    var comp4:String = "U+00000"
+    var comp5:String = "U+00000"
+    var comp6:String = "U+00000"
+    var comp7:String = "U+00000"
     var res1 = String ()
     var res2 = String ()
+    var res3 = String ()
+    var res4 = String ()
+    var res5 = String ()
+    var res6 = String ()
+    var res7 = String ()
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == picker1 {
-        let comp10 = pickerData1[0][pickerView.selectedRow(inComponent: 0)]
-        let comp11 = pickerData1[1][pickerView.selectedRow(inComponent: 1)]
-        let comp12 = pickerData1[2][pickerView.selectedRow(inComponent: 2)]
-        let comp13 = pickerData1[3][pickerView.selectedRow(inComponent: 3)]
-        let comp14 = pickerData1[4][pickerView.selectedRow(inComponent: 4)]
-             comp1 = "U+\(comp10 + comp11 + comp12 + comp13 + comp14)"
-             uniChar.inputUnicode = comp1
-             res1 = uniChar.unicodeSimbolConvert()
-        } else if pickerView == picker2 {
-        let comp20 = pickerData2[0][pickerView.selectedRow(inComponent: 0)]
-        let comp21 = pickerData2[1][pickerView.selectedRow(inComponent: 1)]
-        let comp22 = pickerData2[2][pickerView.selectedRow(inComponent: 2)]
-        let comp23 = pickerData2[3][pickerView.selectedRow(inComponent: 3)]
-        let comp24 = pickerData2[4][pickerView.selectedRow(inComponent: 4)]
-             comp2 = "U+\(comp20 + comp21 + comp22 + comp23 + comp24)"
-             uniChar.inputUnicode = comp2
-             res2 = uniChar.unicodeSimbolConvert()
+        func compSum() -> String {
+            var arrayCompSum = [String]()
+            for i in 0...4 {
+                arrayCompSum.append(pickerData[i][pickerView.selectedRow(inComponent: i)])
+            }
+            return String(arrayCompSum.reduce("", +))
+        }
+        switch pickerView {
+        case picker1: comp1 = "U+\(compSum())";uniChar.inputUnicode = comp1;res1 = uniChar.unicodeSimbolConvert()
+        case picker2: comp2 = "U+\(compSum())";uniChar.inputUnicode = comp2;res2 = uniChar.unicodeSimbolConvert()
+        case picker3: comp3 = "U+\(compSum())";uniChar.inputUnicode = comp3;res3 = uniChar.unicodeSimbolConvert()
+        case picker4: comp4 = "U+\(compSum())";uniChar.inputUnicode = comp4;res4 = uniChar.unicodeSimbolConvert()
+        case picker5: comp5 = "U+\(compSum())";uniChar.inputUnicode = comp5;res5 = uniChar.unicodeSimbolConvert()
+        case picker6: comp6 = "U+\(compSum())";uniChar.inputUnicode = comp6;res6 = uniChar.unicodeSimbolConvert()
+        case picker7: comp7 = "U+\(compSum())";uniChar.inputUnicode = comp7;res7 = uniChar.unicodeSimbolConvert()
+        default: break
+        }
+
+        resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6 + res7
     }
-        resultLabel.text! = res1 + res2
+////
+//// Положение нижнего вьювера и кнопок
+    func constraintView() {
+        view3.translatesAutoresizingMaskIntoConstraints = false
+        switch screenHeight {
+        case 736: view3.heightAnchor.constraint(equalToConstant: 147).isActive = true
+        case 812: view3.heightAnchor.constraint(equalToConstant: 164).isActive = true
+        case 667: view3.heightAnchor.constraint(equalToConstant: 132).isActive = true
+        case 568: view3.heightAnchor.constraint(equalToConstant: 110).isActive = true
+        default: view3.heightAnchor.constraint(equalToConstant: 110).isActive = true
+        }
     }
 ////
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        constraintView()
         pikers()
-
-        
-        
-        
     }
 //// Тач в любую область чтоб убрать экран
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

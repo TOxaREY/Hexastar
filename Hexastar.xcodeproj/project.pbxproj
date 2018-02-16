@@ -11,7 +11,6 @@
 		F23395642031A16100C8D6F2 /* SimUnic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23395632031A16100C8D6F2 /* SimUnic.swift */; };
 		F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */ = {isa = PBXBuildFile; fileRef = F239826D200F8976003A0BBC /* KeyboardHEX.xib */; };
 		F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */; };
-		F24306B420281E2600B1ED08 /* TIE-Wing.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24306B020281DFA00B1ED08 /* TIE-Wing.ttf */; };
 		F24BDE6B20287DBF0007C8C5 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BDE6A20287DBF0007C8C5 /* Star.swift */; };
 		F24E38AF2031AA0E00E93B81 /* ViewController 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E38AE2031AA0E00E93B81 /* ViewController 3.swift */; };
 		F24FD1AA203081DC003A7EFA /* neu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24FD1A9203081D8003A7EFA /* neu.ttf */; };
@@ -40,7 +39,6 @@
 		F23395612031952900C8D6F2 /* ViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController 2.swift"; sourceTree = "<group>"; };
 		F23395632031A16100C8D6F2 /* SimUnic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimUnic.swift; sourceTree = "<group>"; };
 		F239826D200F8976003A0BBC /* KeyboardHEX.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardHEX.xib; sourceTree = "<group>"; };
-		F24306B020281DFA00B1ED08 /* TIE-Wing.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TIE-Wing.ttf"; sourceTree = "<group>"; };
 		F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFDistantGalaxyAlternate.ttf; sourceTree = "<group>"; };
 		F24BDE6A20287DBF0007C8C5 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		F24E38AE2031AA0E00E93B81 /* ViewController 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController 3.swift"; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				F2B10B3E200FAB36003DD679 /* STARWARS.TTF */,
 				F25DEFCE2027840F00BA8348 /* moonhouse.ttf */,
 				F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */,
-				F24306B020281DFA00B1ED08 /* TIE-Wing.ttf */,
 				F24FD1A9203081D8003A7EFA /* neu.ttf */,
 				F27B5B5E2018B7910096D98A /* HexCalc.swift */,
 				F27EB08F2019D5C20061E461 /* OctCalc.swift */,
@@ -188,7 +185,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F24306B420281E2600B1ED08 /* TIE-Wing.ttf in Resources */,
 				F24FD1BC20308894003A7EFA /* InfoPlist.strings in Resources */,
 				F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */,
 				F297B239200E20760072E484 /* Assets.xcassets in Resources */,
