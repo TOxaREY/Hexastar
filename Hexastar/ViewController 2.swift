@@ -9,7 +9,16 @@
 import UIKit
 import Foundation
 
+
+
+
+
 class ViewController2: UIViewController {
+//// Смена цвета текста статус бара
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+////
 //// Блокировка поворота
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
@@ -18,6 +27,7 @@ class ViewController2: UIViewController {
         return false
     }
 ////
+
  var characterUnicode = CharacterUnicodeConverter()
     @IBOutlet weak var textField: UITextField!
     @IBAction func characterInput(_ sender: Any) {
@@ -42,7 +52,7 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         constraintResultLabel()
-        
+
         
    }
     

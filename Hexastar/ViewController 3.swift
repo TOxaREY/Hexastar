@@ -10,7 +10,11 @@ import UIKit
 import Foundation
 
 class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
-
+//// Смена цвета текста статус бара
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+////
     
     
 //// Блокировка поворота

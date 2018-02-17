@@ -265,18 +265,6 @@ class ViewController: UIViewController, KeyboardDelegate {
       }
     }
 ////
-//// Положение поля ввода
-    func constraintTextField() {
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        switch screenHeight {
-        case 736: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -122).isActive = true
-        case 812: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -161).isActive = true
-        case 667: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -106).isActive = true
-        case 568: textField.bottomAnchor.constraint(equalTo: textField.superview!.bottomAnchor, constant: -82).isActive = true
-        default: break
-        }
-    }
-////
 //// Нажатие меняет заголовок
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         if textField.text != NSLocalizedString("invalid value", comment: "invalid value") {
@@ -329,8 +317,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftKey.isSelected = true
         leftKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
         leftKey.setTitleShadowColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
-        rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.7), for: UIControlState.normal)
-        rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+        rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.5), for: UIControlState.normal)
+        rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:0.5), for: UIControlState.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -351,8 +339,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         rightKey.isSelected = true
         rightKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
         rightKey.setTitleShadowColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
-        leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.7), for: UIControlState.normal)
-        leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+        leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.5), for: UIControlState.normal)
+        leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:0.5), for: UIControlState.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -584,7 +572,6 @@ class ViewController: UIViewController, KeyboardDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        constraintTextField()
         labelTitleTap()
         labelButton()
         keyboardOff()

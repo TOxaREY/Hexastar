@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPC-Vb-XJa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,8 +41,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEXADECIMAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="42.5" y="38" width="235" height="25"/>
-                                        <fontDescription key="fontDescription" name="SFDistantGalaxyAlternate" family="SF Distant Galaxy Alternate" pointSize="30"/>
+                                        <rect key="frame" x="23.5" y="35.5" width="274.5" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="SFDistantGalaxyAlternate" family="SF Distant Galaxy Alternate" pointSize="35"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -166,20 +167,18 @@
                                     <constraint firstAttribute="trailing" secondItem="rHJ-BD-fMz" secondAttribute="trailing" constant="8" id="JeJ-b4-64S"/>
                                     <constraint firstAttribute="bottom" secondItem="A0Z-Pr-kgR" secondAttribute="bottom" id="LLW-wR-49r"/>
                                     <constraint firstItem="yAb-Bp-TF3" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="MZE-Cf-JgG"/>
-                                    <constraint firstItem="s1J-N7-F90" firstAttribute="top" secondItem="Q8Z-hz-N0p" secondAttribute="bottom" constant="20" id="OvQ-gl-kUW"/>
                                     <constraint firstItem="s1J-N7-F90" firstAttribute="leading" secondItem="0D4-2p-BDI" secondAttribute="leading" id="TCb-c6-fbI"/>
                                     <constraint firstItem="Q8Z-hz-N0p" firstAttribute="centerY" secondItem="VBF-GK-GcV" secondAttribute="centerY" id="UFU-M8-yaC"/>
                                     <constraint firstItem="CpE-Hf-F3y" firstAttribute="top" secondItem="yAb-Bp-TF3" secondAttribute="bottom" id="VS2-Gl-Wc6"/>
                                     <constraint firstItem="s1J-N7-F90" firstAttribute="height" secondItem="A0Z-Pr-kgR" secondAttribute="height" id="dm0-Qa-OyP"/>
                                     <constraint firstAttribute="trailing" secondItem="yAb-Bp-TF3" secondAttribute="trailing" id="eCy-ja-ZMH"/>
                                     <constraint firstItem="A0Z-Pr-kgR" firstAttribute="leading" secondItem="s1J-N7-F90" secondAttribute="trailing" id="eGD-SL-HWx"/>
+                                    <constraint firstItem="Q8Z-hz-N0p" firstAttribute="top" secondItem="yAb-Bp-TF3" secondAttribute="bottom" multiplier="1:0.77" id="eGO-0E-PTU"/>
                                     <constraint firstItem="tCZ-da-0Go" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="hGd-xU-u8i"/>
                                     <constraint firstItem="kZe-xd-mG9" firstAttribute="top" secondItem="yAb-Bp-TF3" secondAttribute="bottom" id="jcr-7n-hPq"/>
                                     <constraint firstItem="tCZ-da-0Go" firstAttribute="width" secondItem="0D4-2p-BDI" secondAttribute="height" multiplier="30:331" id="kJL-Dl-6mP"/>
                                     <constraint firstItem="tCZ-da-0Go" firstAttribute="top" secondItem="yAb-Bp-TF3" secondAttribute="bottom" constant="-50" id="kMz-Rg-gXz"/>
                                     <constraint firstItem="CpE-Hf-F3y" firstAttribute="width" secondItem="0D4-2p-BDI" secondAttribute="height" multiplier="30:331" id="kaB-z6-OvM"/>
-                                    <constraint firstItem="A0Z-Pr-kgR" firstAttribute="top" secondItem="VBF-GK-GcV" secondAttribute="bottom" constant="20" id="l0O-Rq-lOC"/>
-                                    <constraint firstItem="s1J-N7-F90" firstAttribute="top" secondItem="S12-XP-iRY" secondAttribute="bottom" constant="20" id="lj8-bO-XlL"/>
                                     <constraint firstItem="Q8Z-hz-N0p" firstAttribute="centerX" secondItem="0D4-2p-BDI" secondAttribute="centerX" id="nft-Yb-dwN"/>
                                     <constraint firstItem="Q8Z-hz-N0p" firstAttribute="leading" secondItem="S12-XP-iRY" secondAttribute="trailing" id="oKL-5A-FYx"/>
                                     <constraint firstAttribute="bottom" secondItem="s1J-N7-F90" secondAttribute="bottom" id="pvY-bn-jYj"/>
@@ -861,6 +860,6 @@
         <image name="space" width="863" height="1692"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jiM-cY-7bP"/>
+        <segue reference="4LN-ZN-5CK"/>
     </inferredMetricsTieBreakers>
 </document>
