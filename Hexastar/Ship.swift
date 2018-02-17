@@ -18,33 +18,14 @@ class Ship: SKView {
         self.presentScene(scene)
         self.allowsTransparency = true
         self.backgroundColor = UIColor.clear
-        switch screenHeight {
-        case 812: spaceship.position = CGPoint(x: 450, y: 102)
-        case 736: spaceship.position = CGPoint(x: 489, y: 112)
-        case 667: spaceship.position = CGPoint(x: 450, y: 102)
-        case 568: spaceship.position = CGPoint(x: 395, y: 86)
-        default:
-            spaceship.position = CGPoint(x: screenHeight * 0.678, y: screenHeight * 0.1522)
-        }
+        spaceship.position = CGPoint(x: 390, y: self.frame.size.height / 2)
         scene.addChild(spaceship)
-        
         let oscillate = SKAction.oscillation(amplitude: 40, timePeriod: 5, midPoint: spaceship.position)
         spaceship.run(SKAction.repeatForever(oscillate))
         let moveRight:SKAction
         let returnLeft:SKAction
-        switch screenHeight {
-        case 812: moveRight = SKAction.moveBy(x: -475, y: 0, duration: 13);
-        returnLeft = SKAction.moveBy(x: 475, y: 0, duration: 0.1)
-        case 736: moveRight = SKAction.moveBy(x: -514, y: 0, duration: 13);
-        returnLeft = SKAction.moveBy(x: 514, y: 0, duration: 0.1)
-        case 667: moveRight = SKAction.moveBy(x: -475, y: 0, duration: 13);
-        returnLeft = SKAction.moveBy(x: 475, y: 0, duration: 0.1)
-        case 568: moveRight = SKAction.moveBy(x: -420, y: 0, duration: 13);
-        returnLeft = SKAction.moveBy(x: 420, y: 0, duration: 0.1)
-        default:
-            moveRight = SKAction.moveBy(x: -514, y: 0, duration: 13);
-            returnLeft = SKAction.moveBy(x: 514, y: 0, duration: 0.1)
-        }
+            moveRight = SKAction.moveBy(x: -410, y: 0, duration: 13);
+            returnLeft = SKAction.moveBy(x: 410, y: 0, duration: 0.1)
         let seq = SKAction.sequence([moveRight, SKAction.hide(), returnLeft, SKAction.unhide()])
         let loop = SKAction.repeatForever(seq)
         spaceship.run(loop)
