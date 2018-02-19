@@ -11,13 +11,15 @@ import SpriteKit
 class Touch: SKView {
     let sparki = SKSpriteNode(fileNamed: "sparki.sks")
     let centre = SKSpriteNode(fileNamed: "centre.sks")
+    var centrePosition = CGPoint()
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear
         self.presentScene(scene)
         self.allowsTransparency = true
         self.backgroundColor = UIColor.clear
-        centre?.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+        centrePosition = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+        centre?.position = centrePosition
         sparki?.isHidden = true
         scene.addChild(centre!)
         scene.addChild(sparki!)
@@ -29,9 +31,8 @@ class Touch: SKView {
         sparki?.position = positions!
         sparki?.isHidden = false
         let moveCenter:SKAction
-        moveCenter = SKAction.move(to: CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2), duration: 0.5)
+        moveCenter = SKAction.move(to: centrePosition, duration: 0.5)
         sparki?.run(moveCenter)
-        
     }
 }
 

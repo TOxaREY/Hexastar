@@ -28,8 +28,8 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 //// Вызов вычисления
     var uniChar = UnicodeCharacterConverter()
 ////
-    @IBOutlet weak var view3: UIView!
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultLabel: UITextView!
+//    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var addButton1: UIButton!
     @IBOutlet weak var addButton2: UIButton!
     @IBOutlet weak var addButton3: UIButton!
@@ -329,27 +329,15 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         case picker7: comp7 = "U+\(compSum())";uniChar.inputUnicode = comp7;res7 = uniChar.unicodeSimbolConvert()
         default: break
         }
-
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6 + res7
     }
 ////
-//// Положение нижнего вьювера и кнопок
-    func constraintView() {
-        view3.translatesAutoresizingMaskIntoConstraints = false
-        switch screenHeight {
-        case 736: view3.heightAnchor.constraint(equalToConstant: 147).isActive = true
-        case 812: view3.heightAnchor.constraint(equalToConstant: 164).isActive = true
-        case 667: view3.heightAnchor.constraint(equalToConstant: 132).isActive = true
-        case 568: view3.heightAnchor.constraint(equalToConstant: 110).isActive = true
-        default: view3.heightAnchor.constraint(equalToConstant: 110).isActive = true
-        }
-    }
-////
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         pikers()
-        constraintView()
+        
     }
 
 }
