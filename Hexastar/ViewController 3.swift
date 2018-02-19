@@ -351,13 +351,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         pikers()
         constraintView()
     }
-//// Тач в любую область чтоб убрать экран
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (touches.first) != nil {
-            view.endEditing(true)
-        }
-        super.touchesBegan(touches, with: event)
-    }
-////
+
 }
 

@@ -446,7 +446,7 @@
                                     <constraint firstItem="zGW-kW-f2r" firstAttribute="centerX" secondItem="GW1-Hb-Ld2" secondAttribute="centerX" id="whY-eJ-CKb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Is-x1b">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Is-x1b" customClass="Touch" customModule="Hexastar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="320" height="404"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNS-BT-QkM">
