@@ -369,8 +369,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         pikers()
-        print(picker1.frame)
-        
     }
 
 }
