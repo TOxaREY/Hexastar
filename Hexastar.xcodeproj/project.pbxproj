@@ -17,11 +17,12 @@
 		F24FD1BC20308894003A7EFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24FD1BE20308894003A7EFA /* InfoPlist.strings */; };
 		F24FD1C120308894003A7EFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24FD1C320308894003A7EFA /* Localizable.strings */; };
 		F25DEFCF2027851400BA8348 /* moonhouse.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F25DEFCE2027840F00BA8348 /* moonhouse.ttf */; };
-		F270D606203AFFFE00037075 /* centre.sks in Resources */ = {isa = PBXBuildFile; fileRef = F270D604203AFFFE00037075 /* centre.sks */; };
 		F270D607203AFFFE00037075 /* sparki.sks in Resources */ = {isa = PBXBuildFile; fileRef = F270D605203AFFFE00037075 /* sparki.sks */; };
 		F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B5B5E2018B7910096D98A /* HexCalc.swift */; };
 		F27EB0902019D5C20061E461 /* OctCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EB08F2019D5C20061E461 /* OctCalc.swift */; };
 		F2887EC9202CC6B0006F0075 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2887EC8202CC6B0006F0075 /* Ship.swift */; };
+		F2922138203C40E2006D433E /* sparkiLR.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2922137203C40E2006D433E /* sparkiLR.sks */; };
+		F292213B203C4371006D433E /* centre.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2922139203C4371006D433E /* centre.sks */; };
 		F297B232200E20750072E484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297B231200E20750072E484 /* AppDelegate.swift */; };
 		F297B234200E20760072E484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297B233200E20760072E484 /* ViewController.swift */; };
 		F297B237200E20760072E484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B235200E20760072E484 /* Main.storyboard */; };
@@ -51,11 +52,12 @@
 		F24FD1C220308894003A7EFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F24FD1C420308894003A7EFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F25DEFCE2027840F00BA8348 /* moonhouse.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = moonhouse.ttf; sourceTree = "<group>"; };
-		F270D604203AFFFE00037075 /* centre.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = centre.sks; sourceTree = "<group>"; };
 		F270D605203AFFFE00037075 /* sparki.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sparki.sks; sourceTree = "<group>"; };
 		F27B5B5E2018B7910096D98A /* HexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCalc.swift; sourceTree = "<group>"; };
 		F27EB08F2019D5C20061E461 /* OctCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctCalc.swift; sourceTree = "<group>"; };
 		F2887EC8202CC6B0006F0075 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		F2922137203C40E2006D433E /* sparkiLR.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sparkiLR.sks; sourceTree = "<group>"; };
+		F2922139203C4371006D433E /* centre.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = centre.sks; sourceTree = "<group>"; };
 		F297B22E200E20750072E484 /* Hexastar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hexastar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F297B231200E20750072E484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F297B233200E20760072E484 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,8 +121,9 @@
 				F24BDE6A20287DBF0007C8C5 /* Star.swift */,
 				F2887EC8202CC6B0006F0075 /* Ship.swift */,
 				F2DACD9C203AD6F20090A983 /* Spark.swift */,
-				F270D604203AFFFE00037075 /* centre.sks */,
 				F270D605203AFFFE00037075 /* sparki.sks */,
+				F2922137203C40E2006D433E /* sparkiLR.sks */,
+				F2922139203C4371006D433E /* centre.sks */,
 				F297B235200E20760072E484 /* Main.storyboard */,
 				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
 				F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */,
@@ -197,6 +200,7 @@
 				F24FD1BC20308894003A7EFA /* InfoPlist.strings in Resources */,
 				F270D607203AFFFE00037075 /* sparki.sks in Resources */,
 				F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */,
+				F292213B203C4371006D433E /* centre.sks in Resources */,
 				F297B239200E20760072E484 /* Assets.xcassets in Resources */,
 				F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */,
 				F2EF3C4E20177C3300B899DA /* KeyboardDEC.xib in Resources */,
@@ -204,8 +208,8 @@
 				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
 				F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */,
 				F24FD1C120308894003A7EFA /* Localizable.strings in Resources */,
+				F2922138203C40E2006D433E /* sparkiLR.sks in Resources */,
 				F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */,
-				F270D606203AFFFE00037075 /* centre.sks in Resources */,
 				F25DEFCF2027851400BA8348 /* moonhouse.ttf in Resources */,
 				F297B237200E20760072E484 /* Main.storyboard in Resources */,
 			);

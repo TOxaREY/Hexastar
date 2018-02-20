@@ -9,11 +9,11 @@
 import Foundation
 import SpriteKit
 class Touch: SKView {
-    let deathStar = SKSpriteNode(imageNamed: "ball.png")
-    let sparki = SKSpriteNode(fileNamed: "sparki.sks")
-    let sparkiLeft = SKSpriteNode(fileNamed: "sparki.sks")
-    let sparkiRight = SKSpriteNode(fileNamed: "sparki.sks")
-    let centre = SKSpriteNode(fileNamed: "centre.sks")
+    let deathStar = SKSpriteNode(imageNamed: "deathStar.png")
+    let sparki = SKSpriteNode(fileNamed: "sparki.sks")!
+    let sparkiLeft = SKSpriteNode(fileNamed: "sparkiLR.sks")!
+    let sparkiRight = SKSpriteNode(fileNamed: "sparkiLR.sks")!
+    let centre = SKSpriteNode(fileNamed: "centre.sks")!
     var centrePosition = CGPoint()
     var buttonPosition = CGPoint()
     var pickerPositionLeft = CGPoint()
@@ -24,19 +24,20 @@ class Touch: SKView {
         self.presentScene(scene)
         self.allowsTransparency = true
         self.backgroundColor = UIColor.clear
+        deathStar.size = CGSize(width: 60, height: 60)
         centrePosition = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
-        deathStar.size = CGSize(width: 100, height: 100)
-        centre?.position = centrePosition
+        centre.position = centrePosition
         deathStar.position = centrePosition
-        centre?.isHidden = true
-        sparki?.isHidden = true
-        sparkiLeft?.isHidden = true
-        sparkiRight?.isHidden = true
+        sparki.isHidden = true
+        sparkiLeft.isHidden = true
+        sparkiRight.isHidden = true
+        deathStar.isHidden = true
+        centre.isHidden = true
         scene.addChild(deathStar)
-        scene.addChild(centre!)
-        scene.addChild(sparki!)
-        scene.addChild(sparkiLeft!)
-        scene.addChild(sparkiRight!)
+        scene.addChild(centre)
+        scene.addChild(sparki)
+        scene.addChild(sparkiLeft)
+        scene.addChild(sparkiRight)
         let moveRightUp:SKAction
         let moveDown:SKAction
         let moveLeftUp:SKAction
@@ -51,44 +52,44 @@ class Touch: SKView {
         deathStar.run(loop)
         NotificationCenter.default.addObserver(self, selector: #selector(buttonShot), name: NSNotification.Name(rawValue: "buttonPush"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(pickerShot), name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
-        
     }
     @objc func buttonShot() {
-        buttonPosition = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.object(forKey: "coorButton") as! String)))!
+        deathStar.isHidden = false
+        centre.isHidden = false
+        buttonPosition = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.string(forKey: "coorButton")!)))!
         buttonPosition.x += 15
         buttonPosition.y -= 15
-        sparki?.position = buttonPosition
-        sparki?.isHidden = false
+        sparki.position = buttonPosition
+        sparki.isHidden = false
         let moveCenter:SKAction
-        moveCenter = SKAction.move(to: centrePosition, duration: 0.3)
-        UserDefaults.standard.removeObject(forKey: "coorButton")
-        sparki?.run(moveCenter, completion: {self.sparki?.isHidden = true})
-        
+        moveCenter = SKAction.move(to: centrePosition, duration: 0.4)
+        sparki.run(moveCenter, completion: {self.sparki.isHidden = true})
     }
     @objc func pickerShot() {
-        pickerPositionLeft = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.object(forKey: "coorPicker") as! String)))!
+        pickerPositionLeft = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.string(forKey: "coorPicker")!)))!
         pickerPositionRight = pickerPositionLeft
-        pickerPositionRight.x += 180 - 35
-        sparkiLeft?.position = pickerPositionLeft
-        sparkiRight?.position = pickerPositionRight
-        sparkiLeft?.isHidden = false
-        sparkiRight?.isHidden = false
+        pickerPositionRight.x += CGFloat(UserDefaults.standard.integer(forKey: "wigth"))
+        sparkiLeft.position = pickerPositionLeft
+        sparkiRight.position = pickerPositionRight
+        sparkiLeft.isHidden = false
+        sparkiRight.isHidden = false
         let moveCenter:SKAction
-        moveCenter = SKAction.move(to: centrePosition, duration: 0.3)
-        UserDefaults.standard.removeObject(forKey: "coorPicker")
-        sparkiLeft?.run(moveCenter, completion: {self.sparkiLeft?.isHidden = true})
-        sparkiRight?.run(moveCenter, completion: {self.sparkiRight?.isHidden = true})
+        moveCenter = SKAction.move(to: centrePosition, duration: 0.4)
+        sparkiLeft.run(moveCenter, completion: {self.sparkiLeft.isHidden = true})
+        sparkiRight.run(moveCenter, completion: {self.sparkiRight.isHidden = true})
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UserDefaults.standard.set(true, forKey:"touche")
+        deathStar.isHidden = false
+        centre.isHidden = false
         let touch = touches.first
         var positions = touch?.location(in: self)
         positions = scene?.convertPoint(fromView: positions!)
-        sparki?.position = positions!
-        sparki?.isHidden = false
+        sparki.position = positions!
+        sparki.isHidden = false
         let moveCenter:SKAction
-        moveCenter = SKAction.move(to: centrePosition, duration: 0.3)
-        sparki?.run(moveCenter, completion: {self.sparki?.isHidden = true})
+        moveCenter = SKAction.move(to: centrePosition, duration: 0.4)
+        sparki.run(moveCenter, completion: {self.sparki.isHidden = true})
     }
 }
 

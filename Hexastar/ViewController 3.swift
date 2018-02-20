@@ -27,6 +27,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 //// Вызов вычисления
     var uniChar = UnicodeCharacterConverter()
 ////
+    @IBOutlet weak var startLebel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var addButton1: UIButton!
     @IBOutlet weak var addButton2: UIButton!
@@ -65,12 +66,16 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         var frame = p.frame
         frame.origin.y += frame.size.height / 2
         var coordinate = String()
+        var wigth = Int()
         coordinate = NSStringFromCGPoint(frame.origin)
+        wigth = Int(frame.size.width)
         UserDefaults.standard.set(coordinate, forKey: "coorPicker")
+        UserDefaults.standard.set(wigth, forKey: "wigth")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
     }
 ////
     @IBAction func addButton1(_ sender: Any) {
+        startLebel.isHidden = true
         shotButton(b: addButton1)
         if picker1.isHidden == true {
             self.picker1.delegate = self
@@ -88,6 +93,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton2(_ sender: Any) {
+        startLebel.isHidden = true
         shotButton(b: addButton2)
         if picker2.isHidden == true {
             self.picker2.delegate = self
@@ -105,6 +111,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton3(_ sender: Any) {
+        startLebel.isHidden = true
         shotButton(b: addButton3)
         if picker3.isHidden == true {
             self.picker3.delegate = self
@@ -122,6 +129,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton4(_ sender: Any) {
+        startLebel.isHidden = true
         shotButton(b: addButton4)
         if picker4.isHidden == true {
             self.picker4.delegate = self
@@ -139,6 +147,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton5(_ sender: Any) {
+        startLebel.isHidden = true
         shotButton(b: addButton5)
         if picker5.isHidden == true {
             self.picker5.delegate = self
@@ -156,6 +165,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton6(_ sender: Any) {
+        startLebel.isHidden = true
         shotButton(b: addButton6)
         if picker6.isHidden == true {
             self.picker6.delegate = self
@@ -173,6 +183,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton7(_ sender: Any) {
+        startLebel.isHidden = true
         shotButton(b: addButton7)
         if picker7.isHidden == true {
             self.picker7.delegate = self
@@ -316,8 +327,10 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         var pickerLabel: UILabel? = (view as? UILabel)
         if pickerLabel == nil {
             pickerLabel = UILabel()
-            pickerLabel?.font = UIFont(name: "STARWARS", size: 30.0)!
+            pickerLabel?.font = UIFont(name: "STARWARS", size: 28.0)!
             pickerLabel?.textAlignment = .center
+            pickerLabel?.shadowColor = UIColor.black
+            pickerLabel?.shadowOffset = CGSize(width: 1, height: 1)
         }
         pickerView.backgroundColor = UIColor.clear
         pickerLabel?.text = pickerData[component][row]
@@ -369,7 +382,10 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         pikers()
+        let font = UIFont(name: "Neuropol", size: 20.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
+        startLebel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
+        startLebel.isHidden = UserDefaults.standard.bool(forKey: "touche")
     }
-
 }
 
