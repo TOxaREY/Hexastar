@@ -16,7 +16,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     }
 ////
     
-    
 //// Блокировка поворота
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
@@ -28,8 +27,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 //// Вызов вычисления
     var uniChar = UnicodeCharacterConverter()
 ////
-    @IBOutlet weak var resultLabel: UITextView!
-//    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var addButton1: UIButton!
     @IBOutlet weak var addButton2: UIButton!
     @IBOutlet weak var addButton3: UIButton!
@@ -52,7 +50,28 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var label6: UILabel!
     @IBOutlet weak var label7: UILabel!
     
+//// Стрельба от кнопок
+    func shotButton(b:UIButton) {
+     var coordinate = String()
+         coordinate = NSStringFromCGRect(b.frame)
+         coordinate.removeFirst()
+         coordinate.removeLast(11)
+         UserDefaults.standard.set(coordinate, forKey: "coorButton")
+         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "buttonPush"), object: nil)
+    }
+////
+//// Стрельба от пикеров
+    func shotPicker(p:UIPickerView) {
+        var frame = p.frame
+        frame.origin.y += frame.size.height / 2
+        var coordinate = String()
+        coordinate = NSStringFromCGPoint(frame.origin)
+        UserDefaults.standard.set(coordinate, forKey: "coorPicker")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
+    }
+////
     @IBAction func addButton1(_ sender: Any) {
+        shotButton(b: addButton1)
         if picker1.isHidden == true {
             self.picker1.delegate = self
             self.picker1.delegate = self
@@ -69,6 +88,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton2(_ sender: Any) {
+        shotButton(b: addButton2)
         if picker2.isHidden == true {
             self.picker2.delegate = self
             self.picker2.delegate = self
@@ -85,6 +105,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton3(_ sender: Any) {
+        shotButton(b: addButton3)
         if picker3.isHidden == true {
             self.picker3.delegate = self
             self.picker3.delegate = self
@@ -101,6 +122,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton4(_ sender: Any) {
+        shotButton(b: addButton4)
         if picker4.isHidden == true {
             self.picker4.delegate = self
             self.picker4.delegate = self
@@ -117,6 +139,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton5(_ sender: Any) {
+        shotButton(b: addButton5)
         if picker5.isHidden == true {
             self.picker5.delegate = self
             self.picker5.delegate = self
@@ -133,6 +156,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton6(_ sender: Any) {
+        shotButton(b: addButton6)
         if picker6.isHidden == true {
             self.picker6.delegate = self
             self.picker6.delegate = self
@@ -149,6 +173,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton7(_ sender: Any) {
+        shotButton(b: addButton7)
         if picker7.isHidden == true {
             self.picker7.delegate = self
             self.picker7.delegate = self
@@ -216,24 +241,31 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6
     }
     @IBAction func clear1(_ sender: Any) {
+        shotButton(b: clear1)
               resetPicker1()
     }
     @IBAction func clear2(_ sender: Any) {
+        shotButton(b: clear2)
               resetPicker2()
     }
     @IBAction func clear3(_ sender: Any) {
+        shotButton(b: clear3)
         resetPicker3()
     }
     @IBAction func clear4(_ sender: Any) {
+        shotButton(b: clear4)
         resetPicker4()
     }
     @IBAction func clear5(_ sender: Any) {
+        shotButton(b: clear5)
         resetPicker5()
     }
     @IBAction func clear6(_ sender: Any) {
+        shotButton(b: clear6)
         resetPicker6()
     }
     @IBAction func clear7(_ sender: Any) {
+        shotButton(b: clear7)
         resetPicker7()
     }
 ////
@@ -320,13 +352,13 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             return String(arrayCompSum.reduce("", +))
         }
         switch pickerView {
-        case picker1: comp1 = "U+\(compSum())";uniChar.inputUnicode = comp1;res1 = uniChar.unicodeSimbolConvert()
-        case picker2: comp2 = "U+\(compSum())";uniChar.inputUnicode = comp2;res2 = uniChar.unicodeSimbolConvert()
-        case picker3: comp3 = "U+\(compSum())";uniChar.inputUnicode = comp3;res3 = uniChar.unicodeSimbolConvert()
-        case picker4: comp4 = "U+\(compSum())";uniChar.inputUnicode = comp4;res4 = uniChar.unicodeSimbolConvert()
-        case picker5: comp5 = "U+\(compSum())";uniChar.inputUnicode = comp5;res5 = uniChar.unicodeSimbolConvert()
-        case picker6: comp6 = "U+\(compSum())";uniChar.inputUnicode = comp6;res6 = uniChar.unicodeSimbolConvert()
-        case picker7: comp7 = "U+\(compSum())";uniChar.inputUnicode = comp7;res7 = uniChar.unicodeSimbolConvert()
+        case picker1: comp1 = "U+\(compSum())";uniChar.inputUnicode = comp1;res1 = uniChar.unicodeSimbolConvert();shotPicker(p: picker1)
+        case picker2: comp2 = "U+\(compSum())";uniChar.inputUnicode = comp2;res2 = uniChar.unicodeSimbolConvert();shotPicker(p: picker2)
+        case picker3: comp3 = "U+\(compSum())";uniChar.inputUnicode = comp3;res3 = uniChar.unicodeSimbolConvert();shotPicker(p: picker3)
+        case picker4: comp4 = "U+\(compSum())";uniChar.inputUnicode = comp4;res4 = uniChar.unicodeSimbolConvert();shotPicker(p: picker4)
+        case picker5: comp5 = "U+\(compSum())";uniChar.inputUnicode = comp5;res5 = uniChar.unicodeSimbolConvert();shotPicker(p: picker5)
+        case picker6: comp6 = "U+\(compSum())";uniChar.inputUnicode = comp6;res6 = uniChar.unicodeSimbolConvert();shotPicker(p: picker6)
+        case picker7: comp7 = "U+\(compSum())";uniChar.inputUnicode = comp7;res7 = uniChar.unicodeSimbolConvert();shotPicker(p: picker7)
         default: break
         }
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6 + res7
@@ -337,6 +369,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         pikers()
+        print(picker1.frame)
         
     }
 
