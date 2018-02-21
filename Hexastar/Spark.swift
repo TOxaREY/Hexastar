@@ -18,7 +18,9 @@ class Touch: SKView {
     var buttonPosition = CGPoint()
     var pickerPositionLeft = CGPoint()
     var pickerPositionRight = CGPoint()
+
     override func didMoveToSuperview() {
+        print("SK \(frame)")
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear
         self.presentScene(scene)
@@ -68,7 +70,7 @@ class Touch: SKView {
     @objc func pickerShot() {
         pickerPositionLeft = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.string(forKey: "coorPicker")!)))!
         pickerPositionRight = pickerPositionLeft
-        pickerPositionRight.x += CGFloat(UserDefaults.standard.integer(forKey: "wigth"))
+        pickerPositionRight.x += CGFloat(UserDefaults.standard.integer(forKey: "wigth")) - 30
         sparkiLeft.position = pickerPositionLeft
         sparkiRight.position = pickerPositionRight
         sparkiLeft.isHidden = false
@@ -79,7 +81,6 @@ class Touch: SKView {
         sparkiRight.run(moveCenter, completion: {self.sparkiRight.isHidden = true})
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        UserDefaults.standard.set(true, forKey:"touche")
         deathStar.isHidden = false
         centre.isHidden = false
         let touch = touches.first

@@ -27,6 +27,8 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 //// Вызов вычисления
     var uniChar = UnicodeCharacterConverter()
 ////
+    
+    @IBOutlet weak var uIview: Touch!
     @IBOutlet weak var startLebel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var addButton1: UIButton!
@@ -385,7 +387,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         startLebel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
-        startLebel.isHidden = UserDefaults.standard.bool(forKey: "touche")
     }
 }
 

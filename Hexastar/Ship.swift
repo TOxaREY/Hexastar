@@ -18,6 +18,7 @@ class Ship: SKView {
         self.presentScene(scene)
         self.allowsTransparency = true
         self.backgroundColor = UIColor.clear
+        spaceship.size  = CGSize(width: 50, height: 50)
         spaceship.position = CGPoint(x: 390, y: self.frame.size.height / 2)
         scene.addChild(spaceship)
         let oscillate = SKAction.oscillation(amplitude: 40, timePeriod: 5, midPoint: spaceship.position)
