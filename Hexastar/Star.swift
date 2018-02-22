@@ -63,7 +63,7 @@ class Star: SKView {
     }
             @objc func explosionStar() {
                 if spaceship.isHidden == false {
-                    let animateExplosion = SKAction.animate(with: [expFrame1,expFrame2,expFrame3,expFrame4,expFrame5,expFrame6,expFrame7,expFrame8,expFrame9,expFrame10,expFrame11,expFrame12,expFrame13], timePerFrame: 0.1)
+                    let animateExplosion = SKAction.animate(with: [expFrame1,expFrame2,expFrame2,expFrame3,expFrame3,expFrame4,expFrame5,expFrame6,expFrame7,expFrame8,expFrame9,expFrame9,expFrame10,expFrame10,expFrame11,expFrame12,expFrame13], timePerFrame: 0.1)
                     spaceship.isHidden = true
                     expStart.position = CGPoint(x: self.spaceship.position.x, y: self.spaceship.position.y)
                     expStart.isHidden = false

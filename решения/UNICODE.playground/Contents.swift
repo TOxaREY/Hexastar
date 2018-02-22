@@ -1,6 +1,6 @@
 import UIKit
 import Foundation
-let myString = "👨🏾‍⚕️"
+let myString = "1523"
 var myUni = [UInt32]()
 var myUnic = [UInt32]()
 var multiUni = [String]()
@@ -45,7 +45,7 @@ while myUni.count > 0 {
 for i in multiUni {
     printStringHex.append("U+\(i) ")
 }
-//print(printStringHex)
+print(printStringHex)
 //hex to decimal
 multiUni = ["U+005E0", "U+00000", "U+00000", "U+00000"]
 var multiDec = [String]()

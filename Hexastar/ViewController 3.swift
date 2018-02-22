@@ -29,7 +29,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 ////
     
     @IBOutlet weak var uIview: Touch!
-    @IBOutlet weak var startLebel: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var addButton1: UIButton!
     @IBOutlet weak var addButton2: UIButton!
@@ -77,7 +77,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     }
 ////
     @IBAction func addButton1(_ sender: Any) {
-        startLebel.isHidden = true
+        startLabel.isHidden = true
         shotButton(b: addButton1)
         if picker1.isHidden == true {
             self.picker1.delegate = self
@@ -95,7 +95,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton2(_ sender: Any) {
-        startLebel.isHidden = true
+        startLabel.isHidden = true
         shotButton(b: addButton2)
         if picker2.isHidden == true {
             self.picker2.delegate = self
@@ -113,7 +113,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton3(_ sender: Any) {
-        startLebel.isHidden = true
+        startLabel.isHidden = true
         shotButton(b: addButton3)
         if picker3.isHidden == true {
             self.picker3.delegate = self
@@ -131,7 +131,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton4(_ sender: Any) {
-        startLebel.isHidden = true
+        startLabel.isHidden = true
         shotButton(b: addButton4)
         if picker4.isHidden == true {
             self.picker4.delegate = self
@@ -149,7 +149,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton5(_ sender: Any) {
-        startLebel.isHidden = true
+        startLabel.isHidden = true
         shotButton(b: addButton5)
         if picker5.isHidden == true {
             self.picker5.delegate = self
@@ -167,7 +167,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton6(_ sender: Any) {
-        startLebel.isHidden = true
+        startLabel.isHidden = true
         shotButton(b: addButton6)
         if picker6.isHidden == true {
             self.picker6.delegate = self
@@ -185,7 +185,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     @IBAction func addButton7(_ sender: Any) {
-        startLebel.isHidden = true
+        startLabel.isHidden = true
         shotButton(b: addButton7)
         if picker7.isHidden == true {
             self.picker7.delegate = self
@@ -386,7 +386,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         pikers()
         let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
-        startLebel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
+        startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
     }
 }
 

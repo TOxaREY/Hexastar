@@ -18,12 +18,13 @@ class CharacterUnicodeConverter {
             _inputCharacter = newValue
         }
       }
-func simbolUnicodeConvert() -> String {
+    func simbolUnicodeConvert() -> String {
     var myString = inputCharacter
     var myUni = [UInt32]()
     var myUnic = [UInt32]()
     var multiUni = [String]()
     var printStringHex = String()
+    var printStringArray = [String]()
     for i in myString.unicodeScalars {
     myUnic.append(i.value)
     }
