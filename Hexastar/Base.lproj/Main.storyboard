@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPC-Vb-XJa">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -306,7 +306,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="414_812" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-ct-zqk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceClear" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-ct-zqk">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPM-QG-Vrh">
@@ -347,11 +347,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-OK-7fe">
-                                        <rect key="frame" x="80.5" y="0.0" width="160" height="46"/>
+                                        <rect key="frame" x="37.5" y="0.0" width="245" height="46"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="Ag4-5V-b13"/>
-                                        </constraints>
                                         <color key="textColor" red="0.1647058824" green="0.64705882349999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -369,7 +366,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-S1-3d3">
-                                        <rect key="frame" x="265.5" y="8" width="29.5" height="30"/>
+                                        <rect key="frame" x="282.5" y="8" width="29.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="aAl-S1-3d3" secondAttribute="height" multiplier="1:1" id="BYE-eG-Fcm"/>
                                         </constraints>
@@ -388,7 +385,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzD-8b-2LX">
-                                        <rect key="frame" x="26" y="8" width="29.5" height="30"/>
+                                        <rect key="frame" x="8" y="8" width="29.5" height="30"/>
                                         <state key="normal" image="clear"/>
                                         <connections>
                                             <action selector="buttonReset:" destination="IPC-Vb-XJa" eventType="touchUpInside" id="akw-Yz-YJf"/>
@@ -400,18 +397,20 @@
                                     <constraint firstItem="ujg-Bk-9AT" firstAttribute="centerY" secondItem="hwR-Hg-h9h" secondAttribute="centerY" id="2GA-0Y-cmc"/>
                                     <constraint firstItem="tdg-OK-7fe" firstAttribute="top" secondItem="aKD-57-V2S" secondAttribute="bottom" id="5Ep-xB-QOK"/>
                                     <constraint firstItem="aAl-S1-3d3" firstAttribute="width" secondItem="YzD-8b-2LX" secondAttribute="width" id="8CT-CQ-Scf"/>
+                                    <constraint firstItem="aAl-S1-3d3" firstAttribute="leading" secondItem="tdg-OK-7fe" secondAttribute="trailing" id="EeG-gl-TzY"/>
                                     <constraint firstItem="ujg-Bk-9AT" firstAttribute="centerX" secondItem="hwR-Hg-h9h" secondAttribute="centerX" id="K0x-W1-OlK"/>
+                                    <constraint firstItem="tdg-OK-7fe" firstAttribute="leading" secondItem="YzD-8b-2LX" secondAttribute="trailing" id="LBB-Zs-8iE"/>
+                                    <constraint firstAttribute="trailing" secondItem="aAl-S1-3d3" secondAttribute="trailing" constant="8" id="LjA-gd-RyF"/>
                                     <constraint firstAttribute="trailing" secondItem="ipF-C9-0fo" secondAttribute="trailing" id="NRv-IS-fgC"/>
-                                    <constraint firstItem="aAl-S1-3d3" firstAttribute="leading" secondItem="tdg-OK-7fe" secondAttribute="trailing" constant="25" id="QwN-h8-Izq"/>
                                     <constraint firstItem="aAl-S1-3d3" firstAttribute="height" secondItem="YzD-8b-2LX" secondAttribute="height" id="V71-w5-8yM"/>
                                     <constraint firstItem="aKD-57-V2S" firstAttribute="top" secondItem="hwR-Hg-h9h" secondAttribute="top" id="XGx-p3-aKE"/>
                                     <constraint firstAttribute="trailing" secondItem="aKD-57-V2S" secondAttribute="trailing" id="bYs-pY-qpT"/>
                                     <constraint firstItem="ipF-C9-0fo" firstAttribute="leading" secondItem="hwR-Hg-h9h" secondAttribute="leading" id="cor-KK-ldf"/>
                                     <constraint firstItem="tdg-OK-7fe" firstAttribute="centerX" secondItem="hwR-Hg-h9h" secondAttribute="centerX" id="gky-WU-aEI"/>
                                     <constraint firstItem="tdg-OK-7fe" firstAttribute="centerY" secondItem="aAl-S1-3d3" secondAttribute="centerY" id="jNz-ze-aH0"/>
+                                    <constraint firstItem="YzD-8b-2LX" firstAttribute="leading" secondItem="hwR-Hg-h9h" secondAttribute="leading" constant="8" id="mdr-9h-36s"/>
                                     <constraint firstAttribute="trailing" secondItem="ujg-Bk-9AT" secondAttribute="trailing" constant="10" id="q1I-Of-gpU"/>
                                     <constraint firstItem="aKD-57-V2S" firstAttribute="centerX" secondItem="hwR-Hg-h9h" secondAttribute="centerX" id="qdl-nL-2QP"/>
-                                    <constraint firstItem="tdg-OK-7fe" firstAttribute="leading" secondItem="YzD-8b-2LX" secondAttribute="trailing" constant="25" id="rGB-b8-WZg"/>
                                     <constraint firstItem="tdg-OK-7fe" firstAttribute="centerY" secondItem="YzD-8b-2LX" secondAttribute="centerY" id="w7T-CZ-zfu"/>
                                     <constraint firstItem="aAl-S1-3d3" firstAttribute="width" secondItem="hwR-Hg-h9h" secondAttribute="height" multiplier="5:84" id="zhe-pI-1Fe"/>
                                 </constraints>
@@ -908,6 +907,7 @@
         <image name="shipL" width="120" height="120"/>
         <image name="shipR" width="120" height="120"/>
         <image name="space" width="863" height="1692"/>
+        <image name="spaceClear" width="863" height="1692"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4LN-ZN-5CK"/>

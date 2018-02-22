@@ -9,10 +9,6 @@
 import UIKit
 import Foundation
 
-
-
-
-
 class ViewController2: UIViewController {
 //// Смена цвета текста статус бара
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -27,10 +23,11 @@ class ViewController2: UIViewController {
         return false
     }
 ////
+//// Вызов вычислений
  var characterUnicode = CharacterUnicodeConverter()
- var firstCount = Int()
- var secondCount = Int()
+////
     @IBOutlet weak var startLabel: UILabel!
+//// Вставить
     @IBOutlet weak var buttonPaste: UIButton!
     func wrong() {
         print("wrong")
@@ -47,19 +44,30 @@ class ViewController2: UIViewController {
                         pasteBoardString = String(pasteBoardString!.dropLast(overCount))
                     }
                     if ((pasteBoardString)!).count <= 3 {
-                        textField.text = pasteBoardString
-                        calculating()
-                    }
-                }
-        print(pasteBoardString)
-            }
+                        switch pasteBoardString?.count {
+                        case 0?: textField.text = pasteBoardString;calculating()
+                        case 1?: textField.text = pasteBoardString;calculating()
+                        case 2?: textField.text = String(describing: pasteBoardString![(pasteBoardString!.startIndex)]);calculating();textField.text = pasteBoardString;calculating()
+                        case 3?: textField.text = String(describing: pasteBoardString! [(pasteBoardString!.startIndex)]);calculating();textField.text = String(describing: pasteBoardString! [(pasteBoardString!.startIndex)]) + String(describing: pasteBoardString![pasteBoardString!.index(after: (pasteBoardString!.startIndex))]);calculating();textField.text = pasteBoardString;calculating()
+                        default: break
+                        }
+                  }
+           }
+    }
+////
     @IBOutlet weak var buttonReset: UIButton!
+//// Сброс
     @IBAction func buttonReset(_ sender: Any) {
         textField.text?.removeAll()
+        placeHolder()
         resultLabel.text?.removeAll()
         view.endEditing(true)
     }
+////
     @IBOutlet weak var textField: UITextField!
+//// Вычисления шрифт и мультиколор стринг
+    var firstCount = Int()
+    var secondCount = Int()
     @IBAction func characterInput(_ sender: Any) {
        calculating()
     }
@@ -93,6 +101,7 @@ class ViewController2: UIViewController {
             textField.text?.removeLast()
         }
     }
+////
     @IBOutlet weak var resultLabel: UILabel!
 //// Положение поля результата
     func constraintResultLabel() {
@@ -106,22 +115,25 @@ class ViewController2: UIViewController {
         }
     }
 ////
-    
+//// Плейсхолдер
+    func placeHolder() {
+        let font = UIFont(name: "Neuropol", size: 13.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter up to 3 characters", comment: "enter up to 3 characters"), attributes: attributes)
+    }
+////
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonPaste.isHidden = true
         buttonReset.isHidden = true
+        placeHolder()
         textField.isHidden = true
         let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
-}
-    
-    
-    
-    
+}   
 //// Тач в любую область чтоб убрать экран
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {

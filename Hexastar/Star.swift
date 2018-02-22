@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+//// Синусоида
 let π = CGFloat(Double.pi)
 extension SKAction {
     static func oscillation(amplitude a: CGFloat, timePeriod t: CGFloat, midPoint: CGPoint) -> SKAction {
@@ -19,6 +20,7 @@ extension SKAction {
         return action
     }
 }
+////
 class Star: SKView {
    let spaceship = SKSpriteNode(imageNamed: "ball.png")
     let expStart = SKSpriteNode(imageNamed: "ballStart.png")
@@ -35,7 +37,6 @@ class Star: SKView {
     let expFrame11 = SKTexture(imageNamed: "ball11.png")
     let expFrame12 = SKTexture(imageNamed: "ball12.png")
     let expFrame13 = SKTexture(imageNamed: "ball13.png")
-   
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear
@@ -61,6 +62,7 @@ class Star: SKView {
         NotificationCenter.default.addObserver(self, selector: #selector(explosionStar), name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         
     }
+ //// Взрыв
             @objc func explosionStar() {
                 if spaceship.isHidden == false {
                     let animateExplosion = SKAction.animate(with: [expFrame1,expFrame2,expFrame2,expFrame3,expFrame3,expFrame4,expFrame5,expFrame6,expFrame7,expFrame8,expFrame9,expFrame9,expFrame10,expFrame10,expFrame11,expFrame12,expFrame13], timePerFrame: 0.1)
@@ -70,6 +72,7 @@ class Star: SKView {
                     expStart.run(animateExplosion, completion: {self.expStart.isHidden = true})
           }
     }
+////
 }
 
 

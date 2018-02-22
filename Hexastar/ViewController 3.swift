@@ -15,7 +15,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         return .lightContent
     }
 ////
-    
 //// Блокировка поворота
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
@@ -27,7 +26,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 //// Вызов вычисления
     var uniChar = UnicodeCharacterConverter()
 ////
-    
     @IBOutlet weak var uIview: Touch!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
@@ -52,7 +50,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var label5: UILabel!
     @IBOutlet weak var label6: UILabel!
     @IBOutlet weak var label7: UILabel!
-    
 //// Стрельба от кнопок
     func shotButton(b:UIButton) {
      var coordinate = String()
@@ -76,6 +73,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
     }
 ////
+//// Кнопки добавить
     @IBAction func addButton1(_ sender: Any) {
         startLabel.isHidden = true
         shotButton(b: addButton1)
@@ -202,7 +200,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             resetPicker7()
         }
     }
-    
+////
 //// Сброс пикервью
     func resetPicker1() {
         for index in 0...4 {
@@ -253,6 +251,8 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         res7 = ""
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6
     }
+////
+//// Сброс
     @IBAction func clear1(_ sender: Any) {
         shotButton(b: clear1)
               resetPicker1()
@@ -282,8 +282,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         resetPicker7()
     }
 ////
-
-//// Pickers
+//// Pickers и вычисления
     @IBOutlet weak var picker1: UIPickerView!
     @IBOutlet weak var picker2: UIPickerView!
     @IBOutlet weak var picker3: UIPickerView!
@@ -291,7 +290,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var picker5: UIPickerView!
     @IBOutlet weak var picker6: UIPickerView!
     @IBOutlet weak var picker7: UIPickerView!
-    
     var pickerData: [[String]] = [[String]]()
     let hexadecimal = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]
     func pikers() {
@@ -321,7 +319,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 5
     }
-
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 16
     }
@@ -357,7 +354,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     var res5 = String ()
     var res6 = String ()
     var res7 = String ()
-
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         func compSum() -> String {
             var arrayCompSum = [String]()
@@ -379,8 +375,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6 + res7
     }
 ////
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         pikers()

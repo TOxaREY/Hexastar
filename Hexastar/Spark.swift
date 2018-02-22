@@ -18,9 +18,7 @@ class Touch: SKView {
     var buttonPosition = CGPoint()
     var pickerPositionLeft = CGPoint()
     var pickerPositionRight = CGPoint()
-
     override func didMoveToSuperview() {
-        print("SK \(frame)")
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear
         self.presentScene(scene)
@@ -40,6 +38,7 @@ class Touch: SKView {
         scene.addChild(sparki)
         scene.addChild(sparkiLeft)
         scene.addChild(sparkiRight)
+//// Тряска
         let moveRightUp:SKAction
         let moveDown:SKAction
         let moveLeftUp:SKAction
@@ -52,9 +51,13 @@ class Touch: SKView {
         let seq = SKAction.sequence([SKAction.repeat(seq1, count: 10),moveZero])
         let loop = SKAction.repeatForever(seq)
         deathStar.run(loop)
+////
+//// Стрельба
         NotificationCenter.default.addObserver(self, selector: #selector(buttonShot), name: NSNotification.Name(rawValue: "buttonPush"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(pickerShot), name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
     }
+////
+//// Стрельба из кнопок
     @objc func buttonShot() {
         deathStar.isHidden = false
         centre.isHidden = false
@@ -67,6 +70,8 @@ class Touch: SKView {
         moveCenter = SKAction.move(to: centrePosition, duration: 0.4)
         sparki.run(moveCenter, completion: {self.sparki.isHidden = true})
     }
+////
+//// Стрельба из пикеров
     @objc func pickerShot() {
         pickerPositionLeft = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.string(forKey: "coorPicker")!)))!
         pickerPositionRight = pickerPositionLeft
@@ -80,6 +85,8 @@ class Touch: SKView {
         sparkiLeft.run(moveCenter, completion: {self.sparkiLeft.isHidden = true})
         sparkiRight.run(moveCenter, completion: {self.sparkiRight.isHidden = true})
     }
+////
+//// Стрельба из тачей
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         deathStar.isHidden = false
         centre.isHidden = false
@@ -92,5 +99,6 @@ class Touch: SKView {
         moveCenter = SKAction.move(to: centrePosition, duration: 0.4)
         sparki.run(moveCenter, completion: {self.sparki.isHidden = true})
     }
+////
 }
 
