@@ -86,7 +86,10 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var pasteButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var binatrixLabel: UILabel!
-
+    @IBOutlet weak var segueLabel: UILabel!
+    @IBOutlet weak var segueButton: UIButton!
+    
+    
     @IBAction func clearButton(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         textField.text?.removeAll()
@@ -569,7 +572,6 @@ class ViewController: UIViewController, KeyboardDelegate {
     var octDecCalc = OctDecCalc()
 ////
 
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         labelTitleTap()
@@ -578,13 +580,14 @@ class ViewController: UIViewController, KeyboardDelegate {
         textLabelTitle()
         let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
+        let font1 = UIFont(name: "Neuropol", size: 14.0)!
+        let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
         labelStart.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
         UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
+        segueLabel.attributedText = NSAttributedString(string: NSLocalizedString("converter Characters <-> Unicode", comment: "converter Characters <-> Unicode") , attributes: attributes1)
         borderTextField()
-        runString(string: NSLocalizedString("Convert Decimal <-> Binary ", comment: "Convert Decimal <-> Binary "))
-  
+        runString(string: NSLocalizedString("converter Decimal <-> Binary ", comment: "converter Decimal <-> Binary "))
     }
-    
 //// Кнопка перехода в другую программу
     @IBAction func buttonBinatrix(_ sender: Any) {
                 let appURL = NSURL(string: "binatrixHexastar://")!
@@ -618,7 +621,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         return arrayRunString
     }
     func runString(string:String) {
-        let font = UIFont(name: "Neuropol", size: 15.0)!
+        let font = UIFont(name: "Neuropol", size: 14.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.13, green:0.76, blue:0.05, alpha:1.0), NSAttributedStringKey.font: font]
         let count = runStringArray(string: string).count
         var q = 0
@@ -639,6 +642,5 @@ class ViewController: UIViewController, KeyboardDelegate {
         super.touchesBegan(touches, with: event)
     }
 ////
-    
 }
 

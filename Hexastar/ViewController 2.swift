@@ -55,6 +55,9 @@ class ViewController2: UIViewController {
            }
     }
 ////
+//    @IBOutlet weak var segueLabel2: UILabel!
+    @IBOutlet weak var segueButton2: UIButton!
+    @IBOutlet weak var segueLabel2: UILabel!
     @IBOutlet weak var buttonReset: UIButton!
 //// Сброс
     @IBAction func buttonReset(_ sender: Any) {
@@ -107,11 +110,11 @@ class ViewController2: UIViewController {
     func constraintResultLabel() {
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
         switch screenHeight {
-        case 736: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -318).isActive = true
-        case 812: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -346).isActive = true
-        case 667: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -305).isActive = true
-        case 568: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -301).isActive = true
-        default: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -345).isActive = true
+        case 736: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -94).isActive = true
+        case 812: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -143).isActive = true
+        case 667: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -102).isActive = true
+        case 568: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -128).isActive = true
+        default: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -143).isActive = true
         }
     }
 ////
@@ -130,10 +133,13 @@ class ViewController2: UIViewController {
         textField.isHidden = true
         let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
+        let font1 = UIFont(name: "Neuropol", size: 14.0)!
+        let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
+        segueLabel2.attributedText = NSAttributedString(string: NSLocalizedString("converter DEC<->HEX<->OCT<->DEC", comment: "DEC<->HEX<->OCT<->DEC") , attributes: attributes1)
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
-}   
+    }   
 //// Тач в любую область чтоб убрать экран
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
