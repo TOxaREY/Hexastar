@@ -36,6 +36,7 @@
 		F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */; };
 		F2EF3C562017848D00B899DA /* KeyboardDEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EF3C552017848D00B899DA /* KeyboardDEC.swift */; };
 		F2EF3C582017849F00B899DA /* KeyboardOCT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EF3C572017849F00B899DA /* KeyboardOCT.swift */; };
+		F2FB9BED2042EA0700B702D5 /* Jump.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FB9BEC2042EA0700B702D5 /* Jump.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardOCT.xib; sourceTree = "<group>"; };
 		F2EF3C552017848D00B899DA /* KeyboardDEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDEC.swift; sourceTree = "<group>"; };
 		F2EF3C572017849F00B899DA /* KeyboardOCT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOCT.swift; sourceTree = "<group>"; };
+		F2FB9BEC2042EA0700B702D5 /* Jump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jump.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				F24BDE6A20287DBF0007C8C5 /* Star.swift */,
 				F2887EC8202CC6B0006F0075 /* Ship.swift */,
 				F2DACD9C203AD6F20090A983 /* Spark.swift */,
+				F2FB9BEC2042EA0700B702D5 /* Jump.swift */,
 				F270D605203AFFFE00037075 /* sparki.sks */,
 				F2922137203C40E2006D433E /* sparkiLR.sks */,
 				F2922139203C4371006D433E /* centre.sks */,
@@ -225,6 +228,7 @@
 				F23395642031A16100C8D6F2 /* SimUnic.swift in Sources */,
 				F2EE6FD6200FC39900134DDE /* KeyboardHEX.swift in Sources */,
 				F2E0F5BB203459D300E18BBC /* UnicSim.swift in Sources */,
+				F2FB9BED2042EA0700B702D5 /* Jump.swift in Sources */,
 				F2DACD9D203AD6F20090A983 /* Spark.swift in Sources */,
 				F2EF3C582017849F00B899DA /* KeyboardOCT.swift in Sources */,
 				F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */,
