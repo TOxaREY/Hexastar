@@ -18,6 +18,8 @@
 		F24FD1C120308894003A7EFA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24FD1C320308894003A7EFA /* Localizable.strings */; };
 		F25DEFCF2027851400BA8348 /* moonhouse.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F25DEFCE2027840F00BA8348 /* moonhouse.ttf */; };
 		F270D607203AFFFE00037075 /* sparki.sks in Resources */ = {isa = PBXBuildFile; fileRef = F270D605203AFFFE00037075 /* sparki.sks */; };
+		F27585CF204450A20058DF21 /* green.sks in Resources */ = {isa = PBXBuildFile; fileRef = F27585CE204450A20058DF21 /* green.sks */; };
+		F27585D12044516C0058DF21 /* blue.sks in Resources */ = {isa = PBXBuildFile; fileRef = F27585D02044516C0058DF21 /* blue.sks */; };
 		F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B5B5E2018B7910096D98A /* HexCalc.swift */; };
 		F27EB0902019D5C20061E461 /* OctCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EB08F2019D5C20061E461 /* OctCalc.swift */; };
 		F2887EC9202CC6B0006F0075 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2887EC8202CC6B0006F0075 /* Ship.swift */; };
@@ -54,6 +56,8 @@
 		F24FD1C420308894003A7EFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F25DEFCE2027840F00BA8348 /* moonhouse.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = moonhouse.ttf; sourceTree = "<group>"; };
 		F270D605203AFFFE00037075 /* sparki.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sparki.sks; sourceTree = "<group>"; };
+		F27585CE204450A20058DF21 /* green.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = green.sks; sourceTree = "<group>"; };
+		F27585D02044516C0058DF21 /* blue.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = blue.sks; sourceTree = "<group>"; };
 		F27B5B5E2018B7910096D98A /* HexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCalc.swift; sourceTree = "<group>"; };
 		F27EB08F2019D5C20061E461 /* OctCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctCalc.swift; sourceTree = "<group>"; };
 		F2887EC8202CC6B0006F0075 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				F2FB9BEC2042EA0700B702D5 /* Jump.swift */,
 				F270D605203AFFFE00037075 /* sparki.sks */,
 				F2922137203C40E2006D433E /* sparkiLR.sks */,
+				F27585CE204450A20058DF21 /* green.sks */,
+				F27585D02044516C0058DF21 /* blue.sks */,
 				F2922139203C4371006D433E /* centre.sks */,
 				F297B235200E20760072E484 /* Main.storyboard */,
 				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
@@ -209,10 +215,12 @@
 				F2EF3C4E20177C3300B899DA /* KeyboardDEC.xib in Resources */,
 				F24FD1AA203081DC003A7EFA /* neu.ttf in Resources */,
 				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
+				F27585CF204450A20058DF21 /* green.sks in Resources */,
 				F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */,
 				F24FD1C120308894003A7EFA /* Localizable.strings in Resources */,
 				F2922138203C40E2006D433E /* sparkiLR.sks in Resources */,
 				F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */,
+				F27585D12044516C0058DF21 /* blue.sks in Resources */,
 				F25DEFCF2027851400BA8348 /* moonhouse.ttf in Resources */,
 				F297B237200E20760072E484 /* Main.storyboard in Resources */,
 			);

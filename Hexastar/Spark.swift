@@ -42,13 +42,13 @@ class Touch: SKView {
         let moveRightUp:SKAction
         let moveDown:SKAction
         let moveLeftUp:SKAction
-        let moveZero:SKAction
+        let pause:SKAction
         moveRightUp = SKAction.moveBy(x: 1, y: 1, duration: 0.01)
         moveDown = SKAction.moveBy(x: 0, y: -2, duration: 0.02)
         moveLeftUp = SKAction.moveBy(x: -2, y: 2, duration: 0.02)
-        moveZero = SKAction.moveBy(x: 0, y: 0, duration: 1)
+        pause = SKAction.wait(forDuration: 1)
         let seq1 = SKAction.sequence([moveRightUp,moveDown,moveLeftUp,moveDown,moveRightUp])
-        let seq = SKAction.sequence([SKAction.repeat(seq1, count: 10),moveZero])
+        let seq = SKAction.sequence([SKAction.repeat(seq1, count: 10),pause])
         let loop = SKAction.repeatForever(seq)
         deathStar.run(loop)
 ////

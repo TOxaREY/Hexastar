@@ -34,6 +34,7 @@ class ViewController2: UIViewController {
     }
     var pasteBoardString: String? = nil
     @IBAction func buttonPaste(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
         textField.placeholder?.removeAll()
         pasteBoardString = UIPasteboard.general.string
             if pasteBoardString == nil {
@@ -55,19 +56,19 @@ class ViewController2: UIViewController {
            }
     }
 ////
-//    @IBOutlet weak var segueLabel2: UILabel!
     @IBOutlet weak var segueButton2: UIButton!
     @IBOutlet weak var segueLabel2: UILabel!
     @IBOutlet weak var buttonReset: UIButton!
 //// Сброс
     @IBAction func buttonReset(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
         textField.text?.removeAll()
         placeHolder()
         resultLabel.text?.removeAll()
         view.endEditing(true)
     }
 ////
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak public var textField: UITextField!
 //// Вычисления шрифт и мультиколор стринг
     var firstCount = Int()
     var secondCount = Int()
@@ -85,11 +86,12 @@ class ViewController2: UIViewController {
             case 568: font = UIFont(name: "STARWARS", size: 22.0)!
             default: font = UIFont(name: "STARWARS", size: 22.0)!
             }
-            let attributesYellow = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font] as [NSAttributedStringKey : Any]
+            let attributesYellow = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font, NSAttributedStringKey.strokeWidth: -1, NSAttributedStringKey.strokeColor:UIColor.black] as [NSAttributedStringKey : Any]
             switch textField.text?.count {
             case 0?: firstCount = 0
             case 1?: firstCount = characterUnicode.simbolUnicodeConvert().count; secondCount = 0
             case 2?: secondCount = characterUnicode.simbolUnicodeConvert().count
+            case 3?: NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
             default: break
             }
             if secondCount > firstCount {
@@ -106,6 +108,8 @@ class ViewController2: UIViewController {
     }
 ////
     @IBOutlet weak var resultLabel: UILabel!
+
+    
 //// Положение поля результата
     func constraintResultLabel() {
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -139,7 +143,8 @@ class ViewController2: UIViewController {
         segueLabel2.attributedText = NSAttributedString(string: NSLocalizedString("converter DEC<->HEX<->OCT<->DEC", comment: "DEC<->HEX<->OCT<->DEC") , attributes: attributes1)
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
-    }   
+    }
+    
 //// Тач в любую область чтоб убрать экран
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
