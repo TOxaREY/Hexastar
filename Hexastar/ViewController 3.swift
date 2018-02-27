@@ -381,6 +381,11 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
+        NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "startDS"), object: nil)
     }
+        @objc func start(){
+        startLabel.isHidden = true
+       }
 }
+
 

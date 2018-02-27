@@ -142,7 +142,6 @@ class Jump: SKView {
     }
     
         @objc func start(){
-            print("start")
             sSD.isHidden = false
             wingUp.isHidden = false
             blue.isPaused = false

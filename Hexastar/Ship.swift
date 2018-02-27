@@ -10,9 +10,8 @@ import UIKit
 import SpriteKit
 
 class Ship: SKView {
-    
+    let spaceship = SKSpriteNode(imageNamed: "ship.png")
     override func didMoveToSuperview() {
-        let spaceship = SKSpriteNode(imageNamed: "ship.png")
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear
         self.presentScene(scene)
@@ -30,5 +29,12 @@ class Ship: SKView {
         let seq = SKAction.sequence([moveRight, SKAction.hide(), returnLeft, SKAction.unhide()])
         let loop = SKAction.repeatForever(seq)
         spaceship.run(loop)
+        spaceship.isHidden = true
+        spaceship.isPaused = true
+        NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "startShip"), object: nil)
+    }
+    @objc func start(){
+        spaceship.isHidden = false
+        spaceship.isPaused = false
     }
 }

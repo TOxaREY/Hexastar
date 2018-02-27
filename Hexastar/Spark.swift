@@ -98,6 +98,7 @@ class Touch: SKView {
         let moveCenter:SKAction
         moveCenter = SKAction.move(to: centrePosition, duration: 0.4)
         sparki.run(moveCenter, completion: {self.sparki.isHidden = true})
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startDS"), object: nil)
     }
 ////
 }
