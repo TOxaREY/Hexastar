@@ -139,13 +139,13 @@ class ViewController2: UIViewController {
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         let font1 = UIFont(name: "Neuropol", size: 14.0)!
         let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
-//        startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
+        startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
         segueLabel2.attributedText = NSAttributedString(string: NSLocalizedString("converter DEC<->HEX<->OCT<->DEC", comment: "DEC<->HEX<->OCT<->DEC") , attributes: attributes1)
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
     }
     
-//// Тач в любую область чтоб убрать экран
+//// Тач в любую область чтоб убрать экран и стартовую страницу
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
             view.endEditing(true)
@@ -153,6 +153,7 @@ class ViewController2: UIViewController {
             buttonPaste.isHidden = false
             buttonReset.isHidden = false
             textField.isHidden = false
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "start"), object: nil)
         }
         super.touchesBegan(touches, with: event)
     }
