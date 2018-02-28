@@ -120,7 +120,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.placeholder?.removeAll()
         pasteBoardString = UIPasteboard.general.string?.replacingOccurrences(of: ",", with: ".")
         if leftKey.isSelected != false || rightKey.isSelected != false {
-        if pasteBoardString == nil {
+        if pasteBoardString == nil || pasteBoardString == "" {
             wrong()
         } else {
             var i = 0

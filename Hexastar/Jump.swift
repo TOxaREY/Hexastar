@@ -11,7 +11,6 @@ import SpriteKit
 
 class Jump: SKView {
     let sSD = SKSpriteNode(imageNamed: "ssdestroyer")
-    let sSDJumper = SKSpriteNode(imageNamed: "ssdestroyerjumper")
     let jump3 = SKSpriteNode(imageNamed: "0-3.jpg")
     let jump6 = SKTexture(imageNamed: "0-6.jpg")
     let jump9 = SKTexture(imageNamed: "0-9.jpg")
@@ -32,17 +31,6 @@ class Jump: SKView {
     let jump53 = SKTexture(imageNamed: "0-53.jpg")
     let jump56 = SKTexture(imageNamed: "0-56.jpg")
     let jump59 = SKTexture(imageNamed: "0-59.jpg")
-    let ssj1 = SKTexture(imageNamed: "SSJ1.png")
-    let ssj2 = SKTexture(imageNamed: "SSJ2.png")
-    let ssj3 = SKTexture(imageNamed: "SSJ3.png")
-    let ssj4 = SKTexture(imageNamed: "SSJ4.png")
-    let ssj5 = SKTexture(imageNamed: "SSJ5.png")
-    let ssj6 = SKTexture(imageNamed: "SSJ6.png")
-    let ssj7 = SKTexture(imageNamed: "SSJ7.png")
-    let ssj8 = SKTexture(imageNamed: "SSJ8.png")
-    let ssj9 = SKTexture(imageNamed: "SSJ9.png")
-    let ssj10 = SKTexture(imageNamed: "SSJ10.png")
-    let ssj11 = SKTexture(imageNamed: "SSJ11.png")
     var blue = SKSpriteNode(fileNamed: "blue.sks")!
     var green = SKSpriteNode(fileNamed: "green.sks")!
     var wingUp = SKSpriteNode(imageNamed: "wing1.png")
@@ -120,12 +108,6 @@ class Jump: SKView {
         green.run(loopGreen)
         green.isPaused = true
 ////
-//// Прыгающий sSD
-        sSDJumper.size = sSD.size
-        sSDJumper.position = sSD.position
-        sSDJumper.isHidden = true
-        scene.addChild(sSDJumper)
-////
 //// Тряска статичного sSD
         let moveRightUp:SKAction
         let moveDown:SKAction
@@ -149,31 +131,29 @@ class Jump: SKView {
             green.isPaused = false
      }
         @objc func jump(){
-            if sSD.isHidden == false {
+            if sSD.size == CGSize(width: 806 / 10, height: 500 / 10) {
                 wingUp.isHidden = true
                 wingMid.isHidden = true
                 blue.removeFromParent()
                 green.removeFromParent()
-            sSD.isHidden = true
-            sSDJumper.isHidden = false
-            let moveCentre:SKAction
+                let moveCentre:SKAction
                 let returnMove:SKAction
                 moveCentre = SKAction.moveBy(x: self.frame.size.width / 1.3571 - self.frame.size.width / 6.666, y: -(self.frame.size.height / 1.65 - self.frame.size.height / 3.155), duration: 1)
                 returnMove = SKAction.moveBy(x: -(self.frame.size.width / 1.3571 - self.frame.size.width / 6.666), y: self.frame.size.height / 1.65 - self.frame.size.height / 3.155, duration: 0.01)
                 let seq = SKAction.sequence([moveCentre, SKAction.hide(), returnMove, SKAction.unhide()])
             let jumper = SKAction.animate(with: [jump6,jump9,jump12,jump15,jump18,jump21,jump24,jump27,jump30,jump33,jump36,jump39,jump42,jump45,jump48,jump51,jump51,jump53,jump56,jump59], timePerFrame: 0.05)
-            let moveCentreAktion = SKAction.animate(with: [ssj1,ssj2,ssj3,ssj4,ssj5,ssj6,ssj7,ssj8,ssj9,ssj10,ssj11], timePerFrame: 0.0909)
-            let moveReturnAktion = SKAction.animate(with: [ssj11,ssj10,ssj9,ssj8,ssj7,ssj6,ssj5,ssj4,ssj3,ssj2,ssj1], timePerFrame: 0.03)
+            let moveCentreAktion = SKAction.scale(to: 0, duration: 1)
+            let moveReturnAktion = SKAction.scale(to: CGSize(width: 806 / 10, height: 500 / 10), duration: 0.33)
             let pauseJ = SKAction.wait(forDuration: 1.5)
                 jump3.isHidden = false            
 //// Динамика фона
                 jump3.run(jumper, completion: {self.jump3.isHidden = true})
 ////
 //// Динамика уменьшения sSD
-                sSDJumper.run(moveCentreAktion)
+                sSD.run(moveCentreAktion)
 ////
 //// Динамика движения sSD
-                sSDJumper.run(seq, completion: {self.sSDJumper.run(pauseJ,completion: {self.sSDJumper.run(moveReturnAktion, completion: {self.sSDJumper.isHidden = true; self.wingUp.isHidden = false; self.wingMid.isHidden = false; self.scene?.addChild(self.blue);self.scene?.addChild(self.green); self.sSD.isHidden = false})})})
+                sSD.run(seq, completion: {self.sSD.run(pauseJ,completion: {self.sSD.run(moveReturnAktion, completion: {self.sSD.isHidden = true; self.wingUp.isHidden = false; self.wingMid.isHidden = false; self.scene?.addChild(self.blue);self.scene?.addChild(self.green); self.sSD.isHidden = false})})})
 ////
         }
     }

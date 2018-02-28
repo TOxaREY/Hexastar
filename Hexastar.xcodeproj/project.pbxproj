@@ -33,6 +33,7 @@
 		F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F2B10B3E200FAB36003DD679 /* STARWARS.TTF */; };
 		F2DACD9D203AD6F20090A983 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DACD9C203AD6F20090A983 /* Spark.swift */; };
 		F2E0F5BB203459D300E18BBC /* UnicSim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0F5BA203459D300E18BBC /* UnicSim.swift */; };
+		F2EA20C52045CC2F002EDB2A /* Flash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EA20C42045CC2F002EDB2A /* Flash.swift */; };
 		F2EE6FD6200FC39900134DDE /* KeyboardHEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */; };
 		F2EF3C4E20177C3300B899DA /* KeyboardDEC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EF3C4D20177C3300B899DA /* KeyboardDEC.xib */; };
 		F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */; };
@@ -72,6 +73,7 @@
 		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
 		F2DACD9C203AD6F20090A983 /* Spark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		F2E0F5BA203459D300E18BBC /* UnicSim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicSim.swift; sourceTree = "<group>"; };
+		F2EA20C42045CC2F002EDB2A /* Flash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flash.swift; sourceTree = "<group>"; };
 		F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHEX.swift; sourceTree = "<group>"; };
 		F2EF3C4D20177C3300B899DA /* KeyboardDEC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardDEC.xib; sourceTree = "<group>"; };
 		F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardOCT.xib; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				F2887EC8202CC6B0006F0075 /* Ship.swift */,
 				F2DACD9C203AD6F20090A983 /* Spark.swift */,
 				F2FB9BEC2042EA0700B702D5 /* Jump.swift */,
+				F2EA20C42045CC2F002EDB2A /* Flash.swift */,
 				F270D605203AFFFE00037075 /* sparki.sks */,
 				F2922137203C40E2006D433E /* sparkiLR.sks */,
 				F27585CE204450A20058DF21 /* green.sks */,
@@ -237,6 +240,7 @@
 				F2EE6FD6200FC39900134DDE /* KeyboardHEX.swift in Sources */,
 				F2E0F5BB203459D300E18BBC /* UnicSim.swift in Sources */,
 				F2FB9BED2042EA0700B702D5 /* Jump.swift in Sources */,
+				F2EA20C52045CC2F002EDB2A /* Flash.swift in Sources */,
 				F2DACD9D203AD6F20090A983 /* Spark.swift in Sources */,
 				F2EF3C582017849F00B899DA /* KeyboardOCT.swift in Sources */,
 				F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */,

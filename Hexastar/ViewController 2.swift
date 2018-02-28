@@ -30,14 +30,20 @@ class ViewController2: UIViewController {
 //// Вставить
     @IBOutlet weak var buttonPaste: UIButton!
     func wrong() {
-        print("wrong")
-    }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
+        let font = UIFont(name: "Neuropol", size: 13.0)!
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+            self.textField.text?.removeAll()
+            self.placeHolder()
+      }
+   }
     var pasteBoardString: String? = nil
     @IBAction func buttonPaste(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
         textField.placeholder?.removeAll()
         pasteBoardString = UIPasteboard.general.string
-            if pasteBoardString == nil {
+            if pasteBoardString == nil || pasteBoardString == "" {
                 wrong()
             } else {
                     if pasteBoardString!.count > 3 {
@@ -129,8 +135,18 @@ class ViewController2: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter up to 3 characters", comment: "enter up to 3 characters"), attributes: attributes)
     }
 ////
+//// Пользовательский бордюр textField
+    func borderTextField() {
+        let borderColor : UIColor = UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0)
+        textField.layer.borderWidth = 2
+        textField.layer.borderColor = borderColor.cgColor
+        textField.layer.cornerRadius = 5.0
+        
+    }
+////
     override func viewDidLoad() {
         super.viewDidLoad()
+        borderTextField()
         buttonPaste.isHidden = true
         buttonReset.isHidden = true
         placeHolder()
@@ -154,6 +170,7 @@ class ViewController2: UIViewController {
             buttonReset.isHidden = false
             textField.isHidden = false
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "start"), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startFlash"), object: nil)
         }
         super.touchesBegan(touches, with: event)
     }
