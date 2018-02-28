@@ -138,11 +138,11 @@ class Jump: SKView {
                 green.removeFromParent()
                 let moveCentre:SKAction
                 let returnMove:SKAction
-                moveCentre = SKAction.moveBy(x: self.frame.size.width / 1.3571 - self.frame.size.width / 6.666, y: -(self.frame.size.height / 1.65 - self.frame.size.height / 3.155), duration: 1)
+                moveCentre = SKAction.moveBy(x: self.frame.size.width / 1.3571 - self.frame.size.width / 6.666, y: -(self.frame.size.height / 1.65 - self.frame.size.height / 3.155), duration: 0.7)
                 returnMove = SKAction.moveBy(x: -(self.frame.size.width / 1.3571 - self.frame.size.width / 6.666), y: self.frame.size.height / 1.65 - self.frame.size.height / 3.155, duration: 0.01)
                 let seq = SKAction.sequence([moveCentre, SKAction.hide(), returnMove, SKAction.unhide()])
-            let jumper = SKAction.animate(with: [jump6,jump9,jump12,jump15,jump18,jump21,jump24,jump27,jump30,jump33,jump36,jump39,jump42,jump45,jump48,jump51,jump51,jump53,jump56,jump59], timePerFrame: 0.05)
-            let moveCentreAktion = SKAction.scale(to: 0, duration: 1)
+            let jumper = SKAction.animate(with: [jump6,jump9,jump12,jump15,jump18,jump21,jump24,jump27,jump30,jump33,jump36,jump39,jump42,jump45,jump48,jump51,jump51,jump53,jump56,jump59], timePerFrame: 0.035)
+            let moveCentreAktion = SKAction.scale(to: 0, duration: 0.7)
             let moveReturnAktion = SKAction.scale(to: CGSize(width: 806 / 10, height: 500 / 10), duration: 0.33)
             let pauseJ = SKAction.wait(forDuration: 1.5)
                 jump3.isHidden = false            
