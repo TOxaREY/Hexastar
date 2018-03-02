@@ -11,6 +11,7 @@
 		F23395642031A16100C8D6F2 /* SimUnic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23395632031A16100C8D6F2 /* SimUnic.swift */; };
 		F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */ = {isa = PBXBuildFile; fileRef = F239826D200F8976003A0BBC /* KeyboardHEX.xib */; };
 		F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */; };
+		F2438883204945BF002D33DC /* blackhole.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2438882204945BF002D33DC /* blackhole.sks */; };
 		F24BDE6B20287DBF0007C8C5 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24BDE6A20287DBF0007C8C5 /* Star.swift */; };
 		F24E38AF2031AA0E00E93B81 /* ViewController 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E38AE2031AA0E00E93B81 /* ViewController 3.swift */; };
 		F24FD1AA203081DC003A7EFA /* neu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F24FD1A9203081D8003A7EFA /* neu.ttf */; };
@@ -48,6 +49,7 @@
 		F23395632031A16100C8D6F2 /* SimUnic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimUnic.swift; sourceTree = "<group>"; };
 		F239826D200F8976003A0BBC /* KeyboardHEX.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardHEX.xib; sourceTree = "<group>"; };
 		F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFDistantGalaxyAlternate.ttf; sourceTree = "<group>"; };
+		F2438882204945BF002D33DC /* blackhole.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = blackhole.sks; sourceTree = "<group>"; };
 		F24BDE6A20287DBF0007C8C5 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		F24E38AE2031AA0E00E93B81 /* ViewController 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController 3.swift"; sourceTree = "<group>"; };
 		F24FD1A9203081D8003A7EFA /* neu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = neu.ttf; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				F27585CE204450A20058DF21 /* green.sks */,
 				F27585D02044516C0058DF21 /* blue.sks */,
 				F2922139203C4371006D433E /* centre.sks */,
+				F2438882204945BF002D33DC /* blackhole.sks */,
 				F297B235200E20760072E484 /* Main.storyboard */,
 				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
 				F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */,
@@ -224,6 +227,7 @@
 				F2922138203C40E2006D433E /* sparkiLR.sks in Resources */,
 				F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */,
 				F27585D12044516C0058DF21 /* blue.sks in Resources */,
+				F2438883204945BF002D33DC /* blackhole.sks in Resources */,
 				F25DEFCF2027851400BA8348 /* moonhouse.ttf in Resources */,
 				F297B237200E20760072E484 /* Main.storyboard in Resources */,
 			);

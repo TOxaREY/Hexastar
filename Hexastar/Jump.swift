@@ -121,6 +121,7 @@ class Jump: SKView {
 ////
         NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "start"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(jump), name: NSNotification.Name(rawValue: "jump"), object: nil)
+
     }
     
         @objc func start(){
@@ -157,4 +158,5 @@ class Jump: SKView {
 ////
         }
     }
+
 }

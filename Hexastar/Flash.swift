@@ -26,46 +26,84 @@ extension SKAction {
 }
 ////
 class Flash: SKView {
-    let spaceship = SKSpriteNode(imageNamed: "yoda.png")
-    let bgr5 = SKSpriteNode(imageNamed: "vcd2-0-5.png")
-    let bgr10 = SKTexture(imageNamed: "vcd2-0-10.png")
-    let bgr15 = SKTexture(imageNamed: "vcd2-0-15.png")
-    let bgr20 = SKTexture(imageNamed: "vcd2-0-20.png")
-    let bgr25 = SKTexture(imageNamed: "vcd2-0-25.png")
-    let bgr30 = SKTexture(imageNamed: "vcd2-0-30.png")
-    let bgr35 = SKTexture(imageNamed: "vcd2-0-35.png")
-    let bgr40 = SKTexture(imageNamed: "vcd2-0-40.png")
-    let bgr45 = SKTexture(imageNamed: "vcd2-0-45.png")
-    let bgr50 = SKTexture(imageNamed: "vcd2-0-50.png")
+    let dMNode = SKSpriteNode(imageNamed: "dM.png")
+    let eGNode = SKSpriteNode(imageNamed: "eG.png")
+    let kRNode = SKSpriteNode(imageNamed: "kR.png")
+    let yDNode = SKSpriteNode(imageNamed: "yD.png")
+    let hSNode = SKSpriteNode(imageNamed: "hS.png")
+    let cWNode = SKSpriteNode(imageNamed: "cW.png")
+    let bH = SKSpriteNode(fileNamed: "blackhole.sks")!
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear
         self.presentScene(scene)
         self.allowsTransparency = true
         self.backgroundColor = UIColor.clear
-        bgr5.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
-        bgr5.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
-        bgr5.isHidden = true
-        scene.addChild(bgr5)
-        let jumper = SKAction.animate(with: [bgr10,bgr15,bgr20,bgr25,bgr30,bgr35,bgr40,bgr45,bgr50], timePerFrame: 0.03)
-        
-        spaceship.size  = CGSize(width: 30, height: 30)
-        spaceship.position = CGPoint(x: (self.frame.size.width / 2) + (self.frame.size.height / 2) - 15, y: self.frame.size.height / 2)
-        spaceship.isHidden = true
-        scene.addChild(spaceship)
+        bH.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+        scene.addChild(bH)
         let downStartPosition = SKAction.scale(to: 0, duration: 0.01)
         let upStartPosition = SKAction.scale(to: CGSize(width: 30, height: 30), duration: 1)
         let scaleNode = SKAction.scale(to: 0.2, duration: 15)
+        let rotateNode = SKAction.rotate(byAngle: CGFloat(Double.pi * 12), duration: 15)
         let spiral = SKAction.spiral(startRadius: (self.frame.size.height / 2) - 15, endRadius: 0, angle: CGFloat(Double.pi) * 6, centerPoint: CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2), duration: 15)
-        let rotateNode = SKAction.rotate(toAngle: 15, duration: 15)
-        spaceship.run(downStartPosition, completion: {self.spaceship.isHidden = false; self.spaceship.run(upStartPosition, completion: {self.spaceship.run(scaleNode);self.spaceship.run(rotateNode); self.spaceship.run(spiral, completion: {self.spaceship.isHidden = true; self.bgr5.isHidden = false; self.bgr5.run(jumper, completion: {self.bgr5.isHidden = true})})})})
+        let returnStart = SKAction.moveBy(x: (self.frame.size.height / 2) - 15 , y: 0, duration: 0.01)
+        
+        
+        func addNodeStart(node: SKSpriteNode, timer: TimeInterval) {
+            node.size  = CGSize(width: 30, height: 30)
+            node.position = CGPoint(x: (self.frame.size.width / 2) + (self.frame.size.height / 2) - 15, y: self.frame.size.height / 2)
+            scene.addChild(node)
+            let seq01 = SKAction.sequence([SKAction.hide(),SKAction.wait(forDuration: timer),downStartPosition,SKAction.unhide(),upStartPosition,SKAction.wait(forDuration: 15.01 + 32.04)])
+            let seq02 = SKAction.sequence([SKAction.wait(forDuration: timer),SKAction.wait(forDuration: 1.01),scaleNode,SKAction.wait(forDuration: 0.01 + 32.04)])
+            let seq03 = SKAction.sequence([SKAction.wait(forDuration: timer),SKAction.wait(forDuration: 1.01),rotateNode,SKAction.wait(forDuration: 0.01 + 32.04)])
+            let seq04 = SKAction.sequence([SKAction.wait(forDuration: timer),SKAction.wait(forDuration: 1.01),spiral,SKAction.hide(),returnStart,SKAction.wait(forDuration: 32.04)])
+             let seq1 = SKAction.sequence([SKAction.hide(),downStartPosition,SKAction.unhide(),upStartPosition,SKAction.wait(forDuration: 15.01 + 32.04)])
+             let seq2 = SKAction.sequence([SKAction.wait(forDuration: 1.01),scaleNode,SKAction.wait(forDuration: 0.01 + 32.04)])
+             let seq3 = SKAction.sequence([SKAction.wait(forDuration: 1.01),rotateNode,SKAction.wait(forDuration: 0.01 + 32.04)])
+             let seq4 = SKAction.sequence([SKAction.wait(forDuration: 1.01),spiral,SKAction.hide(),returnStart,SKAction.wait(forDuration: 32.04)])
+            let seq11 = SKAction.sequence([seq01,SKAction.repeatForever(seq1)])
+            let seq12 = SKAction.sequence([seq02,SKAction.repeatForever(seq2)])
+            let seq13 = SKAction.sequence([seq03,SKAction.repeatForever(seq3)])
+            let seq14 = SKAction.sequence([seq04,SKAction.repeatForever(seq4)])
+            node.run(seq11)
+            node.run(seq12)
+            node.run(seq13)
+            node.run(seq14)
+        }
+        addNodeStart(node: yDNode, timer: 0)
+        addNodeStart(node: kRNode, timer: 8.01)
+        addNodeStart(node: cWNode, timer: 8.01 * 2)
+        addNodeStart(node: dMNode, timer: 8.01 * 3)
+        addNodeStart(node: hSNode, timer: 8.01 * 4)
+        addNodeStart(node: eGNode, timer: 8.01 * 5)
 
-        spaceship.isPaused = true
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
-        NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "startFlash"), object: nil)
+        
+        
+        
+        
+        
+        
+        
+        
+
+//        NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "startFlash"), object: nil)
+        
     }
-    @objc func start(){
-        spaceship.isPaused = false
-    }
+//    @objc func start(){
+//        yoda.isPaused = false
+//    }
 }
 
