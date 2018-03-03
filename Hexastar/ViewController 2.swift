@@ -30,7 +30,6 @@ class ViewController2: UIViewController {
 //// Вставить
     @IBOutlet weak var buttonPaste: UIButton!
     func wrong() {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
         let font = UIFont(name: "Neuropol", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
@@ -74,7 +73,7 @@ class ViewController2: UIViewController {
         view.endEditing(true)
     }
 ////
-    @IBOutlet weak public var textField: UITextField!
+    @IBOutlet weak var textField: UITextField!
 //// Вычисления шрифт и мультиколор стринг
     var firstCount = Int()
     var secondCount = Int()
@@ -92,12 +91,12 @@ class ViewController2: UIViewController {
             case 568: font = UIFont(name: "STARWARS", size: 22.0)!
             default: font = UIFont(name: "STARWARS", size: 22.0)!
             }
-            let attributesYellow = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font, NSAttributedStringKey.strokeWidth: -1, NSAttributedStringKey.strokeColor:UIColor.black] as [NSAttributedStringKey : Any]
+            let attributesYellow = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font, NSAttributedStringKey.strokeWidth: -2, NSAttributedStringKey.strokeColor:UIColor.black] as [NSAttributedStringKey : Any]
             switch textField.text?.count {
             case 0?: firstCount = 0
             case 1?: firstCount = characterUnicode.simbolUnicodeConvert().count; secondCount = 0
             case 2?: secondCount = characterUnicode.simbolUnicodeConvert().count
-            case 3?: NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
+//            case 3?: 
             default: break
             }
             if secondCount > firstCount {
@@ -155,7 +154,11 @@ class ViewController2: UIViewController {
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         let font1 = UIFont(name: "Neuropol", size: 14.0)!
         let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
+        startLabel.shadowColor = UIColor .black
+        startLabel.shadowOffset = CGSize(width: 1, height: 1)
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
+        segueLabel2.shadowColor = UIColor .black
+        segueLabel2.shadowOffset = CGSize(width: 1, height: 1)
         segueLabel2.attributedText = NSAttributedString(string: NSLocalizedString("converter DEC<->HEX<->OCT<->DEC", comment: "DEC<->HEX<->OCT<->DEC") , attributes: attributes1)
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()

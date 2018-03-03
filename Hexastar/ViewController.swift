@@ -586,8 +586,12 @@ class ViewController: UIViewController, KeyboardDelegate {
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         let font1 = UIFont(name: "Neuropol", size: 14.0)!
         let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
+        labelStart.shadowColor = UIColor .black
+        labelStart.shadowOffset = CGSize(width: 1, height: 1)
         labelStart.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
         UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
+        segueLabel.shadowColor = UIColor .black
+        segueLabel.shadowOffset = CGSize(width: 1, height: 1)
         segueLabel.attributedText = NSAttributedString(string: NSLocalizedString("converter Characters <-> Unicode", comment: "converter Characters <-> Unicode") , attributes: attributes1)
         borderTextField()
         runString(string: NSLocalizedString("converter Decimal <-> Binary ", comment: "converter Decimal <-> Binary "))

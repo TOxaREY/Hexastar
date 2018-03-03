@@ -42,7 +42,7 @@ class Flash: SKView {
         bH.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         scene.addChild(bH)
         let downStartPosition = SKAction.scale(to: 0, duration: 0.01)
-        let upStartPosition = SKAction.scale(to: CGSize(width: 30, height: 30), duration: 1)
+        let upStartPosition = SKAction.scale(to: CGSize(width: 45, height: 45), duration: 1)
         let scaleNode = SKAction.scale(to: 0.2, duration: 15)
         let rotateNode = SKAction.rotate(byAngle: CGFloat(Double.pi * 12), duration: 15)
         let spiral = SKAction.spiral(startRadius: (self.frame.size.height / 2) - 15, endRadius: 0, angle: CGFloat(Double.pi) * 6, centerPoint: CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2), duration: 15)
@@ -50,7 +50,7 @@ class Flash: SKView {
         
         
         func addNodeStart(node: SKSpriteNode, timer: TimeInterval) {
-            node.size  = CGSize(width: 30, height: 30)
+            node.size  = CGSize(width: 45, height: 45)
             node.position = CGPoint(x: (self.frame.size.width / 2) + (self.frame.size.height / 2) - 15, y: self.frame.size.height / 2)
             scene.addChild(node)
             let seq01 = SKAction.sequence([SKAction.hide(),SKAction.wait(forDuration: timer),downStartPosition,SKAction.unhide(),upStartPosition,SKAction.wait(forDuration: 15.01 + 32.04)])
