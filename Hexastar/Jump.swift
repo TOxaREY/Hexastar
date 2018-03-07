@@ -11,25 +11,11 @@ import SpriteKit
 
 class Jump: SKView {
     let sSD = SKSpriteNode(imageNamed: "ssdestroyer")
-    let jump3 = SKSpriteNode(imageNamed: "0-3.jpg")
+    let jump3 = SKSpriteNode(imageNamed: "0-3.png")
     let jump6 = SKTexture(imageNamed: "0-6.jpg")
-    let jump9 = SKTexture(imageNamed: "0-9.jpg")
-    let jump12 = SKTexture(imageNamed: "0-12.jpg")
-    let jump15 = SKTexture(imageNamed: "0-15.jpg")
     let jump18 = SKTexture(imageNamed: "0-18.jpg")
-    let jump21 = SKTexture(imageNamed: "0-21.jpg")
-    let jump24 = SKTexture(imageNamed: "0-24.jpg")
-    let jump27 = SKTexture(imageNamed: "0-27.jpg")
     let jump30 = SKTexture(imageNamed: "0-30.jpg")
-    let jump33 = SKTexture(imageNamed: "0-33.jpg")
-    let jump36 = SKTexture(imageNamed: "0-36.jpg")
-    let jump39 = SKTexture(imageNamed: "0-39.jpg")
     let jump42 = SKTexture(imageNamed: "0-42.jpg")
-    let jump45 = SKTexture(imageNamed: "0-45.jpg")
-    let jump48 = SKTexture(imageNamed: "0-48.jpg")
-    let jump51 = SKTexture(imageNamed: "0-51.jpg")
-    let jump53 = SKTexture(imageNamed: "0-53.jpg")
-    let jump56 = SKTexture(imageNamed: "0-56.jpg")
     let jump59 = SKTexture(imageNamed: "0-59.jpg")
     var blue = SKSpriteNode(fileNamed: "blue.sks")!
     var green = SKSpriteNode(fileNamed: "green.sks")!
@@ -51,7 +37,6 @@ class Jump: SKView {
 //// Статичный sSD
         sSD.size = CGSize(width: 806 / 10, height: 500 / 10)
         sSD.position = CGPoint(x: self.frame.size.width / 6.666, y: self.frame.size.height / 1.65)
-        sSD.isHidden = true
         scene.addChild(sSD)
 ////
 //// Направление синусоиды
@@ -71,7 +56,6 @@ class Jump: SKView {
 //// Правый верхний корабль
         wingUp.size = CGSize(width: 806 / 18, height: 500 / 18)
         wingUp.position = CGPoint(x: self.frame.size.width / 1.176, y: self.frame.size.height / 1.2716)
-        wingUp.isHidden = true
         scene.addChild(wingUp)
         let oscillateUp = SKAction.oscillation(amplitude: 5, timePeriod: 3, midPoint: wingUp.position)
         wingUp.run(SKAction.repeatForever(oscillateUp))
@@ -80,7 +64,6 @@ class Jump: SKView {
 //// Правый средний корабль
         wingMid.size = CGSize(width: 806 / 18, height: 400 / 18)
         wingMid.position = CGPoint(x: self.frame.size.width / 1.176, y: self.frame.size.height / 2.2)
-        wingMid.isHidden = true
         scene.addChild(wingMid)
         let oscillateMid = SKAction.oscillation(amplitude: 5, timePeriod: 5, midPoint: wingMid.position)
         wingMid.run(SKAction.repeatForever(oscillateMid))
@@ -104,9 +87,7 @@ class Jump: SKView {
         let loopBlue = SKAction.repeatForever(seqBlue)
         let loopGreen = SKAction.repeatForever(seqGreen)
         blue.run(loopBlue)
-        blue.isPaused = true
         green.run(loopGreen)
-        green.isPaused = true
 ////
 //// Тряска статичного sSD
         let moveRightUp:SKAction
@@ -119,18 +100,10 @@ class Jump: SKView {
         let loop = SKAction.repeatForever(seq)
         sSD.run(loop)
 ////
-        NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "start"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(jump), name: NSNotification.Name(rawValue: "jump"), object: nil)
 
     }
-    
-        @objc func start(){
-            sSD.isHidden = false
-            wingUp.isHidden = false
-            blue.isPaused = false
-            wingMid.isHidden = false
-            green.isPaused = false
-     }
+
         @objc func jump(){
             if sSD.size == CGSize(width: 806 / 10, height: 500 / 10) {
                 wingUp.isHidden = true
@@ -139,11 +112,11 @@ class Jump: SKView {
                 green.removeFromParent()
                 let moveCentre:SKAction
                 let returnMove:SKAction
-                moveCentre = SKAction.moveBy(x: self.frame.size.width / 1.3571 - self.frame.size.width / 6.666, y: -(self.frame.size.height / 1.65 - self.frame.size.height / 3.155), duration: 0.7)
+                moveCentre = SKAction.moveBy(x: self.frame.size.width / 1.3571 - self.frame.size.width / 6.666, y: -(self.frame.size.height / 1.65 - self.frame.size.height / 3.155), duration: 0.5)
                 returnMove = SKAction.moveBy(x: -(self.frame.size.width / 1.3571 - self.frame.size.width / 6.666), y: self.frame.size.height / 1.65 - self.frame.size.height / 3.155, duration: 0.01)
                 let seq = SKAction.sequence([moveCentre, SKAction.hide(), returnMove, SKAction.unhide()])
-            let jumper = SKAction.animate(with: [jump6,jump9,jump12,jump15,jump18,jump21,jump24,jump27,jump30,jump33,jump36,jump39,jump42,jump45,jump48,jump51,jump51,jump53,jump56,jump59], timePerFrame: 0.035)
-            let moveCentreAktion = SKAction.scale(to: 0, duration: 0.7)
+            let jumper = SKAction.animate(with: [jump6,jump18,jump30,jump42,jump59], timePerFrame: 0.1)
+            let moveCentreAktion = SKAction.scale(to: 0, duration: 0.5)
             let moveReturnAktion = SKAction.scale(to: CGSize(width: 806 / 10, height: 500 / 10), duration: 0.33)
             let pauseJ = SKAction.wait(forDuration: 1.5)
                 jump3.isHidden = false            
@@ -158,5 +131,4 @@ class Jump: SKView {
 ////
         }
     }
-
 }

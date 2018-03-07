@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEXADECIMAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mut-tC-wbi">
-                                        <rect key="frame" x="23" y="35.5" width="274" height="29.5"/>
+                                        <rect key="frame" x="23" y="36" width="274.5" height="29.5"/>
                                         <fontDescription key="fontDescription" name="SFDistantGalaxyAlternate" family="SF Distant Galaxy Alternate" pointSize="35"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -325,7 +325,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNICODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhV-Ic-5IQ">
-                                        <rect key="frame" x="79" y="35.5" width="163" height="29.5"/>
+                                        <rect key="frame" x="79" y="36" width="163.5" height="29.5"/>
                                         <fontDescription key="fontDescription" name="SFDistantGalaxyAlternate" family="SF Distant Galaxy Alternate" pointSize="35"/>
                                         <color key="textColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -361,7 +361,7 @@
                                         <color key="textColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-OK-7fe">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-OK-7fe" customClass="NMTextField" customModule="Hexastar" customModuleProvider="target">
                                         <rect key="frame" x="38" y="0.0" width="244" height="46"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" red="0.1647058824" green="0.64705882349999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -486,7 +486,7 @@
                         <outlet property="buttonPaste" destination="aAl-S1-3d3" id="yVx-Qh-dwb"/>
                         <outlet property="buttonReset" destination="YzD-8b-2LX" id="deM-tT-jWW"/>
                         <outlet property="resultLabel" destination="aKD-57-V2S" id="99K-ty-BRk"/>
-                        <outlet property="segueButton2" destination="97H-VX-HvV" id="mQE-4R-9aV"/>
+                        <outlet property="segueButton2" destination="97H-VX-HvV" id="BaM-T1-Cw8"/>
                         <outlet property="segueLabel2" destination="KGE-Bc-9Yx" id="Bu6-1i-ky5"/>
                         <outlet property="startLabel" destination="ujg-Bk-9AT" id="Bbr-F2-WJI"/>
                         <outlet property="textField" destination="tdg-OK-7fe" id="RFg-xs-rBI"/>
@@ -511,7 +511,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARACTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGW-kW-f2r">
-                                        <rect key="frame" x="44" y="35.5" width="233" height="29.5"/>
+                                        <rect key="frame" x="44" y="36" width="233" height="29.5"/>
                                         <fontDescription key="fontDescription" name="SFDistantGalaxyAlternate" family="SF Distant Galaxy Alternate" pointSize="35"/>
                                         <color key="textColor" red="0.8862745098" green="0.0078431372550000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -939,7 +939,6 @@
                         <outlet property="picker7" destination="rZl-pc-XV6" id="XdN-eY-9jI"/>
                         <outlet property="resultLabel" destination="ooH-jf-Ri2" id="hAi-Vv-XhN"/>
                         <outlet property="startLabel" destination="699-Gq-tDA" id="ghS-Ql-TXU"/>
-                        <outlet property="uIview" destination="x39-Is-x1b" id="glZ-EO-OJ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yts-XS-fYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -963,6 +962,6 @@
         <image name="shipR" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jiM-cY-7bP"/>
+        <segue reference="4LN-ZN-5CK"/>
     </inferredMetricsTieBreakers>
 </document>

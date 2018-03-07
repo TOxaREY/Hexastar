@@ -49,9 +49,6 @@ class Star: SKView {
         scene.addChild(spaceship)
         let oscillate = SKAction.oscillation(amplitude: 120, timePeriod: 30, midPoint: spaceship.position)
         spaceship.run(SKAction.repeatForever(oscillate))
-        spaceship.isHidden = true
-        spaceship.isPaused = true
-                NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "startStar"), object: nil)
         let moveRight:SKAction
         let returnLeft:SKAction
         moveRight = SKAction.moveBy(x: 420, y: 0, duration: 20)
@@ -76,9 +73,5 @@ class Star: SKView {
           }
     }
 ////
-            @objc func start(){
-             spaceship.isHidden = false
-             spaceship.isPaused = false
-   }
 }
 

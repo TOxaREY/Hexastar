@@ -40,6 +40,7 @@ class ViewController2: UIViewController {
    }
     var pasteBoardString: String? = nil
     @IBAction func buttonPaste(_ sender: Any) {
+        startLabel.isHidden = true
         textField.placeholder?.removeAll()
         pasteBoardString = UIPasteboard.general.string
             if pasteBoardString == nil || pasteBoardString == "" {
@@ -66,6 +67,7 @@ class ViewController2: UIViewController {
     @IBOutlet weak var buttonReset: UIButton!
 //// Сброс
     @IBAction func buttonReset(_ sender: Any) {
+        startLabel.isHidden = true
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
         textField.text?.removeAll()
         placeHolder()
@@ -78,7 +80,8 @@ class ViewController2: UIViewController {
     var firstCount = Int()
     var secondCount = Int()
     @IBAction func characterInput(_ sender: Any) {
-       calculating()
+        startLabel.isHidden = true
+        calculating()
     }
     func calculating() {
         if ((textField.text)!).count <= 3  {
@@ -96,10 +99,11 @@ class ViewController2: UIViewController {
             case 0?: firstCount = 0
             case 1?: firstCount = characterUnicode.simbolUnicodeConvert().count; secondCount = 0
             case 2?: secondCount = characterUnicode.simbolUnicodeConvert().count
-//            case 3?: 
+            case 3?: characterUnicode.inputCharacter = String(textField.text!.dropLast()); secondCount = characterUnicode.simbolUnicodeConvert().count; characterUnicode.inputCharacter = String(textField.text!.dropLast(2));firstCount = characterUnicode.simbolUnicodeConvert().count
             default: break
             }
             if secondCount > firstCount {
+                characterUnicode.inputCharacter = textField.text!
                 var myMutableString = NSMutableAttributedString()
                 myMutableString = NSMutableAttributedString(string: characterUnicode.simbolUnicodeConvert(), attributes: attributesYellow)
                 myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), range: NSRange(location:firstCount,length:secondCount - firstCount))
@@ -109,6 +113,7 @@ class ViewController2: UIViewController {
             }
         } else {
             textField.text?.removeLast()
+            calculating()
         }
     }
 ////
@@ -146,10 +151,7 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         borderTextField()
-        buttonPaste.isHidden = true
-        buttonReset.isHidden = true
         placeHolder()
-        textField.isHidden = true
         let font = UIFont(name: "Neuropol", size: 20.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         let font1 = UIFont(name: "Neuropol", size: 14.0)!
@@ -163,19 +165,11 @@ class ViewController2: UIViewController {
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
     }
-    
-//// Тач в любую область чтоб убрать экран и стартовую страницу
+    //// Тач в любую область чтоб убрать экран
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
             view.endEditing(true)
-            startLabel.isHidden = true
-            buttonPaste.isHidden = false
-            buttonReset.isHidden = false
-            textField.isHidden = false
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "start"), object: nil)
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startFlash"), object: nil)
         }
         super.touchesBegan(touches, with: event)
     }
-////
 }

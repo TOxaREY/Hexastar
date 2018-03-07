@@ -31,8 +31,6 @@ class Touch: SKView {
         sparki.isHidden = true
         sparkiLeft.isHidden = true
         sparkiRight.isHidden = true
-        deathStar.isHidden = true
-        centre.isHidden = true
         scene.addChild(deathStar)
         scene.addChild(centre)
         scene.addChild(sparki)
@@ -88,8 +86,6 @@ class Touch: SKView {
 ////
 //// Стрельба из тачей
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        deathStar.isHidden = false
-        centre.isHidden = false
         let touch = touches.first
         var positions = touch?.location(in: self)
         positions = scene?.convertPoint(fromView: positions!)

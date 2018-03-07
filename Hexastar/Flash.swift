@@ -75,35 +75,7 @@ class Flash: SKView {
         addNodeStart(node: cWNode, timer: 8.01 * 2)
         addNodeStart(node: dMNode, timer: 8.01 * 3)
         addNodeStart(node: hSNode, timer: 8.01 * 4)
-        addNodeStart(node: eGNode, timer: 8.01 * 5)
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-
-//        NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "startFlash"), object: nil)
-        
+        addNodeStart(node: eGNode, timer: 8.01 * 5) 
     }
-//    @objc func start(){
-//        yoda.isPaused = false
-//    }
 }
 

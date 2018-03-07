@@ -26,7 +26,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 //// Вызов вычисления
     var uniChar = UnicodeCharacterConverter()
 ////
-    @IBOutlet weak var uIview: Touch!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var addButton1: UIButton!
@@ -383,11 +382,8 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         startLabel.shadowColor = UIColor .black
         startLabel.shadowOffset = CGSize(width: 1, height: 1)
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
-        NotificationCenter.default.addObserver(self, selector: #selector(start), name: NSNotification.Name(rawValue: "startDS"), object: nil)
     }
-        @objc func start(){
-        startLabel.isHidden = true
-       }
+
 }
 
 

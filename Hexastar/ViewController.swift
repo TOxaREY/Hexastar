@@ -89,7 +89,6 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var segueLabel: UILabel!
     @IBOutlet weak var segueButton: UIButton!
     
-    
     @IBAction func clearButton(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         textField.text?.removeAll()
@@ -314,8 +313,6 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
 //// Нажатие кнопок
     @IBAction func leftPush(_ sender: UIButton) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startStar"), object: nil)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startShip"), object: nil)
         labelStart.isHidden = true
         textField.isEnabled = true
         rightKey.isSelected = false
@@ -338,8 +335,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
     @IBAction func rightPush(_ sender: UIButton) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startStar"), object: nil)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startShip"), object: nil)
         labelStart.isHidden = true
         textField.isEnabled = true
         leftKey.isSelected = false
@@ -648,7 +643,7 @@ class ViewController: UIViewController, KeyboardDelegate {
             view.endEditing(true)
         }
         super.touchesBegan(touches, with: event)
-    }
+      }
 ////
 }
 
