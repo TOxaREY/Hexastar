@@ -117,7 +117,7 @@
       </trans-unit>
       <trans-unit id="converter Decimal &lt;-&gt; Binary ">
         <source>converter Decimal &lt;-&gt; Binary </source>
-        <target>конвертер Десятичное &lt;-&gt; Двоичное</target>
+        <target>конвертер Десятичное &lt;-&gt; Двоичное </target>
         <note>converter Decimal &lt;-&gt; Binary</note>
       </trans-unit>
       <trans-unit id="enter a decimal number">

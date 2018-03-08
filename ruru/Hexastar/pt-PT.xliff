@@ -88,50 +88,61 @@
       </trans-unit>
       <trans-unit id="It's Time To Choose A Side conversion! At the top select the format of the result by touching, then enter data below">
         <source>It's Time To Choose A Side conversion! At the top select the format of the result by touching, then enter data below</source>
+        <target>É Hora De Escolher Um Lado сonversão! No topo selecione o formato do resultado tocando, então insira dados abaixo</target>
         <note>startLabelVC2</note>
       </trans-unit>
       <trans-unit id="It's Time To Choose A Side conversion! At the top select the format of the result by touching, then select the input format below">
         <source>It's Time To Choose A Side conversion! At the top select the format of the result by touching, then select the input format below</source>
+        <target>É Hora De Escolher Um Lado сonversão! No topo selecione o formato do resultado tocando, então selecione o formato de entrada abaixo</target>
         <note>startLabelVC1</note>
       </trans-unit>
       <trans-unit id="OCTAL">
         <source>OCTAL</source>
         <note>OCTAL</note>
       </trans-unit>
-      <trans-unit id="On the left, add the required number of input lines">
-        <source>On the left, add the required number of input lines</source>
+      <trans-unit id="On the left add the required number of input lines">
+        <source>On the left add the required number of input lines</source>
+        <target>À esquerda adicione o número necessário de linhas de entrada</target>
         <note>startLabelVC3</note>
       </trans-unit>
       <trans-unit id="converter Characters &lt;-&gt; Unicode">
         <source>converter Characters &lt;-&gt; Unicode</source>
+        <target>converter Caracteres &lt;-&gt; Unicode</target>
         <note>converter Characters &lt;-&gt; Unicode</note>
       </trans-unit>
       <trans-unit id="converter DEC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC">
         <source>converter DEC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC</source>
+        <target>converter DEC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC</target>
         <note>DEC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC</note>
       </trans-unit>
       <trans-unit id="converter Decimal &lt;-&gt; Binary ">
         <source>converter Decimal &lt;-&gt; Binary </source>
+        <target>converter Decimal &lt;-&gt; Binário </target>
         <note>converter Decimal &lt;-&gt; Binary</note>
       </trans-unit>
       <trans-unit id="enter a decimal number">
         <source>enter a decimal number</source>
+        <target>insira um número decimal</target>
         <note>enter a decimal number</note>
       </trans-unit>
       <trans-unit id="enter a hexadecimal number">
         <source>enter a hexadecimal number</source>
+        <target>insira um número hexadecimal</target>
         <note>enter a hexadecimal number</note>
       </trans-unit>
       <trans-unit id="enter a octal number">
         <source>enter a octal number</source>
+        <target>insira um número octal</target>
         <note>enter a octal number</note>
       </trans-unit>
       <trans-unit id="enter up to 3 characters">
         <source>enter up to 3 characters</source>
+        <target>insira até 3 caracteres</target>
         <note>enter up to 3 characters</note>
       </trans-unit>
       <trans-unit id="invalid value">
         <source>invalid value</source>
+        <target>valor inválido</target>
         <note>invalid value</note>
       </trans-unit>
     </body>

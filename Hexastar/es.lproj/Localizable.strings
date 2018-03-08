@@ -1,0 +1,33 @@
+/* startLabelVC2 */
+"It's Time To Choose A Side conversion! At the top select the format of the result by touching, then enter data below" = "¡Es Hora De Elegir Un Lado conversión! En la parte superior seleccione el formato del resultado tocando, luego entrada datos a continuación";
+
+/* startLabelVC1 */
+"It's Time To Choose A Side conversion! At the top select the format of the result by touching, then select the input format below" = "¡Es Hora De Elegir Un Lado conversión! En la parte superior seleccione el formato del resultado tocando, luego seleccione el formato de entrada a continuación";
+
+/* startLabelVC3 */
+"On the left add the required number of input lines" = "A la izquierda agregue el número requerido de líneas de entrada";
+
+/* converter Characters <-> Unicode */
+"converter Characters <-> Unicode" = "convertir Caracteres <-> Unicode";
+
+/* DEC<->HEX<->OCT<->DEC */
+"converter DEC<->HEX<->OCT<->DEC" = "convertir DEC<->HEX<->OCT<->DEC";
+
+/* converter Decimal <-> Binary */
+"converter Decimal <-> Binary " = "convertir Decimal <-> Binario ";
+
+/* enter a decimal number */
+"enter a decimal number" = "entrada un número decimal";
+
+/* enter a hexadecimal number */
+"enter a hexadecimal number" = "entrada un número hexadecimal";
+
+/* enter a octal number */
+"enter a octal number" = "entrada un número octal";
+
+/* enter up to 3 characters */
+"enter up to 3 characters" = "entrada hasta 3 caracteres";
+
+/* invalid value */
+"invalid value" = "valor no válido";
+

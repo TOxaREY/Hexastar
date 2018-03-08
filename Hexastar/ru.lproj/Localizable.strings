@@ -1,8 +1,20 @@
-/* Convert Decimal <-> Binary */
-"Convert Decimal <-> Binary " = "Конвертировать Десятичное <-> Двоичное ";
+/* startLabelVC2 */
+"It's Time To Choose A Side conversion! At the top select the format of the result by touching, then enter data below" = "Пришло Время Выбрать Сторону конвертации! Вверху выбрать касанием формат результата, ниже ввести данные";
 
-/* startLabel */
-"It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below" = "Пришло время выбрать сторону конвертации! Вверху выбрать касанием формат результата, ниже  выбрать формат ввода";
+/* startLabelVC1 */
+"It's Time To Choose A Side conversion! At the top select the format of the result by touching, then select the input format below" = "Пришло Время Выбрать Сторону конвертации! Вверху выбрать касанием формат результата, ниже выбрать формат ввода";
+
+/* startLabelVC3 */
+"On the left add the required number of input lines" = "Слева добавьте необходимое количество строк ввода";
+
+/* converter Characters <-> Unicode */
+"converter Characters <-> Unicode" = "конвертер Символы <-> Unicode";
+
+/* DEC<->HEX<->OCT<->DEC */
+"converter DEC<->HEX<->OCT<->DEC" = "конвертер 10е<->16е<->8е<->10е";
+
+/* converter Decimal <-> Binary */
+"converter Decimal <-> Binary " = "конвертер Десятичное <-> Двоичное ";
 
 /* enter a decimal number */
 "enter a decimal number" = "введите 10-чное число";
@@ -12,6 +24,9 @@
 
 /* enter a octal number */
 "enter a octal number" = "введите 8-чное число";
+
+/* enter up to 3 characters */
+"enter up to 3 characters" = "введите до 3-х символов";
 
 /* invalid value */
 "invalid value" = "недопустимое значение";
