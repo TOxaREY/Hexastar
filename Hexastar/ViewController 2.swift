@@ -30,7 +30,7 @@ class ViewController2: UIViewController {
 //// Вставить
     @IBOutlet weak var buttonPaste: UIButton!
     func wrong() {
-        let font = UIFont(name: "Neuropol", size: 13.0)!
+        let font = UIFont(name: "Xolonium", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
@@ -134,7 +134,7 @@ class ViewController2: UIViewController {
 ////
 //// Плейсхолдер
     func placeHolder() {
-        let font = UIFont(name: "Neuropol", size: 13.0)!
+        let font = UIFont(name: "Xolonium", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter up to 3 characters", comment: "enter up to 3 characters"), attributes: attributes)
     }
@@ -152,15 +152,15 @@ class ViewController2: UIViewController {
         super.viewDidLoad()
         borderTextField()
         placeHolder()
-        let font = UIFont(name: "Neuropol", size: 20.0)!
+        let font = UIFont(name: "Xolonium", size: 18.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
-        let font1 = UIFont(name: "Neuropol", size: 14.0)!
+        let font1 = UIFont(name: "Xolonium", size: 13.0)!
         let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
         startLabel.shadowColor = UIColor .black
-        startLabel.shadowOffset = CGSize(width: 1, height: 1)
-        startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side Convertion! At the top, select the format of the result by touching, then select the input format below", comment: "startLabel") , attributes: attributes)
+        startLabel.shadowOffset = CGSize(width: 2, height: 1)
+        startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side conversion! At the top select the format of the result by touching, then enter data below", comment: "startLabelVC2") , attributes: attributes)
         segueLabel2.shadowColor = UIColor .black
-        segueLabel2.shadowOffset = CGSize(width: 1, height: 1)
+        segueLabel2.shadowOffset = CGSize(width: 2, height: 1)
         segueLabel2.attributedText = NSAttributedString(string: NSLocalizedString("converter DEC<->HEX<->OCT<->DEC", comment: "DEC<->HEX<->OCT<->DEC") , attributes: attributes1)
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
