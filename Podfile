@@ -6,4 +6,6 @@ target 'Hexastar' do
   use_frameworks!
   # Pods for Hexastar
   pod 'GoogleAnalytics'
+  pod 'Firebase/Core'
+  pod 'YandexMobileMetrica/Dynamic', '2.9.6'
 end

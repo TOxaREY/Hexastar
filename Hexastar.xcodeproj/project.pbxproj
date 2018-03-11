@@ -22,9 +22,9 @@
 		F270D607203AFFFE00037075 /* sparki.sks in Resources */ = {isa = PBXBuildFile; fileRef = F270D605203AFFFE00037075 /* sparki.sks */; };
 		F27585CF204450A20058DF21 /* green.sks in Resources */ = {isa = PBXBuildFile; fileRef = F27585CE204450A20058DF21 /* green.sks */; };
 		F27585D12044516C0058DF21 /* blue.sks in Resources */ = {isa = PBXBuildFile; fileRef = F27585D02044516C0058DF21 /* blue.sks */; };
+		F279878A205579D100DC861B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2798789205579D100DC861B /* GoogleService-Info.plist */; };
 		F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B5B5E2018B7910096D98A /* HexCalc.swift */; };
 		F27EB0902019D5C20061E461 /* OctCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EB08F2019D5C20061E461 /* OctCalc.swift */; };
-		F28024C42055688700D13083 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28024C32055688700D13083 /* GoogleService-Info.plist */; };
 		F2887EC9202CC6B0006F0075 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2887EC8202CC6B0006F0075 /* Ship.swift */; };
 		F2922138203C40E2006D433E /* sparkiLR.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2922137203C40E2006D433E /* sparkiLR.sks */; };
 		F292213B203C4371006D433E /* centre.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2922139203C4371006D433E /* centre.sks */; };
@@ -73,9 +73,9 @@
 		F270D605203AFFFE00037075 /* sparki.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sparki.sks; sourceTree = "<group>"; };
 		F27585CE204450A20058DF21 /* green.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = green.sks; sourceTree = "<group>"; };
 		F27585D02044516C0058DF21 /* blue.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = blue.sks; sourceTree = "<group>"; };
+		F2798789205579D100DC861B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F27B5B5E2018B7910096D98A /* HexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCalc.swift; sourceTree = "<group>"; };
 		F27EB08F2019D5C20061E461 /* OctCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctCalc.swift; sourceTree = "<group>"; };
-		F28024C32055688700D13083 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F28024C52055690200D13083 /* Hexastar-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hexastar-Bridging-header.h"; sourceTree = "<group>"; };
 		F2887EC8202CC6B0006F0075 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		F2922137203C40E2006D433E /* sparkiLR.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sparkiLR.sks; sourceTree = "<group>"; };
@@ -88,6 +88,7 @@
 		F297B23B200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2A5412A6B2CD521931C3909 /* Pods-Hexastar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hexastar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar.release.xcconfig"; sourceTree = "<group>"; };
 		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
+		F2DA0AD22055805D0070AC20 /* Hexastar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hexastar.entitlements; sourceTree = "<group>"; };
 		F2DACD9C203AD6F20090A983 /* Spark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		F2E0F5BA203459D300E18BBC /* UnicSim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicSim.swift; sourceTree = "<group>"; };
 		F2EA20C42045CC2F002EDB2A /* Flash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flash.swift; sourceTree = "<group>"; };
@@ -153,7 +154,9 @@
 		F297B230200E20750072E484 /* Hexastar */ = {
 			isa = PBXGroup;
 			children = (
-				F28024C32055688700D13083 /* GoogleService-Info.plist */,
+				F2DA0AD22055805D0070AC20 /* Hexastar.entitlements */,
+				F2798789205579D100DC861B /* GoogleService-Info.plist */,
+				F22AAD1A2030651800561942 /* Info.plist */,
 				F24712BD20517A8900B342BC /* Localizable.strings */,
 				F24712B820517A8800B342BC /* InfoPlist.strings */,
 				F28024C52055690200D13083 /* Hexastar-Bridging-header.h */,
@@ -189,7 +192,6 @@
 				F2EF3C572017849F00B899DA /* KeyboardOCT.swift */,
 				F297B238200E20760072E484 /* Assets.xcassets */,
 				F297B23A200E20760072E484 /* LaunchScreen.storyboard */,
-				F22AAD1A2030651800561942 /* Info.plist */,
 			);
 			path = Hexastar;
 			sourceTree = "<group>";
@@ -230,6 +232,11 @@
 					F297B22D200E20750072E484 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -267,7 +274,7 @@
 				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
 				F27585CF204450A20058DF21 /* green.sks in Resources */,
 				F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */,
-				F28024C42055688700D13083 /* GoogleService-Info.plist in Resources */,
+				F279878A205579D100DC861B /* GoogleService-Info.plist in Resources */,
 				F2922138203C40E2006D433E /* sparkiLR.sks in Resources */,
 				F21D07DD20512D4200544271 /* 11589.ttf in Resources */,
 				F24712BB20517A8900B342BC /* Localizable.strings in Resources */,
@@ -307,10 +314,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -524,6 +535,7 @@
 			baseConfigurationReference = 5AA010220E2ECEB0A537EBDE /* Pods-Hexastar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hexastar/Hexastar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EB6R5QS764;
 				INFOPLIST_FILE = Hexastar/Info.plist;
@@ -541,6 +553,7 @@
 			baseConfigurationReference = F2A5412A6B2CD521931C3909 /* Pods-Hexastar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hexastar/Hexastar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EB6R5QS764;
 				INFOPLIST_FILE = Hexastar/Info.plist;
