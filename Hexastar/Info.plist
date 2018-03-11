@@ -18,6 +18,11 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>GoogleAnalytics</key>
+	<dict>
+		<key>TRACKING_ID</key>
+		<string>UA-108362966-2</string>
+	</dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>binatrixHexastar</string>

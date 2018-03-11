@@ -383,6 +383,12 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         startLabel.shadowOffset = CGSize(width: 2, height: 1)
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("On the left add the required number of input lines", comment: "startLabelVC3") , attributes: attributes)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
+        tracker.set(kGAIScreenName, value: "VC3")
+        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
 
 }
 

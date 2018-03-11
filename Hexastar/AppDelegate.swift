@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+//import YandexMobileMetrica
+//import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//                guard let gai = GAI.sharedInstance() else {
+//                    assert(false, "Google Analytics not configured correctly")
+//                    return true
+//                }
+//                gai.tracker(withTrackingId: "UA-108362966-2")
+//                gai.trackUncaughtExceptions = true
+        //        YMMYandexMetrica.activate(withApiKey: "5eb25519-c142-4785-a244-96ec5cbb2f9b")
+        //        FirebaseApp.configure()
+        //        RateManager.incrementCount()
         return true
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2843731AB0B291E37A09AB41 /* Pods_Hexastar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883A37ADC317990BF4A6AEA3 /* Pods_Hexastar.framework */; };
 		F21D07DD20512D4200544271 /* 11589.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F21D07DC20512D4100544271 /* 11589.ttf */; };
 		F23395622031952900C8D6F2 /* ViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23395612031952900C8D6F2 /* ViewController 2.swift */; };
 		F23395642031A16100C8D6F2 /* SimUnic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23395632031A16100C8D6F2 /* SimUnic.swift */; };
@@ -23,6 +24,7 @@
 		F27585D12044516C0058DF21 /* blue.sks in Resources */ = {isa = PBXBuildFile; fileRef = F27585D02044516C0058DF21 /* blue.sks */; };
 		F27B5B5F2018B7910096D98A /* HexCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B5B5E2018B7910096D98A /* HexCalc.swift */; };
 		F27EB0902019D5C20061E461 /* OctCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EB08F2019D5C20061E461 /* OctCalc.swift */; };
+		F28024C42055688700D13083 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28024C32055688700D13083 /* GoogleService-Info.plist */; };
 		F2887EC9202CC6B0006F0075 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2887EC8202CC6B0006F0075 /* Ship.swift */; };
 		F2922138203C40E2006D433E /* sparkiLR.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2922137203C40E2006D433E /* sparkiLR.sks */; };
 		F292213B203C4371006D433E /* centre.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2922139203C4371006D433E /* centre.sks */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5AA010220E2ECEB0A537EBDE /* Pods-Hexastar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hexastar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar.debug.xcconfig"; sourceTree = "<group>"; };
+		883A37ADC317990BF4A6AEA3 /* Pods_Hexastar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hexastar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21D07DC20512D4100544271 /* 11589.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 11589.ttf; sourceTree = "<group>"; };
 		F22AAD1A2030651800561942 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F23395612031952900C8D6F2 /* ViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController 2.swift"; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		F27585D02044516C0058DF21 /* blue.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = blue.sks; sourceTree = "<group>"; };
 		F27B5B5E2018B7910096D98A /* HexCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCalc.swift; sourceTree = "<group>"; };
 		F27EB08F2019D5C20061E461 /* OctCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctCalc.swift; sourceTree = "<group>"; };
+		F28024C32055688700D13083 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F28024C52055690200D13083 /* Hexastar-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hexastar-Bridging-header.h"; sourceTree = "<group>"; };
 		F2887EC8202CC6B0006F0075 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		F2922137203C40E2006D433E /* sparkiLR.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sparkiLR.sks; sourceTree = "<group>"; };
 		F2922139203C4371006D433E /* centre.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = centre.sks; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 		F297B236200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F297B238200E20760072E484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F297B23B200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2A5412A6B2CD521931C3909 /* Pods-Hexastar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hexastar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar.release.xcconfig"; sourceTree = "<group>"; };
 		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
 		F2DACD9C203AD6F20090A983 /* Spark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		F2E0F5BA203459D300E18BBC /* UnicSim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicSim.swift; sourceTree = "<group>"; };
@@ -101,17 +108,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2843731AB0B291E37A09AB41 /* Pods_Hexastar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31F91001DDB75B5579103896 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				883A37ADC317990BF4A6AEA3 /* Pods_Hexastar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F345E3401D1C47EA50CA1A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AA010220E2ECEB0A537EBDE /* Pods-Hexastar.debug.xcconfig */,
+				F2A5412A6B2CD521931C3909 /* Pods-Hexastar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F297B225200E20750072E484 = {
 			isa = PBXGroup;
 			children = (
 				F297B230200E20750072E484 /* Hexastar */,
 				F297B22F200E20750072E484 /* Products */,
+				5F345E3401D1C47EA50CA1A0 /* Pods */,
+				31F91001DDB75B5579103896 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,8 +153,10 @@
 		F297B230200E20750072E484 /* Hexastar */ = {
 			isa = PBXGroup;
 			children = (
+				F28024C32055688700D13083 /* GoogleService-Info.plist */,
 				F24712BD20517A8900B342BC /* Localizable.strings */,
 				F24712B820517A8800B342BC /* InfoPlist.strings */,
+				F28024C52055690200D13083 /* Hexastar-Bridging-header.h */,
 				F2B10B3E200FAB36003DD679 /* STARWARS.TTF */,
 				F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */,
 				F2398A6E205121AD00D10DFC /* moonhouse.ttf */,
@@ -172,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F297B240200E20760072E484 /* Build configuration list for PBXNativeTarget "Hexastar" */;
 			buildPhases = (
+				15A8A0AE5ADD14D4B08712DC /* [CP] Check Pods Manifest.lock */,
 				F297B22A200E20750072E484 /* Sources */,
 				F297B22B200E20750072E484 /* Frameworks */,
 				F297B22C200E20750072E484 /* Resources */,
+				708E5BDF67CB3051FC5A35FE /* [CP] Embed Pods Frameworks */,
+				B30CED64627AE3ED25DFECB0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +267,7 @@
 				F239826E200F8976003A0BBC /* KeyboardHEX.xib in Resources */,
 				F27585CF204450A20058DF21 /* green.sks in Resources */,
 				F24306B320281E2400B1ED08 /* SFDistantGalaxyAlternate.ttf in Resources */,
+				F28024C42055688700D13083 /* GoogleService-Info.plist in Resources */,
 				F2922138203C40E2006D433E /* sparkiLR.sks in Resources */,
 				F21D07DD20512D4200544271 /* 11589.ttf in Resources */,
 				F24712BB20517A8900B342BC /* Localizable.strings in Resources */,
@@ -246,6 +279,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15A8A0AE5ADD14D4B08712DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hexastar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		708E5BDF67CB3051FC5A35FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B30CED64627AE3ED25DFECB0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F297B22A200E20750072E484 /* Sources */ = {
@@ -434,6 +521,7 @@
 		};
 		F297B241200E20760072E484 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AA010220E2ECEB0A537EBDE /* Pods-Hexastar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = deltaTOxaREY.Hexastar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hexastar/Hexastar-Bridging-header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -449,6 +538,7 @@
 		};
 		F297B242200E20760072E484 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2A5412A6B2CD521931C3909 /* Pods-Hexastar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,6 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = deltaTOxaREY.Hexastar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hexastar/Hexastar-Bridging-header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

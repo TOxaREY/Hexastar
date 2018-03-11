@@ -11,7 +11,7 @@
 "converter Characters <-> Unicode" = "конвертер Символы <-> Unicode";
 
 /* DEC<->HEX<->OCT<->DEC */
-"converter DEC<->HEX<->OCT<->DEC" = "конвертер 10е<->16е<->8е<->10е";
+"converter DEC<->HEX<->OCT<->DEC" = "конвертер 10-е<->16-е<->8-е<->10-е";
 
 /* converter Decimal <-> Binary */
 "converter Decimal <-> Binary " = "конвертер Десятичное <-> Двоичное ";
