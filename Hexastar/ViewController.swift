@@ -573,6 +573,8 @@ class ViewController: UIViewController, KeyboardDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(screenHeight)
+//        RateManager.showRatesController()
         labelTitleTap()
         labelButton()
         keyboardOff()
