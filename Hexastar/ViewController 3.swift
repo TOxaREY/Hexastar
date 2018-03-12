@@ -15,14 +15,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         return .lightContent
     }
 ////
-//// Блокировка поворота
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
-    }
-    override var shouldAutorotate: Bool {
-        return false
-    }
-////
 //// Вызов вычисления
     var uniChar = UnicodeCharacterConverter()
 ////

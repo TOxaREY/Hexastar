@@ -8,7 +8,48 @@
 
 import UIKit
 import Foundation
-
+//// Смена значений для iPad
+extension NSLayoutConstraint {
+    func setMultiplier(multiplier:CGFloat) -> NSLayoutConstraint {
+        NSLayoutConstraint.deactivate([self])
+        
+        let newConstraint = NSLayoutConstraint(
+            item: firstItem!,
+            attribute: firstAttribute,
+            relatedBy: relation,
+            toItem: secondItem,
+            attribute: secondAttribute,
+            multiplier: multiplier,
+            constant: constant)
+        
+        newConstraint.priority = priority
+        newConstraint.shouldBeArchived = self.shouldBeArchived
+        newConstraint.identifier = self.identifier
+        
+        NSLayoutConstraint.activate([newConstraint])
+        return newConstraint
+    }
+    func setConstant(constant:CGFloat) -> NSLayoutConstraint {
+        NSLayoutConstraint.deactivate([self])
+        
+        let newConstraint = NSLayoutConstraint(
+            item: firstItem!,
+            attribute: firstAttribute,
+            relatedBy: relation,
+            toItem: secondItem,
+            attribute: secondAttribute,
+            multiplier: multiplier,
+            constant: constant)
+        
+        newConstraint.priority = priority
+        newConstraint.shouldBeArchived = self.shouldBeArchived
+        newConstraint.identifier = self.identifier
+        
+        NSLayoutConstraint.activate([newConstraint])
+        return newConstraint
+    }
+}
+////
 //// Определение высоты девайса
 public var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
@@ -32,14 +73,6 @@ class NMTextField: UITextField {
 }
 ////
 class ViewController: UIViewController, KeyboardDelegate {
-//// Блокировка поворота
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
-    }
-    override var shouldAutorotate: Bool {
-        return false
-    }
-////
 //// Ошибка
     func wrong() {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
@@ -74,6 +107,20 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
+    @IBOutlet weak var textFieldMulti: NSLayoutConstraint!
+    func resizeMulti() {
+        if screenHeight == 480 {
+            let newMultiplier:CGFloat = 1 / 0.85
+            textFieldMulti = textFieldMulti.setMultiplier(multiplier: newMultiplier)
+        }
+    }
+    @IBOutlet weak var labelResConst: NSLayoutConstraint!
+    func resizeConst() {
+        if screenHeight == 480 {
+            let newConstant:CGFloat = 44
+            labelResConst = labelResConst.setConstant(constant: newConstant)
+        }
+    }
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var rightImage: UIImageView!
@@ -573,8 +620,9 @@ class ViewController: UIViewController, KeyboardDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(screenHeight)
 //        RateManager.showRatesController()
+        resizeMulti()
+        resizeConst()
         labelTitleTap()
         labelButton()
         keyboardOff()

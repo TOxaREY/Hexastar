@@ -289,6 +289,7 @@
                         <outlet property="clearButton" destination="CpE-Hf-F3y" id="1Xn-oi-wsl"/>
                         <outlet property="copyButton" destination="tCZ-da-0Go" id="4R6-2t-osX"/>
                         <outlet property="labelRes" destination="yAb-Bp-TF3" id="GQ4-gw-Ekq"/>
+                        <outlet property="labelResConst" destination="l7f-0o-bqR" id="XTQ-hh-go7"/>
                         <outlet property="labelStart" destination="rHJ-BD-fMz" id="Grf-b3-D8S"/>
                         <outlet property="labelTitle" destination="mut-tC-wbi" id="VGn-0x-ewb"/>
                         <outlet property="leftImage" destination="S12-XP-iRY" id="fH3-w2-DbW"/>
@@ -299,6 +300,7 @@
                         <outlet property="segueButton" destination="4T4-d9-4jN" id="19T-sh-Yu0"/>
                         <outlet property="segueLabel" destination="M7P-lV-U5J" id="mzt-A5-isy"/>
                         <outlet property="textField" destination="Q8Z-hz-N0p" id="lbx-4e-52z"/>
+                        <outlet property="textFieldMulti" destination="eGO-0E-PTU" id="DbA-f2-f7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

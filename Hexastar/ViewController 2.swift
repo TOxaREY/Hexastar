@@ -15,14 +15,6 @@ class ViewController2: UIViewController {
         return .lightContent
     }
 ////
-//// Блокировка поворота
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
-    }
-    override var shouldAutorotate: Bool {
-        return false
-    }
-////
 //// Вызов вычислений
  var characterUnicode = CharacterUnicodeConverter()
 ////
@@ -92,6 +84,7 @@ class ViewController2: UIViewController {
             case 736: font = UIFont(name: "STARWARS", size: 38.0)!
             case 667: font = UIFont(name: "STARWARS", size: 32.0)!
             case 568: font = UIFont(name: "STARWARS", size: 22.0)!
+            case 480: font = UIFont(name: "STARWARS", size: 18.0)!
             default: font = UIFont(name: "STARWARS", size: 22.0)!
             }
             let attributesYellow = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font, NSAttributedStringKey.strokeWidth: -2, NSAttributedStringKey.strokeColor:UIColor.black] as [NSAttributedStringKey : Any]
@@ -128,6 +121,7 @@ class ViewController2: UIViewController {
         case 812: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -143).isActive = true
         case 667: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -102).isActive = true
         case 568: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -128).isActive = true
+        case 480: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -128).isActive = true
         default: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -143).isActive = true
         }
     }
