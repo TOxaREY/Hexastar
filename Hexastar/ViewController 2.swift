@@ -152,7 +152,7 @@ class ViewController2: UIViewController {
         let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
         startLabel.shadowColor = UIColor .black
         startLabel.shadowOffset = CGSize(width: 2, height: 1)
-        startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side conversion! At the top select the format of the result by touching, then enter data below", comment: "startLabelVC2") , attributes: attributes)
+        startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's time to choose a side conversion! At the top select the format of the result by touching, then enter data below", comment: "startLabelVC2") , attributes: attributes)
         segueLabel2.shadowColor = UIColor .black
         segueLabel2.shadowOffset = CGSize(width: 2, height: 1)
         segueLabel2.attributedText = NSAttributedString(string: NSLocalizedString("converter DEC<->HEX<->OCT<->DEC", comment: "DEC<->HEX<->OCT<->DEC") , attributes: attributes1)

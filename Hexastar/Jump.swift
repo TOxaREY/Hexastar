@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 class Jump: SKView {
-    let sSD = SKSpriteNode(imageNamed: "ssdestroyer")
+    let sSD = SKSpriteNode(imageNamed: "fut.png")
     let jump3 = SKSpriteNode(imageNamed: "0-3.png")
     let jump6 = SKTexture(imageNamed: "0-6.jpg")
     let jump18 = SKTexture(imageNamed: "0-18.jpg")
@@ -35,7 +35,7 @@ class Jump: SKView {
         scene.addChild(jump3)
 ////
 //// Статичный sSD
-        sSD.size = CGSize(width: 806 / 10, height: 500 / 10)
+        sSD.size = CGSize(width: 242 / 3, height: 150 / 3)
         sSD.position = CGPoint(x: self.frame.size.width / 6.666, y: self.frame.size.height / 1.65)
         scene.addChild(sSD)
 ////
@@ -54,7 +54,7 @@ class Jump: SKView {
         let loopWingMid = SKAction.repeatForever(seqWingMid)
 ////
 //// Правый верхний корабль
-        wingUp.size = CGSize(width: 806 / 18, height: 500 / 18)
+        wingUp.size = CGSize(width: 242 / 4, height: 150 / 4)
         wingUp.position = CGPoint(x: self.frame.size.width / 1.176, y: self.frame.size.height / 1.2716)
         scene.addChild(wingUp)
         let oscillateUp = SKAction.oscillation(amplitude: 5, timePeriod: 3, midPoint: wingUp.position)
@@ -62,7 +62,7 @@ class Jump: SKView {
         wingUp.run(loopWingUp)
 ////
 //// Правый средний корабль
-        wingMid.size = CGSize(width: 806 / 18, height: 400 / 18)
+        wingMid.size = CGSize(width: 242 / 4, height: 150 / 4)
         wingMid.position = CGPoint(x: self.frame.size.width / 1.176, y: self.frame.size.height / 2.2)
         scene.addChild(wingMid)
         let oscillateMid = SKAction.oscillation(amplitude: 5, timePeriod: 5, midPoint: wingMid.position)
@@ -105,7 +105,7 @@ class Jump: SKView {
     }
 
         @objc func jump(){
-            if sSD.size == CGSize(width: 806 / 10, height: 500 / 10) {
+            if sSD.size == CGSize(width: 242 / 3, height: 150 / 3) {
                 wingUp.isHidden = true
                 wingMid.isHidden = true
                 blue.removeFromParent()

@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 class Touch: SKView {
-    let deathStar = SKSpriteNode(imageNamed: "deathStar.png")
+    let deathStar = SKSpriteNode(imageNamed: "dS.png")
     let sparki = SKSpriteNode(fileNamed: "sparki.sks")!
     let sparkiLeft = SKSpriteNode(fileNamed: "sparkiLR.sks")!
     let sparkiRight = SKSpriteNode(fileNamed: "sparkiLR.sks")!
@@ -24,7 +24,7 @@ class Touch: SKView {
         self.presentScene(scene)
         self.allowsTransparency = true
         self.backgroundColor = UIColor.clear
-        deathStar.size = CGSize(width: 60, height: 60)
+        deathStar.size = CGSize(width: 100, height: 100)
         centrePosition = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         centre.position = centrePosition
         deathStar.position = centrePosition

@@ -633,7 +633,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
         labelStart.shadowColor = UIColor .black
         labelStart.shadowOffset = CGSize(width: 2, height: 1)
-        labelStart.attributedText = NSAttributedString(string: NSLocalizedString("It's Time To Choose A Side conversion! At the top select the format of the result by touching, then select the input format below", comment: "startLabelVC1") , attributes: attributes)
+        labelStart.attributedText = NSAttributedString(string: NSLocalizedString("It's time to choose a side conversion! At the top select the format of the result by touching, then select the input format below", comment: "startLabelVC1") , attributes: attributes)
         UITextField.appearance().tintColor = UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0)
         segueLabel.shadowColor = UIColor .black
         segueLabel.shadowOffset = CGSize(width: 2, height: 1)

@@ -86,14 +86,14 @@
         <source>HEXADECIMAL</source>
         <note>HEXADECIMAL</note>
       </trans-unit>
-      <trans-unit id="It's Time To Choose A Side conversion! At the top select the format of the result by touching, then enter data below">
-        <source>It's Time To Choose A Side conversion! At the top select the format of the result by touching, then enter data below</source>
-        <target>¡Es Hora De Elegir Un Lado conversión! En la parte superior seleccione el formato del resultado tocando, luego entrada datos a continuación</target>
+      <trans-unit id="It's time to choose a side conversion! At the top select the format of the result by touching, then enter data below">
+        <source>It's time to choose a side conversion! At the top select the format of the result by touching, then enter data below</source>
+        <target>¡Es hora de elegir un lado conversión! En la parte superior seleccione el formato del resultado tocando, luego entrada datos a continuación</target>
         <note>startLabelVC2</note>
       </trans-unit>
-      <trans-unit id="It's Time To Choose A Side conversion! At the top select the format of the result by touching, then select the input format below">
-        <source>It's Time To Choose A Side conversion! At the top select the format of the result by touching, then select the input format below</source>
-        <target>¡Es Hora De Elegir Un Lado conversión! En la parte superior seleccione el formato del resultado tocando, luego seleccione el formato de entrada a continuación</target>
+      <trans-unit id="It's time to choose a side conversion! At the top select the format of the result by touching, then select the input format below">
+        <source>It's time to choose a side conversion! At the top select the format of the result by touching, then select the input format below</source>
+        <target>¡Es hora de elegir un lado conversión! En la parte superior seleccione el formato del resultado tocando, luego seleccione el formato de entrada a continuación</target>
         <note>startLabelVC1</note>
       </trans-unit>
       <trans-unit id="OCTAL">
