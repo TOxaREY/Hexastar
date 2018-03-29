@@ -112,7 +112,7 @@
       </trans-unit>
       <trans-unit id="converter DEC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC">
         <source>converter DEC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC</source>
-        <target>convertir DEC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC</target>
+        <target>convertir DÉC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC</target>
         <note>DEC&lt;-&gt;HEX&lt;-&gt;OCT&lt;-&gt;DEC</note>
       </trans-unit>
       <trans-unit id="converter Decimal &lt;-&gt; Binary ">

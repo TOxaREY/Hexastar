@@ -11,7 +11,7 @@
 "converter Characters <-> Unicode" = "convertir Caractères <-> Unicode";
 
 /* DEC<->HEX<->OCT<->DEC */
-"converter DEC<->HEX<->OCT<->DEC" = "convertir DEC<->HEX<->OCT<->DEC";
+"converter DEC<->HEX<->OCT<->DEC" = "convertir DÉC<->HEX<->OCT<->DEC";
 
 /* converter Decimal <-> Binary */
 "converter Decimal <-> Binary " = "convertir Décimal <-> Binaire ";

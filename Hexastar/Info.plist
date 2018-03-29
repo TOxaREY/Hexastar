@@ -15,9 +15,20 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>1</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>deltaTOxaREY.Binatrix</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>hexastarBinatrix</string>
+			</array>
+		</dict>
+	</array>
 	<key>GoogleAnalytics</key>
 	<dict>
 		<key>TRACKING_ID</key>

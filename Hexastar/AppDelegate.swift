@@ -9,6 +9,7 @@
 import UIKit
 import YandexMobileMetrica
 import Firebase
+import Flurry_iOS_SDK
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        Flurry.startSession("VMZ6QN9SJMR48KZ3TBSJ", with: FlurrySessionBuilder
+//            .init()
+//            .withCrashReporting(true)
+//            .withLogLevel(FlurryLogLevelAll))
 //                guard let gai = GAI.sharedInstance() else {
 //                    assert(false, "Google Analytics not configured correctly")
 //                    return true
