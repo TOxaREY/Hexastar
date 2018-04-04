@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                }
 //                gai.tracker(withTrackingId: "UA-108362966-2")
 //                gai.trackUncaughtExceptions = true
-                YMMYandexMetrica.activate(withApiKey: "9e5c9f56-49f3-47a5-95b1-3e2504e512f0")
+//                YMMYandexMetrica.activate(withApiKey: "9e5c9f56-49f3-47a5-95b1-3e2504e512f0")
 //                FirebaseApp.configure()
 //                RateManager.incrementCount()
         return true
