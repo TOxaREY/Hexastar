@@ -38,7 +38,7 @@ class DecOctCalc {
                 inputDecInt = inputDecInt / 8
             }
             let octStringTempRev = Array(octArrayTemp.reversed())
-            return octStringTempRev.flatMap{String($0)}.joined()
+            return octStringTempRev.compactMap{String($0)}.joined()
         }
         func outputOctFunc() -> (String) {
             var outputOct = String()
@@ -70,7 +70,7 @@ class DecOctCalc {
                 y += 1
                 inputDecFrac = inputDecFrac * 8 - Double(UInt64(inputDecFrac * 8))
             }
-            return octArrayFracTemp.flatMap{String($0)}.joined()
+            return octArrayFracTemp.compactMap{String($0)}.joined()
         }
         let outputOctFrac = decOctFracConv()
         let outputOctInt = outputOctFunc()

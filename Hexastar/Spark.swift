@@ -36,7 +36,7 @@ class Touch: SKView {
         scene.addChild(sparki)
         scene.addChild(sparkiLeft)
         scene.addChild(sparkiRight)
-//// Тряска
+//// Shaking
         let moveRightUp:SKAction
         let moveDown:SKAction
         let moveLeftUp:SKAction
@@ -50,12 +50,12 @@ class Touch: SKView {
         let loop = SKAction.repeatForever(seq)
         deathStar.run(loop)
 ////
-//// Стрельба
+//// Shoting
         NotificationCenter.default.addObserver(self, selector: #selector(buttonShot), name: NSNotification.Name(rawValue: "buttonPush"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(pickerShot), name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
     }
 ////
-//// Стрельба из кнопок
+//// Shot from buttons
     @objc func buttonShot() {
         deathStar.isHidden = false
         centre.isHidden = false
@@ -69,7 +69,7 @@ class Touch: SKView {
         sparki.run(moveCenter, completion: {self.sparki.isHidden = true})
     }
 ////
-//// Стрельба из пикеров
+//// Shot from pickers
     @objc func pickerShot() {
         pickerPositionLeft = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.string(forKey: "coorPicker")!)))!
         pickerPositionRight = pickerPositionLeft
@@ -84,7 +84,7 @@ class Touch: SKView {
         sparkiRight.run(moveCenter, completion: {self.sparkiRight.isHidden = true})
     }
 ////
-//// Стрельба из тачей
+//// Shot from touching
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         var positions = touch?.location(in: self)

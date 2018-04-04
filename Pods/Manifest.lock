@@ -11,9 +11,6 @@ PODS:
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
-  - Flurry-iOS-SDK/FlurryAds (8.4.0):
-    - Flurry-iOS-SDK/FlurrySDK
-  - Flurry-iOS-SDK/FlurrySDK (8.4.0)
   - GoogleAnalytics (3.17.0)
   - GoogleToolboxForMac/Defines (2.1.3)
   - GoogleToolboxForMac/NSData+zlib (2.1.3):
@@ -27,8 +24,6 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Core
-  - Flurry-iOS-SDK/FlurryAds
-  - Flurry-iOS-SDK/FlurrySDK
   - GoogleAnalytics
   - YandexMobileMetrica/Dynamic (= 2.9.6)
 
@@ -37,12 +32,11 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
   FirebaseCore: b981f47e5254cbcfdeb483355300d743f6fcab2c
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
-  Flurry-iOS-SDK: 0c4488af4e4289e2678f81755d3e9c204c0e8bba
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   YandexMobileMetrica: 330c11f9e4b8b3b72454c0cd80f61b4231467ebe
 
-PODFILE CHECKSUM: 1cfa32df86f70d967c65f59b18e356215a986a62
+PODFILE CHECKSUM: 3da4c30c82ce422cefd0c6f5b53091930dde8c9e
 
 COCOAPODS: 1.4.0

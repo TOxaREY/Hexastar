@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA31450517B3381C4F6953A5895597F6"
+               BlueprintIdentifier = "46B5D7FD5FC4BD3034FCCD04DAE651E8"
                BuildableName = "Pods_Hexastar.framework"
                BlueprintName = "Pods-Hexastar"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA31450517B3381C4F6953A5895597F6"
+            BlueprintIdentifier = "46B5D7FD5FC4BD3034FCCD04DAE651E8"
             BuildableName = "Pods_Hexastar.framework"
             BlueprintName = "Pods-Hexastar"
             ReferencedContainer = "container:Pods.xcodeproj">

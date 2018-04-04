@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-//// Смена значений для iPad
+//// Change data for iPad
 extension NSLayoutConstraint {
     func setMultiplier(multiplier:CGFloat) -> NSLayoutConstraint {
         NSLayoutConstraint.deactivate([self])
@@ -50,7 +50,7 @@ extension NSLayoutConstraint {
     }
 }
 ////
-//// Определение высоты девайса
+//// Determination of height device
 public var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
 }
@@ -62,7 +62,7 @@ func heightKeyboard() -> Int {
     }
 }
 ////
-//// Отключение вставить
+//// Off paste
 class NMTextField: UITextField {
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         if action == #selector(UIResponderStandardEditActions.paste(_:)) {
@@ -73,7 +73,7 @@ class NMTextField: UITextField {
 }
 ////
 class ViewController: UIViewController, KeyboardDelegate {
-//// Ошибка
+//// Error
     func wrong() {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         pasteButton.isEnabled = true
@@ -160,7 +160,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
         view.endEditing(true)
     }
-//// Вставка
+//// Paste
     var pasteBoardString: String? = nil
     @IBAction func pasterButton(_ sender: Any) {
         textField.placeholder?.removeAll()
@@ -191,7 +191,7 @@ class ViewController: UIViewController, KeyboardDelegate {
    }
 }
 ////
-//// Проверка вставки для разных направлений и вычисления
+//// Check paste for different directions and calculating
     func pasteCheckDec() {
         for i in pasteBoardString! {
             guard i == "0" ||
@@ -295,7 +295,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         
     }
 ////
-//// Две точки и первая точка
+//// Two dots and the first dot
     func dotta() {
         if textField.text?.count != 0 {
         let startIndex = textField.text?.startIndex
@@ -314,7 +314,7 @@ class ViewController: UIViewController, KeyboardDelegate {
       }
     }
 ////
-//// Нажатие меняет заголовок
+//// Tap change heading
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         if textField.text != NSLocalizedString("invalid value", comment: "invalid value") {
         labelTitleTap()
@@ -338,7 +338,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         blackColorButton()
     }
 ////
-//// Надпись на кнопке в зависисмоти от заголовка
+//// The caption on the button, depending on the title
     func labelButton() {
         leftKey.reversesTitleShadowWhenHighlighted = true
         rightKey.reversesTitleShadowWhenHighlighted = true
@@ -351,14 +351,14 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
-//// Исходный красный на кнопках
+//// Start red in button
     func blackColorButton() {
         leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
         leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
         rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
         rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
     }
-//// Нажатие кнопок
+//// Push button
     @IBAction func leftPush(_ sender: UIButton) {
         labelStart.isHidden = true
         textField.isEnabled = true
@@ -404,7 +404,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
-//// Надпись на старте
+//// Label start
     func textLabelTitle() {
         textField.isHidden = true
         copyClearHiddenButton()
@@ -413,7 +413,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         rightImage.isHidden = true
     }
 ////
-//// Плейсхолдеры
+//// Placeholders
     func placeHoldersDec() {
         textField.isHidden = false
         let font = UIFont(name: "Xolonium", size: 13.0)!
@@ -436,25 +436,25 @@ class ViewController: UIViewController, KeyboardDelegate {
         imageDontHidden()
     }
 ////
-//// Видимость картинок сбоку от textField
+//// Visibility of pictures on the side of textField
     func imageDontHidden() {
         leftImage.isHidden = false
         rightImage.isHidden = false
     }
 ////
-//// Видимость кнопок стиреть и копировать
+//// Visibility buttons clear and copy
     func copyClearDontHiddenButton() {
         copyButton.isHidden = false
         clearButton.isHidden = false
     }
 ////
-//// Видимость кнопок стиреть и копировать
+//// InVisibility buttons clear and copy
     func copyClearHiddenButton() {
         copyButton.isHidden = true
         clearButton.isHidden = true
     }
 ////
-//// Поле ввода и вычисления
+//// Text field and calcilating
     @IBAction func inputTextField(_ sender: Any) {
         textField.placeholder?.removeAll()
         dotta()
@@ -558,20 +558,20 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
-//// Снятие выделения у кнопок
+//// Select off in button
     func selectOff() {
         labelRes.text = ""
         leftKey.isSelected = false
         rightKey.isSelected = false
     }
 ////
-//// Выключение кейборда при ненажатых кнопках
+//// Select off keyboard for not push button
     func keyboardOff() {
         if leftKey.isSelected == false && rightKey.isSelected == false {
             textField.isEnabled = false
         }
     }
-//// Функция показа клавиш удаление бэкфордом!!!
+//// Func vision keyboard delete backward
     func keyWasTapped(character: String) {
         if character == "delete" && (textField.text?.isEmpty)! == true {
             textField.text? = ""
@@ -602,7 +602,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
     
 ////
-//// Пользовательский бордюр textField
+//// Customer border textField
     func borderTextField() {
         let borderColor : UIColor = UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0)
         textField.layer.borderWidth = 2
@@ -611,7 +611,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 
     }
 ////
-//// Классы вычислений
+//// Class calculating
     var decHexCalc = DecHexCalc()
     var hexDecCalc = HexDecCalc()
     var decOctCalc = DecOctCalc()
@@ -641,7 +641,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         borderTextField()
         runString(string: NSLocalizedString("converter Decimal <-> Binary ", comment: "converter Decimal <-> Binary "))
     }
-//// Кнопка перехода в другую программу
+//// Button to go to another program
     @IBAction func buttonBinatrix(_ sender: Any) {
                 let appURL = NSURL(string: "binatrixHexastar://")!
                 let webURL = NSURL(string: "https://itunes.apple.com/ru/app/binatrix/id1296545616")!
@@ -654,7 +654,7 @@ class ViewController: UIViewController, KeyboardDelegate {
                 }
     }
 ////
-//// Бегущая строка
+//// Running string
     func runStringArray(string:String) -> ([String]) {
         let myString = string
         var myStringAdd = myString
@@ -687,7 +687,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
     }
 ////
-//// Тач в любую область чтоб убрать экран
+//// Touch to any area to remove the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
             view.endEditing(true)

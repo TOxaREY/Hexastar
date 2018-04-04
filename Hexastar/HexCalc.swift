@@ -47,7 +47,7 @@ class DecHexCalc {
                 inputDecInt = inputDecInt / 16
             }
             let hexStringTempRev = Array(hexStringTemp.reversed())
-            return hexStringTempRev.flatMap{String($0)}.joined()
+            return hexStringTempRev.compactMap{String($0)}.joined()
         }
         func outputHexFunc() -> (String) {
             var outputHex = String()

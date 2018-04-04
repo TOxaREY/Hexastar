@@ -57,7 +57,7 @@ class CharacterUnicodeConverter {
         }
         myUni.removeLast()
         let hexRev = Array(hex.reversed())
-        return hexRev.flatMap{String($0)}.joined()
+        return hexRev.compactMap{String($0)}.joined()
     }
     while myUni.count > 0 {
     multiUni.append(hexConv())

@@ -33,6 +33,7 @@
 		F297B237200E20760072E484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B235200E20760072E484 /* Main.storyboard */; };
 		F297B239200E20760072E484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F297B238200E20760072E484 /* Assets.xcassets */; };
 		F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B23A200E20760072E484 /* LaunchScreen.storyboard */; };
+		F298C82E20749FA6001F34F2 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F298C82D20749FA6001F34F2 /* iAd.framework */; };
 		F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F2B10B3E200FAB36003DD679 /* STARWARS.TTF */; };
 		F2DACD9D203AD6F20090A983 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DACD9C203AD6F20090A983 /* Spark.swift */; };
 		F2E0F5BB203459D300E18BBC /* UnicSim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0F5BA203459D300E18BBC /* UnicSim.swift */; };
@@ -87,6 +88,7 @@
 		F297B236200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F297B238200E20760072E484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F297B23B200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F298C82D20749FA6001F34F2 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		F2A5412A6B2CD521931C3909 /* Pods-Hexastar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hexastar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar.release.xcconfig"; sourceTree = "<group>"; };
 		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
 		F2DA0AD22055805D0070AC20 /* Hexastar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hexastar.entitlements; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F298C82E20749FA6001F34F2 /* iAd.framework in Frameworks */,
 				2843731AB0B291E37A09AB41 /* Pods_Hexastar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +124,7 @@
 		31F91001DDB75B5579103896 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F298C82D20749FA6001F34F2 /* iAd.framework */,
 				883A37ADC317990BF4A6AEA3 /* Pods_Hexastar.framework */,
 			);
 			name = Frameworks;
@@ -229,7 +233,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "REYNIKOV ANTON";
 				TargetAttributes = {
 					F297B22D200E20750072E484 = {
@@ -316,14 +320,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -442,6 +444,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -449,6 +452,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -500,6 +504,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -507,6 +512,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

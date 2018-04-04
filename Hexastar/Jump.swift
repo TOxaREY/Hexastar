@@ -28,18 +28,18 @@ class Jump: SKView {
         self.presentScene(scene)
         self.allowsTransparency = true
         self.backgroundColor = UIColor.clear
-//// Фон прыжка
+//// Background jumping
         jump3.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
         jump3.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         jump3.isHidden = true
         scene.addChild(jump3)
 ////
-//// Статичный sSD
+//// Alien ship
         sSD.size = CGSize(width: 242 / 3, height: 150 / 3)
         sSD.position = CGPoint(x: self.frame.size.width / 6.666, y: self.frame.size.height / 1.65)
         scene.addChild(sSD)
 ////
-//// Направление синусоиды
+//// Direction sin
         let moveWingUp:SKAction
         let returnWingUp:SKAction
         moveWingUp = SKAction.moveBy(x: -20, y: -20, duration: 8);
@@ -53,7 +53,7 @@ class Jump: SKView {
         let seqWingMid = SKAction.sequence([moveWingMid,returnWingMid])
         let loopWingMid = SKAction.repeatForever(seqWingMid)
 ////
-//// Правый верхний корабль
+//// Up ship
         wingUp.size = CGSize(width: 242 / 4, height: 150 / 4)
         wingUp.position = CGPoint(x: self.frame.size.width / 1.176, y: self.frame.size.height / 1.2716)
         scene.addChild(wingUp)
@@ -61,7 +61,7 @@ class Jump: SKView {
         wingUp.run(SKAction.repeatForever(oscillateUp))
         wingUp.run(loopWingUp)
 ////
-//// Правый средний корабль
+//// Down ship
         wingMid.size = CGSize(width: 242 / 4, height: 150 / 4)
         wingMid.position = CGPoint(x: self.frame.size.width / 1.176, y: self.frame.size.height / 2.2)
         scene.addChild(wingMid)
@@ -69,7 +69,7 @@ class Jump: SKView {
         wingMid.run(SKAction.repeatForever(oscillateMid))
         wingMid.run(loopWingMid)
 ////
-//// Выстрелы
+//// Shoting
         scene.addChild(blue)
         scene.addChild(green)
         let pauseMid = SKAction.wait(forDuration: 1.6)
@@ -89,7 +89,7 @@ class Jump: SKView {
         blue.run(loopBlue)
         green.run(loopGreen)
 ////
-//// Тряска статичного sSD
+//// Shaking alien ship
         let moveRightUp:SKAction
         let moveDown:SKAction
         let moveLeftUp:SKAction
@@ -120,13 +120,13 @@ class Jump: SKView {
             let moveReturnAktion = SKAction.scale(to: CGSize(width: 806 / 10, height: 500 / 10), duration: 0.33)
             let pauseJ = SKAction.wait(forDuration: 1.5)
                 jump3.isHidden = false            
-//// Динамика фона
+//// Dynamic background
                 jump3.run(jumper, completion: {self.jump3.isHidden = true})
 ////
-//// Динамика уменьшения sSD
+//// Dynamic reduction alien ship
                 sSD.run(moveCentreAktion)
 ////
-//// Динамика движения sSD
+//// Dynamic moving alien ship
                 sSD.run(seq, completion: {self.sSD.run(pauseJ,completion: {self.sSD.run(moveReturnAktion, completion: {self.sSD.isHidden = true; self.wingUp.isHidden = false; self.wingMid.isHidden = false; self.scene?.addChild(self.blue);self.scene?.addChild(self.green); self.sSD.isHidden = false})})})
 ////
         }

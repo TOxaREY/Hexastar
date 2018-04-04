@@ -10,12 +10,12 @@ import UIKit
 import Foundation
 
 class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
-//// Смена цвета текста статус бара
+//// Change color status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 ////
-//// Вызов вычисления
+//// Class calculating
     var uniChar = UnicodeCharacterConverter()
 ////
     @IBOutlet weak var startLabel: UILabel!
@@ -41,7 +41,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var label5: UILabel!
     @IBOutlet weak var label6: UILabel!
     @IBOutlet weak var label7: UILabel!
-//// Стрельба от кнопок
+//// Shot from buttons
     func shotButton(b:UIButton) {
      var coordinate = String()
          coordinate = NSStringFromCGRect(b.frame)
@@ -51,7 +51,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
          NotificationCenter.default.post(name: NSNotification.Name(rawValue: "buttonPush"), object: nil)
     }
 ////
-//// Стрельба от пикеров
+//// Shot from pickers
     func shotPicker(p:UIPickerView) {
         var frame = p.frame
         frame.origin.y += frame.size.height / 2
@@ -64,7 +64,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
     }
 ////
-//// Кнопки добавить
+//// Add buttons
     @IBAction func addButton1(_ sender: Any) {
         startLabel.isHidden = true
         shotButton(b: addButton1)
@@ -192,7 +192,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
 ////
-//// Сброс пикервью
+//// Reset pickers
     func resetPicker1() {
         for index in 0...4 {
             picker1.selectRow(0, inComponent: index, animated: true)
@@ -243,7 +243,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6
     }
 ////
-//// Сброс
+//// Clear
     @IBAction func clear1(_ sender: Any) {
         shotButton(b: clear1)
               resetPicker1()
@@ -273,7 +273,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         resetPicker7()
     }
 ////
-//// Pickers и вычисления
+//// Pickers and calculating
     @IBOutlet weak var picker1: UIPickerView!
     @IBOutlet weak var picker2: UIPickerView!
     @IBOutlet weak var picker3: UIPickerView!

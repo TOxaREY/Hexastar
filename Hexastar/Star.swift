@@ -8,7 +8,7 @@
 
 import UIKit
 import SpriteKit
-//// Синусоида
+//// Sin
 let π = CGFloat(Double.pi)
 extension SKAction {
     static func oscillation(amplitude a: CGFloat, timePeriod t: CGFloat, midPoint: CGPoint) -> SKAction {
@@ -62,7 +62,7 @@ class Star: SKView {
         NotificationCenter.default.addObserver(self, selector: #selector(explosionStar), name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         
     }
- //// Взрыв
+ //// Explosion
             @objc func explosionStar() {
                 if spaceship.isHidden == false {
                     let animateExplosion = SKAction.animate(with: [expFrame1,expFrame2,expFrame2,expFrame3,expFrame3,expFrame4,expFrame5,expFrame6,expFrame7,expFrame8,expFrame9,expFrame9,expFrame10,expFrame10,expFrame11,expFrame12,expFrame13], timePerFrame: 0.05)

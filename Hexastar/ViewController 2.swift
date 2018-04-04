@@ -10,16 +10,16 @@ import UIKit
 import Foundation
 
 class ViewController2: UIViewController {
-//// Смена цвета текста статус бара
+//// Change color status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 ////
-//// Вызов вычислений
+//// Class calculating
  var characterUnicode = CharacterUnicodeConverter()
 ////
     @IBOutlet weak var startLabel: UILabel!
-//// Вставить
+//// Paste
     @IBOutlet weak var buttonPaste: UIButton!
     func wrong() {
         let font = UIFont(name: "Xolonium", size: 13.0)!
@@ -57,7 +57,7 @@ class ViewController2: UIViewController {
     @IBOutlet weak var segueButton2: UIButton!
     @IBOutlet weak var segueLabel2: UILabel!
     @IBOutlet weak var buttonReset: UIButton!
-//// Сброс
+//// Reset
     @IBAction func buttonReset(_ sender: Any) {
         startLabel.isHidden = true
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
@@ -68,7 +68,7 @@ class ViewController2: UIViewController {
     }
 ////
     @IBOutlet weak var textField: UITextField!
-//// Вычисления шрифт и мультиколор стринг
+//// Calculating font and multicolor string
     var firstCount = Int()
     var secondCount = Int()
     @IBAction func characterInput(_ sender: Any) {
@@ -113,7 +113,7 @@ class ViewController2: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
 
     
-//// Положение поля результата
+//// Position resultLabel
     func constraintResultLabel() {
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
         switch screenHeight {
@@ -126,14 +126,14 @@ class ViewController2: UIViewController {
         }
     }
 ////
-//// Плейсхолдер
+//// Placeholders
     func placeHolder() {
         let font = UIFont(name: "Xolonium", size: 13.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter up to 3 characters", comment: "enter up to 3 characters"), attributes: attributes)
     }
 ////
-//// Пользовательский бордюр textField
+//// Customer border textField
     func borderTextField() {
         let borderColor : UIColor = UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0)
         textField.layer.borderWidth = 2
@@ -159,7 +159,7 @@ class ViewController2: UIViewController {
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
     }
-    //// Тач в любую область чтоб убрать экран
+    //// Touch to any area to remove the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
             view.endEditing(true)
