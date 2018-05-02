@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -371,6 +371,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         <connections>
                                             <action selector="characterInput:" destination="IPC-Vb-XJa" eventType="editingChanged" id="dtW-e9-zbM"/>
+                                            <action selector="touchTextField:" destination="IPC-Vb-XJa" eventType="touchCancel" id="oC9-lO-zJJ"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-S1-3d3">
@@ -576,7 +577,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy0-Nv-pSD">
-                                        <rect key="frame" x="11.5" y="78" width="30" height="30"/>
+                                        <rect key="frame" x="11.5" y="78.5" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Sy0-Nv-pSD" secondAttribute="height" multiplier="1:1" id="TnD-fc-jOx"/>
                                         </constraints>
@@ -616,7 +617,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMX-MQ-BoV">
-                                        <rect key="frame" x="11.5" y="302" width="30" height="30"/>
+                                        <rect key="frame" x="11.5" y="301.5" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lMX-MQ-BoV" secondAttribute="height" multiplier="1:1" id="h2X-w0-VDv"/>
                                         </constraints>
@@ -648,7 +649,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpi-GF-4nZ">
-                                        <rect key="frame" x="280.5" y="78" width="30" height="30"/>
+                                        <rect key="frame" x="280.5" y="78.5" width="30" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Wpi-GF-4nZ" secondAttribute="height" multiplier="1:1" id="XZw-Ii-Y80"/>
@@ -692,7 +693,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIq-Ar-ENl">
-                                        <rect key="frame" x="280.5" y="302" width="30" height="30"/>
+                                        <rect key="frame" x="280.5" y="301.5" width="30" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.91764705879999997" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JIq-Ar-ENl" secondAttribute="height" multiplier="1:1" id="uwT-x5-DZP"/>

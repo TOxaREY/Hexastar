@@ -8,6 +8,11 @@
 
 import UIKit
 import Foundation
+
+//// Start label one view
+public var vc1ViewCount = 0
+////
+
 //// Change data for iPad
 extension NSLayoutConstraint {
     func setMultiplier(multiplier:CGFloat) -> NSLayoutConstraint {
@@ -316,6 +321,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 ////
 //// Tap change heading
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
+        labelStart.isHidden = true
         if textField.text != NSLocalizedString("invalid value", comment: "invalid value") {
         labelTitleTap()
         keyboardOff()
@@ -620,6 +626,13 @@ class ViewController: UIViewController, KeyboardDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//// Start label one view
+        if vc1ViewCount > 0 {
+            labelStart.isHidden = true
+        } else {
+              vc1ViewCount = 1
+        }
+////
 //        RateManager.showRatesController()
         resizeMulti()
         resizeConst()
@@ -690,6 +703,7 @@ class ViewController: UIViewController, KeyboardDelegate {
 //// Touch to any area to remove the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
+            labelStart.isHidden = true
             view.endEditing(true)
         }
         super.touchesBegan(touches, with: event)

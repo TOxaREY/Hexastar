@@ -9,6 +9,10 @@
 import UIKit
 import Foundation
 
+//// Start label one view
+public var vc3ViewCount = 0
+////
+
 class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
 //// Change color status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -366,14 +370,25 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6 + res7
     }
 ////
+    @objc func startLabelHidden() {
+        startLabel.isHidden = true
+    }
     override func viewDidLoad() {
+//// Start label one view
         super.viewDidLoad()
+        if vc3ViewCount > 0 {
+            startLabel.isHidden = true
+        } else {
+            vc3ViewCount = 1
+        }
+////
         pikers()
         let font = UIFont(name: "Xolonium", size: 18.0)!
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
         startLabel.shadowColor = UIColor .black
         startLabel.shadowOffset = CGSize(width: 2, height: 1)
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("On the left add the required number of input lines", comment: "startLabelVC3") , attributes: attributes)
+        NotificationCenter.default.addObserver(self, selector: #selector(startLabelHidden), name: NSNotification.Name(rawValue: "startLabel"), object: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
         guard let tracker = GAI.sharedInstance().defaultTracker else { return }
@@ -381,7 +396,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
         tracker.send(builder.build() as [NSObject : AnyObject])
     }
-
 }
 
 

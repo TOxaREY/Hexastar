@@ -9,6 +9,10 @@
 import UIKit
 import Foundation
 
+//// Start label one view
+public var vc2ViewCount = 0
+////
+
 class ViewController2: UIViewController {
 //// Change color status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -68,6 +72,11 @@ class ViewController2: UIViewController {
     }
 ////
     @IBOutlet weak var textField: UITextField!
+//// Touch to field hiden startLabel
+    @IBAction func touchTextField(_ sender: UITextField) {
+        startLabel.isHidden = true
+    }
+////
 //// Calculating font and multicolor string
     var firstCount = Int()
     var secondCount = Int()
@@ -144,6 +153,13 @@ class ViewController2: UIViewController {
 ////
     override func viewDidLoad() {
         super.viewDidLoad()
+//// Start label one view
+        if vc2ViewCount > 0 {
+            startLabel.isHidden = true
+        } else {
+            vc2ViewCount = 1
+        }
+////
         borderTextField()
         placeHolder()
         let font = UIFont(name: "Xolonium", size: 18.0)!
@@ -158,10 +174,12 @@ class ViewController2: UIViewController {
         segueLabel2.attributedText = NSAttributedString(string: NSLocalizedString("converter DEC<->HEX<->OCT<->DEC", comment: "DEC<->HEX<->OCT<->DEC") , attributes: attributes1)
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
+    
     }
     //// Touch to any area to remove the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
+            startLabel.isHidden = true
             view.endEditing(true)
         }
         super.touchesBegan(touches, with: event)
