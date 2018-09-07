@@ -215,7 +215,6 @@
 				F297B22B200E20750072E484 /* Frameworks */,
 				F297B22C200E20750072E484 /* Resources */,
 				708E5BDF67CB3051FC5A35FE /* [CP] Embed Pods Frameworks */,
-				B30CED64627AE3ED25DFECB0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,21 +332,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B30CED64627AE3ED25DFECB0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hexastar/Pods-Hexastar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
