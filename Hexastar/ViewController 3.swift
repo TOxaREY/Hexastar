@@ -48,7 +48,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 //// Shot from buttons
     func shotButton(b:UIButton) {
      var coordinate = String()
-         coordinate = NSStringFromCGRect(b.frame)
+         coordinate = NSCoder.string(for: b.frame)
          coordinate.removeFirst()
          coordinate.removeLast(11)
          UserDefaults.standard.set(coordinate, forKey: "coorButton")
@@ -61,7 +61,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         frame.origin.y += frame.size.height / 2
         var coordinate = String()
         var wigth = Int()
-        coordinate = NSStringFromCGPoint(frame.origin)
+        coordinate = NSCoder.string(for: frame.origin)
         wigth = Int(frame.size.width)
         UserDefaults.standard.set(coordinate, forKey: "coorPicker")
         UserDefaults.standard.set(wigth, forKey: "wigth")
@@ -77,13 +77,13 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             self.picker1.delegate = self
             picker1.isHidden = false
             label1.isHidden = false
-            addButton1.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            addButton1.setImage(#imageLiteral(resourceName: "remove"), for: UIControl.State.normal)
             clear1.isHidden = false
         } else {
             picker1.isHidden = true
             clear1.isHidden = true
             label1.isHidden = true
-            addButton1.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            addButton1.setImage(#imageLiteral(resourceName: "add"), for: UIControl.State.normal)
             resetPicker1()
         }
     }
@@ -95,13 +95,13 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             self.picker2.delegate = self
             picker2.isHidden = false
             label2.isHidden = false
-            addButton2.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            addButton2.setImage(#imageLiteral(resourceName: "remove"), for: UIControl.State.normal)
             clear2.isHidden = false
         } else {
             picker2.isHidden = true
             clear2.isHidden = true
             label2.isHidden = true
-            addButton2.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            addButton2.setImage(#imageLiteral(resourceName: "add"), for: UIControl.State.normal)
             resetPicker2()
         }
     }
@@ -113,13 +113,13 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             self.picker3.delegate = self
             picker3.isHidden = false
             label3.isHidden = false
-            addButton3.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            addButton3.setImage(#imageLiteral(resourceName: "remove"), for: UIControl.State.normal)
             clear3.isHidden = false
         } else {
             picker3.isHidden = true
             clear3.isHidden = true
             label3.isHidden = true
-            addButton3.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            addButton3.setImage(#imageLiteral(resourceName: "add"), for: UIControl.State.normal)
             resetPicker3()
         }
     }
@@ -131,12 +131,12 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             self.picker4.delegate = self
             picker4.isHidden = false
             label4.isHidden = false
-            addButton4.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            addButton4.setImage(#imageLiteral(resourceName: "remove"), for: UIControl.State.normal)
             clear4.isHidden = false
         } else {
             picker4.isHidden = true
             clear4.isHidden = true
-            addButton4.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            addButton4.setImage(#imageLiteral(resourceName: "add"), for: UIControl.State.normal)
             label4.isHidden = true
             resetPicker4()
         }
@@ -149,12 +149,12 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             self.picker5.delegate = self
             picker5.isHidden = false
             label5.isHidden = false
-            addButton5.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            addButton5.setImage(#imageLiteral(resourceName: "remove"), for: UIControl.State.normal)
             clear5.isHidden = false
         } else {
             picker5.isHidden = true
             label5.isHidden = true
-            addButton5.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            addButton5.setImage(#imageLiteral(resourceName: "add"), for: UIControl.State.normal)
             clear5.isHidden = true
             resetPicker5()
         }
@@ -167,12 +167,12 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             self.picker6.delegate = self
             picker6.isHidden = false
             label6.isHidden = false
-            addButton6.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            addButton6.setImage(#imageLiteral(resourceName: "remove"), for: UIControl.State.normal)
             clear6.isHidden = false
         } else {
             picker6.isHidden = true
             label6.isHidden = true
-            addButton6.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            addButton6.setImage(#imageLiteral(resourceName: "add"), for: UIControl.State.normal)
             clear6.isHidden = true
             resetPicker6()
         }
@@ -185,12 +185,12 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             self.picker7.delegate = self
             picker7.isHidden = false
             label7.isHidden = false
-            addButton7.setImage(#imageLiteral(resourceName: "remove"), for: UIControlState.normal)
+            addButton7.setImage(#imageLiteral(resourceName: "remove"), for: UIControl.State.normal)
             clear7.isHidden = false
         } else {
             picker7.isHidden = true
             label7.isHidden = true
-            addButton7.setImage(#imageLiteral(resourceName: "add"), for: UIControlState.normal)
+            addButton7.setImage(#imageLiteral(resourceName: "add"), for: UIControl.State.normal)
             clear7.isHidden = true
             resetPicker7()
         }
@@ -384,7 +384,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
 ////
         pikers()
         let font = UIFont(name: "Xolonium", size: 18.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font]
         startLabel.shadowColor = UIColor .black
         startLabel.shadowOffset = CGSize(width: 2, height: 1)
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("On the left add the required number of input lines", comment: "startLabelVC3") , attributes: attributes)

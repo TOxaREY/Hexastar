@@ -27,7 +27,7 @@ class ViewController2: UIViewController {
     @IBOutlet weak var buttonPaste: UIButton!
     func wrong() {
         let font = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedString.Key.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.textField.text?.removeAll()
@@ -96,7 +96,7 @@ class ViewController2: UIViewController {
             case 480: font = UIFont(name: "STARWARS", size: 18.0)!
             default: font = UIFont(name: "STARWARS", size: 22.0)!
             }
-            let attributesYellow = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font, NSAttributedStringKey.strokeWidth: -2, NSAttributedStringKey.strokeColor:UIColor.black] as [NSAttributedStringKey : Any]
+            let attributesYellow = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font, NSAttributedString.Key.strokeWidth: -2, NSAttributedString.Key.strokeColor:UIColor.black] as [NSAttributedString.Key : Any]
             switch textField.text?.count {
             case 0?: firstCount = 0
             case 1?: firstCount = characterUnicode.simbolUnicodeConvert().count; secondCount = 0
@@ -108,7 +108,7 @@ class ViewController2: UIViewController {
                 characterUnicode.inputCharacter = textField.text!
                 var myMutableString = NSMutableAttributedString()
                 myMutableString = NSMutableAttributedString(string: characterUnicode.simbolUnicodeConvert(), attributes: attributesYellow)
-                myMutableString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), range: NSRange(location:firstCount,length:secondCount - firstCount))
+                myMutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), range: NSRange(location:firstCount,length:secondCount - firstCount))
                 resultLabel.attributedText = myMutableString
             } else {
                 resultLabel.attributedText = NSAttributedString(string: characterUnicode.simbolUnicodeConvert(), attributes: attributesYellow)
@@ -138,7 +138,7 @@ class ViewController2: UIViewController {
 //// Placeholders
     func placeHolder() {
         let font = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedString.Key.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter up to 3 characters", comment: "enter up to 3 characters"), attributes: attributes)
     }
 ////
@@ -163,9 +163,9 @@ class ViewController2: UIViewController {
         borderTextField()
         placeHolder()
         let font = UIFont(name: "Xolonium", size: 18.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font]
         let font1 = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
+        let attributes1 = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font1]
         startLabel.shadowColor = UIColor .black
         startLabel.shadowOffset = CGSize(width: 2, height: 1)
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("It's time to choose a side conversion! At the top select the format of the result by touching, then enter data below", comment: "startLabelVC2") , attributes: attributes)

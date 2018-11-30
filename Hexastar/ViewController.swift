@@ -86,7 +86,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelRes.text?.removeAll()
         view.endEditing(true)
         let font = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedString.Key.font: font]
         textField.attributedText = NSAttributedString(string: NSLocalizedString("invalid value", comment: "invalid value") , attributes: attributes)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.textField.text?.removeAll()
@@ -330,7 +330,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     var tap = 0
     func labelTitleTap() {
         let fontTitle = UIFont(name: "SFDistantGalaxyAlternate", size: 35.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: fontTitle]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: fontTitle]
         switch tap {
         case 0: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("HEXADECIMAL", comment: "HEXADECIMAL") , attributes: attributes); tap += 1; textLabelTitle()
         case 1: labelTitle.attributedText = NSAttributedString(string: NSLocalizedString("OCTAL", comment: "OCTAL") , attributes: attributes); tap += 1; textLabelTitle()
@@ -349,20 +349,20 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftKey.reversesTitleShadowWhenHighlighted = true
         rightKey.reversesTitleShadowWhenHighlighted = true
         switch labelTitle.text {
-        case "HEXADECIMAL"?: leftKey.setTitle("DEC", for: UIControlState.normal);
-        rightKey.setTitle("OCT", for: UIControlState.normal)
-        case "OCTAL"?: leftKey.setTitle("DEC", for: UIControlState.normal); rightKey.setTitle("HEX", for: UIControlState.normal)
-        case "DECIMAL"?: leftKey.setTitle("HEX", for: UIControlState.normal); rightKey.setTitle("OCT", for: UIControlState.normal)
+        case "HEXADECIMAL"?: leftKey.setTitle("DEC", for: UIControl.State.normal);
+        rightKey.setTitle("OCT", for: UIControl.State.normal)
+        case "OCTAL"?: leftKey.setTitle("DEC", for: UIControl.State.normal); rightKey.setTitle("HEX", for: UIControl.State.normal)
+        case "DECIMAL"?: leftKey.setTitle("HEX", for: UIControl.State.normal); rightKey.setTitle("OCT", for: UIControl.State.normal)
         default: break
         }
     }
 ////
 //// Start red in button
     func blackColorButton() {
-        leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
-        leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
-        rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
-        rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
+        leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControl.State.normal)
+        leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControl.State.normal)
+        rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControl.State.normal)
+        rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControl.State.normal)
     }
 //// Push button
     @IBAction func leftPush(_ sender: UIButton) {
@@ -370,10 +370,10 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.isEnabled = true
         rightKey.isSelected = false
         leftKey.isSelected = true
-        leftKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
-        leftKey.setTitleShadowColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
-        rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.5), for: UIControlState.normal)
-        rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:0.5), for: UIControlState.normal)
+        leftKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControl.State.normal)
+        leftKey.setTitleShadowColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControl.State.normal)
+        rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.5), for: UIControl.State.normal)
+        rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:0.5), for: UIControl.State.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -392,10 +392,10 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.isEnabled = true
         leftKey.isSelected = false
         rightKey.isSelected = true
-        rightKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControlState.normal)
-        rightKey.setTitleShadowColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControlState.normal)
-        leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.5), for: UIControlState.normal)
-        leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:0.5), for: UIControlState.normal)
+        rightKey.setTitleColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControl.State.normal)
+        rightKey.setTitleShadowColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControl.State.normal)
+        leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:0.5), for: UIControl.State.normal)
+        leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:0.5), for: UIControl.State.normal)
         textField.text = ""
         labelRes.text = ""
         copyClearHiddenButton()
@@ -423,21 +423,21 @@ class ViewController: UIViewController, KeyboardDelegate {
     func placeHoldersDec() {
         textField.isHidden = false
         let font = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedString.Key.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a decimal number", comment: "enter a decimal number"), attributes: attributes)
         imageDontHidden()
     }
     func placeHoldersOct() {
         textField.isHidden = false
         let font = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedString.Key.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a octal number", comment: "enter a octal number"), attributes: attributes)
        imageDontHidden()
     }
     func placeHoldersHex() {
         textField.isHidden = false
         let font = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedString.Key.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a hexadecimal number", comment: "enter a hexadecimal number"), attributes: attributes)
         imageDontHidden()
     }
@@ -641,9 +641,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         keyboardOff()
         textLabelTitle()
         let font = UIFont(name: "Xolonium", size: 18.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font]
         let font1 = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes1 = [NSAttributedStringKey.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedStringKey.font: font1]
+        let attributes1 = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font1]
         labelStart.shadowColor = UIColor .black
         labelStart.shadowOffset = CGSize(width: 2, height: 1)
         labelStart.attributedText = NSAttributedString(string: NSLocalizedString("It's time to choose a side conversion! At the top select the format of the result by touching, then select the input format below", comment: "startLabelVC1") , attributes: attributes)
@@ -688,7 +688,7 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
     func runString(string:String) {
         let font = UIFont(name: "Xolonium", size: 13.0)!
-        let attributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.13, green:0.76, blue:0.05, alpha:1.0), NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.13, green:0.76, blue:0.05, alpha:1.0), NSAttributedString.Key.font: font]
         let count = runStringArray(string: string).count
         var q = 0
         _ = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { (timer) in

@@ -59,7 +59,7 @@ class Touch: SKView {
     @objc func buttonShot() {
         deathStar.isHidden = false
         centre.isHidden = false
-        buttonPosition = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.string(forKey: "coorButton")!)))!
+        buttonPosition = (scene?.convertPoint(fromView: NSCoder.cgPoint(for: UserDefaults.standard.string(forKey: "coorButton")!)))!
         buttonPosition.x += 15
         buttonPosition.y -= 15
         sparki.position = buttonPosition
@@ -71,7 +71,7 @@ class Touch: SKView {
 ////
 //// Shot from pickers
     @objc func pickerShot() {
-        pickerPositionLeft = (scene?.convertPoint(fromView: CGPointFromString(UserDefaults.standard.string(forKey: "coorPicker")!)))!
+        pickerPositionLeft = (scene?.convertPoint(fromView: NSCoder.cgPoint(for: UserDefaults.standard.string(forKey: "coorPicker")!)))!
         pickerPositionRight = pickerPositionLeft
         pickerPositionRight.x += CGFloat(UserDefaults.standard.integer(forKey: "wigth")) - 30
         sparkiLeft.position = pickerPositionLeft
