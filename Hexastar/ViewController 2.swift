@@ -89,9 +89,10 @@ class ViewController2: UIViewController {
             characterUnicode.inputCharacter = textField.text!
             var font = UIFont(name: "STARWARS", size: 22.0)!
             switch screenHeight {
-            case 812: font = UIFont(name: "STARWARS", size: 38.0)!
-            case 736: font = UIFont(name: "STARWARS", size: 38.0)!
-            case 667: font = UIFont(name: "STARWARS", size: 32.0)!
+            case 896: font = UIFont(name: "STARWARS", size: 38.0)!
+            case 812: font = UIFont(name: "STARWARS", size: 36.0)!
+            case 736: font = UIFont(name: "STARWARS", size: 35.0)!
+            case 667: font = UIFont(name: "STARWARS", size: 29.0)!
             case 568: font = UIFont(name: "STARWARS", size: 22.0)!
             case 480: font = UIFont(name: "STARWARS", size: 18.0)!
             default: font = UIFont(name: "STARWARS", size: 22.0)!
@@ -128,6 +129,7 @@ class ViewController2: UIViewController {
         switch screenHeight {
         case 736: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -94).isActive = true
         case 812: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -143).isActive = true
+        case 896: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -143).isActive = true
         case 667: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -102).isActive = true
         case 568: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -128).isActive = true
         case 480: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -128).isActive = true

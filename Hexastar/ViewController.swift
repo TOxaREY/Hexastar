@@ -60,10 +60,10 @@ public var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
 }
 func heightKeyboard() -> Int {
-    if screenHeight == 812 {
-        return 203
-    } else {
-        return Int(screenHeight / (736/224))
+    switch screenHeight {
+    case 812: return 203
+    case 896: return 224
+    default: return Int(screenHeight / (736/224))
     }
 }
 ////
@@ -623,7 +623,12 @@ class ViewController: UIViewController, KeyboardDelegate {
     var decOctCalc = DecOctCalc()
     var octDecCalc = OctDecCalc()
 ////
-
+//// Disable buttonBinatrix
+    @objc func disableButtonBinatrix() {
+        buttonBinatrix.isEnabled = false
+    }
+////
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //// Start label one view
@@ -639,6 +644,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelTitleTap()
         labelButton()
         keyboardOff()
+        NotificationCenter.default.addObserver(self, selector: #selector(disableButtonBinatrix), name: UIResponder.keyboardDidShowNotification, object: nil)
+        buttonBinatrix.isEnabled = true
         textLabelTitle()
         let font = UIFont(name: "Xolonium", size: 18.0)!
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font]
@@ -655,6 +662,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         runString(string: NSLocalizedString("converter Decimal <-> Binary ", comment: "converter Decimal <-> Binary "))
     }
 //// Button to go to another program
+    @IBOutlet weak var buttonBinatrix: UIButton!
     @IBAction func buttonBinatrix(_ sender: Any) {
                 let appURL = NSURL(string: "binatrixHexastar://")!
                 let webURL = NSURL(string: "https://itunes.apple.com/ru/app/binatrix/id1296545616")!
@@ -705,6 +713,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         if (touches.first) != nil {
             labelStart.isHidden = true
             view.endEditing(true)
+            buttonBinatrix.isEnabled = true
         }
         super.touchesBegan(touches, with: event)
       }

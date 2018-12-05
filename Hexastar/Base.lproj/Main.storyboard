@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -284,6 +284,7 @@
                     </view>
                     <connections>
                         <outlet property="binatrixLabel" destination="qIH-1e-Hao" id="JDc-Dn-rzQ"/>
+                        <outlet property="buttonBinatrix" destination="FbQ-5r-eMw" id="mlC-TE-hab"/>
                         <outlet property="clearButton" destination="CpE-Hf-F3y" id="1Xn-oi-wsl"/>
                         <outlet property="copyButton" destination="tCZ-da-0Go" id="4R6-2t-osX"/>
                         <outlet property="labelRes" destination="yAb-Bp-TF3" id="GQ4-gw-Ekq"/>
@@ -948,15 +949,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0-0" width="1242" height="1533"/>
+        <image name="0-0" width="596.15997314453125" height="735.84002685546875"/>
         <image name="Ship-Vector-PNG" width="621" height="180"/>
         <image name="Ship-Vector-PNG2" width="621" height="180"/>
-        <image name="VC1" width="1242" height="2435"/>
+        <image name="VC1" width="596.15997314453125" height="1168.800048828125"/>
         <image name="VC2" width="1242" height="2436"/>
-        <image name="VC3" width="1242" height="2435"/>
+        <image name="VC3" width="596.15997314453125" height="1168.800048828125"/>
         <image name="add" width="159" height="161"/>
         <image name="binaicon" width="50" height="50"/>
-        <image name="clear" width="256" height="256"/>
+        <image name="clear" width="263.31430053710938" height="263.31430053710938"/>
         <image name="copy" width="256" height="256"/>
         <image name="paste" width="256" height="256"/>
         <image name="shipL" width="120" height="120"/>

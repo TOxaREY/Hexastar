@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,17 +13,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardOct" customModule="Hexastar" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZO-6I-XDH">
-                    <rect key="frame" x="0.0" y="512" width="414" height="224"/>
+                    <rect key="frame" x="0.0" y="575" width="375" height="203"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="414_224" translatesAutoresizingMaskIntoConstraints="NO" id="jUz-3i-1HF">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mb1-k8-TU5">
-                            <rect key="frame" x="4.6666666666666643" y="116" width="59.999999999999993" height="64"/>
+                            <rect key="frame" x="4.6666666666666679" y="102" width="53.333333333333329" height="57"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Mb1-k8-TU5" secondAttribute="height" multiplier="60:64" id="rgT-e8-gyF"/>
                             </constraints>
@@ -36,7 +35,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ax-JA-0aZ">
-                            <rect key="frame" x="73.666666666666671" y="116" width="59.666666666666671" height="64"/>
+                            <rect key="frame" x="67" y="102" width="53.666666666666657" height="57"/>
                             <state key="normal" image="5">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -45,7 +44,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6t-TF-ttV">
-                            <rect key="frame" x="142.33333333333334" y="116" width="59.666666666666657" height="64"/>
+                            <rect key="frame" x="129.66666666666666" y="102" width="53.333333333333343" height="57"/>
                             <state key="normal" image="6">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -54,7 +53,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulS-SG-uzz">
-                            <rect key="frame" x="211" y="116" width="60.333333333333314" height="64"/>
+                            <rect key="frame" x="192" y="102" width="53.666666666666657" height="57"/>
                             <state key="normal" image="7">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -63,7 +62,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDL-Bm-E6B">
-                            <rect key="frame" x="280.33333333333331" y="116" width="60" height="64"/>
+                            <rect key="frame" x="254.66666666666666" y="102" width="53.333333333333343" height="57"/>
                             <state key="normal" image="dotta">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -71,14 +70,14 @@
                                 <action selector="keyTappedDottaWithSender:" destination="-1" eventType="touchUpInside" id="3pB-fA-R94"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-F6-6SC">
-                            <rect key="frame" x="349.33333333333331" y="116" width="60.333333333333314" height="64"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-F6-6SC">
+                            <rect key="frame" x="317" y="102" width="53.666666666666686" height="57"/>
                             <state key="normal">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDz-cJ-qWQ">
-                            <rect key="frame" x="4.6666666666666643" y="43.333333333333378" width="59.999999999999993" height="64.666666666666686"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDz-cJ-qWQ">
+                            <rect key="frame" x="4.6666666666666679" y="37" width="53.333333333333329" height="57"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="cDz-cJ-qWQ" secondAttribute="height" multiplier="60:64" id="wt4-n3-vXL"/>
                             </constraints>
@@ -87,7 +86,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-2C-wqB">
-                            <rect key="frame" x="73.666666666666671" y="43.333333333333378" width="59.666666666666671" height="64.666666666666686"/>
+                            <rect key="frame" x="67" y="37" width="53.666666666666657" height="57"/>
                             <state key="normal" image="0">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -96,7 +95,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xh-gR-VX9">
-                            <rect key="frame" x="142.33333333333334" y="43.333333333333378" width="59.666666666666657" height="64.666666666666686"/>
+                            <rect key="frame" x="129.66666666666666" y="37" width="53.333333333333343" height="57"/>
                             <state key="normal" image="1">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -105,7 +104,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyd-kn-Z80">
-                            <rect key="frame" x="211" y="43.333333333333378" width="60.333333333333314" height="64.666666666666686"/>
+                            <rect key="frame" x="192" y="37" width="53.666666666666657" height="57"/>
                             <state key="normal" image="2">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -114,7 +113,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqV-BB-9r9">
-                            <rect key="frame" x="280.33333333333331" y="43.333333333333378" width="60" height="64.666666666666686"/>
+                            <rect key="frame" x="254.66666666666666" y="37" width="53.333333333333343" height="57"/>
                             <state key="normal" image="3">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -123,7 +122,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvT-GI-p9Y">
-                            <rect key="frame" x="349.33333333333331" y="43.333333333333378" width="60.333333333333314" height="64.666666666666686"/>
+                            <rect key="frame" x="317" y="37" width="53.666666666666686" height="57"/>
                             <state key="normal" image="Delete">
                                 <color key="titleColor" red="1" green="0.90980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -132,6 +131,7 @@
                             </connections>
                         </button>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="cDz-cJ-qWQ" firstAttribute="width" secondItem="9xh-gR-VX9" secondAttribute="width" id="0Dw-9R-8pq"/>
                         <constraint firstItem="cDz-cJ-qWQ" firstAttribute="height" secondItem="vyd-kn-Z80" secondAttribute="height" id="0HQ-8w-yGA"/>
@@ -147,7 +147,7 @@
                         <constraint firstItem="Mb1-k8-TU5" firstAttribute="height" secondItem="XNI-F6-6SC" secondAttribute="height" id="Ioz-sj-7Kg"/>
                         <constraint firstAttribute="trailing" secondItem="jUz-3i-1HF" secondAttribute="trailing" id="J2e-b7-NO6"/>
                         <constraint firstItem="GDL-Bm-E6B" firstAttribute="leading" secondItem="ulS-SG-uzz" secondAttribute="trailing" constant="9" id="LZ4-D8-aXr"/>
-                        <constraint firstAttribute="bottom" secondItem="jUz-3i-1HF" secondAttribute="bottom" id="M38-hq-xHH"/>
+                        <constraint firstAttribute="bottom" secondItem="jUz-3i-1HF" secondAttribute="bottom" constant="-34" id="M38-hq-xHH"/>
                         <constraint firstItem="Mb1-k8-TU5" firstAttribute="width" secondItem="I6t-TF-ttV" secondAttribute="width" id="RS8-AF-Jsc"/>
                         <constraint firstAttribute="bottom" secondItem="7Ax-JA-0aZ" secondAttribute="bottom" constant="44" id="Rpx-aO-CCM"/>
                         <constraint firstItem="cDz-cJ-qWQ" firstAttribute="width" secondItem="IvT-GI-p9Y" secondAttribute="width" id="SZP-d7-2jb"/>
@@ -186,7 +186,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="width" secondItem="bZO-6I-XDH" secondAttribute="height" multiplier="414:224" id="9G2-hZ-COK"/>
                 <constraint firstAttribute="trailing" secondItem="bZO-6I-XDH" secondAttribute="trailing" id="MLz-Sp-QZ0"/>
@@ -194,7 +194,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bZO-6I-XDH" secondAttribute="bottom" id="gph-Y5-e0G"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="26.5" y="52.5"/>
+            <point key="canvasLocation" x="26.399999999999999" y="52.463054187192121"/>
         </view>
     </objects>
     <resources>
@@ -203,11 +203,11 @@
         <image name="2" width="100" height="116"/>
         <image name="3" width="100" height="116"/>
         <image name="4" width="100" height="116"/>
-        <image name="414_224" width="863" height="515"/>
+        <image name="414_224" width="414.239990234375" height="247.19999694824219"/>
         <image name="5" width="100" height="116"/>
         <image name="6" width="100" height="116"/>
         <image name="7" width="100" height="116"/>
-        <image name="Delete" width="128" height="128"/>
+        <image name="Delete" width="100" height="116"/>
         <image name="dotta" width="100" height="116"/>
     </resources>
 </document>
