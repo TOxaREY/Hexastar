@@ -36,7 +36,15 @@ NS_ASSUME_NONNULL_BEGIN
 
  By default this option is disabled.
  */
-@property (nonatomic, assign) BOOL handleFirstActivationAsUpdateEnabled;
+@property (nonatomic, assign) BOOL handleFirstActivationAsUpdate;
+
+/** A boolean value indicating whether statistics sending to the AppMetrica server is enabled.
+
+ @note Disabling this option also turns off data sending from the reporters that initialized for different apiKey.
+
+ By default, the statistics sending is enabled.
+ */
+@property (nonatomic, assign) BOOL statisticsSending;
 
 /** Enable/disable location reporting to AppMetrica.
  If enabled and location set via setLocation: method - that location would be used.
@@ -45,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  Enabled by default.
  */
-@property (nonatomic, assign) BOOL trackLocationEnabled;
+@property (nonatomic, assign) BOOL locationTracking;
 
 /** Set/get location to AppMetrica
  To enable AppMetrica to use this location trackLocationEnabled should be 'YES'
@@ -67,19 +75,19 @@ NS_ASSUME_NONNULL_BEGIN
  Enabled by default.
  To disable crash tracking, set the parameter value to false.
  */
-@property (nonatomic, assign) BOOL reportCrashesEnabled;
+@property (nonatomic, assign) BOOL crashReporting;
 
 /** Set/get the arbitrary application version for AppMetrica to report.
 
  By default, the application version is set in the app configuration file Info.plist (CFBundleShortVersionString).
  */
-@property (nonatomic, copy, nullable) NSString *customAppVersion;
+@property (nonatomic, copy, nullable) NSString *appVersion;
 
 /** Enable/disable logging.
 
  By default logging is disabled.
  */
-@property (nonatomic, assign) BOOL loggingEnabled;
+@property (nonatomic, assign) BOOL logs;
 
 /** Set/get preload info, which is used for tracking preload installs.
  Additional info could be https://appmetrica.yandex.com

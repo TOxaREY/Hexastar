@@ -7,5 +7,5 @@ target 'Hexastar' do
   # Pods for Hexastar
   pod 'GoogleAnalytics'
   pod 'Firebase/Core'
-  pod 'YandexMobileMetrica/Dynamic', '2.9.6'
+  pod 'YandexMobileMetrica/Dynamic', '3.3.0'
 end

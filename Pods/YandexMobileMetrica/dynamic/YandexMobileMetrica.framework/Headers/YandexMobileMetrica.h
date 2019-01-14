@@ -10,12 +10,20 @@
     #import "YMMYandexMetrica.h"
     #import "YMMVersion.h"
     #import "YMMYandexMetricaConfiguration.h"
+    #import "YMMReporterConfiguration.h"
     #import "YMMYandexMetricaReporting.h"
     #import "YMMYandexMetricaPreloadInfo.h"
+    #import "YMMProfileAttribute.h"
+    #import "YMMUserProfile.h"
+    #import "YMMRevenueInfo.h"
 #else
     #import <YandexMobileMetrica/YMMYandexMetrica.h>
     #import <YandexMobileMetrica/YMMVersion.h>
     #import <YandexMobileMetrica/YMMYandexMetricaConfiguration.h>
+    #import <YandexMobileMetrica/YMMReporterConfiguration.h>
     #import <YandexMobileMetrica/YMMYandexMetricaReporting.h>
     #import <YandexMobileMetrica/YMMYandexMetricaPreloadInfo.h>
+    #import <YandexMobileMetrica/YMMProfileAttribute.h>
+    #import <YandexMobileMetrica/YMMUserProfile.h>
+    #import <YandexMobileMetrica/YMMRevenueInfo.h>
 #endif

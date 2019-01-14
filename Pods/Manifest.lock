@@ -1,9 +1,9 @@
 PODS:
-  - Firebase/Core (5.14.0):
+  - Firebase/Core (5.15.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.4.0)
-  - Firebase/CoreOnly (5.14.0):
-    - FirebaseCore (= 5.1.9)
+  - Firebase/CoreOnly (5.15.0):
+    - FirebaseCore (= 5.1.10)
   - FirebaseAnalytics (5.4.0):
     - FirebaseCore (~> 5.1)
     - FirebaseInstanceID (~> 3.3)
@@ -13,7 +13,7 @@ PODS:
     - GoogleUtilities/Network (~> 5.2)
     - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
-  - FirebaseCore (5.1.9):
+  - FirebaseCore (5.1.10):
     - GoogleUtilities/Logger (~> 5.2)
   - FirebaseInstanceID (3.3.0):
     - FirebaseCore (~> 5.1)
@@ -49,12 +49,12 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - YandexMobileMetrica/Dynamic (2.9.6)
+  - YandexMobileMetrica/Dynamic (3.3.0)
 
 DEPENDENCIES:
   - Firebase/Core
   - GoogleAnalytics
-  - YandexMobileMetrica/Dynamic (= 2.9.6)
+  - YandexMobileMetrica/Dynamic (= 3.3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -69,16 +69,16 @@ SPEC REPOS:
     - YandexMobileMetrica
 
 SPEC CHECKSUMS:
-  Firebase: 963d5685fae888a56d6d4d9cfce6b9c976958798
+  Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
-  FirebaseCore: 8f49b70f57ab5cbb032ef41d64992ded21606459
+  FirebaseCore: 35747502d9e8c6ee217385ad04446c7c2aaf9c5c
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  YandexMobileMetrica: 330c11f9e4b8b3b72454c0cd80f61b4231467ebe
+  YandexMobileMetrica: 415e4e8a7a23121a3d086958a655f444dd340edb
 
-PODFILE CHECKSUM: 3da4c30c82ce422cefd0c6f5b53091930dde8c9e
+PODFILE CHECKSUM: a576990cf3cbf436046aa7ce95ab505e3db07426
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

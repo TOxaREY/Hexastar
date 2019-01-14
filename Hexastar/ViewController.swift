@@ -623,11 +623,14 @@ class ViewController: UIViewController, KeyboardDelegate {
     var decOctCalc = DecOctCalc()
     var octDecCalc = OctDecCalc()
 ////
-//// Disable buttonBinatrix
+    //// Disable & enable buttonBinatrix
     @objc func disableButtonBinatrix() {
         buttonBinatrix.isEnabled = false
     }
-////
+    @objc func enableButtonBinatrix() {
+        buttonBinatrix.isEnabled = true
+    }
+    ////
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -638,14 +641,14 @@ class ViewController: UIViewController, KeyboardDelegate {
               vc1ViewCount = 1
         }
 ////
-//        RateManager.showRatesController()
+        RateManager.showRatesController()
         resizeMulti()
         resizeConst()
         labelTitleTap()
         labelButton()
         keyboardOff()
         NotificationCenter.default.addObserver(self, selector: #selector(disableButtonBinatrix), name: UIResponder.keyboardDidShowNotification, object: nil)
-        buttonBinatrix.isEnabled = true
+        NotificationCenter.default.addObserver(self, selector: #selector(enableButtonBinatrix), name: UIResponder.keyboardDidHideNotification, object: nil)
         textLabelTitle()
         let font = UIFont(name: "Xolonium", size: 18.0)!
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font]
@@ -713,7 +716,6 @@ class ViewController: UIViewController, KeyboardDelegate {
         if (touches.first) != nil {
             labelStart.isHidden = true
             view.endEditing(true)
-            buttonBinatrix.isEnabled = true
         }
         super.touchesBegan(touches, with: event)
       }
