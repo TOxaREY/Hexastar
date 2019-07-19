@@ -33,6 +33,9 @@ class Flash: SKView {
     let hSNode = SKSpriteNode(imageNamed: "hS.png")
     let cWNode = SKSpriteNode(imageNamed: "cW.png")
     let bH = SKSpriteNode(fileNamed: "blackhole.sks")!
+    deinit {
+        print("FlashVC2")
+    }
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear

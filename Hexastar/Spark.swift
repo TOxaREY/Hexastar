@@ -18,6 +18,9 @@ class Touch: SKView {
     var buttonPosition = CGPoint()
     var pickerPositionLeft = CGPoint()
     var pickerPositionRight = CGPoint()
+    deinit {
+        print("SparkVC3")
+    }
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear

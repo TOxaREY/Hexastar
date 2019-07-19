@@ -21,7 +21,9 @@ class Jump: SKView {
     var green = SKSpriteNode(fileNamed: "green.sks")!
     var wingUp = SKSpriteNode(imageNamed: "wing1.png")
     var wingMid = SKSpriteNode(imageNamed: "wing2.png")
-    
+    deinit {
+        print("JumpVC2")
+    }
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear

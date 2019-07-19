@@ -11,6 +11,9 @@ import SpriteKit
 
 class Ship: SKView {
     let spaceship = SKSpriteNode(imageNamed: "ship.png")
+    deinit {
+        print("ShipVC")
+    }
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear

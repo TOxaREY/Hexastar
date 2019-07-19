@@ -37,6 +37,9 @@ class Star: SKView {
     let expFrame11 = SKTexture(imageNamed: "ball11.png")
     let expFrame12 = SKTexture(imageNamed: "ball12.png")
     let expFrame13 = SKTexture(imageNamed: "ball13.png")
+    deinit {
+        print("StarVC")
+    }
     override func didMoveToSuperview() {
         let scene = SKScene(size: self.frame.size)
         scene.backgroundColor = UIColor.clear

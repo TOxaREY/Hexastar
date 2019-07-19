@@ -55,18 +55,7 @@ extension NSLayoutConstraint {
     }
 }
 ////
-//// Determination of height device
-public var screenHeight: CGFloat {
-    return UIScreen.main.bounds.height
-}
-func heightKeyboard() -> Int {
-    switch screenHeight {
-    case 812: return 203
-    case 896: return 224
-    default: return Int(screenHeight / (736/224))
-    }
-}
-////
+
 //// Off paste
 class NMTextField: UITextField {
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
@@ -78,6 +67,14 @@ class NMTextField: UITextField {
 }
 ////
 class ViewController: UIViewController, KeyboardDelegate {
+    var timer: Timer!
+    func heightKeyboard() -> Int {
+        switch screenHeight {
+        case 812: return 203
+        case 896: return 224
+        default: return Int(screenHeight / (736/224))
+        }
+    }
 //// Error
     func wrong() {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
@@ -140,6 +137,14 @@ class ViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var binatrixLabel: UILabel!
     @IBOutlet weak var segueLabel: UILabel!
     @IBOutlet weak var segueButton: UIButton!
+    @IBAction func buttonToVC2(_ sender: Any) {
+        timer.invalidate()
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        let sB: UIStoryboard = UIStoryboard(name: nameStoryboard, bundle: nil)
+        let newVC = sB.instantiateViewController(withIdentifier: "VC2")
+        appDel.window?.rootViewController = newVC
+        appDel.window?.makeKeyAndVisible()
+    }
     
     @IBAction func clearButton(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
@@ -631,6 +636,9 @@ class ViewController: UIViewController, KeyboardDelegate {
         buttonBinatrix.isEnabled = true
     }
     ////
+    deinit {
+        print("VC")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -702,7 +710,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.13, green:0.76, blue:0.05, alpha:1.0), NSAttributedString.Key.font: font]
         let count = runStringArray(string: string).count
         var q = 0
-        _ = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { (timer) in
             self.binatrixLabel.attributedText = NSAttributedString(string: self.runStringArray(string: string)[q], attributes: attributes)
             q += 1
             if q >= count {
@@ -720,11 +728,5 @@ class ViewController: UIViewController, KeyboardDelegate {
         super.touchesBegan(touches, with: event)
       }
 ////
-    override func viewWillAppear(_ animated: Bool) {
-        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-        tracker.set(kGAIScreenName, value: "VC1")
-        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-        tracker.send(builder.build() as [NSObject : AnyObject])
-    }
 }
 

@@ -45,7 +45,14 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var label5: UILabel!
     @IBOutlet weak var label6: UILabel!
     @IBOutlet weak var label7: UILabel!
-//// Shot from buttons
+    @IBAction func buttonToVC2(_ sender: Any) {
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        let sB: UIStoryboard = UIStoryboard(name: nameStoryboard, bundle: nil)
+        let newVC = sB.instantiateViewController(withIdentifier: "VC2")
+        appDel.window?.rootViewController = newVC
+        appDel.window?.makeKeyAndVisible()
+    }
+    //// Shot from buttons
     func shotButton(b:UIButton) {
      var coordinate = String()
          coordinate = NSCoder.string(for: b.frame)
@@ -373,6 +380,9 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     @objc func startLabelHidden() {
         startLabel.isHidden = true
     }
+    deinit {
+        print("VC3")
+    }
     override func viewDidLoad() {
 //// Start label one view
         super.viewDidLoad()
@@ -389,12 +399,6 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         startLabel.shadowOffset = CGSize(width: 2, height: 1)
         startLabel.attributedText = NSAttributedString(string: NSLocalizedString("On the left add the required number of input lines", comment: "startLabelVC3") , attributes: attributes)
         NotificationCenter.default.addObserver(self, selector: #selector(startLabelHidden), name: NSNotification.Name(rawValue: "startLabel"), object: nil)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-        tracker.set(kGAIScreenName, value: "VC3")
-        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-        tracker.send(builder.build() as [NSObject : AnyObject])
     }
 }
 

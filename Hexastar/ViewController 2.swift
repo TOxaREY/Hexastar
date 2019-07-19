@@ -61,7 +61,21 @@ class ViewController2: UIViewController {
     @IBOutlet weak var segueButton2: UIButton!
     @IBOutlet weak var segueLabel2: UILabel!
     @IBOutlet weak var buttonReset: UIButton!
-//// Reset
+    @IBAction func buttonToVC(_ sender: Any) {
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        let sB: UIStoryboard = UIStoryboard(name: nameStoryboard, bundle: nil)
+        let newVC = sB.instantiateViewController(withIdentifier: "VC")
+        appDel.window?.rootViewController = newVC
+        appDel.window?.makeKeyAndVisible()
+    }
+    @IBAction func buttonToVC3(_ sender: Any) {
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        let sB: UIStoryboard = UIStoryboard(name: nameStoryboard, bundle: nil)
+        let newVC = sB.instantiateViewController(withIdentifier: "VC3")
+        appDel.window?.rootViewController = newVC
+        appDel.window?.makeKeyAndVisible()
+    }
+    //// Reset
     @IBAction func buttonReset(_ sender: Any) {
         startLabel.isHidden = true
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
@@ -95,7 +109,7 @@ class ViewController2: UIViewController {
             case 667: font = UIFont(name: "STARWARS", size: 29.0)!
             case 568: font = UIFont(name: "STARWARS", size: 22.0)!
             case 480: font = UIFont(name: "STARWARS", size: 18.0)!
-            default: font = UIFont(name: "STARWARS", size: 22.0)!
+            default: font = UIFont(name: "STARWARS", size: 35.0)!
             }
             let attributesYellow = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font, NSAttributedString.Key.strokeWidth: -2, NSAttributedString.Key.strokeColor:UIColor.black] as [NSAttributedString.Key : Any]
             switch textField.text?.count {
@@ -133,7 +147,7 @@ class ViewController2: UIViewController {
         case 667: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -102).isActive = true
         case 568: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -128).isActive = true
         case 480: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -128).isActive = true
-        default: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -143).isActive = true
+        default: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -94).isActive = true
         }
     }
 ////
@@ -153,6 +167,9 @@ class ViewController2: UIViewController {
         
     }
 ////
+    deinit {
+        print("VC2")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 //// Start label one view
@@ -185,11 +202,5 @@ class ViewController2: UIViewController {
             view.endEditing(true)
         }
         super.touchesBegan(touches, with: event)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-        tracker.set(kGAIScreenName, value: "VC2")
-        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-        tracker.send(builder.build() as [NSObject : AnyObject])
     }
 }

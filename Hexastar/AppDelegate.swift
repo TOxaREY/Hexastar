@@ -9,6 +9,12 @@
 import UIKit
 import YandexMobileMetrica
 import Firebase
+
+var screenHeight: CGFloat {
+    return UIScreen.main.bounds.height
+}
+var nameStoryboard = String()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,17 +22,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-                guard let gai = GAI.sharedInstance() else {
-                    assert(false, "Google Analytics not configured correctly")
-                    return true
-                }
-                gai.tracker(withTrackingId: "UA-108362966-2")
-                gai.trackUncaughtExceptions = true
+        ////Check storyboard
+        switch screenHeight {
+        case 568: nameStoryboard = "SE"
+        case 667: nameStoryboard = "8"
+        case 736: nameStoryboard = "8+"
+        case 812: nameStoryboard = "Xs"
+        case 896: nameStoryboard = "Xrs"
+        default: nameStoryboard = "8"
+        }
+        ////
                 YMMYandexMetrica.activate(with: YMMYandexMetricaConfiguration.init(apiKey: "9e5c9f56-49f3-47a5-95b1-3e2504e512f0")!)
                 FirebaseApp.configure()
                 RateManager.incrementCount()
+        launchScreenTimer()
         return true
     }
+    ////LaunchScreen timer
+    private func launchScreenTimer(){
+        let launchScreenVC = UIStoryboard.init(name: "LaunchScreen", bundle: nil)
+        let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "splashController")
+        self.window?.rootViewController = rootVC
+        self.window?.makeKeyAndVisible()
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(dismissSplashController), userInfo: nil, repeats: false)
+    }
+    @objc func dismissSplashController(){
+        let mainVC = UIStoryboard.init(name: nameStoryboard, bundle: nil)
+        let rootVC = mainVC.instantiateViewController(withIdentifier: "VC")
+        self.window?.rootViewController = rootVC
+        self.window?.makeKeyAndVisible()
+    }
+    ////
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

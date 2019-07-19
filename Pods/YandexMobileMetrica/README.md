@@ -19,7 +19,32 @@ advertisement**.
 
 ## Changelog
 
+### Version 3.6.0
+
+* Fixed possible loss of crash reports on devices with a 32-bit processor.
+* Fixed possible crashes which affected the AppMetrica SDK versions 3.1.0 to 3.5.0.
+* Improved performance and quality of statistics.
+
+### Version 3.5.0
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/50347/YandexMobileMetrica-3.5.0-ios-a29e7edc-5396-454c-ac51-32593097e680.zip)
+
+* Added tvOS support (subspecs `Static-TV` and `Dynamic-TV`).
+* Improved performance and quality of statistics.
+
+### Version 3.4.1
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/128534/YandexMobileMetrica-3.4.1-ios-17403b29-3ad3-494b-9793-f2c38628edc7.zip)
+
+* Fixed Swift support(#76).
+
+### Version 3.4.0
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/175948/YandexMobileMetrica-3.4.0-ios-73e951f2-134a-46a4-953a-7054bf97d1fb.zip)
+
+* Separated the library into two frameworks: core and crash-handling. See documentation for more info.
+* Fixed the sendEventsBuffer method to work correctly in the background.
+* Improved performance and memory usage.
+
 ### Version 3.3.0
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/175948/YandexMobileMetrica-3.3.0-ios-5cd81fc3-f157-438b-bfd2-5f73229fecbe.zip)
 
 * Improved the API for reporting profiles and revenue.
 * Improved performance and quality of statistics.
