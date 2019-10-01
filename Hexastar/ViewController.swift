@@ -9,11 +9,11 @@
 import UIKit
 import Foundation
 
-//// Start label one view
+// Start label one view
 public var vc1ViewCount = 0
-////
 
-//// Change data for iPad
+
+// Change data for iPad
 extension NSLayoutConstraint {
     func setMultiplier(multiplier:CGFloat) -> NSLayoutConstraint {
         NSLayoutConstraint.deactivate([self])
@@ -54,9 +54,8 @@ extension NSLayoutConstraint {
         return newConstraint
     }
 }
-////
 
-//// Off paste
+// Off paste
 class NMTextField: UITextField {
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         if action == #selector(UIResponderStandardEditActions.paste(_:)) {
@@ -65,7 +64,7 @@ class NMTextField: UITextField {
         return super.canPerformAction(action, withSender: sender)
     }
 }
-////
+
 class ViewController: UIViewController, KeyboardDelegate {
     var timer: Timer!
     func heightKeyboard() -> Int {
@@ -75,7 +74,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         default: return Int(screenHeight / (736/224))
         }
     }
-//// Error
+    // Error
     func wrong() {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         pasteButton.isEnabled = true
@@ -105,10 +104,10 @@ class ViewController: UIViewController, KeyboardDelegate {
                 }
             default: break
             }
-
+            
         }
     }
-////
+    //
     @IBOutlet weak var textFieldMulti: NSLayoutConstraint!
     func resizeMulti() {
         if screenHeight == 480 {
@@ -159,49 +158,49 @@ class ViewController: UIViewController, KeyboardDelegate {
     }
     @IBAction func copyButton(_ sender: Any) {
         if labelRes.text?.count != 0 {
-        if labelRes.text!.count > 18 {
-            var labelRes18:String = ""
-            let overCount = labelRes.text!.count - 18
-            labelRes18 = String(labelRes.text!.dropLast(overCount))
-            UIPasteboard.general.string = labelRes18
-        } else {
-        UIPasteboard.general.string = labelRes.text
-      }
-    }
+            if labelRes.text!.count > 18 {
+                var labelRes18:String = ""
+                let overCount = labelRes.text!.count - 18
+                labelRes18 = String(labelRes.text!.dropLast(overCount))
+                UIPasteboard.general.string = labelRes18
+            } else {
+                UIPasteboard.general.string = labelRes.text
+            }
+        }
         view.endEditing(true)
     }
-//// Paste
+    // Paste
     var pasteBoardString: String? = nil
     @IBAction func pasterButton(_ sender: Any) {
         textField.placeholder?.removeAll()
         pasteBoardString = UIPasteboard.general.string?.replacingOccurrences(of: ",", with: ".")
         if leftKey.isSelected != false || rightKey.isSelected != false {
-        if pasteBoardString == nil || pasteBoardString == "" {
-            wrong()
-        } else {
-            var i = 0
-            for character in pasteBoardString! {
-                if character == "." {
-                    i += 1
+            if pasteBoardString == nil || pasteBoardString == "" {
+                wrong()
+            } else {
+                var i = 0
+                for character in pasteBoardString! {
+                    if character == "." {
+                        i += 1
+                    }
                 }
-            }
                 if i > 1 {
                     wrong()
                 } else {
-
-            if pasteBoardString!.count > 13 {
-            let overCount = pasteBoardString!.count - 13
-                pasteBoardString = String(pasteBoardString!.dropLast(overCount))
+                    
+                    if pasteBoardString!.count > 13 {
+                        let overCount = pasteBoardString!.count - 13
+                        pasteBoardString = String(pasteBoardString!.dropLast(overCount))
+                    }
+                    if ((pasteBoardString)!).count <= 13 {
+                        pasteCheck()
+                    }
+                }
             }
-            if ((pasteBoardString)!).count <= 13 {
-                pasteCheck()
-          }
         }
-      }
-   }
-}
-////
-//// Check paste for different directions and calculating
+    }
+    
+    // Check paste for different directions and calculating
     func pasteCheckDec() {
         for i in pasteBoardString! {
             guard i == "0" ||
@@ -259,7 +258,7 @@ class ViewController: UIViewController, KeyboardDelegate {
             break
         }
     }
-
+    
     func pasteCheckOct() {
         for i in pasteBoardString! {
             guard i == "0" ||
@@ -304,33 +303,33 @@ class ViewController: UIViewController, KeyboardDelegate {
         }
         
     }
-////
-//// Two dots and the first dot
+    
+    // Two dots and the first dot
     func dotta() {
         if textField.text?.count != 0 {
-        let startIndex = textField.text?.startIndex
-        if textField.text![startIndex!] == "." {
-            textField.text?.removeLast()
-        }
-        var i = 0
-        for character in (textField.text!) {
-            if character == "."  {
-                i += 1
+            let startIndex = textField.text?.startIndex
+            if textField.text![startIndex!] == "." {
+                textField.text?.removeLast()
             }
-            if i == 2 {
-                ((textField.text)!).removeLast()
+            var i = 0
+            for character in (textField.text!) {
+                if character == "."  {
+                    i += 1
+                }
+                if i == 2 {
+                    ((textField.text)!).removeLast()
+                }
             }
         }
-      }
     }
-////
-//// Tap change heading
+    
+    // Tap change heading
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         labelStart.isHidden = true
         if textField.text != NSLocalizedString("invalid value", comment: "invalid value") {
-        labelTitleTap()
-        keyboardOff()
-       }
+            labelTitleTap()
+            keyboardOff()
+        }
     }
     var tap = 0
     func labelTitleTap() {
@@ -348,8 +347,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         labelButton()
         blackColorButton()
     }
-////
-//// The caption on the button, depending on the title
+    
+    // The caption on the button, depending on the title
     func labelButton() {
         leftKey.reversesTitleShadowWhenHighlighted = true
         rightKey.reversesTitleShadowWhenHighlighted = true
@@ -361,15 +360,15 @@ class ViewController: UIViewController, KeyboardDelegate {
         default: break
         }
     }
-////
-//// Start red in button
+    
+    // Start red in button
     func blackColorButton() {
         leftKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControl.State.normal)
         leftKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControl.State.normal)
         rightKey.setTitleColor(UIColor(red:0, green:0, blue:0, alpha:1.0), for: UIControl.State.normal)
         rightKey.setTitleShadowColor(UIColor(red:0.89, green:0.01, blue:0.01, alpha:1.0), for: UIControl.State.normal)
     }
-//// Push button
+    // Push button
     @IBAction func leftPush(_ sender: UIButton) {
         labelStart.isHidden = true
         textField.isEnabled = true
@@ -414,8 +413,8 @@ class ViewController: UIViewController, KeyboardDelegate {
             break
         }
     }
-////
-//// Label start
+
+    // Label start
     func textLabelTitle() {
         textField.isHidden = true
         copyClearHiddenButton()
@@ -423,8 +422,8 @@ class ViewController: UIViewController, KeyboardDelegate {
         leftImage.isHidden = true
         rightImage.isHidden = true
     }
-////
-//// Placeholders
+    
+    // Placeholders
     func placeHoldersDec() {
         textField.isHidden = false
         let font = UIFont(name: "Xolonium", size: 13.0)!
@@ -437,7 +436,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         let font = UIFont(name: "Xolonium", size: 13.0)!
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedString.Key.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a octal number", comment: "enter a octal number"), attributes: attributes)
-       imageDontHidden()
+        imageDontHidden()
     }
     func placeHoldersHex() {
         textField.isHidden = false
@@ -446,26 +445,26 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter a hexadecimal number", comment: "enter a hexadecimal number"), attributes: attributes)
         imageDontHidden()
     }
-////
-//// Visibility of pictures on the side of textField
+    
+    // Visibility of pictures on the side of textField
     func imageDontHidden() {
         leftImage.isHidden = false
         rightImage.isHidden = false
     }
-////
-//// Visibility buttons clear and copy
+    
+    // Visibility buttons clear and copy
     func copyClearDontHiddenButton() {
         copyButton.isHidden = false
         clearButton.isHidden = false
     }
-////
-//// InVisibility buttons clear and copy
+    
+    // InVisibility buttons clear and copy
     func copyClearHiddenButton() {
         copyButton.isHidden = true
         clearButton.isHidden = true
     }
-////
-//// Text field and calcilating
+    
+    // Text field and calcilating
     @IBAction func inputTextField(_ sender: Any) {
         textField.placeholder?.removeAll()
         dotta()
@@ -492,7 +491,7 @@ class ViewController: UIViewController, KeyboardDelegate {
         } else {
             labelRes.text = ""
             if leftKey.isSelected == true {
-               placeHoldersDec()
+                placeHoldersDec()
             }
         }
     }
@@ -568,21 +567,21 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
     }
-////
-//// Select off in button
+    
+    // Select off in button
     func selectOff() {
         labelRes.text = ""
         leftKey.isSelected = false
         rightKey.isSelected = false
     }
-////
-//// Select off keyboard for not push button
+
+    // Select off keyboard for not push button
     func keyboardOff() {
         if leftKey.isSelected == false && rightKey.isSelected == false {
             textField.isEnabled = false
         }
     }
-//// Func vision keyboard delete backward
+    // Func vision keyboard delete backward
     func keyWasTapped(character: String) {
         if character == "delete" && (textField.text?.isEmpty)! == true {
             textField.text? = ""
@@ -594,8 +593,8 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
     }
-////
-//// Keyboards
+    
+    // Keyboards
     func keyboardHex() {
         let keyboardViewHex = KeyboardHex(frame: CGRect(x: 0, y: 0, width: 0, height: Int(heightKeyboard())))
         keyboardViewHex.delegate = self
@@ -612,43 +611,40 @@ class ViewController: UIViewController, KeyboardDelegate {
         textField.inputView = keyboardViewOct
     }
     
-////
-//// Customer border textField
+    // Customer border textField
     func borderTextField() {
         let borderColor : UIColor = UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0)
         textField.layer.borderWidth = 2
         textField.layer.borderColor = borderColor.cgColor
         textField.layer.cornerRadius = 5.0
-
+        
     }
-////
-//// Class calculating
+
+    // Class calculating
     var decHexCalc = DecHexCalc()
     var hexDecCalc = HexDecCalc()
     var decOctCalc = DecOctCalc()
     var octDecCalc = OctDecCalc()
-////
-    //// Disable & enable buttonBinatrix
+    
+    // Disable & enable buttonBinatrix
     @objc func disableButtonBinatrix() {
         buttonBinatrix.isEnabled = false
     }
     @objc func enableButtonBinatrix() {
         buttonBinatrix.isEnabled = true
     }
-    ////
     deinit {
         print("VC")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//// Start label one view
+        // Start label one view
         if vc1ViewCount > 0 {
             labelStart.isHidden = true
         } else {
-              vc1ViewCount = 1
+            vc1ViewCount = 1
         }
-////
         RateManager.showRatesController()
         resizeMulti()
         resizeConst()
@@ -672,21 +668,21 @@ class ViewController: UIViewController, KeyboardDelegate {
         borderTextField()
         runString(string: NSLocalizedString("converter Decimal <-> Binary ", comment: "converter Decimal <-> Binary "))
     }
-//// Button to go to another program
+    // Button to go to another program
     @IBOutlet weak var buttonBinatrix: UIButton!
     @IBAction func buttonBinatrix(_ sender: Any) {
-                let appURL = NSURL(string: "binatrixHexastar://")!
-                let webURL = NSURL(string: "https://itunes.apple.com/ru/app/binatrix/id1296545616")!
-                let application = UIApplication.shared
-    
-                if application.canOpenURL(appURL as URL) {
-                    application.open(appURL as URL)
-                } else {
-                    application.open(webURL as URL)
-                }
+        let appURL = NSURL(string: "binatrixHexastar://")!
+        let webURL = NSURL(string: "https://itunes.apple.com/ru/app/binatrix/id1296545616")!
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL as URL) {
+            application.open(appURL as URL)
+        } else {
+            application.open(webURL as URL)
+        }
     }
-////
-//// Running string
+    
+    // Running string
     func runStringArray(string:String) -> ([String]) {
         let myString = string
         var myStringAdd = myString
@@ -718,15 +714,14 @@ class ViewController: UIViewController, KeyboardDelegate {
             }
         }
     }
-////
-//// Touch to any area to remove the screen
+    
+    // Touch to any area to remove the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
             labelStart.isHidden = true
             view.endEditing(true)
         }
         super.touchesBegan(touches, with: event)
-      }
-////
+    }
 }
 

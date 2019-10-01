@@ -57,7 +57,7 @@ class UnicodeCharacterConverter {
             }
             return String(UnicodeScalar(Int(decimal.reduce(0, +)))!)
         }
-            multiDec.append(decimalConv())
-            return multiDec
-     }
+        multiDec.append(decimalConv())
+        return multiDec
+    }
 }

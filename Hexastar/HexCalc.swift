@@ -110,57 +110,57 @@ class HexDecCalc {
             _inputHexString = newValue
         }
     }
-func hexDecConv() -> (String) {
-    var decArrayChar = [Character]()
-    var decArrayIntTemp = [UInt64]()
-    var decArrayDouble = [Double]()
-    var indexString = 0
-    var indexDotta = 0
-    var z = 0
-    for char in inputHexString {
-        indexString += 1
-        if char == "." {
-            indexDotta = indexString
+    func hexDecConv() -> (String) {
+        var decArrayChar = [Character]()
+        var decArrayIntTemp = [UInt64]()
+        var decArrayDouble = [Double]()
+        var indexString = 0
+        var indexDotta = 0
+        var z = 0
+        for char in inputHexString {
+            indexString += 1
+            if char == "." {
+                indexDotta = indexString
+            }
+            decArrayChar.append(char)
         }
-        decArrayChar.append(char)
-    }
-    for i in decArrayChar {
-        switch i {
-        case "F" : decArrayIntTemp.append(15)
-        case "E" : decArrayIntTemp.append(14)
-        case "D" : decArrayIntTemp.append(13)
-        case "C" : decArrayIntTemp.append(12)
-        case "B" : decArrayIntTemp.append(11)
-        case "A" : decArrayIntTemp.append(10)
-        case "9" : decArrayIntTemp.append(9)
-        case "8" : decArrayIntTemp.append(8)
-        case "7" : decArrayIntTemp.append(7)
-        case "6" : decArrayIntTemp.append(6)
-        case "5" : decArrayIntTemp.append(5)
-        case "4" : decArrayIntTemp.append(4)
-        case "3" : decArrayIntTemp.append(3)
-        case "2" : decArrayIntTemp.append(2)
-        case "1" : decArrayIntTemp.append(1)
-        case "0" : decArrayIntTemp.append(0)
-        default: break
+        for i in decArrayChar {
+            switch i {
+            case "F" : decArrayIntTemp.append(15)
+            case "E" : decArrayIntTemp.append(14)
+            case "D" : decArrayIntTemp.append(13)
+            case "C" : decArrayIntTemp.append(12)
+            case "B" : decArrayIntTemp.append(11)
+            case "A" : decArrayIntTemp.append(10)
+            case "9" : decArrayIntTemp.append(9)
+            case "8" : decArrayIntTemp.append(8)
+            case "7" : decArrayIntTemp.append(7)
+            case "6" : decArrayIntTemp.append(6)
+            case "5" : decArrayIntTemp.append(5)
+            case "4" : decArrayIntTemp.append(4)
+            case "3" : decArrayIntTemp.append(3)
+            case "2" : decArrayIntTemp.append(2)
+            case "1" : decArrayIntTemp.append(1)
+            case "0" : decArrayIntTemp.append(0)
+            default: break
+            }
+        }
+        var decArrayIntTempRev = Array(decArrayIntTemp.reversed())
+        if indexDotta != 0 {
+            z = indexDotta - decArrayChar.count
+        } else {
+            z = 0
+        }
+        for i in 0...decArrayIntTempRev.count - 1 {
+            decArrayDouble.append(Double(decArrayIntTempRev[i]) * pow(16, Double(z)))
+            z += 1
+        }
+        if indexDotta != 0 {
+            return String(decArrayDouble.reduce(0, +))
+        } else {
+            return String(UInt64(decArrayDouble.reduce(0, +)))
         }
     }
-    var decArrayIntTempRev = Array(decArrayIntTemp.reversed())
-    if indexDotta != 0 {
-        z = indexDotta - decArrayChar.count
-    } else {
-        z = 0
-    }
-    for i in 0...decArrayIntTempRev.count - 1 {
-        decArrayDouble.append(Double(decArrayIntTempRev[i]) * pow(16, Double(z)))
-        z += 1
-    }
-    if indexDotta != 0 {
-        return String(decArrayDouble.reduce(0, +))
-    } else {
-        return String(UInt64(decArrayDouble.reduce(0, +)))
-    }
- }
 }
 
 

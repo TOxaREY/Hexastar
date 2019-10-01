@@ -39,7 +39,7 @@ class Touch: SKView {
         scene.addChild(sparki)
         scene.addChild(sparkiLeft)
         scene.addChild(sparkiRight)
-//// Shaking
+        // Shaking
         let moveRightUp:SKAction
         let moveDown:SKAction
         let moveLeftUp:SKAction
@@ -52,13 +52,13 @@ class Touch: SKView {
         let seq = SKAction.sequence([SKAction.repeat(seq1, count: 10),pause])
         let loop = SKAction.repeatForever(seq)
         deathStar.run(loop)
-////
-//// Shoting
+        
+        // Shoting
         NotificationCenter.default.addObserver(self, selector: #selector(buttonShot), name: NSNotification.Name(rawValue: "buttonPush"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(pickerShot), name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
     }
-////
-//// Shot from buttons
+    
+    // Shot from buttons
     @objc func buttonShot() {
         deathStar.isHidden = false
         centre.isHidden = false
@@ -71,8 +71,8 @@ class Touch: SKView {
         moveCenter = SKAction.move(to: centrePosition, duration: 0.4)
         sparki.run(moveCenter, completion: {self.sparki.isHidden = true})
     }
-////
-//// Shot from pickers
+    
+    // Shot from pickers
     @objc func pickerShot() {
         pickerPositionLeft = (scene?.convertPoint(fromView: NSCoder.cgPoint(for: UserDefaults.standard.string(forKey: "coorPicker")!)))!
         pickerPositionRight = pickerPositionLeft
@@ -86,8 +86,8 @@ class Touch: SKView {
         sparkiLeft.run(moveCenter, completion: {self.sparkiLeft.isHidden = true})
         sparkiRight.run(moveCenter, completion: {self.sparkiRight.isHidden = true})
     }
-////
-//// Shot from touching
+    
+    // Shot from touching
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         var positions = touch?.location(in: self)
@@ -100,6 +100,5 @@ class Touch: SKView {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startLabel"), object: nil)
         
     }
-////
 }
 

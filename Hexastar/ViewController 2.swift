@@ -9,21 +9,21 @@
 import UIKit
 import Foundation
 
-//// Start label one view
+// Start label one view
 public var vc2ViewCount = 0
-////
+
 
 class ViewController2: UIViewController {
-//// Change color status bar
+    // Change color status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-////
-//// Class calculating
- var characterUnicode = CharacterUnicodeConverter()
-////
+    
+    // Class calculating
+    var characterUnicode = CharacterUnicodeConverter()
+    
     @IBOutlet weak var startLabel: UILabel!
-//// Paste
+    // Paste
     @IBOutlet weak var buttonPaste: UIButton!
     func wrong() {
         let font = UIFont(name: "Xolonium", size: 13.0)!
@@ -32,32 +32,32 @@ class ViewController2: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.textField.text?.removeAll()
             self.placeHolder()
-      }
-   }
+        }
+    }
     var pasteBoardString: String? = nil
     @IBAction func buttonPaste(_ sender: Any) {
         startLabel.isHidden = true
         textField.placeholder?.removeAll()
         pasteBoardString = UIPasteboard.general.string
-            if pasteBoardString == nil || pasteBoardString == "" {
-                wrong()
-            } else {
-                    if pasteBoardString!.count > 3 {
-                        let overCount = pasteBoardString!.count - 3
-                        pasteBoardString = String(pasteBoardString!.dropLast(overCount))
-                    }
-                    if ((pasteBoardString)!).count <= 3 {
-                        switch pasteBoardString?.count {
-                        case 0?: textField.text = pasteBoardString;calculating()
-                        case 1?: textField.text = pasteBoardString;calculating()
-                        case 2?: textField.text = String(describing: pasteBoardString![(pasteBoardString!.startIndex)]);calculating();textField.text = pasteBoardString;calculating()
-                        case 3?: textField.text = String(describing: pasteBoardString! [(pasteBoardString!.startIndex)]);calculating();textField.text = String(describing: pasteBoardString! [(pasteBoardString!.startIndex)]) + String(describing: pasteBoardString![pasteBoardString!.index(after: (pasteBoardString!.startIndex))]);calculating();textField.text = pasteBoardString;calculating()
-                        default: break
-                        }
-                  }
-           }
+        if pasteBoardString == nil || pasteBoardString == "" {
+            wrong()
+        } else {
+            if pasteBoardString!.count > 3 {
+                let overCount = pasteBoardString!.count - 3
+                pasteBoardString = String(pasteBoardString!.dropLast(overCount))
+            }
+            if ((pasteBoardString)!).count <= 3 {
+                switch pasteBoardString?.count {
+                case 0?: textField.text = pasteBoardString;calculating()
+                case 1?: textField.text = pasteBoardString;calculating()
+                case 2?: textField.text = String(describing: pasteBoardString![(pasteBoardString!.startIndex)]);calculating();textField.text = pasteBoardString;calculating()
+                case 3?: textField.text = String(describing: pasteBoardString! [(pasteBoardString!.startIndex)]);calculating();textField.text = String(describing: pasteBoardString! [(pasteBoardString!.startIndex)]) + String(describing: pasteBoardString![pasteBoardString!.index(after: (pasteBoardString!.startIndex))]);calculating();textField.text = pasteBoardString;calculating()
+                default: break
+                }
+            }
+        }
     }
-////
+    
     @IBOutlet weak var segueButton2: UIButton!
     @IBOutlet weak var segueLabel2: UILabel!
     @IBOutlet weak var buttonReset: UIButton!
@@ -75,7 +75,7 @@ class ViewController2: UIViewController {
         appDel.window?.rootViewController = newVC
         appDel.window?.makeKeyAndVisible()
     }
-    //// Reset
+    // Reset
     @IBAction func buttonReset(_ sender: Any) {
         startLabel.isHidden = true
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "jump"), object: nil)
@@ -84,14 +84,14 @@ class ViewController2: UIViewController {
         resultLabel.text?.removeAll()
         view.endEditing(true)
     }
-////
+    
     @IBOutlet weak var textField: UITextField!
-//// Touch to field hiden startLabel
+    // Touch to field hiden startLabel
     @IBAction func touchTextField(_ sender: UITextField) {
         startLabel.isHidden = true
     }
-////
-//// Calculating font and multicolor string
+    
+    // Calculating font and multicolor string
     var firstCount = Int()
     var secondCount = Int()
     @IBAction func characterInput(_ sender: Any) {
@@ -133,11 +133,11 @@ class ViewController2: UIViewController {
             calculating()
         }
     }
-////
-    @IBOutlet weak var resultLabel: UILabel!
-
     
-//// Position resultLabel
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    
+    // Position resultLabel
     func constraintResultLabel() {
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
         switch screenHeight {
@@ -150,15 +150,15 @@ class ViewController2: UIViewController {
         default: resultLabel.bottomAnchor.constraint(equalTo: resultLabel.superview!.bottomAnchor, constant: -94).isActive = true
         }
     }
-////
-//// Placeholders
+    
+    // Placeholders
     func placeHolder() {
         let font = UIFont(name: "Xolonium", size: 13.0)!
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0), NSAttributedString.Key.font: font]
         textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("enter up to 3 characters", comment: "enter up to 3 characters"), attributes: attributes)
     }
-////
-//// Customer border textField
+    
+    // Customer border textField
     func borderTextField() {
         let borderColor : UIColor = UIColor(red:0.55, green:0.55, blue:0.55, alpha:1.0)
         textField.layer.borderWidth = 2
@@ -166,19 +166,18 @@ class ViewController2: UIViewController {
         textField.layer.cornerRadius = 5.0
         
     }
-////
+    
     deinit {
         print("VC2")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//// Start label one view
+        // Start label one view
         if vc2ViewCount > 0 {
             startLabel.isHidden = true
         } else {
             vc2ViewCount = 1
         }
-////
         borderTextField()
         placeHolder()
         let font = UIFont(name: "Xolonium", size: 18.0)!
@@ -193,9 +192,9 @@ class ViewController2: UIViewController {
         segueLabel2.attributedText = NSAttributedString(string: NSLocalizedString("converter DEC<->HEX<->OCT<->DEC", comment: "DEC<->HEX<->OCT<->DEC") , attributes: attributes1)
         UITextField.appearance().tintColor = UIColor(red:0.16, green:0.65, blue:0.91, alpha:1.0)
         constraintResultLabel()
-    
+        
     }
-    //// Touch to any area to remove the screen
+    // Touch to any area to remove the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.first) != nil {
             startLabel.isHidden = true

@@ -9,19 +9,19 @@
 import UIKit
 import Foundation
 
-//// Start label one view
+// Start label one view
 public var vc3ViewCount = 0
-////
+
 
 class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
-//// Change color status bar
+    // Change color status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-////
-//// Class calculating
+    
+    // Class calculating
     var uniChar = UnicodeCharacterConverter()
-////
+
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var addButton1: UIButton!
@@ -52,17 +52,17 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         appDel.window?.rootViewController = newVC
         appDel.window?.makeKeyAndVisible()
     }
-    //// Shot from buttons
+    // Shot from buttons
     func shotButton(b:UIButton) {
-     var coordinate = String()
-         coordinate = NSCoder.string(for: b.frame)
-         coordinate.removeFirst()
-         coordinate.removeLast(11)
-         UserDefaults.standard.set(coordinate, forKey: "coorButton")
-         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "buttonPush"), object: nil)
+        var coordinate = String()
+        coordinate = NSCoder.string(for: b.frame)
+        coordinate.removeFirst()
+        coordinate.removeLast(11)
+        UserDefaults.standard.set(coordinate, forKey: "coorButton")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "buttonPush"), object: nil)
     }
-////
-//// Shot from pickers
+    
+    // Shot from pickers
     func shotPicker(p:UIPickerView) {
         var frame = p.frame
         frame.origin.y += frame.size.height / 2
@@ -74,8 +74,8 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         UserDefaults.standard.set(wigth, forKey: "wigth")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "pickerPush"), object: nil)
     }
-////
-//// Add buttons
+    
+    // Add buttons
     @IBAction func addButton1(_ sender: Any) {
         startLabel.isHidden = true
         shotButton(b: addButton1)
@@ -202,8 +202,8 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
             resetPicker7()
         }
     }
-////
-//// Reset pickers
+    
+    // Reset pickers
     func resetPicker1() {
         for index in 0...4 {
             picker1.selectRow(0, inComponent: index, animated: true)
@@ -215,8 +215,8 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         for index in 0...4 {
             picker2.selectRow(0, inComponent: index, animated: true)
         }
-           res2 = ""
-           resultLabel.text! = res1 + res3 + res4 + res5 + res6 + res7
+        res2 = ""
+        resultLabel.text! = res1 + res3 + res4 + res5 + res6 + res7
     }
     func resetPicker3() {
         for index in 0...4 {
@@ -253,15 +253,15 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         res7 = ""
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6
     }
-////
-//// Clear
+    
+    // Clear
     @IBAction func clear1(_ sender: Any) {
         shotButton(b: clear1)
-              resetPicker1()
+        resetPicker1()
     }
     @IBAction func clear2(_ sender: Any) {
         shotButton(b: clear2)
-              resetPicker2()
+        resetPicker2()
     }
     @IBAction func clear3(_ sender: Any) {
         shotButton(b: clear3)
@@ -283,8 +283,8 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         shotButton(b: clear7)
         resetPicker7()
     }
-////
-//// Pickers and calculating
+    
+    // Pickers and calculating
     @IBOutlet weak var picker1: UIPickerView!
     @IBOutlet weak var picker2: UIPickerView!
     @IBOutlet weak var picker3: UIPickerView!
@@ -341,7 +341,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[component][row]
-      }
+    }
     var comp1:String = "U+00000"
     var comp2:String = "U+00000"
     var comp3:String = "U+00000"
@@ -376,7 +376,7 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         }
         resultLabel.text! = res1 + res2 + res3 + res4 + res5 + res6 + res7
     }
-////
+    
     @objc func startLabelHidden() {
         startLabel.isHidden = true
     }
@@ -384,14 +384,14 @@ class ViewController3: UIViewController,UIPickerViewDelegate, UIPickerViewDataSo
         print("VC3")
     }
     override func viewDidLoad() {
-//// Start label one view
+        // Start label one view
         super.viewDidLoad()
         if vc3ViewCount > 0 {
             startLabel.isHidden = true
         } else {
             vc3ViewCount = 1
         }
-////
+    
         pikers()
         let font = UIFont(name: "Xolonium", size: 18.0)!
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor(red:1.00, green:0.91, blue:0.12, alpha:1.0), NSAttributedString.Key.font: font]

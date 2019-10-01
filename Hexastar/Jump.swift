@@ -30,18 +30,18 @@ class Jump: SKView {
         self.presentScene(scene)
         self.allowsTransparency = true
         self.backgroundColor = UIColor.clear
-//// Background jumping
+        // Background jumping
         jump3.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
         jump3.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         jump3.isHidden = true
         scene.addChild(jump3)
-////
-//// Alien ship
+        
+        // Alien ship
         sSD.size = CGSize(width: 242 / 3, height: 150 / 3)
         sSD.position = CGPoint(x: self.frame.size.width / 6.666, y: self.frame.size.height / 1.65)
         scene.addChild(sSD)
-////
-//// Direction sin
+        
+        // Direction sin
         let moveWingUp:SKAction
         let returnWingUp:SKAction
         moveWingUp = SKAction.moveBy(x: -20, y: -20, duration: 8);
@@ -54,24 +54,24 @@ class Jump: SKView {
         returnWingMid = SKAction.moveBy(x: 15, y: -15, duration: 5)
         let seqWingMid = SKAction.sequence([moveWingMid,returnWingMid])
         let loopWingMid = SKAction.repeatForever(seqWingMid)
-////
-//// Up ship
+        
+        // Up ship
         wingUp.size = CGSize(width: 242 / 4, height: 150 / 4)
         wingUp.position = CGPoint(x: self.frame.size.width / 1.176, y: self.frame.size.height / 1.2716)
         scene.addChild(wingUp)
         let oscillateUp = SKAction.oscillation(amplitude: 5, timePeriod: 3, midPoint: wingUp.position)
         wingUp.run(SKAction.repeatForever(oscillateUp))
         wingUp.run(loopWingUp)
-////
-//// Down ship
+        
+        // Down ship
         wingMid.size = CGSize(width: 242 / 4, height: 150 / 4)
         wingMid.position = CGPoint(x: self.frame.size.width / 1.176, y: self.frame.size.height / 2.2)
         scene.addChild(wingMid)
         let oscillateMid = SKAction.oscillation(amplitude: 5, timePeriod: 5, midPoint: wingMid.position)
         wingMid.run(SKAction.repeatForever(oscillateMid))
         wingMid.run(loopWingMid)
-////
-//// Shoting
+        
+        // Shoting
         scene.addChild(blue)
         scene.addChild(green)
         let pauseMid = SKAction.wait(forDuration: 1.6)
@@ -90,8 +90,8 @@ class Jump: SKView {
         let loopGreen = SKAction.repeatForever(seqGreen)
         blue.run(loopBlue)
         green.run(loopGreen)
-////
-//// Shaking alien ship
+        
+        // Shaking alien ship
         let moveRightUp:SKAction
         let moveDown:SKAction
         let moveLeftUp:SKAction
@@ -101,36 +101,35 @@ class Jump: SKView {
         let seq = SKAction.sequence([moveRightUp,moveDown,moveLeftUp,moveDown,moveRightUp])
         let loop = SKAction.repeatForever(seq)
         sSD.run(loop)
-////
+        
         NotificationCenter.default.addObserver(self, selector: #selector(jump), name: NSNotification.Name(rawValue: "jump"), object: nil)
-
+        
     }
-
-        @objc func jump(){
-            if sSD.size == CGSize(width: 242 / 3, height: 150 / 3) {
-                wingUp.isHidden = true
-                wingMid.isHidden = true
-                blue.removeFromParent()
-                green.removeFromParent()
-                let moveCentre:SKAction
-                let returnMove:SKAction
-                moveCentre = SKAction.moveBy(x: self.frame.size.width / 1.3571 - self.frame.size.width / 6.666, y: -(self.frame.size.height / 1.65 - self.frame.size.height / 3.155), duration: 0.5)
-                returnMove = SKAction.moveBy(x: -(self.frame.size.width / 1.3571 - self.frame.size.width / 6.666), y: self.frame.size.height / 1.65 - self.frame.size.height / 3.155, duration: 0.01)
-                let seq = SKAction.sequence([moveCentre, SKAction.hide(), returnMove, SKAction.unhide()])
+    
+    @objc func jump(){
+        if sSD.size == CGSize(width: 242 / 3, height: 150 / 3) {
+            wingUp.isHidden = true
+            wingMid.isHidden = true
+            blue.removeFromParent()
+            green.removeFromParent()
+            let moveCentre:SKAction
+            let returnMove:SKAction
+            moveCentre = SKAction.moveBy(x: self.frame.size.width / 1.3571 - self.frame.size.width / 6.666, y: -(self.frame.size.height / 1.65 - self.frame.size.height / 3.155), duration: 0.5)
+            returnMove = SKAction.moveBy(x: -(self.frame.size.width / 1.3571 - self.frame.size.width / 6.666), y: self.frame.size.height / 1.65 - self.frame.size.height / 3.155, duration: 0.01)
+            let seq = SKAction.sequence([moveCentre, SKAction.hide(), returnMove, SKAction.unhide()])
             let jumper = SKAction.animate(with: [jump6,jump18,jump30,jump42,jump59], timePerFrame: 0.1)
             let moveCentreAktion = SKAction.scale(to: 0, duration: 0.5)
             let moveReturnAktion = SKAction.scale(to: CGSize(width: 806 / 10, height: 500 / 10), duration: 0.33)
             let pauseJ = SKAction.wait(forDuration: 1.5)
-                jump3.isHidden = false            
-//// Dynamic background
-                jump3.run(jumper, completion: {self.jump3.isHidden = true})
-////
-//// Dynamic reduction alien ship
-                sSD.run(moveCentreAktion)
-////
-//// Dynamic moving alien ship
-                sSD.run(seq, completion: {self.sSD.run(pauseJ,completion: {self.sSD.run(moveReturnAktion, completion: {self.sSD.isHidden = true; self.wingUp.isHidden = false; self.wingMid.isHidden = false; self.scene?.addChild(self.blue);self.scene?.addChild(self.green); self.sSD.isHidden = false})})})
-////
+            jump3.isHidden = false
+            // Dynamic background
+            jump3.run(jumper, completion: {self.jump3.isHidden = true})
+            
+            // Dynamic reduction alien ship
+            sSD.run(moveCentreAktion)
+            
+            // Dynamic moving alien ship
+            sSD.run(seq, completion: {self.sSD.run(pauseJ,completion: {self.sSD.run(moveReturnAktion, completion: {self.sSD.isHidden = true; self.wingUp.isHidden = false; self.wingMid.isHidden = false; self.scene?.addChild(self.blue);self.scene?.addChild(self.green); self.sSD.isHidden = false})})})
         }
     }
 }

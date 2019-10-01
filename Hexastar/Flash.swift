@@ -8,7 +8,7 @@
 
 import UIKit
 import SpriteKit
-//// Spiral
+// Spiral
 func pointOnCircle(angle: CGFloat, radius: CGFloat, center: CGPoint) -> CGPoint {
     return CGPoint(x: center.x + radius * cos(angle),
                    y: center.y + radius * sin(angle))
@@ -17,14 +17,14 @@ extension SKAction {
     static func spiral(startRadius: CGFloat, endRadius: CGFloat, angle totalAngle: CGFloat, centerPoint: CGPoint, duration: TimeInterval) -> SKAction {
         let radiusPerRevolution = (endRadius - startRadius) / totalAngle
         let action = SKAction.customAction(withDuration: duration) { node, time in
-        let θ = totalAngle * time / CGFloat(duration)
-        let radius = startRadius + radiusPerRevolution * θ
-        node.position = pointOnCircle(angle: θ, radius: radius, center: centerPoint)
+            let θ = totalAngle * time / CGFloat(duration)
+            let radius = startRadius + radiusPerRevolution * θ
+            node.position = pointOnCircle(angle: θ, radius: radius, center: centerPoint)
         }
         return action
     }
 }
-////
+
 class Flash: SKView {
     let dMNode = SKSpriteNode(imageNamed: "dM.png")
     let eGNode = SKSpriteNode(imageNamed: "eG.png")
@@ -60,10 +60,10 @@ class Flash: SKView {
             let seq02 = SKAction.sequence([SKAction.wait(forDuration: timer),SKAction.wait(forDuration: 1.01),scaleNode,SKAction.wait(forDuration: 0.01 + 32.04)])
             let seq03 = SKAction.sequence([SKAction.wait(forDuration: timer),SKAction.wait(forDuration: 1.01),rotateNode,SKAction.wait(forDuration: 0.01 + 32.04)])
             let seq04 = SKAction.sequence([SKAction.wait(forDuration: timer),SKAction.wait(forDuration: 1.01),spiral,SKAction.hide(),returnStart,SKAction.wait(forDuration: 32.04)])
-             let seq1 = SKAction.sequence([SKAction.hide(),downStartPosition,SKAction.unhide(),upStartPosition,SKAction.wait(forDuration: 15.01 + 32.04)])
-             let seq2 = SKAction.sequence([SKAction.wait(forDuration: 1.01),scaleNode,SKAction.wait(forDuration: 0.01 + 32.04)])
-             let seq3 = SKAction.sequence([SKAction.wait(forDuration: 1.01),rotateNode,SKAction.wait(forDuration: 0.01 + 32.04)])
-             let seq4 = SKAction.sequence([SKAction.wait(forDuration: 1.01),spiral,SKAction.hide(),returnStart,SKAction.wait(forDuration: 32.04)])
+            let seq1 = SKAction.sequence([SKAction.hide(),downStartPosition,SKAction.unhide(),upStartPosition,SKAction.wait(forDuration: 15.01 + 32.04)])
+            let seq2 = SKAction.sequence([SKAction.wait(forDuration: 1.01),scaleNode,SKAction.wait(forDuration: 0.01 + 32.04)])
+            let seq3 = SKAction.sequence([SKAction.wait(forDuration: 1.01),rotateNode,SKAction.wait(forDuration: 0.01 + 32.04)])
+            let seq4 = SKAction.sequence([SKAction.wait(forDuration: 1.01),spiral,SKAction.hide(),returnStart,SKAction.wait(forDuration: 32.04)])
             let seq11 = SKAction.sequence([seq01,SKAction.repeatForever(seq1)])
             let seq12 = SKAction.sequence([seq02,SKAction.repeatForever(seq2)])
             let seq13 = SKAction.sequence([seq03,SKAction.repeatForever(seq3)])

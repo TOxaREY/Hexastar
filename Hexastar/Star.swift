@@ -8,7 +8,7 @@
 
 import UIKit
 import SpriteKit
-//// Sin
+// Sin
 let π = CGFloat(Double.pi)
 extension SKAction {
     static func oscillation(amplitude a: CGFloat, timePeriod t: CGFloat, midPoint: CGPoint) -> SKAction {
@@ -20,9 +20,9 @@ extension SKAction {
         return action
     }
 }
-////
+
 class Star: SKView {
-   let spaceship = SKSpriteNode(imageNamed: "ball.png")
+    let spaceship = SKSpriteNode(imageNamed: "ball.png")
     let expStart = SKSpriteNode(imageNamed: "ballStart.png")
     let expFrame1 = SKTexture(imageNamed: "ball1.png")
     let expFrame2 = SKTexture(imageNamed: "ball2.png")
@@ -65,16 +65,15 @@ class Star: SKView {
         NotificationCenter.default.addObserver(self, selector: #selector(explosionStar), name: NSNotification.Name(rawValue: "explosionStar"), object: nil)
         
     }
- //// Explosion
-            @objc func explosionStar() {
-                if spaceship.isHidden == false {
-                    let animateExplosion = SKAction.animate(with: [expFrame1,expFrame2,expFrame2,expFrame3,expFrame3,expFrame4,expFrame5,expFrame6,expFrame7,expFrame8,expFrame9,expFrame9,expFrame10,expFrame10,expFrame11,expFrame12,expFrame13], timePerFrame: 0.05)
-                    spaceship.isHidden = true
-                    expStart.position = CGPoint(x: self.spaceship.position.x, y: self.spaceship.position.y)
-                    expStart.isHidden = false
-                    expStart.run(animateExplosion, completion: {self.expStart.isHidden = true})
-          }
+    // Explosion
+    @objc func explosionStar() {
+        if spaceship.isHidden == false {
+            let animateExplosion = SKAction.animate(with: [expFrame1,expFrame2,expFrame2,expFrame3,expFrame3,expFrame4,expFrame5,expFrame6,expFrame7,expFrame8,expFrame9,expFrame9,expFrame10,expFrame10,expFrame11,expFrame12,expFrame13], timePerFrame: 0.05)
+            spaceship.isHidden = true
+            expStart.position = CGPoint(x: self.spaceship.position.x, y: self.spaceship.position.y)
+            expStart.isHidden = false
+            expStart.run(animateExplosion, completion: {self.expStart.isHidden = true})
+        }
     }
-////
 }
 
