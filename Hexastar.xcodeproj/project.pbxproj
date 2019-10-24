@@ -162,6 +162,71 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F224ECA52361A5E80055B35F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F2B10B3E200FAB36003DD679 /* STARWARS.TTF */,
+				F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */,
+				F2398A6E205121AD00D10DFC /* moonhouse.ttf */,
+				F21D07DC20512D4100544271 /* 11589.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F224ECA62361A60D0055B35F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F27B5B5E2018B7910096D98A /* HexCalc.swift */,
+				F27EB08F2019D5C20061E461 /* OctCalc.swift */,
+				F23395632031A16100C8D6F2 /* SimUnic.swift */,
+				F2E0F5BA203459D300E18BBC /* UnicSim.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F224ECA72361A6320055B35F /* Keyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
+				F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */,
+				F2EF3C4D20177C3300B899DA /* KeyboardDEC.xib */,
+				F2EF3C552017848D00B899DA /* KeyboardDEC.swift */,
+				F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */,
+				F2EF3C572017849F00B899DA /* KeyboardOCT.swift */,
+			);
+			path = Keyboards;
+			sourceTree = "<group>";
+		};
+		F224ECA82361A6490055B35F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F25D39DE22E218460011187B /* SE.storyboard */,
+				F25D39EB22E2192D0011187B /* 8.storyboard */,
+				F25D39EE22E219340011187B /* 8+.storyboard */,
+				F25D39F122E2193C0011187B /* Xs.storyboard */,
+				F25D39F422E219440011187B /* Xrs.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F224ECA92361A6800055B35F /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				F24BDE6A20287DBF0007C8C5 /* Star.swift */,
+				F2887EC8202CC6B0006F0075 /* Ship.swift */,
+				F2DACD9C203AD6F20090A983 /* Spark.swift */,
+				F2FB9BEC2042EA0700B702D5 /* Jump.swift */,
+				F2EA20C42045CC2F002EDB2A /* Flash.swift */,
+				F270D605203AFFFE00037075 /* sparki.sks */,
+				F2922137203C40E2006D433E /* sparkiLR.sks */,
+				F27585CE204450A20058DF21 /* green.sks */,
+				F27585D02044516C0058DF21 /* blue.sks */,
+				F2438882204945BF002D33DC /* blackhole.sks */,
+				F2922139203C4371006D433E /* centre.sks */,
+			);
+			path = Effects;
+			sourceTree = "<group>";
+		};
 		F297B225200E20750072E484 = {
 			isa = PBXGroup;
 			children = (
@@ -188,42 +253,17 @@
 				F22AAD1A2030651800561942 /* Info.plist */,
 				F24712BD20517A8900B342BC /* Localizable.strings */,
 				F24712B820517A8800B342BC /* InfoPlist.strings */,
-				F2B10B3E200FAB36003DD679 /* STARWARS.TTF */,
-				F24306B220281DFA00B1ED08 /* SFDistantGalaxyAlternate.ttf */,
-				F2398A6E205121AD00D10DFC /* moonhouse.ttf */,
-				F21D07DC20512D4100544271 /* 11589.ttf */,
+				F224ECA52361A5E80055B35F /* Fonts */,
 				F297B23A200E20760072E484 /* LaunchScreen.storyboard */,
-				F2E7698E20559B7F00A7F769 /* RateManager.swift */,
-				F27B5B5E2018B7910096D98A /* HexCalc.swift */,
-				F27EB08F2019D5C20061E461 /* OctCalc.swift */,
-				F23395632031A16100C8D6F2 /* SimUnic.swift */,
-				F2E0F5BA203459D300E18BBC /* UnicSim.swift */,
 				F297B231200E20750072E484 /* AppDelegate.swift */,
+				F2E7698E20559B7F00A7F769 /* RateManager.swift */,
+				F224ECA62361A60D0055B35F /* Models */,
 				F297B233200E20760072E484 /* ViewController.swift */,
 				F23395612031952900C8D6F2 /* ViewController 2.swift */,
 				F24E38AE2031AA0E00E93B81 /* ViewController 3.swift */,
-				F24BDE6A20287DBF0007C8C5 /* Star.swift */,
-				F2887EC8202CC6B0006F0075 /* Ship.swift */,
-				F2DACD9C203AD6F20090A983 /* Spark.swift */,
-				F2FB9BEC2042EA0700B702D5 /* Jump.swift */,
-				F2EA20C42045CC2F002EDB2A /* Flash.swift */,
-				F270D605203AFFFE00037075 /* sparki.sks */,
-				F2922137203C40E2006D433E /* sparkiLR.sks */,
-				F27585CE204450A20058DF21 /* green.sks */,
-				F27585D02044516C0058DF21 /* blue.sks */,
-				F2922139203C4371006D433E /* centre.sks */,
-				F2438882204945BF002D33DC /* blackhole.sks */,
-				F25D39DE22E218460011187B /* SE.storyboard */,
-				F25D39EB22E2192D0011187B /* 8.storyboard */,
-				F25D39EE22E219340011187B /* 8+.storyboard */,
-				F25D39F122E2193C0011187B /* Xs.storyboard */,
-				F25D39F422E219440011187B /* Xrs.storyboard */,
-				F239826D200F8976003A0BBC /* KeyboardHEX.xib */,
-				F2EE6FD5200FC39900134DDE /* KeyboardHEX.swift */,
-				F2EF3C4D20177C3300B899DA /* KeyboardDEC.xib */,
-				F2EF3C552017848D00B899DA /* KeyboardDEC.swift */,
-				F2EF3C4F20177C4D00B899DA /* KeyboardOCT.xib */,
-				F2EF3C572017849F00B899DA /* KeyboardOCT.swift */,
+				F224ECA92361A6800055B35F /* Effects */,
+				F224ECA82361A6490055B35F /* Storyboards */,
+				F224ECA72361A6320055B35F /* Keyboards */,
 				F297B238200E20760072E484 /* Assets.xcassets */,
 			);
 			path = Hexastar;
