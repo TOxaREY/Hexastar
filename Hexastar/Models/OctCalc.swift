@@ -120,7 +120,7 @@ class OctDecCalc {
             }
         }
         
-        var decArrayIntTempRev = Array(decArrayIntTemp.reversed())
+        let decArrayIntTempRev = Array(decArrayIntTemp.reversed())
         if indexDotta != 0 {
             z = indexDotta - decArrayChar.count
         } else {

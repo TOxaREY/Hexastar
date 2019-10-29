@@ -48,7 +48,7 @@ class UnicodeCharacterConverter {
                 default: break
                 }
             }
-            var decArr = Array(hexArrayInt.reversed())
+            let decArr = Array(hexArrayInt.reversed())
             for i in 0...decArr.count - 1 {
                 decimal.append(decArr[i] * Int(pow(16, Double(i))))
             }
