@@ -1,6 +1,0 @@
-framework module Pods_Hexastar {
-  umbrella header "Pods-Hexastar-umbrella.h"
-
-  export *
-  module * { export * }
-}
