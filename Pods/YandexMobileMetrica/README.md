@@ -19,7 +19,60 @@ advertisement**.
 
 ## Changelog
 
+### Version 3.11.1
+
+* Added the API to report non-fatals: NSError, custom errors.
+* Added the error environment to be reported with crashes and errors.
+* Added the configuration property `maxReportsInDatabaseCount` to control DB limits.
+* Fixed tvOS support.
+* Added the configuration property `appForKids` for applications from App Store Kids' Category.
+* Improved stability and performance.
+
+### Version 3.9.4
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/48248/YandexMobileMetrica-3.9.4-ios-9d093f38-8a48-434a-bc01-5226212f2b07.zip)
+
+* Fixed possible crashes which affected the AppMetrica SDK versions 3.9.0 to 3.9.3.
+
+### Version 3.9.2
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/128534/YandexMobileMetrica-3.9.2-ios-2a9196d3-c8d5-4db0-bda6-a72beb9d0026.zip)
+
+* Fixed the issue with invalid `appmetrica_device_id` generation.
+* Fixed possible deadlock during activation.
+
+### Version 3.9.1
+
+* Fixed the reportReferralUrl method. It is no longer deprecated.
+* Fixed getting information about code and subcode for Mach exceptions.
+* Fixed framework for tvOS.
+* Improved stability and performance.
+
+### Version 3.8.2
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/175948/YandexMobileMetrica-3.8.2-ios-fd6bf496-ed60-4d84-978a-a8f9a818b566.zip)
+
+* Fixed an issue with serialization of revenue decimal price.
+
+### Version 3.8.1
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/175948/YandexMobileMetrica-3.8.1-ios-05f06e48-1975-4ece-9947-1562868bfc84.zip)
+
+* Fixed an issue with "helper" command line tool in dynamic frameworks.
+
+### Version 3.8.0
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/128534/YandexMobileMetrica-3.8.0-ios-4a829c81-8941-4676-9136-48a22f386501.zip)
+
+* Added a command line tool for dSYM uploading.
+
+### Version 3.7.1
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/175948/YandexMobileMetrica-3.7.1-ios-066381b6-39c3-4794-949f-2391e0ea618f.zip)
+
+* Added support of NSDecimalNumber for a price in YMMRevenueInfo.
+* Added the API to control sessions manually (see the sessionsAutoTracking property of YMMYandexMetricaConfiguration).
+* Added the configuration flag to handle activation as a session start (see handleActivationAsSessionStart of YMMYandexMetricaConfiguration).
+* Stopped supporting the reportReferralUrl method. The method is deprecated.
+* Stopped supporting the double type for the price field in the YMMRevenueInfo class. The field is deprecated.
+* Fixed an issue with additional information in crash logs (active_time_since_launch, active_time_since_last_crash etc).
+
 ### Version 3.6.0
+SDK archive: [**download**](https://storage.mds.yandex.net/get-appmetrica-mobile-sdk/175948/YandexMobileMetrica-3.6.0-ios-702bb3c2-76a5-4b77-9dd3-b743d5996080.zip)
 
 * Fixed possible loss of crash reports on devices with a 32-bit processor.
 * Fixed possible crashes which affected the AppMetrica SDK versions 3.1.0 to 3.5.0.

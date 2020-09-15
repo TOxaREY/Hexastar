@@ -38,6 +38,26 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL handleFirstActivationAsUpdate;
 
+/** Whether activation of AppMetrica should be considered as the start of a session.
+ If this option is disabled session starts at UIApplicationDidBecomeActiveNotification.
+
+ The option is disabled by default. Enable this property if you want events that are reported after activation to join
+ the current session.
+ */
+@property (nonatomic, assign) BOOL handleActivationAsSessionStart;
+
+/** Whether AppMetrica should automatically track session starts and ends.
+ AppMetrica uses UIApplicationDidBecomeActiveNotification and UIApplicationWillResignActiveNotification notifications
+ to track sessions.
+
+ The maximum length of the session is 24 hours. To continue the session after 24 hours, you should manually
+ invoke the resumeSession method.
+
+ The option is enabled by default. If the option is disabled, you should manually control the session
+ using pauseSession and resumeSession methods.
+ */
+@property (nonatomic, assign) BOOL sessionsAutoTracking;
+
 /** A boolean value indicating whether statistics sending to the AppMetrica server is enabled.
 
  @note Disabling this option also turns off data sending from the reporters that initialized for different apiKey.
@@ -45,6 +65,19 @@ NS_ASSUME_NONNULL_BEGIN
  By default, the statistics sending is enabled.
  */
 @property (nonatomic, assign) BOOL statisticsSending;
+
+/** Maximum number of reports stored in the database.
+
+ Acceptable values are in the range of [100; 10000]. If passed value is outside of the range, AppMetrica automatically
+ trims it to closest border value.
+
+ @note Different apiKeys use different databases and can have different limits of reports count.
+ The parameter only affects the configuration created for that apiKey.
+ To set the parameter for a different apiKey, see `YMMReporterConfiguration.maxReportsInDatabaseCount`
+
+ By default, the parameter value is 1000.
+ */
+@property (nonatomic, assign) NSUInteger maxReportsInDatabaseCount;
 
 /** Enable/disable location reporting to AppMetrica.
  If enabled and location set via setLocation: method - that location would be used.
@@ -88,6 +121,14 @@ NS_ASSUME_NONNULL_BEGIN
  By default logging is disabled.
  */
 @property (nonatomic, assign) BOOL logs;
+
+/** Defines the app type as "For Kids" to comply with the
+ [App Store Review Guidelines for Kids' Category](https://developer.apple.com/app-store/review/guidelines/#kids).
+ If the option is enabled, AppMetrica SDK doesn't send advertising IDs and device location.
+
+@note Enable this option only if your app intended for the "For Kids" category.
+ */
+@property (nonatomic, assign) BOOL appForKids;
 
 /** Set/get preload info, which is used for tracking preload installs.
  Additional info could be https://appmetrica.yandex.com
