@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C4F964003FC2794F75E6E43 /* libPods-Hexastar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E62DFD5538DFA3DC9E6D18FC /* libPods-Hexastar.a */; };
+		BE9A7F8EB27E8FDCF3F084D1 /* Pods_Hexastar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AE5E1CC9468F0A7BB5F7DF /* Pods_Hexastar.framework */; };
 		F21D07DD20512D4200544271 /* 11589.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F21D07DC20512D4100544271 /* 11589.ttf */; };
 		F23395622031952900C8D6F2 /* ViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23395612031952900C8D6F2 /* ViewController 2.swift */; };
 		F23395642031A16100C8D6F2 /* SimUnic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23395632031A16100C8D6F2 /* SimUnic.swift */; };
@@ -38,7 +38,6 @@
 		F297B23C200E20760072E484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297B23A200E20760072E484 /* LaunchScreen.storyboard */; };
 		F298C82E20749FA6001F34F2 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F298C82D20749FA6001F34F2 /* iAd.framework */; };
 		F2B10B3F200FAB41003DD679 /* STARWARS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F2B10B3E200FAB36003DD679 /* STARWARS.TTF */; };
-		F2D3E7592510CC8B003ACCD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2D3E7582510CC8B003ACCD9 /* GoogleService-Info.plist */; };
 		F2DACD9D203AD6F20090A983 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DACD9C203AD6F20090A983 /* Spark.swift */; };
 		F2E0F5BB203459D300E18BBC /* UnicSim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0F5BA203459D300E18BBC /* UnicSim.swift */; };
 		F2E7698F20559B7F00A7F769 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E7698E20559B7F00A7F769 /* RateManager.swift */; };
@@ -52,8 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		887E7315E10905FB4048EE40 /* Pods-Hexastar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hexastar.debug.xcconfig"; path = "Target Support Files/Pods-Hexastar/Pods-Hexastar.debug.xcconfig"; sourceTree = "<group>"; };
-		E62DFD5538DFA3DC9E6D18FC /* libPods-Hexastar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hexastar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56AE5E1CC9468F0A7BB5F7DF /* Pods_Hexastar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hexastar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7303BF9978327496D7D3B5 /* Pods-Hexastar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hexastar.debug.xcconfig"; path = "Target Support Files/Pods-Hexastar/Pods-Hexastar.debug.xcconfig"; sourceTree = "<group>"; };
 		F21D07DC20512D4100544271 /* 11589.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 11589.ttf; sourceTree = "<group>"; };
 		F22AAD1A2030651800561942 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F23395612031952900C8D6F2 /* ViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController 2.swift"; sourceTree = "<group>"; };
@@ -116,7 +115,6 @@
 		F297B23B200E20760072E484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F298C82D20749FA6001F34F2 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		F2B10B3E200FAB36003DD679 /* STARWARS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STARWARS.TTF; sourceTree = "<group>"; };
-		F2D3E7582510CC8B003ACCD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2DA0AD22055805D0070AC20 /* Hexastar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hexastar.entitlements; sourceTree = "<group>"; };
 		F2DACD9C203AD6F20090A983 /* Spark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		F2E0F5BA203459D300E18BBC /* UnicSim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicSim.swift; sourceTree = "<group>"; };
@@ -136,7 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F298C82E20749FA6001F34F2 /* iAd.framework in Frameworks */,
-				3C4F964003FC2794F75E6E43 /* libPods-Hexastar.a in Frameworks */,
+				BE9A7F8EB27E8FDCF3F084D1 /* Pods_Hexastar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				F298C82D20749FA6001F34F2 /* iAd.framework */,
-				E62DFD5538DFA3DC9E6D18FC /* libPods-Hexastar.a */,
+				56AE5E1CC9468F0A7BB5F7DF /* Pods_Hexastar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,7 +153,7 @@
 		A29703CEAD15CAA277C81E1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				887E7315E10905FB4048EE40 /* Pods-Hexastar.debug.xcconfig */,
+				DD7303BF9978327496D7D3B5 /* Pods-Hexastar.debug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -246,7 +244,6 @@
 		F297B230200E20750072E484 /* Hexastar */ = {
 			isa = PBXGroup;
 			children = (
-				F2D3E7582510CC8B003ACCD9 /* GoogleService-Info.plist */,
 				F2DA0AD22055805D0070AC20 /* Hexastar.entitlements */,
 				F22AAD1A2030651800561942 /* Info.plist */,
 				F24712BD20517A8900B342BC /* Localizable.strings */,
@@ -274,12 +271,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F297B240200E20760072E484 /* Build configuration list for PBXNativeTarget "Hexastar" */;
 			buildPhases = (
-				63B3FE86180351B4870F76DF /* [CP] Check Pods Manifest.lock */,
+				20E816CFA8BD0734C5576B80 /* [CP] Check Pods Manifest.lock */,
 				F297B22A200E20750072E484 /* Sources */,
 				F297B22B200E20750072E484 /* Frameworks */,
 				F297B22C200E20750072E484 /* Resources */,
-				F2D3E75A2510CC96003ACCD9 /* ShellScript */,
-				28537C37160E476DBEC3EC93 /* [CP] Embed Pods Frameworks */,
+				3C7A98D7AF815617D39E565D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,7 +309,7 @@
 				};
 			};
 			buildConfigurationList = F297B229200E20750072E484 /* Build configuration list for PBXProject "Hexastar" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -358,7 +354,6 @@
 				F25D39ED22E2192D0011187B /* 8.storyboard in Resources */,
 				F24712BB20517A8900B342BC /* Localizable.strings in Resources */,
 				F2EF3C5020177C4D00B899DA /* KeyboardOCT.xib in Resources */,
-				F2D3E7592510CC8B003ACCD9 /* GoogleService-Info.plist in Resources */,
 				F25D39F322E2193D0011187B /* Xs.storyboard in Resources */,
 				F27585D12044516C0058DF21 /* blue.sks in Resources */,
 				F2438883204945BF002D33DC /* blackhole.sks in Resources */,
@@ -368,27 +363,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28537C37160E476DBEC3EC93 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh",
-				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
-				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetricaCrashes.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetricaCrashes.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63B3FE86180351B4870F76DF /* [CP] Check Pods Manifest.lock */ = {
+		20E816CFA8BD0734C5576B80 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -410,23 +385,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F2D3E75A2510CC96003ACCD9 /* ShellScript */ = {
+		3C7A98D7AF815617D39E565D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${PODS_ROOT}/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh",
+				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
+				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetricaCrashes.framework",
 			);
-			outputFileListPaths = (
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetricaCrashes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hexastar/Pods-Hexastar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -618,18 +595,21 @@
 		};
 		F297B241200E20760072E484 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 887E7315E10905FB4048EE40 /* Pods-Hexastar.debug.xcconfig */;
+			baseConfigurationReference = DD7303BF9978327496D7D3B5 /* Pods-Hexastar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Hexastar/Hexastar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = EB6R5QS764;
 				INFOPLIST_FILE = Hexastar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = deltaTOxaREY.Hexastar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

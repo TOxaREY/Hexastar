@@ -8,7 +8,6 @@
 
 import UIKit
 import YandexMobileMetrica
-import Firebase
 
 var screenHeight: CGFloat {
     return UIScreen.main.bounds.height
@@ -32,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         default: nameStoryboard = "8"
         }
         YMMYandexMetrica.activate(with: YMMYandexMetricaConfiguration.init(apiKey: "9e5c9f56-49f3-47a5-95b1-3e2504e512f0")!)
-        FirebaseApp.configure()
         RateManager.incrementCount()
         launchScreenTimer()
         return true
